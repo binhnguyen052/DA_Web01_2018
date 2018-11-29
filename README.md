@@ -19,21 +19,51 @@ Thành viên:
 
 1660164 - Nguyễn Anh Hào
 
+
+Các thư mục:
+
+WEB 01: thư mục khởi đầu (chứa template gốc, file đồ án, file vấn đáp)
+
+Stage01: chỉ chứa các file liên quan đến giai đoạn 01
+
+
+Ghi chú kí hiệu: 
+
+*: chưa hoàn thành, hoặc đang trong tiến trình kiểm thử, chỉnh sửa lại cho phù hợp, fix lỗi, ...
+
+++: đã hoàn thành
+
 Tiến trình:
 
 -- Giai đoạn 01:
 
 29/11/2018
 
-Khởi tạo repository đồ án, các thành viên tạo tài khoản và gia nhập github
+Khởi tạo repository đồ án (++)
 
-Upload source (template) sẽ làm
+Các thành viên tạo tài khoản và gia nhập github
 
-Việt hóa lại template (chưa hoàn thành)
+Upload source code (template) (++)
 
+Việt hóa lại template (*)
+
+Chỉnh template phù hợp với yêu cầu đồ án (*)
 
 -- Giai đoạn 02:
-trống
 
+Thiết kế database (*)
+
+-- Giai đoạn 03:
+
+Kiểm thử database lên localhost (*)
+
+-- Giai đoạn 04:
+
+Chỉnh sửa lại các giai đoạn trước theo yêu cầu (*)
+
+
+-- Giai đoạn kết thúc:
+
+Thi vấn đáp (29/11/2018) (*)
 
 

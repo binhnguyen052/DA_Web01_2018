@@ -21,7 +21,7 @@ Thành viên:
 
 Tiến trình:
 
-Giai đoạn 01:
+-- Giai đoạn 01:
 
 29/11/2018
 
@@ -29,11 +29,11 @@ Khởi tạo repository đồ án, các thành viên tạo tài khoản và gia 
 
 Upload source (template) sẽ làm
 
--- Việt hóa lại template
+Việt hóa lại template
 
 
-Giai đoạn 02:
--- trống
+-- Giai đoạn 02:
+trống
 
 
 

@@ -5,7 +5,7 @@ Nơi làm việc và lưu dữ liệu của đồ án web01 (khtn-29/11/2018)
 
 Web01
 
-Gv lý thuyết: Trần Văn Quy
+Gv lý thuyết: Trần Văn Quý
 
 Ngày khởi tạo nhóm github: 29/11/2018
 

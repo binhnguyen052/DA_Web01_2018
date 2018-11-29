@@ -45,6 +45,8 @@ Ghi chú kí hiệu:
 
 Khởi tạo repository đồ án (++)
 
++ folder: Stage 01
+
 Các thành viên tạo tài khoản và gia nhập github
 
 Upload source code (template) (++)

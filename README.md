@@ -7,7 +7,7 @@ Web01
 
 Gv lý thuyết: Trần Văn Quy
 
-Ngày khởi tạo 29/11/2018
+Ngày khởi tạo nhóm github: 29/11/2018
 
 Ngày sẽ kết thúc đồ án (thi vấn đáp): 28/12/2018
 

@@ -29,7 +29,7 @@ Khởi tạo repository đồ án, các thành viên tạo tài khoản và gia 
 
 Upload source (template) sẽ làm
 
-Việt hóa lại template
+Việt hóa lại template (chưa hoàn thành)
 
 
 -- Giai đoạn 02:

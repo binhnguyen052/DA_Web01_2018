@@ -33,7 +33,7 @@ Ghi chú kí hiệu:
 
 ++: đã hoàn thành
 
-==================== Tiến trình ====================
+==================== TIẾN TRÌNH ====================
 
 
 ==================== Giai đoạn 01 ====================
@@ -50,7 +50,7 @@ Việt hóa lại template (*)
 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 
--- Giai đoạn 02:
+==================== Giai đoạn 02 ====================
 
 Thiết kế database (*)
 
@@ -58,12 +58,11 @@ Thiết kế database (*)
 
 Kiểm thử database lên localhost (*)
 
--- Giai đoạn 04:
+==================== Giai đoạn 03 ====================
 
 Chỉnh sửa lại các giai đoạn trước theo yêu cầu (*)
 
-
--- Giai đoạn kết thúc:
+==================== Giai đoạn kết thúc ====================
 
 Thi vấn đáp (29/11/2018) (*)
 

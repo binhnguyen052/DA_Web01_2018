@@ -13,7 +13,7 @@ Ngày sẽ kết thúc đồ án (thi vấn đáp): 28/12/2018
 
 Thành viên:
 
-1660052 - Nguyễn Đình Bình
+1660052 - Nguyễn Đình Bình (khởi tạo)
 
 1660056 - Nguyễn Tuấn Cảnh
 

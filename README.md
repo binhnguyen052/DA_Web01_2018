@@ -52,6 +52,11 @@ Các thành viên tạo tài khoản và gia nhập github
 Upload source code (template) (++)
 
 Việt hóa lại template (*)
+ + index.html (Bình)
+ + blank.html (Hào)
+ + checkout.html 
+ + products.html
+ + product-page.html
 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 

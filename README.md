@@ -10,9 +10,9 @@ Web01
 
 Gv lý thuyết: Trần Văn Quý
 
-Ngày khởi tạo nhóm github: 29/11/2018
++ Ngày khởi tạo nhóm github: 29/11/2018
 
-Ngày sẽ kết thúc đồ án (thi vấn đáp): 28/12/2018
++ Ngày sẽ kết thúc đồ án (thi vấn đáp): 24/12/2018
 
 Thành viên:
 

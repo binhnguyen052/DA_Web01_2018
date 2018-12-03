@@ -62,7 +62,7 @@ Chỉnh template phù hợp với yêu cầu đồ án (*)
 
 ==================== Giai đoạn 02 ====================
 
-Thiết kế database (*)
+Thiết kế và upload database (++ v1)
 
 -- Giai đoạn 03:
 

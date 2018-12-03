@@ -68,11 +68,13 @@ Thiết kế và upload database (++ v1)
 
 Insert Database (*)
 
--- Giai đoạn 03:
+==================== Giai đoạn 03 ====================
 
 Kiểm thử database lên localhost (*)
 
-==================== Giai đoạn 03 ====================
+Tạo mô hình phù hợp để truy vấn và đổ dữ liệu lên web (*)
+
+==================== Giai đoạn 04 ====================
 
 Chỉnh sửa lại các giai đoạn trước theo yêu cầu (*)
 

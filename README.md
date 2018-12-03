@@ -55,7 +55,7 @@ Upload source code (template) (++)
 Việt hóa lại template (*)
  + index.html (* Bình)
  + blank.html (* Hào)
- + checkout.html (*)
+ + checkout.html (* Cảnh)
  + products.html (*)
  + product-page.html (*)
 

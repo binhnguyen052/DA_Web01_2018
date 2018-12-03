@@ -78,6 +78,6 @@ Chỉnh sửa lại các giai đoạn trước theo yêu cầu (*)
 
 ==================== Giai đoạn kết thúc ====================
 
-Thi vấn đáp (29/11/2018) (*)
+Thi vấn đáp (24/11/2018) (*)
 
 

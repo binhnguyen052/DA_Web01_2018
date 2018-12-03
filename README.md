@@ -27,8 +27,9 @@ Các thư mục:
 
 WEB 01: thư mục khởi đầu (chứa template gốc, file đồ án, file vấn đáp)
 
-Stage01: chỉ chứa các file liên quan đến giai đoạn 01
+Stage01: chỉ chứa các file source web liên quan đến giai đoạn 01
 
+Stage02: chỉ chứa các file database liên quan đến giai đoạn 02
 
 Ghi chú kí hiệu: 
 

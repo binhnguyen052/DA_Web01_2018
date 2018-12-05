@@ -57,7 +57,7 @@ Việt hóa lại template (*)
  + blank.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))
  + checkout.html (* Cảnh, ++(Bình-HEADER-NAVIGATION-FOOTER) )
  + products.html (*, ++(Bình-HEADER-NAVIGATION-FOOTER))
- + product-page.html (* , ++(Bình-HEADER-NAVIGATION-FOOTER))
+ + product-page.html (*Hào , ++(Bình-HEADER-NAVIGATION-FOOTER))
 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 

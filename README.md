@@ -65,7 +65,7 @@ Chỉnh template phù hợp với yêu cầu đồ án (*)
 
 + folder: Stage 02
 
-Thiết kế và upload database (++ v1)
+Thiết kế và upload database (* v1)
 
 Insert Database (*)
 

@@ -54,10 +54,10 @@ Upload source code (template) (++)
 
 Việt hóa lại template (*)
  + index.html (* Bình)
- + blank.html (* Hào)
- + checkout.html (* Cảnh)
+ + blank.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))
+ + checkout.html (* Cảnh, ++(Bình-HEADER-NAVIGATION-FOOTER) )
  + products.html (*)
- + product-page.html (*)
+ + product-page.html (* , ++(Bình-HEADER-NAVIGATION-FOOTER))
 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 

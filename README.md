@@ -52,12 +52,14 @@ Các thành viên tạo tài khoản và gia nhập github (++)
 
 Upload source code (template) (++)
 
+Upload source code trang admin (template) (++)
+
 Việt hóa lại template (*)
  + index.html (* Bình)
  + blank.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))
  + checkout.html (* Cảnh, ++(Bình-HEADER-NAVIGATION-FOOTER) )
- + products.html (*, ++(Bình-HEADER-NAVIGATION-FOOTER))
- + product-page.html (*Hào , ++(Bình-HEADER-NAVIGATION-FOOTER))
+ + products.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))
+ + product-page.html (* Hào , ++(Bình-HEADER-NAVIGATION-FOOTER))
 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 

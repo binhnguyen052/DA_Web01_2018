@@ -52,6 +52,8 @@ Các thành viên tạo tài khoản và gia nhập github (++)
 
 Upload source code (template) (++)
 
+Upload source code trang admin (template) (++)
+
 Việt hóa lại template (*)
  + index.html (* Bình)
  + blank.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))

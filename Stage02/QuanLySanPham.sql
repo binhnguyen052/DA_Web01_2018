@@ -15,16 +15,6 @@ CREATE DATABASE IF NOT EXISTS `QuanLySanPham` DEFAULT CHARACTER SET utf8 COLLATE
 USE `QuanLySanPham` ;
 
 -- -----------------------------------------------------
--- Table `QuanLySanPham`.`LoaiTaiKhoan`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`LoaiTaiKhoan` (
-  `MaLoaiTaiKhoan` INT ZEROFILL NOT NULL,
-  `TenLoaiTaiKhoan` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`MaLoaiTaiKhoan`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `QuanLySanPham`.`TaiKhoan`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`TaiKhoan` (
@@ -35,26 +25,11 @@ CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`TaiKhoan` (
   `DiaChi` VARCHAR(200) NULL,
   `DienThoai` VARCHAR(11) NULL,
   `Email` VARCHAR(40) NULL,
-  `BiXoa` TINYINT NOT NULL,
+  `BiXoa` SMALLINT NOT NULL,
   `HinhDaiDienURL` VARCHAR(100) NULL,
-  `MaLoaiTaiKhoan` INT ZEROFILL NOT NULL,
-  PRIMARY KEY (`MaTaiKhoan`),
-  INDEX `fk_MaLoaiTaiKhoanTK_MaLoaiTaiKhoanLTK_idx` (`MaLoaiTaiKhoan` ASC), #VISIBLE,
-  CONSTRAINT `fk_MaLoaiTaiKhoanTK_MaLoaiTaiKhoanLTK`
-    FOREIGN KEY (`MaLoaiTaiKhoan`)
-    REFERENCES `QuanLySanPham`.`LoaiTaiKhoan` (`MaLoaiTaiKhoan`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `QuanLySanPham`.`TinhTrang`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`TinhTrang` (
-  `MaTinhTrang` INT ZEROFILL NOT NULL,
-  `TenTinhTrang` VARCHAR(100) NULL,
-  PRIMARY KEY (`MaTinhTrang`))
+  `MaLoaiTaiKhoan` SMALLINT ZEROFILL NOT NULL COMMENT '0: admin, 1: khach hang',
+  `BiXoa` SMALLINT NULL,
+  PRIMARY KEY (`MaTaiKhoan`))
 ENGINE = InnoDB;
 
 
@@ -63,23 +38,24 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`DonDatHang` (
   `MaDonDatHang` VARCHAR(11) NOT NULL,
-  `NgayLap` DATETIME NULL,
-  `NgayDuKienGiaoHang` DATETIME NULL,
-  `TongThanhTien` BIGINT NULL,
   `MaTaiKhoan` INT ZEROFILL NOT NULL,
-  `MaTinhTrang` INT ZEROFILL NOT NULL,
-  `LoaiGiaoHang` INT NULL,
+  `NgayLap` DATETIME NOT NULL,
+  `NgayDuKienGiaoHang` DATETIME NOT NULL,
+  `TongThanhTien` BIGINT NOT NULL,
+  `BiXoa` SMALLINT NULL,
+  `TinhTrang` SMALLINT NOT NULL COMMENT '0: chua giao, 1: da giao',
+  `TenNguoiNhan` VARCHAR(40) NOT NULL,
+  `SDTNguoiNhan` VARCHAR(11) NULL,
+  `SoNha` VARCHAR(20) NOT NULL,
+  `TenDuong` VARCHAR(20) NOT NULL,
+  `Phuong` VARCHAR(20) NOT NULL,
+  `Quan` VARCHAR(20) NOT NULL,
+  `Tinh` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`MaDonDatHang`),
-  INDEX `fk_MaTaiKhoan_MaTaiKhoan_idx` (`MaTaiKhoan` ASC), # VISIBLE,
-  INDEX `fk_MaTinhTrangDDH_MaTinhTrangTT_idx` (`MaTinhTrang` ASC), # VISIBLE,
+  INDEX `fk_MaTaiKhoan_MaTaiKhoan_idx` (`MaTaiKhoan` ASC), #VISIBLE,
   CONSTRAINT `fk_MaTaiKhoanDDH_MaTaiKhoanTK`
     FOREIGN KEY (`MaTaiKhoan`)
     REFERENCES `QuanLySanPham`.`TaiKhoan` (`MaTaiKhoan`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_MaTinhTrangDDH_MaTinhTrangTT`
-    FOREIGN KEY (`MaTinhTrang`)
-    REFERENCES `QuanLySanPham`.`TinhTrang` (`MaTinhTrang`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -91,7 +67,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`LoaiSanPham` (
   `MaLoaiSanPham` INT ZEROFILL NOT NULL,
   `TenLoaiSanPham` VARCHAR(100) NULL,
-  `BiXoa` TINYINT NULL,
+  `BiXoa` SMALLINT NULL,
   PRIMARY KEY (`MaLoaiSanPham`))
 ENGINE = InnoDB;
 
@@ -103,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`HangSanXuat` (
   `MaHangSanXuat` INT ZEROFILL NOT NULL,
   `TenHangSanXuat` VARCHAR(100) NULL,
   `LogoURL` VARCHAR(100) NULL,
-  `BiXoa` TINYINT NULL,
+  `BiXoa` SMALLINT NULL,
+  `HangSanXuatcol` VARCHAR(45) NULL,
   PRIMARY KEY (`MaHangSanXuat`))
 ENGINE = InnoDB;
 
@@ -122,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`SanPham` (
   `SoLuongBan` INT NULL,
   `SoLuotXem` INT NULL,
   `MoTa` TEXT NULL,
-  `BiXoa` TINYINT NULL,
+  `BiXoa` SMALLINT NULL,
   `MaLoaiSanPham` INT ZEROFILL NOT NULL,
   `MaHangSanXuat` INT ZEROFILL NOT NULL,
   PRIMARY KEY (`MaSanPham`),
@@ -161,31 +138,6 @@ CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`ChiTietDonDatHang` (
   CONSTRAINT `fk_MaSanPhamCTDDH_MaSanPhamSP`
     FOREIGN KEY (`MaSanPham`)
     REFERENCES `QuanLySanPham`.`SanPham` (`MaSanPham`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `QuanLySanPham`.`DiaChiNhanHang`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `QuanLySanPham`.`DiaChiNhanHang` (
-  `MaDiaChiNhanHang` INT ZEROFILL NOT NULL,
-  `MaDDH` VARCHAR(11) NOT NULL,
-  `TenNguoiNhan` VARCHAR(40) NULL,
-  `SDTNguoiNhan` VARCHAR(11) NULL,
-  `BiXoa` TINYINT NULL,
-  `SoNha` VARCHAR(20) NOT NULL,
-  `TenDuong` VARCHAR(40) NOT NULL,
-  `Phuong` VARCHAR(20) NOT NULL,
-  `Quan` VARCHAR(20) NOT NULL,
-  `Tinh` VARCHAR(20) NOT NULL,
-  `QuocGia` VARCHAR(40) NOT NULL,
-  PRIMARY KEY (`MaDiaChiNhanHang`),
-  INDEX `fk_MaDDH_idx` (`MaDDH` ASC), # VISIBLE,
-  CONSTRAINT `fk_MaDDH`
-    FOREIGN KEY (`MaDDH`)
-    REFERENCES `QuanLySanPham`.`DonDatHang` (`MaDonDatHang`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

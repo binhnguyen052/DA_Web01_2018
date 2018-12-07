@@ -66,6 +66,7 @@ Việt hóa lại template (*)
  + product-page.html (* Hào , ++(Bình-HEADER-NAVIGATION-FOOTER))
  + user-profile.html (* Cảnh)
  + login.html, login.css (* Cảnh)
+ 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 
 ==================== Giai đoạn 02 ====================

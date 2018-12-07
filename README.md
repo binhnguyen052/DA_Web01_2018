@@ -54,6 +54,10 @@ Upload source code (template) (++)
 
 Upload source code trang admin (template) (++)
 
+Upload source code user-profile.html, user-profile.js(++ Cảnh)
+
+
+
 Việt hóa lại template (*)
  + index.html (* Bình)
  + blank.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))

@@ -54,7 +54,7 @@ Upload source code (template) (++)
 
 Upload source code trang admin (template) (++)
 
-Upload source code user-profile.html, user-profile.js(++ Cảnh)
+Upload source code user-profile.html, user-profile.js (++ Cảnh)
 
 
 
@@ -64,6 +64,7 @@ Việt hóa lại template (*)
  + checkout.html (* Cảnh, ++(Bình-HEADER-NAVIGATION-FOOTER) )
  + products.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))
  + product-page.html (* Hào , ++(Bình-HEADER-NAVIGATION-FOOTER))
+ + user-profile.html (* Cảnh)
 
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 

@@ -13,20 +13,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
 
 	<!-- Slick -->
-	<link type="text/css" rel="stylesheet" href="css/slick.css" />
-	<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+	<link type="text/css" rel="stylesheet" href="../css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="../css/slick-theme.css" />
 
 	<!-- nouislider -->
-	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+	<link type="text/css" rel="stylesheet" href="../css/nouislider.min.css" />
 
 	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +35,12 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+
+	<!-- <link type="text/css" rel="stylesheet" href="css/user-profile.css" /> -->
 </head>
+
+
+<!-- https://bootsnipp.com/tags/profile -->
 
 <body>
 	<!-- HEADER -->
@@ -44,12 +49,12 @@
 		<div id="top-header">
 			<div class="container">
 				<div class="pull-left">
-					<span>Chào mừng đến với E-shop!</span>
+					<span>Welcome to E-shop!</span>
 				</div>
 				<div class="pull-right">
 					<ul class="header-top-links">
-						<li><a href="#">Cửa hàng</a></li> <!-- Tên Mục  -->
-						<li><a href="#">Bản tin</a></li>
+						<li><a href="#">Store</a></li>
+						<li><a href="#">Newsletter</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li class="dropdown default-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>
@@ -80,7 +85,7 @@
 					<!-- Logo -->
 					<div class="header-logo">
 						<a class="logo" href="#">
-							<img src="./img/logo.png" alt="">
+							<img src="../img/logo.png" alt="">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -88,11 +93,11 @@
 					<!-- Search -->
 					<div class="header-search">
 						<form>
-							<input class="input search-input" type="text" placeholder="Nhập từ khóa tìm kiếm">
+							<input class="input search-input" type="text" placeholder="Enter your keyword">
 							<select class="input search-categories">
-								<option value="0">DANH MỤC</option>
-								<option value="1">Danh mục 01</option>
-								<option value="1">Danh mục 02</option>
+								<option value="0">All Categories</option>
+								<option value="1">Category 01</option>
+								<option value="1">Category 02</option>
 							</select>
 							<button class="search-btn"><i class="fa fa-search"></i></button>
 						</form>
@@ -107,16 +112,16 @@
 								<div class="header-btns-icon">
 									<i class="fa fa-user-o"></i>
 								</div>
-								<strong class="text-uppercase">Tài khoản của tôi<i class="fa fa-caret-down"></i></strong>
+								<strong class="text-uppercase">My Account <i class="fa fa-caret-down"></i></strong>
 							</div>
-							<a href="#" class="text-uppercase">Đăng nhập</a>/<a href="#" class="text-uppercase">Đăng kí</a>
+							<a href="#" class="text-uppercase">Login</a> / <a href="#" class="text-uppercase">Join</a>
 							<ul class="custom-menu">
-								<li><a href="#"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
-								<li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
-								<li><a href="#"><i class="fa fa-exchange"></i>So sánh</a></li>
-								<li><a href="#"><i class="fa fa-check"></i>Thanh toán</a></li>
-								<li><a href="#"><i class="fa fa-unlock-alt"></i>Đăng nhập</a></li>
-								<li><a href="#"><i class="fa fa-user-plus"></i>Tạo tài khoản</a></li>
+								<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+								<li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li>
+								<li><a href="#"><i class="fa fa-exchange"></i> Compare</a></li>
+								<li><a href="#"><i class="fa fa-check"></i> Checkout</a></li>
+								<li><a href="#"><i class="fa fa-unlock-alt"></i> Login</a></li>
+								<li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>
 							</ul>
 						</li>
 						<!-- /Account -->
@@ -128,7 +133,7 @@
 									<i class="fa fa-shopping-cart"></i>
 									<span class="qty">3</span>
 								</div>
-								<strong class="text-uppercase">Giỏ hàng của tôi:</strong>
+								<strong class="text-uppercase">My Cart:</strong>
 								<br>
 								<span>35.20$</span>
 							</a>
@@ -137,21 +142,21 @@
 									<div class="shopping-cart-list">
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="./img/thumb-product01.jpg" alt="">
+												<img src="../img/thumb-product01.jpg" alt="">
 											</div>
 											<div class="product-body">
 												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-												<h2 class="product-name"><a href="#">Xem chi tiết</a></h2>
+												<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
 											</div>
 											<button class="cancel-btn"><i class="fa fa-trash"></i></button>
 										</div>
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="./img/thumb-product01.jpg" alt="">
+												<img src="../img/thumb-product01.jpg" alt="">
 											</div>
 											<div class="product-body">
 												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-												<h2 class="product-name"><a href="#">Xem chi tiết</a></h2>
+												<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
 											</div>
 											<button class="cancel-btn"><i class="fa fa-trash"></i></button>
 										</div>
@@ -195,7 +200,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -207,7 +213,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -219,7 +226,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -232,7 +240,7 @@
 									<div class="col-md-12">
 										<hr>
 										<a class="banner banner-1" href="#">
-											<img src="./img/banner05.jpg" alt="">
+											<img src="../img/banner05.jpg" alt="">
 											<div class="banner-caption text-center">
 												<h2 class="white-color">NEW COLLECTION</h2>
 												<h3 class="white-color font-weak">HOT DEAL</h3>
@@ -245,13 +253,15 @@
 
 						<li><a href="#">Thời trang nam</a></li>
 
-						<li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Điện thoại & Phụ kiệ <i class="fa fa-angle-right"></i></a>
+						<li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Điện
+								thoại & Phụ kiệ <i class="fa fa-angle-right"></i></a>
 							<div class="custom-menu">
 								<div class="row">
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -261,7 +271,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -273,7 +284,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -283,7 +295,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -293,7 +306,7 @@
 									</div>
 									<div class="col-md-4 hidden-sm hidden-xs">
 										<a class="banner banner-2" href="#">
-											<img src="./img/banner04.jpg" alt="">
+											<img src="../img/banner04.jpg" alt="">
 											<div class="banner-caption">
 												<h3 class="white-color">NEW<br>COLLECTION</h3>
 											</div>
@@ -303,7 +316,7 @@
 							</div>
 						</li>
 
-						<li><a href="#">Máy tính  & Văn phòng</a></li>
+						<li><a href="#">Máy tính & Văn phòng</a></li>
 						<li><a href="#">Điện tử gia dụng</a></li>
 
 						<li class="dropdown side-dropdown">
@@ -313,7 +326,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -323,7 +337,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -335,7 +350,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -345,7 +361,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -357,7 +374,8 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -367,7 +385,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -381,7 +400,7 @@
 
 						<li><a href="#">Túi xách & Giày dép</a></li>
 						<li><a href="#">Xem tất cả</a></li>
-						
+
 					</ul>
 				</div>
 				<!-- /category nav -->
@@ -392,25 +411,15 @@
 					<ul class="menu-list">
 						<li><a href="#">Trang chủ</a></li>
 						<li><a href="#">Shop</a></li>
-						<li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời trang nữ <i class="fa fa-caret-down"></i></a>
+						<li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời
+								trang nữ <i class="fa fa-caret-down"></i></a>
 							<div class="custom-menu">
 								<div class="row">
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
-												<li><a href="#">Women’s Clothing</a></li>
-												<li><a href="#">Men’s Clothing</a></li>
-												<li><a href="#">Phones & Accessories</a></li>
-												<li><a href="#">Jewelry & Watches</a></li>
-												<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
-									</div>
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -422,7 +431,21 @@
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
+											<li><a href="#">Women’s Clothing</a></li>
+											<li><a href="#">Men’s Clothing</a></li>
+											<li><a href="#">Phones & Accessories</a></li>
+											<li><a href="#">Jewelry & Watches</a></li>
+											<li><a href="#">Bags & Shoes</a></li>
+										</ul>
+										<hr class="hidden-md hidden-lg">
+									</div>
+									<div class="col-md-4">
+										<ul class="list-links">
+											<li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -435,7 +458,7 @@
 									<div class="col-md-12">
 										<hr>
 										<a class="banner banner-1" href="#">
-											<img src="./img/banner05.jpg" alt="">
+											<img src="../img/banner05.jpg" alt="">
 											<div class="banner-caption text-center">
 												<h2 class="white-color">NEW COLLECTION</h2>
 												<h3 class="white-color font-weak">HOT DEAL</h3>
@@ -445,13 +468,14 @@
 								</div>
 							</div>
 						</li>
-						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời trang nam <i class="fa fa-caret-down"></i></a>
+						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời
+								trang nam <i class="fa fa-caret-down"></i></a>
 							<div class="custom-menu">
 								<div class="row">
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="./img/banner06.jpg" alt="">
+												<img src="../img/banner06.jpg" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Women’s</h3>
 												</div>
@@ -460,7 +484,8 @@
 										</div>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -471,7 +496,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="./img/banner07.jpg" alt="">
+												<img src="../img/banner07.jpg" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Men’s</h3>
 												</div>
@@ -480,7 +505,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -491,7 +517,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="./img/banner08.jpg" alt="">
+												<img src="../img/banner08.jpg" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Accessories</h3>
 												</div>
@@ -500,7 +526,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -511,7 +538,7 @@
 									<div class="col-md-3">
 										<div class="hidden-sm hidden-xs">
 											<a class="banner banner-1" href="#">
-												<img src="./img/banner09.jpg" alt="">
+												<img src="../img/banner09.jpg" alt="">
 												<div class="banner-caption text-center">
 													<h3 class="white-color text-uppercase">Bags</h3>
 												</div>
@@ -520,7 +547,8 @@
 										<hr>
 										<ul class="list-links">
 											<li>
-												<h3 class="list-links-title">Categories</h3></li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
 											<li><a href="#">Women’s Clothing</a></li>
 											<li><a href="#">Men’s Clothing</a></li>
 											<li><a href="#">Phones & Accessories</a></li>
@@ -532,12 +560,15 @@
 							</div>
 						</li>
 						<li><a href="#">Giảm giá</a></li>
-						<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Các trang<i class="fa fa-caret-down"></i></a>
+						<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Các
+								trang<i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
-								<li><a href="index.html">Trang chủ</a></li>
+								<li><a href="../../index.html">Trang chủ</a></li>
 								<li><a href="products.html">Các sản phẩm</a></li>
 								<li><a href="product-page.html">Chi tiết sản phẩm</a></li>
 								<li><a href="checkout.html">Thanh toán</a></li>
+								<li><a href="admin/index.html">Admin (test view)</a></li>
+								<li><a href="blank.html">Blank</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -553,8 +584,8 @@
 	<div id="breadcrumb">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href="#">Trang Chủ</a></li>
-				<li class="active">Thanh Toán</li>
+				<li><a href="#">Home</a></li>
+				<li class="active">Blank</li>
 			</ul>
 		</div>
 	</div>
@@ -565,192 +596,119 @@
 		<!-- container -->
 		<div class="container">
 			<!-- row -->
+
 			<div class="row">
-				<form id="checkout-form" class="clearfix">
-					<div class="col-md-6">
-						<div class="billing-details">
-							<p>Bạn đã là Khách Hàng Chưa? <a href="#">Đăng Nhập</a></p>
-							<div class="section-title">
-								<h3 class="title">Chi Tiết Hóa Đơn</h3>
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="Tên">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="last-name" placeholder="Họ">
-							</div>
-							<div class="form-group">
-								<input class="input" type="email" name="email" placeholder="Email">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="Địa Chỉ">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="Thành Phố">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="country" placeholder="Quốc Gia">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-							</div>
-							<div class="form-group">
-								<input class="input" type="tel" name="tel" placeholder="Số Điện Thoại">
-							</div>
-							<div class="form-group">
-								<div class="input-checkbox">
-									<input type="checkbox" id="register">
-									<label class="font-weak" for="register">Tạo Tài Khoản ?</label>
-									<div class="caption">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-											<p>
-												<input class="input" type="password" name="password" placeholder="Enter Your Password">
-									</div>
-								</div>
-							</div>
-						</div>
+
+				<div class="col-md-3 ">
+					<div class="text-center">
+						<img src="../img/user-profile/user.png" class="avatar img-circle img-thumbnail" alt="avatar">
+						<h6>Tải lên một ảnh khác...</h6>
+						<input type="file" class="text-center center-block file-upload">
 					</div>
+					</hr>
+					<div class="list-group ">
+						<a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
+						<a href="#" class="list-group-item list-group-item-action">User Management</a>
+						<a href="#" class="list-group-item list-group-item-action">Used</a>
+						<a href="#" class="list-group-item list-group-item-action">Enquiry</a>
+						<a href="#" class="list-group-item list-group-item-action">Dealer</a>
+						<a href="#" class="list-group-item list-group-item-action">Media</a>
+						<a href="#" class="list-group-item list-group-item-action">Post</a>
+						<a href="#" class="list-group-item list-group-item-action">Category</a>
+						<a href="#" class="list-group-item list-group-item-action">New</a>
+						<a href="#" class="list-group-item list-group-item-action">Comments</a>
+						<a href="#" class="list-group-item list-group-item-action">Appearance</a>
+						<a href="#" class="list-group-item list-group-item-action">Reports</a>
+						<a href="#" class="list-group-item list-group-item-action">Settings</a>
 
-					<div class="col-md-6">
-						<div class="shiping-methods">
-							<div class="section-title">
-								<h4 class="title">Phương Thức Vận Chuyển</h4>
-							</div>
-							<div class="input-checkbox">
-								<input type="radio" name="shipping" id="shipping-1" checked>
-								<label for="shipping-1">Free Shiping -  $0.00</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										<p>
-								</div>
-							</div>
-							<div class="input-checkbox">
-								<input type="radio" name="shipping" id="shipping-2">
-								<label for="shipping-2">Tiêu Chuẩn - $4.00</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										<p>
-								</div>
-							</div>
-						</div>
-
-						<div class="payments-methods">
-							<div class="section-title">
-								<h4 class="title">Phương Thức Thanh Toán</h4>
-							</div>
-							<div class="input-checkbox">
-								<input type="radio" name="payments" id="payments-1" checked>
-								<label for="payments-1">Chuyển Qua Ngân Hàng</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										<p>
-								</div>
-							</div>
-							<div class="input-checkbox">
-								<input type="radio" name="payments" id="payments-2">
-								<label for="payments-2">Cheque Payment</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										<p>
-								</div>
-							</div>
-							<div class="input-checkbox">
-								<input type="radio" name="payments" id="payments-3">
-								<label for="payments-3">Hệ Thống Paypal </label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										<p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="order-summary clearfix">
-							<div class="section-title">
-								<h3 class="title">Xem Lại Đơn Đặt Hàng</h3>
-							</div>
-							<table class="shopping-cart-table table">
-								<thead>
-									<tr>
-										<th>Sản Phẩm</th>
-										<th></th>
-										<th class="text-center">Giá</th>
-										<th class="text-center">Số Lượng</th>
-										<th class="text-center">Tổng</th>
-										<th class="text-right"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="thumb"><img src="./img/thumb-product01.jpg" alt=""></td>
-										<td class="details">
-											<a href="#">Tên Sản Phẩm</a>
-											<ul>
-												<li><span>Kích Thước: XL</span></li>
-												<li><span>Màu sắc: Camelot</span></li>
-											</ul>
-										</td>
-										<td class="price text-center"><strong>$32.50</strong><br><del class="font-weak"><small>$40.00</small></del></td>
-										<td class="qty text-center"><input class="input" type="number" value="1"></td>
-										<td class="total text-center"><strong class="primary-color">$32.50</strong></td>
-										<td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
-									</tr>
-									<tr>
-										<td class="thumb"><img src="./img/thumb-product01.jpg" alt=""></td>
-										<td class="details">
-											<a href="#">Tên Sản Phẩm</a>
-											<ul>
-												<li><span>Kích Thước: XL</span></li>
-												<li><span>Màu sắc: Camelot</span></li>
-											</ul>
-										</td>
-										<td class="price text-center"><strong>$32.50</strong></td>
-										<td class="qty text-center"><input class="input" type="number" value="1"></td>
-										<td class="total text-center"><strong class="primary-color">$32.50</strong></td>
-										<td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
-									</tr>
-									<tr>
-										<td class="thumb"><img src="./img/thumb-product01.jpg" alt=""></td>
-										<td class="details">
-											<a href="#">Tên Sản Phẩm</a>
-											<ul>
-												<li><span>Kích Thước: XL</span></li>
-												<li><span>Màu sắc: Camelot</span></li>
-											</ul>
-										</td>
-										<td class="price text-center"><strong>$32.50</strong></td>
-										<td class="qty text-center"><input class="input" type="number" value="1"></td>
-										<td class="total text-center"><strong class="primary-color">$32.50</strong></td>
-										<td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<th class="empty" colspan="3"></th>
-										<th>SUBTOTAL</th>
-										<th colspan="2" class="sub-total">$97.50</th>
-									</tr>
-									<tr>
-										<th class="empty" colspan="3"></th>
-										<th>SHIPING</th>
-										<td colspan="2">Free Shipping</td>
-									</tr>
-									<tr>
-										<th class="empty" colspan="3"></th>
-										<th>TOTAL</th>
-										<th colspan="2" class="total">$97.50</th>
-									</tr>
-								</tfoot>
-							</table>
-							<div class="pull-right">
-								<button class="primary-btn">Đặt Hàng</button>
-							</div>
-						</div>
 
 					</div>
-				</form>
+				</div>
+				<div class="col-md-9">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12">
+									<h4>Your Profile</h4>
+									<hr>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<form>
+										<div class="form-group row">
+											<label for="username" class="col-4 col-form-label">User Name*</label>
+											<div class="col-8">
+												<input id="username" name="username" placeholder="Username" class="form-control here" required="required"
+												 type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="name" class="col-4 col-form-label">First Name</label>
+											<div class="col-8">
+												<input id="name" name="name" placeholder="First Name" class="form-control here" type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="lastname" class="col-4 col-form-label">Last Name</label>
+											<div class="col-8">
+												<input id="lastname" name="lastname" placeholder="Last Name" class="form-control here" type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="text" class="col-4 col-form-label">Nick Name*</label>
+											<div class="col-8">
+												<input id="text" name="text" placeholder="Nick Name" class="form-control here" required="required" type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="select" class="col-4 col-form-label">Display Name public as</label>
+											<div class="col-8">
+												<select id="select" name="select" class="custom-select">
+													<option value="admin">Admin</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="email" class="col-4 col-form-label">Email*</label>
+											<div class="col-8">
+												<input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="website" class="col-4 col-form-label">Website</label>
+											<div class="col-8">
+												<input id="website" name="website" placeholder="website" class="form-control here" type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="publicinfo" class="col-4 col-form-label">Public Info</label>
+											<div class="col-8">
+												<textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="newpass" class="col-4 col-form-label">New Password</label>
+											<div class="col-8">
+												<input id="newpass" name="newpass" placeholder="New Password" class="form-control here" type="text">
+											</div>
+										</div>
+										<div class="form-group row">
+											<div class="offset-4 col-8">
+												<button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
 			</div>
+
 			<!-- /row -->
 		</div>
 		<!-- /container -->
@@ -769,8 +727,8 @@
 						<!-- footer logo -->
 						<div class="footer-logo">
 							<a class="logo" href="#">
-		            <img src="./img/logo.png" alt="">
-		          </a>
+								<img src="../img/logo.png" alt="">
+							</a>
 						</div>
 						<!-- /footer logo -->
 
@@ -844,7 +802,10 @@
 					<div class="footer-copyright">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						1660052 - Nguyễn Đình Bình | 1660056 - Nguyễn Tuấn Cảnh | 1660164 - Nguyễn Anh Hào<br>
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						Copyright &copy;<script>
+							document.write(new Date().getFullYear());
+						</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+						 href="https://colorlib.com" target="_blank">Colorlib</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 					<!-- /footer copyright -->
@@ -856,14 +817,14 @@
 	</footer>
 	<!-- /FOOTER -->
 
-	<!-- jQuery Plugins -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/jquery.zoom.min.js"></script>
-	<script src="js/main.js"></script>
 
+	<!-- jQuery Plugins -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/nouislider.min.js"></script>
+	<script src="../js/jquery.zoom.min.js"></script>
+	<script src="../js/main.js"></script>
 </body>
 
 </html>

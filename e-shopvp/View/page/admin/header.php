@@ -43,7 +43,7 @@
       <i class="fas fa-bars"></i>
     </button>
 
-    <a class="navbar-brand mr-1 text-info" href="../../../index.html">Home</a>
+    <a class="navbar-brand mr-1 text-info" href="../../../index.php">Home</a>
     
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">

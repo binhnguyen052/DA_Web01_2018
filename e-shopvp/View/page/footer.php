@@ -1,0 +1,9 @@
+<!-- 
+    index.php
+    blank.php
+    checkout.php
+    product-page.php
+    products.php
+    register.php
+    user-profile.php
+-->

@@ -1,0 +1,6 @@
+https://viblo.asia/p/phan-biet-mo-hinh-3-layer-va-mvc-m68Z0mP2lkG
+
+
+V là View: Hiển thị dữ liệu cho người dùng theo cách dễ hiểu dựa trên hành động của người dùng.
+Đảm nhận việc hiển thị thông tin, tương tác với người dùng, nơi chứa tất cả các đối tượng GUI như textbox, 
+images… Hiểu một cách đơn giản, nó là tập hợp các form hoặc các file HTML.

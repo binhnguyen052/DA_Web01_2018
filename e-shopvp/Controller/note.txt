@@ -1,0 +1,7 @@
+https://viblo.asia/p/phan-biet-mo-hinh-3-layer-va-mvc-m68Z0mP2lkG
+
+
+C là Controller: Nhận lệnh từ người dùng, gửi lệnh đến cho Model để cập nhập dữ liệu, 
+truyền lệnh đến View để cập nhập giao diện hiển thị.
+Giữ nhiệm vụ nhận điều hướng các yêu cầu từ người dùng và gọi đúng những phương thức xử lý chúng… 
+Chẳng hạn thành phần này sẽ nhận request từ url và form để thao tác trực tiếp với Model.

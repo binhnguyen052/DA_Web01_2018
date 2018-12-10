@@ -1,0 +1,8 @@
+https://viblo.asia/p/phan-biet-mo-hinh-3-layer-va-mvc-m68Z0mP2lkG
+
+
+M là Model: cấu trúc dữ liệu theo cách tin cậy và chuẩn bị dữ liệu theo lệnh của controller
+Đây là thành phần chứa tất cả các nghiệp vụ logic, phương thức xử lý, truy xuất database, 
+đối tượng mô tả dữ liệu như các Class, hàm xử lý…
+
+Ở MVC, thành phần Model giữ chức năng của cả lớp Business và Data Access trong mô hình 3 Layer.

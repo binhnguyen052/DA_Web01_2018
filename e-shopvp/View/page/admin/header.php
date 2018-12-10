@@ -116,46 +116,60 @@
           <span class="text-uppercase">Pages</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Login Screens:</h6>
+          <h6 class="dropdown-header text-uppercase text-info">management:</h6>
+          <a class="dropdown-item" href="account.php">Account</a>
+          <a class="dropdown-item" href="product.php">Product</a>
+          <a class="dropdown-item" href="product-type.php">Product Type</a>
+          <a class="dropdown-item" href="manufacturer.php">Manufacturer</a>
+          <a class="dropdown-item" href="order.php">Product Orders</a>
+          <a class="dropdown-item" href="order-detail.php">Product Order Details</a>
+
+          <h6 class="dropdown-header text-uppercase text-info">Login Screens:</h6>
           <a class="dropdown-item" href="login.php">Login</a>
           <a class="dropdown-item" href="register.php">Register</a>
           <a class="dropdown-item" href="forgot-password.php">Forgot Password</a>
           <div class="dropdown-divider"></div>
-          <h6 class="dropdown-header">Other Pages:</h6>
+          <h6 class="dropdown-header text-uppercase text-info">Other Pages:</h6>
           <a class="dropdown-item" href="404.php">404 Page</a>
           <a class="dropdown-item" href="blank.php">Blank Page</a>
         </div>
       </li>
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="account.php">
           <i class="fas fa-fw fa-table"></i>
-          <span class="text-warning text-uppercase">account management</span></a>
+          <span class="text-info text-uppercase">account management</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="product.php">
           <i class="fas fa-fw fa-table"></i>
-          <span class="text-warning text-uppercase">Product Management</span></a>
+          <span class="text-info text-uppercase">Product Management</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="product-type.php">
           <i class="fas fa-fw fa-table"></i>
-          <span class="text-warning text-uppercase">Product type Management</span></a>
+          <span class="text-info text-uppercase">Product type Management</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="manufacturer.php">
           <i class="fas fa-fw fa-table"></i>
-          <span class="text-warning text-uppercase">manufacturer management</span></a>
+          <span class="text-info text-uppercase">manufacturer management</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="order.php">
           <i class="fas fa-fw fa-table"></i>
-          <span class="text-warning text-uppercase">order management</span></a>
+          <span class="text-info text-uppercase">Product orders management</span></a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="order-detail.php">
+          <i class="fas fa-fw fa-table"></i>
+          <span class="text-info text-uppercase">Product order details</span></a>
+      </li> -->
 
       <li class="nav-item">
         <a class="nav-link" href="tables.php">

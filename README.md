@@ -64,8 +64,9 @@ Việt hóa lại template (*)
  + checkout.html (* Cảnh, ++(Bình-HEADER-NAVIGATION-FOOTER) )
  + products.html (* Hào, ++(Bình-HEADER-NAVIGATION-FOOTER))
  + product-page.html (* Hào , ++(Bình-HEADER-NAVIGATION-FOOTER))
- + user-profile.html (* Cảnh)
- + login.html, login.css (* Cảnh)
+ + user-profile.html (++ Cảnh)
+ + login.html (++ Cảnh)
+ + register.html (++ Cảnh)
  
 Chỉnh template phù hợp với yêu cầu đồ án (*)
 

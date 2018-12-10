@@ -31,6 +31,8 @@ Stage01: chỉ chứa các file source web liên quan đến giai đoạn 01
 
 Stage02: chỉ chứa các file database liên quan đến giai đoạn 02
 
+eshopvp: folder sẽ chạy đồ án (cắt file.php, file.php, kết nối database)
+
 Ghi chú kí hiệu: 
 
 *: chưa hoàn thành, hoặc đang trong tiến trình kiểm thử, chỉnh sửa lại cho phù hợp, fix lỗi, ...
@@ -74,7 +76,9 @@ Chỉnh template phù hợp với yêu cầu đồ án (*)
 
 + folder: Stage 02
 
-Thiết kế và upload database (* v1)
+Thiết kế và upload database (++ v1)
+
+Thiết kế mô hình: chọn mô hình MVC (++)
 
 Insert Database (*)
 

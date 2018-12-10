@@ -12,8 +12,8 @@ define('DB_DATABASE', "eshopv");
 //port: cổng mạng 
 define('DB_PORT', 3308);
 
-//thông số controller và action mặc định
-define('CONTROLLER_DEFAULT', 'index');
-define('ACTION_DEFAULT', 'index');
+// //thông số controller và action mặc định
+// define('CONTROLLER_DEFAULT', 'index');
+// define('ACTION_DEFAULT', 'index');
 
 ?>

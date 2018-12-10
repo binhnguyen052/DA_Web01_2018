@@ -58,7 +58,7 @@
 				<!-- section-title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">Khuyến mãi trong ngày</h2>
+						<h2 class="title">Sản phẩm mới nhất</h2>
 						<div class="pull-right">
 							<div class="product-slick-dots-1 custom-dots"></div>
 						</div>
@@ -228,7 +228,7 @@
 				<!-- section title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">Khuyến mãi trong ngày</h2>
+						<h2 class="title">Bán chạy nhất</h2>
 						<div class="pull-right">
 							<div class="product-slick-dots-2 custom-dots">
 							</div>
@@ -449,7 +449,7 @@
 				<!-- section title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">Sản phẩm mới nhất</h2>
+						<h2 class="title">Xem nhiều nhất</h2>
 					</div>
 				</div>
 				<!-- section title -->

@@ -109,7 +109,8 @@
 								</div>
 								<strong class="text-uppercase">Tài khoản của tôi<i class="fa fa-caret-down"></i></strong>
 							</div>
-							<a href="View/page/login.php" class="text-uppercase">Đăng nhập</a>/<a href="View/page/register.php" class="text-uppercase">Đăng kí</a>
+							<a href="View/page/login.php" class="text-uppercase">Đăng nhập</a>/<a href="View/page/register.php" class="text-uppercase">Đăng
+								kí</a>
 							<ul class="custom-menu">
 								<li><a href="#"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
 								<li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
@@ -406,7 +407,98 @@
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
 						<li><a href="#">Trang chủ</a></li>
-						<li><a href="#">Shop</a></li>
+						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Nhà
+								sản xuất <i class="fa fa-caret-down"></i></a>
+							<div class="custom-menu">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="hidden-sm hidden-xs">
+											<a class="banner banner-1" href="#">
+												<img src="View/img/banner06.jpg" alt="">
+												<div class="banner-caption text-center">
+													<h3 class="white-color text-uppercase">Women’s</h3>
+												</div>
+											</a>
+											<hr>
+										</div>
+										<ul class="list-links">
+											<li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
+											<li><a href="#">Women’s Clothing</a></li>
+											<li><a href="#">Men’s Clothing</a></li>
+											<li><a href="#">Phones & Accessories</a></li>
+											<li><a href="#">Jewelry & Watches</a></li>
+											<li><a href="#">Bags & Shoes</a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<div class="hidden-sm hidden-xs">
+											<a class="banner banner-1" href="#">
+												<img src="View/img/banner07.jpg" alt="">
+												<div class="banner-caption text-center">
+													<h3 class="white-color text-uppercase">Men’s</h3>
+												</div>
+											</a>
+										</div>
+										<hr>
+										<ul class="list-links">
+											<li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
+											<li><a href="#">Women’s Clothing</a></li>
+											<li><a href="#">Men’s Clothing</a></li>
+											<li><a href="#">Phones & Accessories</a></li>
+											<li><a href="#">Jewelry & Watches</a></li>
+											<li><a href="#">Bags & Shoes</a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<div class="hidden-sm hidden-xs">
+											<a class="banner banner-1" href="#">
+												<img src="View/img/banner08.jpg" alt="">
+												<div class="banner-caption text-center">
+													<h3 class="white-color text-uppercase">Accessories</h3>
+												</div>
+											</a>
+										</div>
+										<hr>
+										<ul class="list-links">
+											<li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
+											<li><a href="#">Women’s Clothing</a></li>
+											<li><a href="#">Men’s Clothing</a></li>
+											<li><a href="#">Phones & Accessories</a></li>
+											<li><a href="#">Jewelry & Watches</a></li>
+											<li><a href="#">Bags & Shoes</a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<div class="hidden-sm hidden-xs">
+											<a class="banner banner-1" href="#">
+												<img src="View/img/banner09.jpg" alt="">
+												<div class="banner-caption text-center">
+													<h3 class="white-color text-uppercase">Bags</h3>
+												</div>
+											</a>
+										</div>
+										<hr>
+										<ul class="list-links">
+											<li>
+												<h3 class="list-links-title">Categories</h3>
+											</li>
+											<li><a href="#">Women’s Clothing</a></li>
+											<li><a href="#">Men’s Clothing</a></li>
+											<li><a href="#">Phones & Accessories</a></li>
+											<li><a href="#">Jewelry & Watches</a></li>
+											<li><a href="#">Bags & Shoes</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+
 						<li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời
 								trang nữ <i class="fa fa-caret-down"></i></a>
 							<div class="custom-menu">
@@ -464,6 +556,7 @@
 								</div>
 							</div>
 						</li>
+
 						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời
 								trang nam <i class="fa fa-caret-down"></i></a>
 							<div class="custom-menu">

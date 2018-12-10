@@ -14,11 +14,11 @@
             <li class="breadcrumb-item">
               <a href="index.php">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Blank Page</li>
+            <li class="breadcrumb-item active">Product</li>
           </ol>
 
           <!-- Page Content -->
-          <h1>Blank Page</h1>
+          <h1>Quản lý sản phẩm</h1>
           <hr>
           <p>This is a great starting point for new custom pages.</p>
 

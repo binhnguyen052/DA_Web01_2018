@@ -86,6 +86,8 @@ Insert Database (*)
 
 Kiểm thử database lên localhost (*)
 
+Thư mục eshopvp
+
 Tạo mô hình phù hợp để truy vấn và đổ dữ liệu lên web (*)
 
 ==================== Giai đoạn 04 ====================

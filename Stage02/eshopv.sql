@@ -15,128 +15,127 @@ CREATE DATABASE IF NOT EXISTS `eshopv` DEFAULT CHARACTER SET utf8 COLLATE utf8_u
 USE `eshopv` ;
 
 -- -----------------------------------------------------
--- Table `eshopv`.`TaiKhoan`
+-- Table `eshopv`.`ACCOUNT`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `eshopv`.`TaiKhoan` (
-  `MaTaiKhoan` INT ZEROFILL NOT NULL AUTO_INCREMENT,
-  `TenDangNhap` VARCHAR(20) NOT NULL,
-  `MatKhau` VARCHAR(20) NOT NULL,
-  `TenHienThi` VARCHAR(40) NOT NULL,
-  `DiaChi` VARCHAR(200) NULL,
-  `DienThoai` VARCHAR(11) NULL,
+CREATE TABLE IF NOT EXISTS `eshopv`.`ACCOUNT` (
+  `AccountID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
+  `UserName` VARCHAR(20) NOT NULL,
+  `Password` VARCHAR(20) NOT NULL,
+  `DisplayName` VARCHAR(40) NOT NULL,
+  `Address` VARCHAR(200) NULL,
+  `Tel` VARCHAR(11) NULL,
   `Email` VARCHAR(40) NULL,
-  `BiXoa` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
-  `HinhDaiDienURL` VARCHAR(100) NULL,
-  `MaLoaiTaiKhoan` SMALLINT ZEROFILL NOT NULL COMMENT '0: admin, 1: khach hang',
-  PRIMARY KEY (`MaTaiKhoan`))
+  `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
+  `AvartarURL` VARCHAR(100) NULL,
+  `AccountType` SMALLINT ZEROFILL NOT NULL COMMENT '0: admin, 1: khach hang',
+  PRIMARY KEY (`AccountID`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `eshopv`.`DonDatHang`
+-- Table `eshopv`.`PRODUCT_ORDER`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `eshopv`.`DonDatHang` (
-  `MaDonDatHang` VARCHAR(11) NOT NULL,
-  `MaTaiKhoan` INT ZEROFILL NOT NULL,
-  `NgayLap` DATETIME NOT NULL,
-  `NgayDuKienGiaoHang` DATETIME NOT NULL,
-  `TongThanhTien` BIGINT NOT NULL,
-  `BiXoa` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
-  `TinhTrang` SMALLINT NOT NULL COMMENT '0: chua giao, 1: da giao',
-  `TenNguoiNhan` VARCHAR(40) NOT NULL,
-  `SDTNguoiNhan` VARCHAR(11) NULL,
-  `SoNha` VARCHAR(20) NOT NULL,
-  `TenDuong` VARCHAR(20) NOT NULL,
-  `Phuong` VARCHAR(20) NOT NULL,
-  `Quan` VARCHAR(20) NOT NULL,
-  `Tinh` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`MaDonDatHang`),
-  INDEX `fk_MaTaiKhoan_MaTaiKhoan_idx` (`MaTaiKhoan` ASC), #VISIBLE,
-  CONSTRAINT `fk_MaTaiKhoanDDH_MaTaiKhoanTK`
-    FOREIGN KEY (`MaTaiKhoan`)
-    REFERENCES `eshopv`.`TaiKhoan` (`MaTaiKhoan`)
+CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT_ORDER` (
+  `ProductOrderID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
+  `AccountID` INT ZEROFILL NOT NULL,
+  `DateCreate` DATETIME NOT NULL COMMENT 'ngày lập',
+  `DateDelivery` DATETIME NOT NULL COMMENT 'ngày giao',
+  `TotalAmount` BIGINT NOT NULL COMMENT 'tổng tiền',
+  `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
+  `Status` SMALLINT NOT NULL COMMENT '0: chua giao, 1: da giao',
+  `RecipientName` VARCHAR(40) NOT NULL COMMENT 'tên người nhận',
+  `RecipientTel` VARCHAR(11) NULL COMMENT 'SDT người nhận',
+  `AddressNumber` VARCHAR(20) NOT NULL COMMENT 'số nhà',
+  `Street` VARCHAR(20) NOT NULL COMMENT 'tên đường',
+  `Ward` VARCHAR(20) NOT NULL COMMENT 'phường, xã',
+  `District` VARCHAR(20) NOT NULL COMMENT 'quận, huyện',
+  `Province` VARCHAR(20) NOT NULL COMMENT 'tỉnh, thành phố',
+  PRIMARY KEY (`ProductOrderID`),
+  INDEX `fk_MaTaiKhoan_MaTaiKhoan_idx` (`AccountID` ASC), #VISIBLE,
+  CONSTRAINT `fk_AccounID_PO`
+    FOREIGN KEY (`AccountID`)
+    REFERENCES `eshopv`.`ACCOUNT` (`AccountID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `eshopv`.`LoaiSanPham`
+-- Table `eshopv`.`PRODUCT_TYPE`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `eshopv`.`LoaiSanPham` (
-  `MaLoaiSanPham` INT ZEROFILL NOT NULL,
-  `TenLoaiSanPham` VARCHAR(100) NULL,
-  `BiXoa` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
-  PRIMARY KEY (`MaLoaiSanPham`))
+CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT_TYPE` (
+  `ProductTypeID` INT ZEROFILL NOT NULL,
+  `ProductTypeName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
+  `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
+  PRIMARY KEY (`ProductTypeID`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `eshopv`.`HangSanXuat`
+-- Table `eshopv`.`MANUFACTURER`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `eshopv`.`HangSanXuat` (
-  `MaHangSanXuat` INT ZEROFILL NOT NULL,
-  `TenHangSanXuat` VARCHAR(100) NULL,
+CREATE TABLE IF NOT EXISTS `eshopv`.`MANUFACTURER` (
+  `ManufacturerID` INT ZEROFILL NOT NULL,
+  `ManufactureName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
   `LogoURL` VARCHAR(100) NULL,
-  `BiXoa` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
-  `HangSanXuatcol` VARCHAR(45) NULL,
-  PRIMARY KEY (`MaHangSanXuat`))
+  `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
+  PRIMARY KEY (`ManufacturerID`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `eshopv`.`SanPham`
+-- Table `eshopv`.`PRODUCT`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `eshopv`.`SanPham` (
-  `MaSanPham` INT ZEROFILL NOT NULL AUTO_INCREMENT,
-  `TenSanPham` VARCHAR(100) NULL,
-  `HinhURL` VARCHAR(100) NULL,
-  `GiaSanPham` INT NULL,
-  `XuatXu` VARCHAR(40) NULL,
-  `NgayNhap` DATETIME NULL,
-  `SoLuongTon` INT NULL,
-  `SoLuongBan` INT NULL,
-  `SoLuotXem` INT NULL,
-  `MoTa` TEXT NULL,
-  `BiXoa` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
-  `MaLoaiSanPham` INT ZEROFILL NOT NULL,
-  `MaHangSanXuat` INT ZEROFILL NOT NULL,
-  PRIMARY KEY (`MaSanPham`),
-  INDEX `fk_MaLoaiSanPhamSP_MaLoaiSanPhamLSP_idx` (`MaLoaiSanPham` ASC), # VISIBLE,
-  INDEX `fk_MaHangSanXuatSP_MaHangSanXuatHSX_idx` (`MaHangSanXuat` ASC), # VISIBLE,
-  CONSTRAINT `fk_MaLoaiSanPhamSP_MaLoaiSanPhamLSP`
-    FOREIGN KEY (`MaLoaiSanPham`)
-    REFERENCES `eshopv`.`LoaiSanPham` (`MaLoaiSanPham`)
+CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT` (
+  `ProductID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
+  `ProductName` VARCHAR(100) NULL,
+  `ImageURL` VARCHAR(100) NULL,
+  `Price` INT NULL,
+  `Origin` VARCHAR(40) NULL COMMENT 'xuất xứ',
+  `DateAdded` DATETIME NULL COMMENT 'ngày nhập',
+  `InventoryQuantity` INT NULL COMMENT 'Số lượng tồn',
+  `AmountSold` INT NULL COMMENT 'số lượng bán',
+  `ViewCounts` INT NULL COMMENT 'số lượt xem',
+  `Descreibe` TEXT NULL COMMENT 'mô tả',
+  `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
+  `ProductTypeID` INT ZEROFILL NOT NULL,
+  `ManufacturerID` INT ZEROFILL NOT NULL,
+  PRIMARY KEY (`ProductID`),
+  INDEX `fk_MaLoaiSanPhamSP_MaLoaiSanPhamLSP_idx` (`ProductTypeID` ASC), # VISIBLE,
+  INDEX `fk_MaHangSanXuatSP_MaHangSanXuatHSX_idx` (`ManufacturerID` ASC), # VISIBLE,
+  CONSTRAINT `fk_ProductTypeID`
+    FOREIGN KEY (`ProductTypeID`)
+    REFERENCES `eshopv`.`PRODUCT_TYPE` (`ProductTypeID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_MaHangSanXuatSP_MaHangSanXuatHSX`
-    FOREIGN KEY (`MaHangSanXuat`)
-    REFERENCES `eshopv`.`HangSanXuat` (`MaHangSanXuat`)
+  CONSTRAINT `fk_ManufacturerID`
+    FOREIGN KEY (`ManufacturerID`)
+    REFERENCES `eshopv`.`MANUFACTURER` (`ManufacturerID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `eshopv`.`ChiTietDonDatHang`
+-- Table `eshopv`.`ORDER_DETAIL`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `eshopv`.`ChiTietDonDatHang` (
-  `MaChiTietDonDatHang` VARCHAR(15) NOT NULL,
-  `SoLuong` INT NULL,
-  `GiaBan` INT NULL,
-  `MaDonDatHang` VARCHAR(11) NOT NULL,
-  `MaSanPham` INT ZEROFILL NOT NULL,
-  PRIMARY KEY (`MaChiTietDonDatHang`),
-  INDEX `fk_MaDonDatHangCTDDH_MaDonDatHangDDH_idx` (`MaDonDatHang` ASC), # VISIBLE,
-  INDEX `fk_MaSanPhamCTDDH_MaSanPhamSP_idx` (`MaSanPham` ASC), # VISIBLE,
-  CONSTRAINT `fk_MaDonDatHangCTDDH_MaDonDatHangDDH`
-    FOREIGN KEY (`MaDonDatHang`)
-    REFERENCES `eshopv`.`DonDatHang` (`MaDonDatHang`)
+CREATE TABLE IF NOT EXISTS `eshopv`.`ORDER_DETAIL` (
+  `OrderDetailID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
+  `Quantity` INT NULL,
+  `Price` INT NULL,
+  `ProductOrderID` INT ZEROFILL NOT NULL,
+  `ProductID` INT ZEROFILL NOT NULL,
+  PRIMARY KEY (`OrderDetailID`),
+  INDEX `fk_MaDonDatHangCTDDH_MaDonDatHangDDH_idx` (`ProductOrderID` ASC), # VISIBLE,
+  INDEX `fk_MaSanPhamCTDDH_MaSanPhamSP_idx` (`ProductID` ASC), # VISIBLE,
+  CONSTRAINT `fk_ProductOrderID_O`
+    FOREIGN KEY (`ProductOrderID`)
+    REFERENCES `eshopv`.`PRODUCT_ORDER` (`ProductOrderID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_MaSanPhamCTDDH_MaSanPhamSP`
-    FOREIGN KEY (`MaSanPham`)
-    REFERENCES `eshopv`.`SanPham` (`MaSanPham`)
+  CONSTRAINT `fk_ProductID_O`
+    FOREIGN KEY (`ProductID`)
+    REFERENCES `eshopv`.`PRODUCT` (`ProductID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

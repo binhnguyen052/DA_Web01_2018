@@ -4,7 +4,8 @@
 include_once("../../../Model/database/database.php");
 
   //khởi tạo biến database
-$db = new Database();
+  $db = new Database();
+  $db->db_connect();
 ?>
 
 <?php
@@ -50,4 +51,8 @@ include("./header.php");
 
 <?php
 include("./footer.php");
+?>
+
+<?php
+  $db->db_close();
 ?>

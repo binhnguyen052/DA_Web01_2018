@@ -24,30 +24,30 @@
 					<div class="col-md-6">
 						<div id="product-main-view">
 							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes04.jpg" alt="">
+								<img src="../img/products/adidas/shoes/adidas_shoes03.jpg" alt="">
 							</div>
 							<div class="product-view">
 								<img src="../img/products/seiko/watches/seiko_watches01.jpg" alt="">
 							</div>
 							<div class="product-view">
-								<img src="../img/main-product03.jpg" alt="">
+								<img src="../img/products/adidas/shoes/adidas_shoes02.jpg" alt="">
 							</div>
 							<div class="product-view">
-								<img src="../img/main-product04.jpg" alt="">
+								<img src="../img/products/adidas/shoes/adidas_shoes05.jpg" alt="">
 							</div>
 						</div>
 						<div id="product-view">
 							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes04.jpg" alt="">
+								<img src="../img/products/adidas/shoes/adidas_shoes03.jpg" alt="">
 							</div>
 							<div class="product-view">
 								<img src="../img/products/seiko/watches/seiko_watches01.jpg" alt="">
 							</div>
 							<div class="product-view">
-								<img src="../img/thumb-product03.jpg" alt="">
+								<img src="../img/products/adidas/shoes/adidas_shoes02.jpg" alt="">
 							</div>
 							<div class="product-view">
-								<img src="../img/thumb-product04.jpg" alt="">
+								<img src="../img/products/adidas/shoes/adidas_shoes05.jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -57,7 +57,7 @@
 								<span>Sản Phẩm Mới</span>
 								<span class="sale">-20%</span>
 							</div>
-							<h2 class="product-name">tên Sản Phẩm</h2>
+							<h2 class="product-name">Adidas Superstar</h2>
 							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
 							<div>
 								<div class="product-rating">

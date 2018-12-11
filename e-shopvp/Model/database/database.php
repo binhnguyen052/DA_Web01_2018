@@ -1,7 +1,7 @@
 <?php 
 
 // file config.php cấu hình database để kết nối
-    include_once("config.php");
+include_once("config.php");
 
 /*
  *  file tạo cấu trúc database và kết nối dữ liệu
@@ -12,20 +12,50 @@ class Database
      * Khai báo biến kết nối
      * @var [type]
      */
-    public $link;
+    public $link = null;
 
     public function __construct()
     {
-        // $this->link = mysqli_connect("localhost", "root", "", "eshopv", 3308);
-        $this->link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT);
-        mysqli_set_charset($this->link, "utf8");
-        if (mysqli_connect_error()) {
-            die("Không thể kết nối: " . $link->connect_error);
-        } else {
-            echo "kết nối thành công";
+        // // $this->link = mysqli_connect("localhost", "root", "", "eshopv", 3308);
+        // $this->link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT);
+        // mysqli_set_charset($this->link, "utf8");
+        // if (mysqli_connect_error()) {
+        //     die("Không thể kết nối: " . $link->connect_error);
+        // } else {
+        //     echo "kết nối thành công";
+        // }
+    }
+
+    /**
+     * hàm mở kết nối 
+     */
+    public function db_connect()
+    {
+        //kiểm tra biến $link (connect database) đã khởi tạo connect chưa
+        if (!$this->link) {
+            // $this->link = mysqli_connect("localhost", "root", "", "eshopv", 3308);
+            $this->link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT);
+            mysqli_set_charset($this->link, "utf8");
+            
+            //xuất thông báo xem có kết nối được hay không?
+            if (mysqli_connect_error()) {
+                die("Không thể kết nối: " . $link->connect_error);
+            } else {
+                echo "kết nối thành công";
+            }
         }
     }
 
+    /**
+     * hàm đóng kết nối 
+     */
+    public function db_close()
+    {
+        //nếu có mở kết nối thì đóng kết nối
+        if ($this->link) {
+            mysqli_close($this->link);
+        }
+    }
 
     /**
      * [insert description] hàm insert 

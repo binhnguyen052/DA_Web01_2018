@@ -1,0 +1,15 @@
+﻿Cần có ít nhất 40 mặt hàng thuộc 4-5 hãng sản xuất và 4-5 loại mặt hàng.
+hàng sản xuất:
+adidas (giày, túi sách, áo, quần)
+nike (giày)
+levi (túi sách)
+seko (đồng hồ)
+casio (đồng hồ)
+an phước (quần, áo)
+blueexchange (quần, áo)
+việt tiến (quần, áo)
+
+hình kích cở 
+1200 - 675
+ 720x540
+C:\Users\Hao\Desktop\products

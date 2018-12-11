@@ -89,7 +89,7 @@
 				<div class="pull-left">
 					<!-- Logo -->
 					<div class="header-logo">
-						<a class="logo" href="#">
+						hp<a class="logo" href="../../index.php">
 							<img src="../img/logo.png" alt="">
 						</a>
 					</div>

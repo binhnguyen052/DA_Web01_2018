@@ -10,7 +10,7 @@ define('DB_PASSWORD', "");
 //database sử dụng
 define('DB_DATABASE', "eshopv");
 //port: cổng mạng 
-define('DB_PORT', 3308);
+define('DB_PORT', 3306);
 
 // //thông số controller và action mặc định
 // define('CONTROLLER_DEFAULT', 'index');

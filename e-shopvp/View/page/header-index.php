@@ -79,8 +79,9 @@
 				<div class="pull-left">
 					<!-- Logo -->
 					<div class="header-logo">
-						<a class="logo" href="#">
+						<a class="logo" href="index.php">
 							<img src="View/img/logo.png" alt="">
+
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -190,7 +191,7 @@
 					<span class="category-header">Danh mục <i class="fa fa-list"></i></span>
 					<ul class="category-list">
 						<li class="dropdown side-dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Thời trang nữ <i class="fa fa-angle-right"></i></a>
+							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Áo<i class="fa fa-angle-right"></i></a>
 							<div class="custom-menu">
 								<div class="row">
 									<div class="col-md-4">
@@ -247,11 +248,11 @@
 							</div>
 						</li>
 
-						<!-- category nav Thời trang nam-->
-						<li><a href="#">Thời trang nam</a></li>
+						<!-- category Quần-->
+						<li><a href="#">Quần</a></li>
 
-						<li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Điện
-								thoại & Phụ kiện <i class="fa fa-angle-right"></i></a>
+						<li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+							Giày <i class="fa fa-angle-right"></i></a>
 							<div class="custom-menu">
 								<div class="row">
 									<div class="col-md-4">
@@ -259,14 +260,14 @@
 											<li>
 												<h3 class="list-links-title">Categories</h3>
 											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
+											<li><a href="#">Adidas </a></li>
+											<li><a href="#">Nike's</a></li>
+											<!-- <li><a href="#">Van</a></li>
+											<li><a href="#">BiTis's</a></li>
+											<li><a href="#">Bags & Shoes</a></li> -->
 										</ul>
-										<hr>
-										<ul class="list-links">
+										<!-- <hr> -->
+										<!-- <ul class="list-links">
 											<li>
 												<h3 class="list-links-title">Categories</h3>
 											</li>
@@ -275,8 +276,8 @@
 											<li><a href="#">Phones & Accessories</a></li>
 											<li><a href="#">Jewelry & Watches</a></li>
 											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
+										</ul> -->
+										<!-- <hr class="hidden-md hidden-lg">
 									</div>
 									<div class="col-md-4">
 										<ul class="list-links">
@@ -300,10 +301,10 @@
 											<li><a href="#">Jewelry & Watches</a></li>
 											<li><a href="#">Bags & Shoes</a></li>
 										</ul>
-									</div>
+									</div> -->
 									<div class="col-md-4 hidden-sm hidden-xs">
 										<a class="banner banner-2" href="#">
-											<img src="View/img/banner04.jpg" alt="">
+											 <img src="View/img/banner04.jpg" alt=""> 
 											<div class="banner-caption">
 												<h3 class="white-color">NEW<br>COLLECTION</h3>
 											</div>
@@ -313,10 +314,10 @@
 							</div>
 						</li>
 
-						<li><a href="#">Máy tính & Văn phòng</a></li>
-						<li><a href="#">Điện tử gia dụng</a></li>
+						<li><a href="#">Túi Xách</a></li>
+						<li><a href="#">Đồng Hồ</a></li>
 
-						<li class="dropdown side-dropdown">
+						<!-- <li class="dropdown side-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Trang sức & Đồng hồ <i class="fa fa-angle-right"></i></a>
 							<div class="custom-menu">
 								<div class="row">
@@ -395,7 +396,7 @@
 							</div>
 						</li>
 
-						<li><a href="#">Túi xách & Giày dép</a></li>
+						<li><a href="#">Túi xách & Giày dép</a></li> -->
 						<li><a href="#">Xem tất cả</a></li>
 
 					</ul>
@@ -691,7 +692,7 @@
 
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="View/img/banner02.jpg" alt="">
+						<img src="View/img/banner02.jpg" alt="" >
 						<div class="banner-caption">
 							<h1 class="primary-color">Giảm giá<br><span class="white-color font-weak">Lên đến 50%</span></h1>
 							<button class="primary-btn">Mua ngay</button>

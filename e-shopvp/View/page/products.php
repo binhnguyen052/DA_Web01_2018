@@ -54,15 +54,15 @@
 					<!-- /aside widget -->
 
 					<!-- aside widget -->
-					<div class="aside">
+					<!-- <div class="aside">
 						<h3 class="aside-title">Lọc Theo Giá</h3>
 						<div id="price-slider"></div>
-					</div>
+					</div> -->
 					<!-- aside widget -->
 
 					<!-- aside widget -->
 					<div class="aside">
-						<h3 class="aside-title">Lọc Theo Màu:</h3>
+						<!-- <h3 class="aside-title">Lọc Theo Màu:</h3>
 						<ul class="color-option">
 							<li><a href="#" style="background-color:#475984;"></a></li>
 							<li><a href="#" style="background-color:#8A2454;"></a></li>
@@ -71,7 +71,7 @@
 							<li><a href="#" style="background-color:#675F52;"></a></li>
 							<li><a href="#" style="background-color:#050505;"></a></li>
 							<li><a href="#" style="background-color:#D5B47B;"></a></li>
-						</ul>
+						</ul> -->
 					</div>
 					<!-- /aside widget -->
 
@@ -99,13 +99,13 @@
 					<!-- /aside widget -->
 
 					<!-- aside widget -->
-					<div class="aside">
+					<!-- <div class="aside">
 						<h3 class="aside-title">Lọc Theo Phái</h3>
 						<ul class="list-links">
 							<li class="active"><a href="#">Nam</a></li>
 							<li><a href="#">Nữ</a></li>
 						</ul>
-					</div>
+					</div> -->
 					<!-- /aside widget -->
 
 					<!-- aside widget -->

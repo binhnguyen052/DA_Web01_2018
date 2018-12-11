@@ -692,7 +692,7 @@
 
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="View/img/banner02.jpg" alt="" >
+						<img src="View/img/banner02.jpg" alt="">
 						<div class="banner-caption">
 							<h1 class="primary-color">Giảm giá<br><span class="white-color font-weak">Lên đến 50%</span></h1>
 							<button class="primary-btn">Mua ngay</button>

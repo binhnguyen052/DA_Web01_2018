@@ -64,7 +64,7 @@
                 </form>
             </div>
             <p class="botto-text"> 1660052 - Nguyễn Đình Bình | 1660056 - Nguyễn Tuấn Cảnh | 1660164 - Nguyễn Anh Hào</p><br>
-            <p class="botto-text"> Designed by Sunil Rajput</p>
+            <p class="botto-text">Đồ Án Web</p>
         </div>
     </div>
 

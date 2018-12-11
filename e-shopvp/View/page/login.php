@@ -22,7 +22,14 @@
 
 <body id="LoginForm">
     <div class="container">
-        <h1 class="form-heading">WELCOME!</h1>
+        <!-- <h1 class="form-heading">WELCOME!</h1> -->
+        <!-- Logo -->
+					<div class="header-logo">
+						<a class="logo" href="../../index.php">
+							<img src="../img/logo.png" alt="">
+						</a>
+					</div>
+					<!-- /Logo -->
         <div class="login-form">
             <div class="main-div">
                 <div class="panel">

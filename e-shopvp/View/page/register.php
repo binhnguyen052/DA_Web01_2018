@@ -22,7 +22,7 @@
 				<form id="checkout-form" class="clearfix">
 					<div class="col-md-6">
 						<div class="billing-details">
-							<p>Bạn đã có tài khoản chưa?<a href="login.html"> Đăng Nhập</a></p>
+							<p>Bạn đã có tài khoản chưa?<a href="login.php"> Đăng Nhập</a></p>
 							<div class="section-title">
 								<h3 class="title">Thông tin đăng kí</h3> <br>
 								<h6>(*) Thông tin bắt buộc phải nhập</h6>
@@ -242,7 +242,7 @@
 							<li><a href="#">Sản phẩm yêu thích</a></li>
 							<li><a href="#">So sánh</a></li>
 							<li><a href="#">Thanh toán</a></li>
-							<li><a href="login.html">Đăng nhập</a></li>
+							<li><a href="login.php">Đăng nhập</a></li>
 						</ul>
 					</div>
 				</div>

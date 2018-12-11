@@ -564,7 +564,7 @@
 							<li><a href="#">Sản phẩm yêu thích</a></li>
 							<li><a href="#">So sánh</a></li>
 							<li><a href="#">Thanh toán</a></li>
-							<li><a href="login.html">Đăng nhập</a></li>
+							<li><a href="login.php">Đăng nhập</a></li>
 						</ul>
 					</div>
 				</div>

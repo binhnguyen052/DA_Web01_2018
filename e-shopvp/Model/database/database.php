@@ -41,7 +41,7 @@ class Database
             if (mysqli_connect_error()) {
                 die("Không thể kết nối: " . $link->connect_error);
             } else {
-                echo "kết nối thành công";
+                // echo "kết nối thành công";
             }
         }
     }

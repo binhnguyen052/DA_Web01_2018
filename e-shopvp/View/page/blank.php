@@ -1,5 +1,5 @@
 <?php
-	include ("./hearder.php");
+	include ("./header.php");
 ?>
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">

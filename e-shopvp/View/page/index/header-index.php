@@ -1,3 +1,10 @@
+<?php
+	include("Model/database/database.php");
+	$db = new Database();
+
+	$db->db_connect();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -182,7 +189,7 @@
 	<!-- /HEADER -->
 
 	<!-- NAVIGATION -->
-	<div id="navigation">
+    <div id="navigation">
 		<!-- container -->
 		<div class="container">
 			<div id="responsive-nav">
@@ -190,10 +197,34 @@
 				<div class="category-nav">
 					<span class="category-header">Danh mục <i class="fa fa-list"></i></span>
 					<ul class="category-list">
-						<li class="dropdown side-dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Áo<i class="fa fa-angle-right"></i></a>
-							<div class="custom-menu">
-								<div class="row">
+
+                    	<!-- vùng hiển thị menu -->
+                        
+                        
+                        <?php	
+                        //lấy danh sách loại sản phẩm từ database   
+
+                        //biến lưu tên loại sản phẩm
+                        $manufacturer = null;
+						$sql = "SELECT producttypename FROM `product_type` WHERE Deleted = 1";
+                        $result = mysqli_query($db->link , $sql) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                        while($row = mysqli_fetch_array($result))
+                        {
+                            extract($row);
+                            $manufacturer = $producttypename;
+                            echo "<li class='dropdown side-dropdown'>
+							<a class='dropdown-toggle' data-toggle='dropdown' aria-expanded='true'>                       
+                                 $manufacturer <i class='fa fa-angle-right'></i> </a> </li>";
+                        }                       			
+						
+                        ?>
+
+                            <!-- mũi tên bấm sổ menu -->
+                            <!-- <i class="fa fa-angle-right"></i></a> -->
+
+                            <!-- menu sổ ra -->
+							<!-- <div class="custom-menu">
+								<div class="row">                               
 									<div class="col-md-4">
 										<ul class="list-links">
 											<li>
@@ -245,158 +276,12 @@
 										</a>
 									</div>
 								</div>
-							</div>
-						</li>
+							</div> -->
+                            
+                            <!-- </li> -->
 
-						<!-- category Quần-->
-						<li><a href="#">Quần</a></li>
-
-						<li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-							Giày <i class="fa fa-angle-right"></i></a>
-							<div class="custom-menu">
-								<div class="row">
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Adidas </a></li>
-											<li><a href="#">Nike's</a></li>
-											<!-- <li><a href="#">Van</a></li>
-											<li><a href="#">BiTis's</a></li>
-											<li><a href="#">Bags & Shoes</a></li> -->
-										</ul>
-										<!-- <hr> -->
-										<!-- <ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul> -->
-										<!-- <hr class="hidden-md hidden-lg">
-									</div>
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div> -->
-									<div class="col-md-4 hidden-sm hidden-xs">
-										<a class="banner banner-2" href="#">
-											 <img src="View/img/banner04.jpg" alt=""> 
-											<div class="banner-caption">
-												<h3 class="white-color">NEW<br>COLLECTION</h3>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-						</li>
-
-						<li><a href="#">Túi Xách</a></li>
-						<li><a href="#">Đồng Hồ</a></li>
-
-						<!-- <li class="dropdown side-dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Trang sức & Đồng hồ <i class="fa fa-angle-right"></i></a>
-							<div class="custom-menu">
-								<div class="row">
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
-									</div>
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
-									</div>
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li>
-
-						<li><a href="#">Túi xách & Giày dép</a></li> -->
+						
+						
 						<li><a href="#">Xem tất cả</a></li>
 
 					</ul>
@@ -407,7 +292,7 @@
 				<div class="menu-nav">
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
-						<li><a href="#">Trang chủ</a></li>
+						<li><a href="index.php">Trang chủ</a></li>
 						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Nhà
 								sản xuất <i class="fa fa-caret-down"></i></a>
 							<div class="custom-menu">
@@ -671,6 +556,7 @@
 	</div>
 	<!-- /NAVIGATION -->
 
+
 	<!-- HOME -->
 	<div id="home">
 		<!-- container -->
@@ -717,3 +603,7 @@
 		<!-- /container -->
 	</div>
 	<!-- /HOME -->
+
+<?php
+	$db->db_close();
+?>

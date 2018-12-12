@@ -1,6 +1,6 @@
 <!-- https://bootsnipp.com/tags/profile -->
 <?php
-	include ("./hearder.php");
+	include ("./header.php");
 ?>
 
 	<!-- BREADCRUMB -->

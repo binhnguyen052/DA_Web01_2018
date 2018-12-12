@@ -107,6 +107,7 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT` (
   `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
   `ProductTypeID` INT ZEROFILL NOT NULL,
   `ManufacturerID` INT ZEROFILL NOT NULL,
+  `Sale` INT NULL COMMENT 'giảm giá',
   PRIMARY KEY (`ProductID`),
   INDEX `fk_ProductTypeID_idx` (`ProductTypeID` ASC), # VISIBLE,
   INDEX `fk_ManufacturerID_idx` (`ManufacturerID` ASC), # VISIBLE,

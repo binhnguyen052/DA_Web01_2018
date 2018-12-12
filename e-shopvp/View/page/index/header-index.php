@@ -1,10 +1,3 @@
-<?php
-	include("Model/database/database.php");
-	$db = new Database();
-
-	$db->db_connect();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -204,85 +197,19 @@
                         <?php	
                         //lấy danh sách loại sản phẩm từ database   
 
-                        //biến lưu tên loại sản phẩm
-                        $manufacturer = null;
-						$sql = "SELECT producttypename FROM `product_type` WHERE Deleted = 1";
+						$sql = "SELECT producttypeid, producttypename FROM `product_type` WHERE 1";
                         $result = mysqli_query($db->link , $sql) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
                         while($row = mysqli_fetch_array($result))
                         {
                             extract($row);
-                            $manufacturer = $producttypename;
                             echo "<li class='dropdown side-dropdown'>
-							<a class='dropdown-toggle' data-toggle='dropdown' aria-expanded='true'>                       
-                                 $manufacturer <i class='fa fa-angle-right'></i> </a> </li>";
+							<a class='dropdown-toggle'  aria-expanded='true' a href='View/page/products.php?id=$producttypename'>                       
+                                 $producttypename <i class='fa fa-angle-right'></i> </a> </li>";
                         }                       			
 						
                         ?>
-
-                            <!-- mũi tên bấm sổ menu -->
-                            <!-- <i class="fa fa-angle-right"></i></a> -->
-
-                            <!-- menu sổ ra -->
-							<!-- <div class="custom-menu">
-								<div class="row">                               
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
-									</div>
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
-									</div>
-									<div class="col-md-4">
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="row hidden-sm hidden-xs">
-									<div class="col-md-12">
-										<hr>
-										<a class="banner banner-1" href="#">
-											<img src="View/img/banner05.jpg" alt="">
-											<div class="banner-caption text-center">
-												<h2 class="white-color">NEW COLLECTION</h2>
-												<h3 class="white-color font-weak">HOT DEAL</h3>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div> -->
-                            
-                            <!-- </li> -->
-
 						
-						
-						<li><a href="#">Xem tất cả</a></li>
+						<li><a href='View/page/products.php'>Xem tất cả</a></li>
 
 					</ul>
 				</div>
@@ -293,94 +220,34 @@
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
 						<li><a href="index.php">Trang chủ</a></li>
+
 						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Nhà
 								sản xuất <i class="fa fa-caret-down"></i></a>
+
 							<div class="custom-menu">
 								<div class="row">
-									<div class="col-md-3">
-										<div class="hidden-sm hidden-xs">
-											<a class="banner banner-1" href="#">
-												<img src="View/img/banner06.jpg" alt="">
-												<div class="banner-caption text-center">
-													<h3 class="white-color text-uppercase">Women’s</h3>
-												</div>
-											</a>
-											<hr>
-										</div>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<div class="hidden-sm hidden-xs">
-											<a class="banner banner-1" href="#">
-												<img src="View/img/banner07.jpg" alt="">
-												<div class="banner-caption text-center">
-													<h3 class="white-color text-uppercase">Men’s</h3>
-												</div>
-											</a>
-										</div>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<div class="hidden-sm hidden-xs">
-											<a class="banner banner-1" href="#">
-												<img src="View/img/banner08.jpg" alt="">
-												<div class="banner-caption text-center">
-													<h3 class="white-color text-uppercase">Accessories</h3>
-												</div>
-											</a>
-										</div>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<div class="hidden-sm hidden-xs">
-											<a class="banner banner-1" href="#">
-												<img src="View/img/banner09.jpg" alt="">
-												<div class="banner-caption text-center">
-													<h3 class="white-color text-uppercase">Bags</h3>
-												</div>
-											</a>
-										</div>
-										<hr>
-										<ul class="list-links">
-											<li>
-												<h3 class="list-links-title">Categories</h3>
-											</li>
-											<li><a href="#">Women’s Clothing</a></li>
-											<li><a href="#">Men’s Clothing</a></li>
-											<li><a href="#">Phones & Accessories</a></li>
-											<li><a href="#">Jewelry & Watches</a></li>
-											<li><a href="#">Bags & Shoes</a></li>
-										</ul>
-									</div>
+
+									<?php 
+
+									$sql = "SELECT manufacturername, logourl FROM `manufacturer` WHERE Deleted = 1";
+									$result = mysqli_query($db->link, $sql);
+									while ($row = mysqli_fetch_array($result))
+									{
+										extract($row);
+										echo "<div class='col-md-3'>
+											<div class='hidden-sm hidden-xs'>
+												<a class='banner banner-1' href='View/page/products.php?id=$manufacturername'>
+													<img src='View/img/banner06.jpg' alt=''>
+													<div class='banner-caption text-center'>
+														<h3 class='white-color text-uppercase'>$manufacturername</h3>
+													</div>
+												</a>
+												<hr>
+											</div>					
+										</div>" ;
+									};
+									?>
+
 								</div>
 							</div>
 						</li>
@@ -604,6 +471,3 @@
 	</div>
 	<!-- /HOME -->
 
-<?php
-	$db->db_close();
-?>

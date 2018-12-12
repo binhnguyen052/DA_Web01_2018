@@ -1,5 +1,5 @@
 <?php
-	include("./View/page/header-index.php");
+	include("./View/page/index/header-index.php");
 ?>
 
 	<!-- section -->
@@ -822,5 +822,5 @@
 
 
 <?php
-	include("./View/page/footer-index.php");
+	include("./View/page/index/footer-index.php");
 ?>

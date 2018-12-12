@@ -67,7 +67,7 @@ ENGINE = InnoDB;
 -- Table `eshopv`.`PRODUCT_TYPE`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT_TYPE` (
-  `ProductTypeID` INT ZEROFILL NOT NULL,
+  `ProductTypeID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
   `ProductTypeName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
   `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
   PRIMARY KEY (`ProductTypeID`),
@@ -80,7 +80,7 @@ ENGINE = InnoDB;
 -- Table `eshopv`.`MANUFACTURER`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `eshopv`.`MANUFACTURER` (
-  `ManufacturerID` INT ZEROFILL NOT NULL,
+  `ManufacturerID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
   `ManufactureName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
   `LogoURL` VARCHAR(100) NULL,
   `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',

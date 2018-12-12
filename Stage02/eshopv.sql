@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`ACCOUNT` (
   `AccountType` SMALLINT ZEROFILL NOT NULL COMMENT '0: admin, 1: khach hang',
   PRIMARY KEY (`AccountID`),
   UNIQUE INDEX `DisplayName_UNIQUE` (`DisplayName` ASC), #VISIBLE,
-  UNIQUE INDEX `UserName_UNIQUE` (`UserName` ASC)#, VISIBLE
+  UNIQUE INDEX `UserName_UNIQUE` (`UserName` ASC) #VISIBLE
   )
 ENGINE = InnoDB;
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT_ORDER` (
   `District` VARCHAR(20) NOT NULL COMMENT 'quận, huyện',
   `Province` VARCHAR(20) NOT NULL COMMENT 'tỉnh, thành phố',
   PRIMARY KEY (`ProductOrderID`),
-  INDEX `fk_MaTaiKhoan_MaTaiKhoan_idx` (`AccountID` ASC), #VISIBLE,
+  INDEX `fk_AccountID_idx` (`AccountID` ASC), # VISIBLE,
   CONSTRAINT `fk_AccounID_PO`
     FOREIGN KEY (`AccountID`)
     REFERENCES `eshopv`.`ACCOUNT` (`AccountID`)
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT_TYPE` (
   `ProductTypeName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
   `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
   PRIMARY KEY (`ProductTypeID`),
-  UNIQUE INDEX `ProductTypeName_UNIQUE` (`ProductTypeName` ASC)#, VISIBLE
+  UNIQUE INDEX `ProductTypeName_UNIQUE` (`ProductTypeName` ASC) #VISIBLE
   )
 ENGINE = InnoDB;
 
@@ -81,11 +81,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `eshopv`.`MANUFACTURER` (
   `ManufacturerID` INT ZEROFILL NOT NULL AUTO_INCREMENT,
-  `ManufactureName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
+  `ManufacturerName` VARCHAR(100) NOT NULL COMMENT 'tên nhà sản xuất',
   `LogoURL` VARCHAR(100) NULL,
   `Deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '1: chưa xóa, 0: bị xóa',
   PRIMARY KEY (`ManufacturerID`),
-  UNIQUE INDEX `ManufactureName_UNIQUE` (`ManufactureName` ASC)#, VISIBLE
+  UNIQUE INDEX `ManufactureName_UNIQUE` (`ManufacturerName` ASC) #VISIBLE
   )
 ENGINE = InnoDB;
 
@@ -108,8 +108,8 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`PRODUCT` (
   `ProductTypeID` INT ZEROFILL NOT NULL,
   `ManufacturerID` INT ZEROFILL NOT NULL,
   PRIMARY KEY (`ProductID`),
-  INDEX `fk_MaLoaiSanPhamSP_MaLoaiSanPhamLSP_idx` (`ProductTypeID` ASC), #VISIBLE,
-  INDEX `fk_MaHangSanXuatSP_MaHangSanXuatHSX_idx` (`ManufacturerID` ASC), #VISIBLE,
+  INDEX `fk_ProductTypeID_idx` (`ProductTypeID` ASC), # VISIBLE,
+  INDEX `fk_ManufacturerID_idx` (`ManufacturerID` ASC), # VISIBLE,
   CONSTRAINT `fk_ProductTypeID`
     FOREIGN KEY (`ProductTypeID`)
     REFERENCES `eshopv`.`PRODUCT_TYPE` (`ProductTypeID`)
@@ -133,8 +133,8 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`ORDER_DETAIL` (
   `ProductOrderID` INT ZEROFILL NOT NULL,
   `ProductID` INT ZEROFILL NOT NULL,
   PRIMARY KEY (`OrderDetailID`),
-  INDEX `fk_MaDonDatHangCTDDH_MaDonDatHangDDH_idx` (`ProductOrderID` ASC), #VISIBLE,
-  INDEX `fk_MaSanPhamCTDDH_MaSanPhamSP_idx` (`ProductID` ASC), # VISIBLE,
+  INDEX `fk_ProductOderID_idx` (`ProductOrderID` ASC), # VISIBLE,
+  INDEX `fk_ProductID_idx` (`ProductID` ASC), # VISIBLE,
   CONSTRAINT `fk_ProductOrderID_O`
     FOREIGN KEY (`ProductOrderID`)
     REFERENCES `eshopv`.`PRODUCT_ORDER` (`ProductOrderID`)

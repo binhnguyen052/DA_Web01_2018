@@ -20,6 +20,14 @@ class Users extends CI_Controller {
         $this->load->view('user_profile');
         $this->load->view('footer');
     }
+
+    public function checkout()
+    {
+        $this->load->view('header');
+        $this->load->view('user_checkout');
+        $this->load->view('footer');
+    }
+
     public function detail($id)
     {
         $data = array(

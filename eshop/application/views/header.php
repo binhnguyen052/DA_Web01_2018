@@ -79,7 +79,7 @@
             <div class="pull-left">
                 <!-- Logo -->
                 <div class="header-logo">
-                    <a class="logo" href="#">
+                    <a class="logo" href="<?php echo base_url();?>index.php">
                         <img src="<?php echo base_url();?>public/img/logo.png" alt="">
                     </a>
                 </div>
@@ -109,7 +109,7 @@
                             </div>
                             <strong class="text-uppercase">Tài khoản của tôi<i class="fa fa-caret-down"></i></strong>
                         </div>
-                        <a href="login.php" class="text-uppercase">Đăng nhập</a>/<a href="register.php" class="text-uppercase">Đăng kí</a>
+                        <a href="<?php echo base_url();?>index.php/users/login" class="text-uppercase">Đăng nhập</a>/<a href="<?php echo base_url();?>index.php/users/register" class="text-uppercase">Đăng kí</a>
                         <ul class="custom-menu">
                             <li><a href="#"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
@@ -712,7 +712,7 @@
                             <li><a href="./checkout.php">Thanh toán</a></li>
                             <li><a href="./admin/index.php">Admin (test view)</a></li>
                             <li><a href="./blank.php">Blank</a></li>
-                            <li><a href="./user-profile.php">user-profile (test view)</a></li>
+<!--                            <li><a href="--><?php //echo base_url();?><!--index.php/users/profile">user-profile (test view)</a></li>-->
                         </ul>
                     </li>
                 </ul>

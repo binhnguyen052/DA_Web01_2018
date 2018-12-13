@@ -16,4 +16,11 @@ class Managers extends CI_Controller {
         $this->load->view('admin/blankt');
         $this->load->view('admin/footer');
     }
+
+    public  function register()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/register');
+        $this->load->view('admin/footer');
+    }
 }

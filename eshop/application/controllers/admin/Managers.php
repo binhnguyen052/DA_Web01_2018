@@ -17,14 +17,13 @@ class Managers extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
-<<<<<<< Updated upstream
     public  function register()
     {
         $this->load->view('admin/header');
         $this->load->view('admin/register');
         $this->load->view('admin/footer');
     }
-=======
+
     public function table()
     {
         $this->load->view('admin/header');
@@ -39,5 +38,5 @@ class Managers extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
->>>>>>> Stashed changes
+
 }

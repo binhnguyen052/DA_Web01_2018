@@ -9,7 +9,7 @@
                 <div class="footer">
                     <!-- footer logo -->
                     <div class="footer-logo">
-                        <a class="logo" href="#">
+                        <a class="logo" href="<?php echo base_url();?>index.php">
                             <img src="<?php echo base_url();?>public/img/logo.png" alt="">
                         </a>
                     </div>
@@ -35,11 +35,11 @@
                 <div class="footer">
                     <h3 class="footer-header">Tài khoản của tôi</h3>
                     <ul class="list-links">
-                        <li><a href="#">Tài khoản của tôi</a></li>
+                        <li><a href="<?php echo base_url();?>index.php/users/profile">Tài khoản của tôi</a></li>
                         <li><a href="#">Sản phẩm yêu thích</a></li>
                         <li><a href="#">So sánh</a></li>
                         <li><a href="#">Thanh toán</a></li>
-                        <li><a href="View/page/login.php">Đăng nhập</a></li>
+                        <li><a href="<?php echo base_url();?>index.php/users/login">Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>

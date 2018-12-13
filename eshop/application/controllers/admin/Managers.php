@@ -10,10 +10,55 @@ class Managers extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
-    public function blankt()
+
+
+
+    public function m_account()
     {
         $this->load->view('admin/header');
-        $this->load->view('admin/blankt');
+        $this->load->view('admin/account');
+        $this->load->view('admin/footer');
+    }
+
+    public function m_product()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/products');
+        $this->load->view('admin/footer');
+    }
+
+    public function m_product_type()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/product_type');
+        $this->load->view('admin/footer');
+    }
+
+    public function m_order()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/order');
+        $this->load->view('admin/footer');
+    }
+
+    public function m_order_detail()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/order_detail');
+        $this->load->view('admin/footer');
+    }
+
+    public function m_manufacturer()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/manufacturer');
+        $this->load->view('admin/footer');
+    }
+
+    public  function login()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/login');
         $this->load->view('admin/footer');
     }
 
@@ -24,6 +69,28 @@ class Managers extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
+    public  function forgot_password()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/forgot_password');
+        $this->load->view('admin/footer');
+    }
+
+    public function p404()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/404');
+        $this->load->view('admin/footer');
+    }
+
+    public function blank()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/blank');
+        $this->load->view('admin/footer');
+    }
+
+
     public function table()
     {
         $this->load->view('admin/header');
@@ -31,12 +98,10 @@ class Managers extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
-    public function account()
+    public function blankt()
     {
         $this->load->view('admin/header');
-        $this->load->view('admin/account');
+        $this->load->view('admin/blankt');
         $this->load->view('admin/footer');
     }
-
-
 }

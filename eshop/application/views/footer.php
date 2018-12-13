@@ -35,7 +35,7 @@
                 <div class="footer">
                     <h3 class="footer-header">Tài khoản của tôi</h3>
                     <ul class="list-links">
-                        <li><a href="<?php echo base_url();?>index.php/users/profile">Tài khoản của tôi</a></li>
+                        <li><a href="#">Tài khoản của tôi</a></li>
                         <li><a href="#">Sản phẩm yêu thích</a></li>
                         <li><a href="#">So sánh</a></li>
                         <li><a href="#">Thanh toán</a></li>

@@ -707,11 +707,11 @@
                     <li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Các trang<i class="fa fa-caret-down"></i></a>
                         <ul class="custom-menu">
                             <li><a href="#">Trang chủ</a></li>
-                            <li><a href="./products.php">Các sản phẩm</a></li>
-                            <li><a href="./product-page.php">Chi tiết sản phẩm</a></li>
-                            <li><a href="./checkout.php">Thanh toán</a></li>
-                            <li><a href="./admin/index.php">Admin (test view)</a></li>
-                            <li><a href="./blank.php">Blank</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/products">Các sản phẩm</a></li>
+                            <li><a href="#">Chi tiết sản phẩm</a></li>
+                            <li><a href="#">Thanh toán</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/admin/managers">Admin (test view)</a></li>
+                            <li><a href="#">Blank</a></li>
 <!--                            <li><a href="--><?php //echo base_url();?><!--index.php/users/profile">user-profile (test view)</a></li>-->
                         </ul>
                     </li>

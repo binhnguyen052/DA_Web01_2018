@@ -8,15 +8,17 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="<?php echo base_url();?>index.php/admin/managers">Dashboard</a>
+                    <a href="index.php">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Account</li>
+                <li class="breadcrumb-item active">404 Error</li>
             </ol>
 
             <!-- Page Content -->
-            <h1>Quản lý tài khoản</h1>
-            <hr>
-            <p>This is a great starting point for new custom pages.</p>
+            <h1 class="display-1">404</h1>
+            <p class="lead">Page not found. You can
+                <a href="javascript:history.back()">go back</a>
+                to the previous page, or
+                <a href="index.php">return home</a>.</p>
 
         </div>
         <!-- /.container-fluid -->
@@ -32,3 +34,6 @@
 
     </div>
     <!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

@@ -5,7 +5,7 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="#">Dashboard</a>
+                    <a href="<?php echo base_url();?>index.php/admin/managers">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item active">Tables</li>
             </ol>

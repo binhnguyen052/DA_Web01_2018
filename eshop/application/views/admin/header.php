@@ -111,21 +111,21 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <h6 class="dropdown-header text-uppercase text-info">management:</h6>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/account">Account</a>
-                <a class="dropdown-item" href="product.php">Product</a>
-                <a class="dropdown-item" href="product-type.php">Product Type</a>
-                <a class="dropdown-item" href="manufacturer.php">Manufacturer</a>
-                <a class="dropdown-item" href="order.php">Product Orders</a>
-                <a class="dropdown-item" href="order-detail.php">Product Order Details</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_account">Account</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_product">Product</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_product_type">Product Type</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_manufacturer">Manufacturer</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_order">Product Orders</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_order_detail">Product Order Details</a>
 
                 <h6 class="dropdown-header text-uppercase text-info">Login Screens:</h6>
-                <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="register.php">Register</a>
-                <a class="dropdown-item" href="forgot-password.php">Forgot Password</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/login">Login</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/register">Register</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/forgot_password">Forgot Password</a>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header text-uppercase text-info">Other Pages:</h6>
-                <a class="dropdown-item" href="404.php">404 Page</a>
-                <a class="dropdown-item" href="blank.php">Blank Page</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/p404">404 Page</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/blank">Blank Page</a>
             </div>
         </li>
 

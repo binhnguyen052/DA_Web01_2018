@@ -10,11 +10,11 @@
                 <li class="breadcrumb-item">
                     <a href="<?php echo base_url();?>index.php/admin/managers">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Account</li>
+                <li class="breadcrumb-item active">Product Orders</li>
             </ol>
 
             <!-- Page Content -->
-            <h1>Quản lý tài khoản</h1>
+            <h1>Quản lý đơn đặt hàng</h1>
             <hr>
             <p>This is a great starting point for new custom pages.</p>
 

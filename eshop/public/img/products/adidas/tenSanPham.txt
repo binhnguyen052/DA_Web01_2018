@@ -1,0 +1,15 @@
+﻿tên sản phâm:
+adidas_bags01: adidas aop black -50$-Đức
+adidas_bags02: adidas school bags-52$-USA
+adidas_bags03: adidas duffle bag-54$-Đức
+adidas_pants01:adidas Adibreak Track-42$-China
+adidas_pants02:adidas  women's cycling -40$-Đức
+adidas_pants03:adidas  Track Trousers-60$-indonexia
+adidas_shirts01:adidas Camisetas para -80$-Nhật
+adidas_shirts02:adidas  sports shirt black-70$-China
+adidas_shirts03:adidas Originals T Shirts-90$-Việt nam
+adidas_shoes01:adidas Prophere Shoes -65$-Đức
+adidas_shoes02:adidas superstar white-100$-China
+adidas_shoes03: adidas ultra boost-120$-USA
+adidas_shoes04:adidas NMD R1-110$ -USA
+adidas_shoes05:adidas superstar 80s-130$-USA

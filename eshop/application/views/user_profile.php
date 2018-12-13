@@ -39,6 +39,8 @@
                     <a href="#" class="list-group-item list-group-item-action">Reports</a>
                     <a href="#" class="list-group-item list-group-item-action">Settings</a>
 
+<!--                    <a href="#" class="list-group-item list-group-item-action">Reports</a>-->
+<!--                    <a href="#" class="list-group-item list-group-item-action">Settings</a>-->
 
                 </div>
             </div>

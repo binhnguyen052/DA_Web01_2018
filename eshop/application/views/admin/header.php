@@ -172,7 +172,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="blankt.php">
+            <a class="nav-link" href="<?php echo base_url();?>index.php/admin/managers/blankt">
                 <i class="fas fa-fw fa-table"></i>
                 <span class="text-uppercase">Blankt</span></a>
         </li>

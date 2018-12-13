@@ -9,6 +9,15 @@ class Users extends CI_Controller {
         $this->load->view('footer');
     }
 
+    public function login()
+    {
+        $this->load-view('user_login');
+    }
+
+    public function  profile()
+    {
+
+    }
     public function detail($id)
     {
         $data = array(

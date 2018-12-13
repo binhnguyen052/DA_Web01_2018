@@ -35,7 +35,7 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <a class="navbar-brand mr-1 text-info" href="#">Home</a>
+        <a class="navbar-brand mr-1 text-info" href="<?php echo base_url();?>index.php">Home</a>
 
         <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -98,7 +98,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="index.php">
+            <a class="nav-link" href="<?php echo base_url();?>index.php/admin/managers">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span class="text-uppercase">Dashboard</span>
             </a>
@@ -111,7 +111,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <h6 class="dropdown-header text-uppercase text-info">management:</h6>
-                <a class="dropdown-item" href="account.php">Account</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/account">Account</a>
                 <a class="dropdown-item" href="product.php">Product</a>
                 <a class="dropdown-item" href="product-type.php">Product Type</a>
                 <a class="dropdown-item" href="manufacturer.php">Manufacturer</a>
@@ -166,7 +166,7 @@
         </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" href="tables.php">
+            <a class="nav-link" href="<?php echo base_url();?>index.php/admin/managers/table">
                 <i class="fas fa-fw fa-table"></i>
                 <span class="text-uppercase">Tables</span></a>
         </li>

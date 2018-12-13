@@ -19,7 +19,7 @@
     <!-- <h1 class="form-heading">WELCOME!</h1> -->
     <!-- Logo -->
     <div class="header-logo">
-        <a class="logo" href="#">
+        <a class="logo" href="<?php echo base_url();?>index.php">
             <img src="<?php echo base_url();?>public/img/logo.png" alt="">
         </a>
     </div>

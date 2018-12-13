@@ -11,7 +11,7 @@ class Users extends CI_Controller {
 
     public function login()
     {
-        $this->load-view('user_login');
+        $this->load->view('user_login');
     }
 
     public function  profile()

@@ -27,7 +27,7 @@
     <div class="login-form">
         <div class="main-div">
             <div class="panel">
-                <h2>Đăng nhập</h2>
+                <h1>Đăng nhập</h1>
             </div>
 
             <form id="Login">
@@ -57,8 +57,8 @@
 
             </form>
         </div>
-        <p class="botto-text"> 1660052 - Nguyễn Đình Bình | 1660056 - Nguyễn Tuấn Cảnh | 1660164 - Nguyễn Anh Hào</p><br>
-        <p class="botto-text">Đồ Án Web</p>
+        <p class="botto-text" style="color: black"> 1660052 - Nguyễn Đình Bình | 1660056 - Nguyễn Tuấn Cảnh | 1660164 - Nguyễn Anh Hào</p><br>
+        <p class="botto-text" style="color: black">Đồ Án Web</p>
     </div>
 </div>
 

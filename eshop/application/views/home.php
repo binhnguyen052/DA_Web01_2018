@@ -2,6 +2,53 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
+	<!-- HOME -->
+	<div id="home">
+		<!-- container -->
+		<div class="container">
+			<!-- home wrap -->
+			<div class="home-wrap">
+				<!-- home slick -->
+				<div id="home-slick">
+					<!-- banner -->
+					<div class="banner banner-1">
+						<img src="<?php echo base_url(); ?>public/img/banner01.jpg" alt="">
+						<div class="banner-caption text-center">
+							<h1 style="color: #F8694A">Giảm giá túi xách</h1>
+							<h3 class="white-color font-weak">Giảm lên đến 50%</h3>
+							<button class="primary-btn">Mua ngay</button>
+						</div>
+					</div>
+					<!-- /banner -->
+
+					<!-- banner -->
+					<div class="banner banner-1">
+						<img src="<?php echo base_url(); ?>public/img/banner02.jpg" alt="">
+						<div class="banner-caption">
+							<h1 class="primary-color">Giảm giá<br><span class="white-color font-weak">Lên đến 50%</span></h1>
+							<button class="primary-btn">Mua ngay</button>
+						</div>
+					</div>
+					<!-- /banner -->
+
+					<!-- banner -->
+					<div class="banner banner-1">
+						<img src="<?php echo base_url(); ?>public/img/banner03.jpg" alt="">
+						<div class="banner-caption">
+							<h1 class="white-color">Sản phẩm <span>mới</span></h1>
+							<button class="primary-btn">Mua ngay</button>
+						</div>
+					</div>
+					<!-- /banner -->
+				</div>
+				<!-- /home slick -->
+			</div>
+			<!-- /home wrap -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /HOME -->
+
 <!-- section -->
 <div class="section">
     <!-- container -->
@@ -393,8 +440,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- /container -->
 </div>
 <!-- /section -->
-
-
 
 <!-- section -->
 <div class="section">

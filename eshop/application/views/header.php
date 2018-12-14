@@ -109,7 +109,7 @@
                             </div>
                             <strong class="text-uppercase">Tài khoản của tôi<i class="fa fa-caret-down"></i></strong>
                         </div>
-                        <a href="<?php echo base_url();?>index.php/users/login" class="text-uppercase">Đăng nhập</a>/<a href="<?php echo base_url();?>index.php/users/register" class="text-uppercase">Đăng kí</a>
+                         <a href="<?php echo base_url();?>index.php/users/login" class="text-uppercase">Đăng nhập</a>/<a href="<?php echo base_url();?>index.php/users/register" class="text-uppercase">Đăng kí</a>
                         <ul class="custom-menu">
                             <li><a href="#"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
@@ -185,7 +185,7 @@
     <div class="container">
         <div id="responsive-nav">
             <!-- category nav -->
-            <div class="category-nav show-on-click">
+            <div class="category-nav <?php if(isset($current_page) && $current_page == 'home') echo 'show-on-home'; else echo 'show-on-click'; ?>">
                 <span class="category-header">Danh mục <i class="fa fa-list"></i></span>
                 <ul class="category-list">
                     <li class="dropdown side-dropdown">
@@ -709,7 +709,7 @@
                             <li><a href="#">Trang chủ</a></li>
                             <li><a href="<?php echo base_url(); ?>index.php/products">Các sản phẩm</a></li>
                             <li><a href="#">Chi tiết sản phẩm</a></li>
-                            <li><a href="#">Thanh toán</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/products/checkout">Thanh toán</a></li>
                             <li><a href="<?php echo base_url();?>index.php/admin/managers">Admin (test view)</a></li>
                             <li><a href="#">Blank</a></li>
 <!--                            <li><a href="--><?php //echo base_url();?><!--index.php/users/profile">user-profile (test view)</a></li>-->

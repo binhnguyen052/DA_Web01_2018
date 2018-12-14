@@ -1,5 +1,3 @@
-
-
 <!-- BREADCRUMB -->
 <div id="breadcrumb">
     <div class="container">
@@ -459,7 +457,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o empty"></
+                                        <i class="fa fa-star-o empty"></i>
                                     </div>
                                     <h2 class="product-name"><a href="#">Tên Sản Phẩm</a></h2>
                                     <div class="product-btns">

@@ -11,9 +11,17 @@ class Products extends CI_Controller {
 
     public function detail($id)
     {
-        $data = array(
+            $data = array(
             'title' => 'Product '.$id,
-        );
-        $this->load->view('product_detail', $data);
+            );
+            $this->load->view('product_detail', $data);
+
+    }
+
+    public function checkout()
+    {
+        $this->load->view('header');
+        $this->load->view('checkout');
+        $this->load->view('footer');
     }
 }

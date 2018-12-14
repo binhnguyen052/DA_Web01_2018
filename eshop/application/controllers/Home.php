@@ -20,8 +20,18 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('header');
-		$this->load->view('home');
-		$this->load->view('footer');
+        $this->load->model('Product');
+        $last_products = $this->Product->get_last_entries();
+
+	    $data = array(
+	        'current_page' => 'home',
+            'last_products' => $last_products
+        );
+
+	    //echo '<pre>'; print_r($last_products); echo '</pre>'; exit();
+
+		$this->load->view('header', $data);
+		$this->load->view('home', $data);
+		$this->load->view('footer', $data);
 	}
 }

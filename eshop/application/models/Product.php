@@ -1,9 +1,11 @@
 <?php
-class Product extends CI_Model {
+
+class Product extends CI_Model
+{
     public $table = 'product';
 
     public $id;
-    public $name;
+    public $__name;
 
     public function get_last_entries($num = 10)
     {
@@ -12,6 +14,18 @@ class Product extends CI_Model {
         return $query->result_array();
     }
 
+    public function get_most_views($num = 12)
+    {
+        $query = $this->db->query("SELECT * FROM {$this->table} ORDER BY views DESC LIMIT {$num}");
+
+        return $query->result_array();
+    }
+
+    public function get_most_solds($num = 10)
+    {
+        $query = $this->db->query("SELECT * FROM {$this->table} ORDER BY solds DESC LIMIT {$num}");
+        return $query->result_array();
+    }
     /*
     public function insert_entry()
     {

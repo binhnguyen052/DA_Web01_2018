@@ -191,23 +191,18 @@
 					<span class="category-header">Danh mục <i class="fa fa-list"></i></span>
 					<ul class="category-list">
 
-                    	<!-- vùng hiển thị menu -->
-                        
-                        
+                    	<!-- vùng hiển thị menu -->                 
                         <?php	
                         //lấy danh sách loại sản phẩm từ database   
-
-						$sql = "SELECT producttypeid, producttypename FROM `product_type` WHERE 1";
+						$sql = "SELECT * FROM `product_type` WHERE deleted = 0";
                         $result = mysqli_query($db->link , $sql) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
                         while($row = mysqli_fetch_array($result))
-                        {
-                            extract($row);
-                            echo "<li class='dropdown side-dropdown'>
+                        { 
+                            extract($row); ?>
+                            <li class='dropdown side-dropdown'>
 							<a class='dropdown-toggle'  aria-expanded='true' a href='View/page/products.php?id=$producttypename'>                       
-                                 $producttypename <i class='fa fa-angle-right'></i> </a> </li>";
-                        }                       			
-						
-                        ?>
+                                 <?php echo $name; ?> <i class='fa fa-angle-right'></i> </a> </li>
+                        <?php } ?>                       								
 						
 						<li><a href='View/page/products.php'>Xem tất cả</a></li>
 
@@ -228,25 +223,23 @@
 								<div class="row">
 
 									<?php 
-
-									$sql = "SELECT manufacturername, logourl FROM `manufacturer` WHERE Deleted = 1";
-									$result = mysqli_query($db->link, $sql);
-									while ($row = mysqli_fetch_array($result))
-									{
-										extract($row);
-										echo "<div class='col-md-3'>
-											<div class='hidden-sm hidden-xs'>
-												<a class='banner banner-1' href='View/page/products.php?id=$manufacturername'>
-													<img src='View/img/banner06.jpg' alt=''>
-													<div class='banner-caption text-center'>
-														<h3 class='white-color text-uppercase'>$manufacturername</h3>
-													</div>
-												</a>
-												<hr>
-											</div>					
-										</div>" ;
-									};
-									?>
+										$sql = "SELECT * FROM `manufacturer` WHERE deleted = 0";
+										$result = mysqli_query($db->link, $sql);
+										while ($row = mysqli_fetch_array($result))
+										 {
+											extract($row); ?>
+											<div class='col-md-3'>
+												<div class='hidden-sm hidden-xs'>
+													<a class='banner banner-1' href='View/page/products.php?id=$manufacturername'>
+														<img src='View/img/banner06.jpg' alt=''>
+														<div class='banner-caption text-center'>
+															<h3 class='white-color text-uppercase'> <?php echo $name; ?></h3>
+														</div>
+													</a>
+													<hr>
+												</div>					
+											</div>
+									<?php } ?>  
 
 								</div>
 							</div>

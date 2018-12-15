@@ -1,5 +1,5 @@
 <?php
-	include("Model/database/database.php");
+	include("./Model/database/database.php");
 	$db = new Database();
 	$db->db_connect();
 
@@ -398,8 +398,6 @@
 		<!-- /container -->
 	</div>
 	<!-- /section -->
-
-
 
 	<!-- section -->
 	<div class="section">

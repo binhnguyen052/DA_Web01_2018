@@ -230,7 +230,7 @@
 											extract($row); ?>
 											<div class='col-md-3'>
 												<div class='hidden-sm hidden-xs'>
-													<a class='banner banner-1' href='View/page/products.php?id=$manufacturername'>
+													<a class='banner banner-1' href='View/page/products.php?id=<?php echo $name; ?>'>
 														<img src='View/img/banner06.jpg' alt=''>
 														<div class='banner-caption text-center'>
 															<h3 class='white-color text-uppercase'> <?php echo $name; ?></h3>

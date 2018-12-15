@@ -233,7 +233,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div id="product-slick-2" class="product-slick">
 
-                        <?php foreach ($most_solds as $sold) { ?>
+                        <?php foreach ($most_sold as $sold) { ?>
                             <!-- Product Single -->
                             <div class="product product-single">
                                 <div class="product-thumb">

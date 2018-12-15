@@ -24,12 +24,14 @@ class Home extends CI_Controller
         $this->load->model('Product');
         $last_products = $this->Product->get_last_entries();
         $most_views = $this->Product->get_most_views();
-        $most_solds = $this->Product->get_most_solds();
+        $most_sold = $this->Product->get_most_sold();
+        $manufacturers = $this->Product->get_manufacturer();
         $data = array(
             'current_page' => 'home',
             'last_products' => $last_products,
             'most_views' => $most_views,
-            'most_solds' => $most_solds
+            'most_sold' => $most_sold,
+            'manufacturers' => $manufacturers
         );
 
 

@@ -24,7 +24,6 @@ class Products extends CI_Controller {
             'title' => 'Product '.$id,
             );
             $this->load->view('product_detail', $data);
-
     }
 
     public function checkout()

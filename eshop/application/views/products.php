@@ -86,10 +86,9 @@
                 <div class="aside">
                     <h3 class="aside-title">Lọc Theo Nhãn Hiệu</h3>
                     <ul class="list-links">
-                        <li><a href="#">Nike</a></li>
-                        <li><a href="#">Adidas</a></li>
-                        <li><a href="#">Polo</a></li>
-                        <li><a href="#">Lacost</a></li>
+                        <?php foreach($manufacturers as $manufacturer) {?>
+                        <li><a href="#"> <?php echo $manufacturer['name']; ?> </a></li>
+                         <?php }?>
                     </ul>
                 </div>
                 <!-- /aside widget -->

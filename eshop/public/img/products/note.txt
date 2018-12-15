@@ -13,31 +13,3 @@ hình kích cở
 1200 - 675
  720x540
 C:\Users\Hao\Desktop\products
-áo quần giày túi xách đồng hồ
-
-
-1('adidas', null, 1),
-
-2('an phước', null, 1),
-
-3('casio', null, 1),
-
-4('levi', null, 1),
-
-5('nike', null, 1),
-
-6('seiko', null, 1),
-
-7('việt tiến', null, 1);
-
-1('bag', 1),
-2('shirt', 1),
-
-3('shoe', 1),
-
-4('pant', 1),
-
-5('watch', 1);
-
-
-

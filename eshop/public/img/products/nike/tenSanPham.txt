@@ -1,8 +1,10 @@
-nike_shirts01:Nike Black History-40$-china
-nike_shirts02:Nike tricko nasrat-50$-USA
-nike_shirts03:Nike Notre Dame-50$-China
-nike_shirts04:Nike homer -60$-USA
-nike_shirts05:Nike t shirt mens-50$-USA
-nike_shoes01:Nike scott air force 1-120$-USA
-nike_shoes02: Nike air max-30$-USA
-nike_shoes03:Nike air max 90-200$-USA
+nike_shirts01:nike taka-10$-usa
+nike_shirts02:nike cv9888-200$-usa
+nike_shirts03:nike Notre Dame -100$-usa
+nike_shirts04:nike homer simpson-100$-usa
+nike_shoes01:air force 1 travis -140$-usa
+nike_shoes02: air max-150$-usa
+nike_shoes03:nike air max 90-100$-usa
+nike_shoes04:nike super ari-500$-usa
+
+	

@@ -217,13 +217,13 @@ values
 
 insert into manufacturer(name, logo_url)
 values 
-('adidas', null),
-('an phước', null),
-('casio', null),
-('levi', null),
-('nike', null),
-('seiko', null),
-('việt tiến', null);
+('adidas', 'adidas_logo01.jpg'),
+('an phước', 'anphuoc_logo01.jpg'),
+('casio', 'casio_logo01.jpg'),
+('levi\'s', 'levi_logo01.jpg'),
+('nike', 'nike_logo01.jpg'),
+('seiko', 'seiko_logo01.jpg'),
+('việt tiến', 'viettien_logo01.jpg');
 
 /*
   `id` INT ZEROFILL NOT NULL AUTO_INCREMENT,

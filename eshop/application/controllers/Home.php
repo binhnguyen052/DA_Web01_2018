@@ -26,11 +26,14 @@ class Home extends CI_Controller
         $most_views = $this->Product->get_most_views();
         $most_sold = $this->Product->get_most_sold();
         $manufacturers = $this->Product->get_manufacturer();
+        $product_type = $this->Product->get_product_type();
+
         $data = array(
             'current_page' => 'home',
             'last_products' => $last_products,
             'most_views' => $most_views,
             'most_sold' => $most_sold,
+            'product_type' => $product_type,
             'manufacturers' => $manufacturers
         );
 

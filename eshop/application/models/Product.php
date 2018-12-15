@@ -3,6 +3,7 @@
 class Product extends CI_Model
 {
     public $tb_product = 'product';
+    public $tb_product_type = 'product_type';
     public $tb_manufacturer = 'manufacturer';
 
     public $id;
@@ -25,6 +26,13 @@ class Product extends CI_Model
     public function get_most_sold($num = 10)
     {
         $query = $this->db->query("SELECT * FROM {$this->tb_product} ORDER BY solds DESC LIMIT {$num}");
+
+        return $query->result_array();
+    }
+
+    public function get_product_type()
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_product_type} WHERE deleted = 0 ORDER BY name ASC ");
 
         return $query->result_array();
     }

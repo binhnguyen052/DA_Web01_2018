@@ -44,4 +44,5 @@ class Users extends CI_Controller {
         );
         $this->load->view('product_detail', $data);
     }
+
 }

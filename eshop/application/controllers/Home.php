@@ -38,8 +38,6 @@ class Home extends CI_Controller
         );
 
 
-        //echo '<pre>'; print_r($last_products); echo '</pre>'; exit();
-
         $this->load->view('header', $data);
         $this->load->view('home', $data);
         $this->load->view('footer', $data);

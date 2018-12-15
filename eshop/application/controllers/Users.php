@@ -4,9 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Users extends CI_Controller {
     public function register()
     {
-        $this->load->view('header');
-        $this->load->view('user_register');
-        $this->load->view('footer');
+        $this->load->model('Product');
+        $manufacturers = $this->Product->get_manufacturer();
+        $product_type = $this->Product->get_product_type();
+
+        $data = array(
+            'product_type' => $product_type,
+            'manufacturers' => $manufacturers
+        );
+
+        $this->load->view('header', $data);
+        $this->load->view('user_register', $data);
+        $this->load->view('footer', $data);
     }
 
     public function login()

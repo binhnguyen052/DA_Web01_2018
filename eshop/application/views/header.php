@@ -281,7 +281,7 @@
                                         <li>
                                             <h3 class="list-links-title"><?php echo $manufacturer['name']; ?></h3></li>
                                         <li>
-                                            <a href="#">Women’s Clothing</a></li>
+                                            <a href="#"></a></li>
                                     </ul>
                                 </div>
                             <?php }?>

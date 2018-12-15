@@ -435,7 +435,7 @@
                         <ul class="custom-menu">
                             <li><a href="<?php echo base_url();?>index.php">Trang chủ</a></li>
                             <li><a href="<?php echo base_url(); ?>index.php/products">Các sản phẩm</a></li>
-                            <li><a href="#">Chi tiết sản phẩm</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/products/detail">Chi tiết sản phẩm</a></li>
                             <li><a href="<?php echo base_url(); ?>index.php/products/checkout">Thanh toán</a></li>
                             <li><a href="<?php echo base_url();?>index.php/admin/managers">Admin (test view)</a></li>
                             <li><a href="<?php echo base_url();?>index.php">Blank</a></li>

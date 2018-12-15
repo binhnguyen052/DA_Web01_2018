@@ -1,0 +1,10 @@
+nike_shirts01:nike taka-10$-usa
+nike_shirts02:nike cv9888-200$-usa
+nike_shirts03:nike Notre Dame -100$-usa
+nike_shirts04:nike homer simpson-100$-usa
+nike_shoes01:air force 1 travis -140$-usa
+nike_shoes02: air max-150$-usa
+nike_shoes03:nike air max 90-100$-usa
+nike_shoes04:nike super ari-500$-usa
+
+	

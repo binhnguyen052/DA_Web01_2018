@@ -1,0 +1,5 @@
+seiko_watches01:seiko quan doi-50$-USA
+seiko_watches02:seiko 5 -55$-USA
+seiko_watches03:seiko srz469p1-60$-USA
+seiko_watches04:seiko 5 snkk71-100$-USA
+seiko_watches05:seiko szzc42-80$-USA

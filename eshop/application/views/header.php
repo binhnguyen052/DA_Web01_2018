@@ -195,21 +195,26 @@
                             <?php echo $ptype['name'];
                             $product_type_manufacturers = $this->Product->get_product_type_manufacturer($ptype['id']); ?>
                             <i class="fa fa-angle-right"></i></a>
+
                         <div class="custom-menu">
                             <div class="row">
-
                                 <?php foreach ($product_type_manufacturers as $p) {?>
                                     <div class="col-md-4">
-                                        <ul class="list-links">
-                                       <li><a href="#"> <img class="img-thumbnail" src="<?php base_url();?>public/upload/<?php echo $p['logo_url']; ?>"> </a></li>
-                                       <li><hr></li>
-<!--                                   <li><h3 class="list-links-title text-center"> <a href="#">--><?php //echo $p['name']; ?><!-- </a> </h3></li>-->
-<!--                                   <li><a href="#">Women’s Clothing</a></li>-->
+                                       <ul class="list-links" >
+                                           <li><a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>/<?php echo str_replace("'","", $p['name'])?>">
+                                                   <img class="img-thumbnail" src="<?php base_url();?>public/upload/<?php echo $p['logo_url']; ?>"> </a></li>
+                                           <li><hr></li>
+<!--                                       <li><h3 class="list-links-title text-center"> <a href="#">--><?php //echo $p['name']; ?><!-- </a> </h3></li>-->
+<!--                                       <li><a href="#">Women’s Clothing</a></li>-->
                                         </ul>
                                         <hr class="hidden-md hidden-lg">
                                     </div>
                                 <?php }?>
 
+                                <!-- https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-bong-do-155.html  -->
+                                <div class="col-md-4"> <a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>"">
+                                    <img class="img-thumbnail" src="<?php base_url();?>public/upload/views_all.jpg"> </a>
+                                </div>
 <!--                            <div class="row hidden-sm hidden-xs">-->
 <!--                                <div class="col-md-12">-->
 <!--                                    <hr>-->
@@ -224,6 +229,8 @@
 <!--                            </div>-->
 
                         </div>
+
+
                     </li>
 
                     <?php }?>
@@ -248,7 +255,7 @@
                              <?php foreach($manufacturers as $manufacturer) {?>
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="<?php echo base_url();?>/index.php/Products/index/<?php echo str_replace("'","", $manufacturer['name']);;?>">
+                                        <a class="banner banner-1" href="<?php echo base_url();?>/index.php/Products/index/<?php echo str_replace("'","", $manufacturer['name']);?>">
                                             <img class="img-thumbnail" src="<?php echo base_url();?>public/upload/<?php echo $manufacturer['logo_url']; ?>" alt="">
 <!--                                            <div class="banner-caption text-center">-->
 <!--                                                <h3 class="white-color text-uppercase"></h3>-->

@@ -44,6 +44,17 @@ class Product extends CI_Model
         return $query->result_array();
     }
 
+    // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
+    public function get_product_type_manufacturer($id_type = 1)
+    {
+        $query = $this->db->query("select distinct manufacturer.name, manufacturer.logo_url
+        from manufacturer join product on manufacturer.id = product.manufacturer_id
+		join product_type on product_type.id = product.product_type_id
+        where product_type.id = {$id_type}");
+
+        return $query->result_array();
+    }
+
     /*
     public function insert_entry()
     {

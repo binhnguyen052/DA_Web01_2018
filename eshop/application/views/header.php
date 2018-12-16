@@ -192,58 +192,37 @@
                     <?php foreach ($product_type as $ptype) {?>
                     <li class="dropdown side-dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            <?php echo $ptype['name']; ?>
+                            <?php echo $ptype['name'];
+                            $product_type_manufacturers = $this->Product->get_product_type_manufacturer($ptype['id']); ?>
                             <i class="fa fa-angle-right"></i></a>
                         <div class="custom-menu">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                    <hr class="hidden-md hidden-lg">
-                                </div>
-                                <div class="col-md-4">
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                    <hr class="hidden-md hidden-lg">
-                                </div>
-                                <div class="col-md-4">
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row hidden-sm hidden-xs">
-                                <div class="col-md-12">
-                                    <hr>
-                                    <a class="banner banner-1" href="#">
-                                        <img src="<?php echo base_url();?>public/img/banner05.jpg" alt="">
-                                        <div class="banner-caption text-center">
-                                            <h2 class="white-color">NEW COLLECTION</h2>
-                                            <h3 class="white-color font-weak">HOT DEAL</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+
+                                <?php foreach ($product_type_manufacturers as $p) {?>
+                                    <div class="col-md-4">
+                                        <ul class="list-links">
+                                       <li><a href="#"> <img class="img-thumbnail" src="<?php base_url();?>public/upload/<?php echo $p['logo_url']; ?>"> </a></li>
+                                       <li><hr></li>
+<!--                                   <li><h3 class="list-links-title text-center"> <a href="#">--><?php //echo $p['name']; ?><!-- </a> </h3></li>-->
+<!--                                   <li><a href="#">Women’s Clothing</a></li>-->
+                                        </ul>
+                                        <hr class="hidden-md hidden-lg">
+                                    </div>
+                                <?php }?>
+
+<!--                            <div class="row hidden-sm hidden-xs">-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <hr>-->
+<!--                                    <a class="banner banner-1" href="#">-->
+<!--                                        <img src="--><?php //echo base_url();?><!--public/img/banner05.jpg" alt="">-->
+<!--                                        <div class="banner-caption text-center">-->
+<!--                                            <h2 class="white-color">NEW COLLECTION</h2>-->
+<!--                                            <h3 class="white-color font-weak">HOT DEAL</h3>-->
+<!--                                        </div>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
                         </div>
                     </li>
 
@@ -269,8 +248,8 @@
                              <?php foreach($manufacturers as $manufacturer) {?>
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="#">
-                                            <img src="<?php echo base_url();?>public/upload/<?php echo $manufacturer['logo_url']; ?>" alt="">
+                                        <a class="banner banner-1" href="<?php echo base_url();?>/index.php/Products/index/<?php echo str_replace("'","", $manufacturer['name']);;?>">
+                                            <img class="img-thumbnail" src="<?php echo base_url();?>public/upload/<?php echo $manufacturer['logo_url']; ?>" alt="">
 <!--                                            <div class="banner-caption text-center">-->
 <!--                                                <h3 class="white-color text-uppercase"></h3>-->
 <!--                                            </div>-->

@@ -299,7 +299,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="product product-single">
                         <div class="product-thumb">
                             <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh</button>
-                            <img src="<?php echo base_url(); ?>public/upload/<?php echo $view['image_url'] ?>" alt="">
+                            <img src="<?php echo base_url(); ?>public/upload/<?php echo $view['image_url']; ?>" alt="">
                         </div>
                         <div class="product-body">
                             <h3 class="product-price">$32.50</h3>

@@ -28,13 +28,16 @@ class Home extends CI_Controller
         $manufacturers = $this->Product->get_manufacturer();
         $product_type = $this->Product->get_product_type();
 
+        $product_type_manufacturers = $this->Product->get_product_type_manufacturer(1);
+
         $data = array(
             'current_page' => 'home',
             'last_products' => $last_products,
             'most_views' => $most_views,
             'most_sold' => $most_sold,
             'product_type' => $product_type,
-            'manufacturers' => $manufacturers
+            'manufacturers' => $manufacturers,
+            'product_type_manufacturers' => $product_type_manufacturers
         );
 
 

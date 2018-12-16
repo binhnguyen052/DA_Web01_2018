@@ -9,9 +9,11 @@ class Products extends CI_Controller
         $manufacturers = $this->Product->get_manufacturer();
         $product_type = $this->Product->get_product_type();
 
+
         $data = array(
             'product_type' => $product_type,
-            'manufacturers' => $manufacturers
+            'manufacturers' => $manufacturers,
+
         );
 
         $this->load->view('header', $data);
@@ -21,8 +23,13 @@ class Products extends CI_Controller
 
     public function detail($id = '')
     {
+        $this->load->model('Product');
+        $manufacturers = $this->Product->get_manufacturer();
+        $product_type = $this->Product->get_product_type();
         $data = array(
             'title' => 'Product ' . $id,
+            'product_type' => $product_type,
+            'manufacturers' => $manufacturers
         );
         $this->load->view('header', $data);
         $this->load->view('product_detail', $data);

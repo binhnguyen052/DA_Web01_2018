@@ -15,7 +15,7 @@ begin
 		fetch cur into product_id, _count;
 		if no_more_products = 0 then leave m_loop;
         end if;
-		UPDATE product SET product.sold = _count WHERE product.id = product_id;	
+		UPDATE product SET product.solds = _count WHERE product.id = product_id;	
 	end loop m_loop;
     close cur;
 end $$

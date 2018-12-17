@@ -20,7 +20,31 @@ class Users extends CI_Controller {
 
     public function login()
     {
-        $this->load->view('user_login');
+        $data = array();
+        if ($this->input->server('REQUEST_METHOD') == 'POST') {
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+            $this->load->model('Account');
+
+            $check_login = $this->Account->login($username,$password);
+
+            if ($check_login) {
+                // chuyen qua trang chu
+                $account_type = $this->session->userdata('account_type');
+                if($account_type==1){
+                    redirect('products');
+                }
+                if($account_type==0)
+                {
+                    redirect('admin/managers');
+                }
+                //die($account_type);
+            } else {
+                $data['login_message'] = 'Thong tin dang nhap sai';
+            }
+        }
+
+        $this->load->view('user_login', $data);
     }
 
     public function  profile()

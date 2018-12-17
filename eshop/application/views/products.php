@@ -171,17 +171,18 @@
                         <div class="page-filter">
                             <span class="text-uppercase">Hiển Thị:</span>
                             <select class="input">
-                                <option value="0">10</option>
-                                <option value="1">20</option>
-                                <option value="2">30</option>
+                                <option value="9">9</option>
+                                <option value="24">24</option>
+                                <option value="36">36</option>
                             </select>
                         </div>
                         <ul class="store-pages">
                             <li><span class="text-uppercase">Trang:</span></li>
-                            <li class="active">1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+                            <?php echo $pagination_links; ?>
+<!--                            <li class="active">1</li>-->
+<!--                            <li><a href="#">2</a></li>-->
+<!--                            <li><a href="#">3</a></li>-->
+<!--                            <li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -191,7 +192,6 @@
                 <div id="store">
                     <!-- row -->
                     <div class="row">
-
 
                         <?php foreach ($products as $_product) {?>
                         <!-- Product Single -->
@@ -226,7 +226,6 @@
                         <!-- /Product Single -->
                         <?php } ?>
 
-
                     </div>
                     <!-- /row -->
                 </div>
@@ -253,17 +252,19 @@
                         <div class="page-filter">
                             <span class="text-uppercase">Hiển Thị:</span>
                             <select class="input">
-                                <option value="0">10</option>
-                                <option value="1">20</option>
-                                <option value="2">30</option>
+                                <option value="9">9</option>
+                                <option value="24">24</option>
+                                <option value="36">36</option>
                             </select>
                         </div>
                         <ul class="store-pages">
                             <li><span class="text-uppercase">Trang:</span></li>
-                            <li class="active">1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+                            <?php echo $pagination_links; ?>
+<!--                            <li class="active">1</li>-->
+<!--                            <li><a href="#">2</a></li>-->
+<!--                            <li><a href="#">3</a></li>-->
+<!--                            <li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
+
                         </ul>
                     </div>
                 </div>

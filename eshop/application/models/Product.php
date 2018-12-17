@@ -9,6 +9,11 @@ class Product extends CI_Model
     public $id;
     public $__name;
 
+    function __construct()
+    {
+        parent::__construct();
+    }
+
     public function get_last_entries($num = 10)
     {
         $query = $this->db->query("SELECT * FROM {$this->tb_product} ORDER BY date_added DESC LIMIT {$num}");
@@ -56,22 +61,23 @@ class Product extends CI_Model
         return $query->result_array();
     }
 
-    public function get_all($filter = array())
+    public function get_all($filter = array(), $start = 0, $limit = 10)
     {
         $where = "";
 
         if (!empty($filter['product_type'])) {
-            $where .= " AND product.product_type_id = {$filter['product_type']}";
+            $where .= " AND product_type_id = {$filter['product_type']}";
         }
 
         if (!empty($filter['manufacturer'])) {
-            $where .= " AND product.manufacturer_id = {$filter['manufacturer']}";
+            $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
 
         $query = $this->db->query("
             SELECT * 
             FROM product
-            WHERE 1 {$where} and  deleted = 0
+            WHERE 1 {$where} AND deleted = 0
+            LIMIT {$start}, {$limit}
         ");
 
        // $sql = "SELECT * FROM `product` WHERE deleted = 0";
@@ -79,7 +85,32 @@ class Product extends CI_Model
         return $query->result_array();
     }
 
+    public function count_all($filter = array())
+    {
+        $where = "";
 
+        if (!empty($filter['product_type'])) {
+            $where .= " AND product_type_id = {$filter['product_type']}";
+        }
+
+        if (!empty($filter['manufacturer'])) {
+            $where .= " AND manufacturer_id = {$filter['manufacturer']}";
+        }
+
+        $query = $this->db->query("
+            SELECT
+                COUNT(id) AS num_rows
+            FROM product
+            WHERE 1 {$where} AND deleted = 0
+        ");
+
+        $row = $query->row();
+
+        if (isset($row))
+            return $row->num_rows;
+
+        return 0;
+    }
 
     /*
     public function insert_entry()

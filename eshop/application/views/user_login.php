@@ -30,14 +30,14 @@
                 <h1>Đăng nhập</h1>
             </div>
 
-            <form id="Login">
+            <form id="Login" method="POST">
 
                 <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Tên đăng nhập hoặc Email">
+                    <input name="username" type="text" class="form-control" id="inputEmail" placeholder="Tên đăng nhập hoặc Email">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Mật khẩu">
+                    <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Mật khẩu">
                 </div>
                 <div class="forgot">
                     <a href="#">Quên mật khẩu?</a>

@@ -47,10 +47,32 @@ class Product extends CI_Model
     // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
     public function get_product_type_manufacturer($id_type = 1)
     {
-        $query = $this->db->query("select distinct manufacturer.name, manufacturer.logo_url
+        $query = $this->db->query("
+        select distinct manufacturer.name, manufacturer.id, manufacturer.logo_url
         from manufacturer join product on manufacturer.id = product.manufacturer_id
 		join product_type on product_type.id = product.product_type_id
         where product_type.id = {$id_type}");
+
+        return $query->result_array();
+    }
+
+    public function get_all($filter = array())
+    {
+        $where = "";
+
+        if (!empty($filter['manufacture'])) {
+            $where .= " AND product.manufacturer_id = {$filter['manufacturer']}";
+        }
+
+        if (!empty($filter['product_type'])) {
+            $where .= " AND product.product_type_id = {$filter['product_type']}";
+        }
+
+        $query = $this->db->query("
+            SELECT * 
+            FROM product
+            WHERE 1 {$where}
+        ");
 
         return $query->result_array();
     }

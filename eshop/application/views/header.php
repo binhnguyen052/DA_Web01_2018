@@ -205,7 +205,7 @@
 <!--                                           <li><a href="--><?php //echo base_url(); ?><!--index.php/Products/index/--><?php //echo str_replace("'","", $ptype['name'])?><!--/--><?php //echo str_replace("'","", $p['name'])?><!--">-->
 <!--                                                   <img class="img-thumbnail" src="--><?php //base_url();?><!--public/upload/--><?php //echo $p['logo_url']; ?><!--"> </a></li>-->
                                            <!-- hiện tên nhà sản xuất -->
-                                           <li><a href="<?php //echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>/<?php echo str_replace("'","", $p['name'])?>">
+                                           <li><a href="<?php echo base_url(); ?>products?product_type=<?php echo $ptype['id']; ?>&manufacturer=<?php echo $p['id']; ?>">
                                                    <h3 class="text-uppercase text-warning"> <?php echo $p['name']; ?></h3></a> </li>
                                            <li><hr/></li>
 <!--                                       <li><h3 class="list-links-title text-center"> <a href="#">--><?php //echo $p['name']; ?><!-- </a> </h3></li>-->
@@ -217,7 +217,7 @@
 
                                 <!-- https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-bong-do-155.html  -->
                                 <div class="col-md-4">
-                                    <a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>">
+                                    <a href="<?php echo base_url(); ?>products?product_type=<?php echo $ptype['id']; ?>">
                                         <h3 class="text-uppercase text-info">xem tất cả</h3></a>
                                 </div>
 
@@ -241,7 +241,7 @@
 
                     <?php }?>
 
-                    <li><a href="#">Xem tất cả</a></li>
+                    <li><a href="<?php echo base_url(); ?>products">Xem tất cả</a></li>
 
                 </ul>
             </div>
@@ -252,7 +252,7 @@
                 <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
                 <ul class="menu-list">
 
-                    <li><a href="<?php echo base_url(); ?>index.php">Trang chủ</a></li>
+                    <li><a href="<?php echo base_url(); ?>">Trang chủ</a></li>
 
                     <li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Nhà sản xuất<i class="fa fa-caret-down"></i></a>
                         <div class="custom-menu">
@@ -261,7 +261,7 @@
                              <?php foreach($manufacturers as $manufacturer) {?>
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="<?php echo base_url();?>/index.php/Products/index/<?php echo str_replace("'","", $manufacturer['name']);?>">
+                                        <a class="banner banner-1" href="<?php echo base_url();?>products/index/<?php echo str_replace("'","", $manufacturer['name']);?>">
                                             <img class="img-thumbnail" src="<?php echo base_url();?>public/upload/<?php echo $manufacturer['logo_url']; ?>" alt="">
 <!--                                            <div class="banner-caption text-center">-->
 <!--                                                <h3 class="white-color text-uppercase"></h3>-->

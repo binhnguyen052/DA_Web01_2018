@@ -71,11 +71,15 @@ class Product extends CI_Model
         $query = $this->db->query("
             SELECT * 
             FROM product
-            WHERE 1 {$where}
+            WHERE 1 {$where} and  deleted = 0
         ");
+
+       // $sql = "SELECT * FROM `product` WHERE deleted = 0";
 
         return $query->result_array();
     }
+
+
 
     /*
     public function insert_entry()

@@ -217,8 +217,6 @@
 
                                 <!-- https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-bong-do-155.html  -->
                                 <div class="col-md-4">
-                                    <a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>>
-<!--                                    <img class="img-thumbnail" src=""><?php //base_url();?><!--public/upload/views_all.jpg"> </a>-->
                                     <a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>">
                                         <h3 class="text-uppercase text-info">xem tất cả</h3></a>
                                 </div>

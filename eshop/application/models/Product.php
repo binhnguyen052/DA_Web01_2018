@@ -60,12 +60,12 @@ class Product extends CI_Model
     {
         $where = "";
 
-        if (!empty($filter['manufacture'])) {
-            $where .= " AND product.manufacturer_id = {$filter['manufacturer']}";
-        }
-
         if (!empty($filter['product_type'])) {
             $where .= " AND product.product_type_id = {$filter['product_type']}";
+        }
+
+        if (!empty($filter['manufacturer'])) {
+            $where .= " AND product.manufacturer_id = {$filter['manufacturer']}";
         }
 
         $query = $this->db->query("

@@ -206,7 +206,7 @@
 <!--                                                   <img class="img-thumbnail" src="--><?php //base_url();?><!--public/upload/--><?php //echo $p['logo_url']; ?><!--"> </a></li>-->
                                            <!-- hiện tên nhà sản xuất -->
                                            <li><a href="<?php echo base_url(); ?>products?product_type=<?php echo $ptype['id']; ?>&manufacturer=<?php echo $p['id']; ?>">
-                                                   <h3 class="text-uppercase text-warning"> <?php echo $p['name']; ?></h3></a> </li>
+                                                   <h3 class="text-uppercase" style=" color: #F8694A;"> <?php echo $p['name']; ?></h3></a> </li>
                                            <li><hr/></li>
 <!--                                       <li><h3 class="list-links-title text-center"> <a href="#">--><?php //echo $p['name']; ?><!-- </a> </h3></li>-->
 <!--                                       <li><a href="#">Women’s Clothing</a></li>-->

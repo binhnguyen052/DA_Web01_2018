@@ -201,9 +201,12 @@
                                 <?php foreach ($product_type_manufacturers as $p) {?>
                                     <div class="col-md-4">
                                        <ul class="list-links" >
-                                           <li><a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>/<?php echo str_replace("'","", $p['name'])?>">
-                                                   <img class="img-thumbnail" src="<?php base_url();?>public/upload/<?php echo $p['logo_url']; ?>"> </a></li>
-                                           <li><hr></li>
+                                            <!-- hiện hình ảnh nhà sản xuất -->
+<!--                                           <li><a href="--><?php //echo base_url(); ?><!--index.php/Products/index/--><?php //echo str_replace("'","", $ptype['name'])?><!--/--><?php //echo str_replace("'","", $p['name'])?><!--">-->
+<!--                                                   <img class="img-thumbnail" src="--><?php //base_url();?><!--public/upload/--><?php //echo $p['logo_url']; ?><!--"> </a></li>-->
+                                           <!-- hiện tên nhà sản xuất -->
+                                           <li><a href="#"><h3 class="text-uppercase text-warning"> <?php echo $p['name']; ?></h3></a> </li>
+                                           <li><hr/></li>
 <!--                                       <li><h3 class="list-links-title text-center"> <a href="#">--><?php //echo $p['name']; ?><!-- </a> </h3></li>-->
 <!--                                       <li><a href="#">Women’s Clothing</a></li>-->
                                         </ul>
@@ -213,8 +216,10 @@
 
                                 <!-- https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-bong-do-155.html  -->
                                 <div class="col-md-4"> <a href="<?php echo base_url(); ?>index.php/Products/index/<?php echo str_replace("'","", $ptype['name'])?>"">
-                                    <img class="img-thumbnail" src="<?php base_url();?>public/upload/views_all.jpg"> </a>
+<!--                                    <img class="img-thumbnail" src="--><?php //base_url();?><!--public/upload/views_all.jpg"> </a>-->
+                                    <a href="#"> <h3 class="text-uppercase text-info">  xem tất cả</h3></a>
                                 </div>
+
 <!--                            <div class="row hidden-sm hidden-xs">-->
 <!--                                <div class="col-md-12">-->
 <!--                                    <hr>-->

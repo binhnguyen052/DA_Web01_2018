@@ -201,10 +201,7 @@
                                 <?php foreach ($product_type_manufacturers as $p) {?>
                                     <div class="col-md-4">
                                        <ul class="list-links" >
-                                            <!-- hiện hình ảnh nhà sản xuất -->
-<!--                                           <li><a href="--><?php //echo base_url(); ?><!--index.php/Products/index/--><?php //echo str_replace("'","", $ptype['name'])?><!--/--><?php //echo str_replace("'","", $p['name'])?><!--">-->
-<!--                                                   <img class="img-thumbnail" src="--><?php //base_url();?><!--public/upload/--><?php //echo $p['logo_url']; ?><!--"> </a></li>-->
-                                           <!-- hiện tên nhà sản xuất -->
+
                                            <li><a href="<?php echo base_url(); ?>products?product_type=<?php echo $ptype['id']; ?>&manufacturer=<?php echo $p['id']; ?>">
                                                    <h3 class="text-uppercase" style=" color: #F8694A;"> <?php echo $p['name']; ?></h3></a> </li>
                                            <li><hr/></li>
@@ -261,7 +258,7 @@
                              <?php foreach($manufacturers as $manufacturer) {?>
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="<?php echo base_url();?>products/index/<?php echo str_replace("'","", $manufacturer['name']);?>">
+                                        <a class="banner banner-1" href="<?php echo base_url();?>products?manufacturer=<?php echo $manufacturer['id'];?>">
                                             <img class="img-thumbnail" src="<?php echo base_url();?>public/upload/<?php echo $manufacturer['logo_url']; ?>" alt="">
 <!--                                            <div class="banner-caption text-center">-->
 <!--                                                <h3 class="white-color text-uppercase"></h3>-->

@@ -50,7 +50,7 @@
                             Chưa có tài khoản?
                         </span>
 
-                    <a href="#" class="txt3">
+                    <a href="./register" class="txt3">
                         Đăng ký ngay
                     </a>
                 </div>

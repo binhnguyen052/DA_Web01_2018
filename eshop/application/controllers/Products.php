@@ -17,6 +17,7 @@ class Products extends CI_Controller
         $products = $this->Product->get_all($params, $start, 9);
         $total = $this->Product->count_all($params);
 
+
         //echo '<pre>'; print_r($products); echo '</pre>'; exit();
 
         $this->load->library('pagination');
@@ -48,14 +49,18 @@ class Products extends CI_Controller
 
     public function detail($id = '')
     {
+        $params = $this->input->get();
+
         $this->load->model('Product');
         $manufacturers = $this->Product->get_manufacturer();
         $product_type = $this->Product->get_product_type();
         $product_type_manufacturers = $this->Product->get_product_type_manufacturer(1);
+        $one_product = $this->Product->get_one($params);
         $data = array(
             'title' => 'Product ' . $id,
             'product_type' => $product_type,
             'manufacturers' => $manufacturers,
+            'one_product' => $one_product,
             'product_type_manufacturers' => $product_type_manufacturers
         );
         $this->load->view('header', $data);

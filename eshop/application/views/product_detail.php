@@ -19,45 +19,30 @@
             <div class="product product-details clearfix">
                 <div class="col-md-6">
                     <div id="product-main-view">
-
+                       <?php foreach ($one_product as $__product)?>
                         <div class="product-view">
                             <img src="<?php echo base_url(); ?>public/img/main-product01.jpg" alt="">
                         </div>
-                        <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/main-product02.jpg" alt="">
-                        </div>
-                        <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/main-product03.jpg" alt="">
-                        </div>
-                        <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/main-product04.jpg" alt="">
-                        </div>
+
                     </div>
 
                     <div id="product-view">
                         <div class="product-view">
                             <img src="<?php echo base_url(); ?>public/img/thumb-product01.jpg" alt="">
                         </div>
-                        <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/thumb-product02.jpg" alt="">
-                        </div>
-                        <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/thumb-product03.jpg" alt="">
-                        </div>
-                        <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/thumb-product04.jpg" alt="">
-                        </div>
+
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="product-body">
                         <div class="product-label">
-                            <span>Sản Phẩm Mới</span>
-                            <span class="sale">-20%</span>
+                            <span class="text-uppercase">Tên sản phẩm</span>
+<!--                            <span class="sale">-20%</span>-->
                         </div>
-                        <h2 class="product-name">Adidas Superstar</h2>
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+                        <h2 class="product-name text-uppercase"><?php  ?></h2>
+                        <h3 class="product-price" style="color: #8A2454;">$<?php echo $__product['price'];?> </h3>
+<!--                        <del class="product-old-price">$45.00</del>-->
                         <div>
                             <div class="product-rating">
                                 <i class="fa fa-star"></i>
@@ -68,13 +53,13 @@
                             </div>
                             <a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>
                         </div>
-                        <p><strong>Tình trạng:</strong> Còn hàng</p>
-                        <p><strong>Loại:</strong> Giày</p>
-                        <p><strong>Nhãn Hiệu:</strong> Adidas</p>
-                        <p><strong>Xuất Xứ:</strong> USA</p>
-                        <p><strong>Số lượt xem:</strong> 4</p>
-                        <p><strong>Số lượt bán:</strong> 2</p>
-                        <p><strong>Mô tả:</strong> màu nam tính, đẳng cấp cùng chất liệu vải sợi cao cấp, mềm mại, không mang đến cảm giác đau chân khi phải di chuyển nhiều, sản phẩm tạo nên sự tin tưởng tuyệt đối trong sự lựa chọn của giới trẻ thời nay.</p>
+                        <p class="text-uppercase"><strong>Tình trạng: </strong>Còn hàng</p>
+                        <p class="text-uppercase"><strong>Loại: </strong><?php  ?></p>
+                        <p class="text-uppercase"><strong>Nhãn Hiệu: </strong> Adidas</p>
+                        <p class="text-uppercase"><strong>Xuất Xứ: </strong><?php echo $__product['origin'];?></p>
+                        <p class="text-uppercase"><strong>Số lượt xem: </strong><?php echo $__product['views'];?></p>
+                        <p class="text-uppercase"><strong>Số lượt bán: </strong><?php echo $__product['solds'];?></p>
+                        <p><strong class="text-uppercase">Mô tả:</strong><?php echo $__product['descreibe'];?> </p>
                         <div class="product-options">
                             <ul class="size-option">
                                 <li><span class="text-uppercase">Size:</span></li>
@@ -105,116 +90,115 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-12">
-                    <div class="product-tab">
-                        <ul class="tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Miêu Tả</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Chi Tiết</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Nhận Xét(3)</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="tab1" class="tab-pane fade in active">
-
-                            </div>
-                            <div id="tab2" class="tab-pane fade in">
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="product-reviews">
-                                            <div class="single-review">
-                                                <div class="review-heading">
-                                                    <div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
-                                                    <div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
-                                                    <div class="review-rating pull-right">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o empty"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="review-body">
-
-                                                </div>
-                                            </div>
-
-                                            <div class="single-review">
-                                                <div class="review-heading">
-                                                    <div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
-                                                    <div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
-                                                    <div class="review-rating pull-right">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o empty"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="review-body">
-
-                                                </div>
-                                            </div>
-
-                                            <div class="single-review">
-                                                <div class="review-heading">
-                                                    <div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
-                                                    <div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
-                                                    <div class="review-rating pull-right">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o empty"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="review-body">
-
-                                                </div>
-                                            </div>
-
-                                            <ul class="reviews-pages">
-                                                <li class="active">1</li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#"><i class="fa fa-caret-right"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h4 class="text-uppercase">Hãy Viết Đánh Gía Của Bạn</h4>
-                                        <p>Địa chỉ email của bạn sẽ không được công bố.</p>
-                                        <form class="review-form">
-                                            <div class="form-group">
-                                                <input class="input" type="text" placeholder="Họ Tên" />
-                                            </div>
-                                            <div class="form-group">
-                                                <input class="input" type="email" placeholder="Email" />
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea class="input" placeholder="Đánh Giá"></textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-rating">
-                                                    <strong class="text-uppercase">Xếp Hạng Của Bạn: </strong>
-                                                    <div class="stars">
-                                                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
-                                                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
-                                                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
-                                                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
-                                                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="primary-btn">Gửi Đi</button>
-                                        </form>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="product-tab">-->
+<!--                        <ul class="tab-nav">-->
+<!--                            <li class="active"><a data-toggle="tab" href="#tab1">Miêu Tả</a></li>-->
+<!--                            <li><a data-toggle="tab" href="#tab1">Chi Tiết</a></li>-->
+<!--                            <li><a data-toggle="tab" href="#tab2">Nhận Xét(3)</a></li>-->
+<!--                        </ul>-->
+<!--                        <div class="tab-content">-->
+<!--                            <div id="tab1" class="tab-pane fade in active">-->
+<!---->
+<!--                            </div>-->
+<!--                            <div id="tab2" class="tab-pane fade in">-->
+<!---->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-md-6">-->
+<!--                                        <div class="product-reviews">-->
+<!--                                            <div class="single-review">-->
+<!--                                                <div class="review-heading">-->
+<!--                                                    <div><a href="#"><i class="fa fa-user-o"></i> John</a></div>-->
+<!--                                                    <div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>-->
+<!--                                                    <div class="review-rating pull-right">-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star-o empty"></i>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="review-body">-->
+<!---->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!---->
+<!--                                            <div class="single-review">-->
+<!--                                                <div class="review-heading">-->
+<!--                                                    <div><a href="#"><i class="fa fa-user-o"></i> John</a></div>-->
+<!--                                                    <div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>-->
+<!--                                                    <div class="review-rating pull-right">-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star-o empty"></i>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="review-body">-->
+<!---->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!---->
+<!--                                            <div class="single-review">-->
+<!--                                                <div class="review-heading">-->
+<!--                                                    <div><a href="#"><i class="fa fa-user-o"></i> John</a></div>-->
+<!--                                                    <div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>-->
+<!--                                                    <div class="review-rating pull-right">-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star"></i>-->
+<!--                                                        <i class="fa fa-star-o empty"></i>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="review-body">-->
+<!---->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!---->
+<!--                                            <ul class="reviews-pages">-->
+<!--                                                <li class="active">1</li>-->
+<!--                                                <li><a href="#">2</a></li>-->
+<!--                                                <li><a href="#">3</a></li>-->
+<!--                                                <li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-6">-->
+<!--                                        <h4 class="text-uppercase">Hãy Viết Đánh Gía Của Bạn</h4>-->
+<!--                                        <p>Địa chỉ email của bạn sẽ không được công bố.</p>-->
+<!--                                        <form class="review-form">-->
+<!--                                            <div class="form-group">-->
+<!--                                                <input class="input" type="text" placeholder="Họ Tên" />-->
+<!--                                            </div>-->
+<!--                                            <div class="form-group">-->
+<!--                                                <input class="input" type="email" placeholder="Email" />-->
+<!--                                            </div>-->
+<!--                                            <div class="form-group">-->
+<!--                                                <textarea class="input" placeholder="Đánh Giá"></textarea>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-group">-->
+<!--                                                <div class="input-rating">-->
+<!--                                                    <strong class="text-uppercase">Xếp Hạng Của Bạn: </strong>-->
+<!--                                                    <div class="stars">-->
+<!--                                                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>-->
+<!--                                                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>-->
+<!--                                                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>-->
+<!--                                                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>-->
+<!--                                                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <button class="primary-btn">Gửi Đi</button>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <hr/>
                 </div>
 
             </div>

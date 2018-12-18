@@ -53,11 +53,26 @@ class Product extends CI_Model
     public function get_product_type_manufacturer($id_type = 1)
     {
         $query = $this->db->query("
-        select distinct manufacturer.name, manufacturer.id, manufacturer.logo_url
-        from manufacturer join product on manufacturer.id = product.manufacturer_id
-		join product_type on product_type.id = product.product_type_id
-        where product_type.id = {$id_type}");
+        SELECT DISTINCT manufacturer.name, manufacturer.id, manufacturer.logo_url
+        FROM manufacturer JOIN product ON manufacturer.id = product.manufacturer_id
+		JOIN product_type ON product_type.id = product.product_type_id
+        WHERE product_type.id = {$id_type}");
 
+        return $query->result_array();
+    }
+
+    public function get_one($filter = array())
+    {
+        $where = "";
+        if (!empty($filter['id'])) {
+            $where .= " AND product.id = {$filter['id']}";
+        }
+        $query = $this->db->query("
+            SELECT *
+            FROM manufacturer JOIN product ON manufacturer.id = product.manufacturer_id
+		    JOIN product_type ON product_type.id = product.product_type_id
+            WHERE 1 {$where} AND product.deleted = 0
+        ");
         return $query->result_array();
     }
 

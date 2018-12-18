@@ -19,6 +19,7 @@
             <div class="product product-details clearfix">
                 <div class="col-md-6">
                     <div id="product-main-view">
+
                         <div class="product-view">
                             <img src="<?php echo base_url(); ?>public/img/main-product01.jpg" alt="">
                         </div>
@@ -32,6 +33,7 @@
                             <img src="<?php echo base_url(); ?>public/img/main-product04.jpg" alt="">
                         </div>
                     </div>
+
                     <div id="product-view">
                         <div class="product-view">
                             <img src="<?php echo base_url(); ?>public/img/thumb-product01.jpg" alt="">
@@ -47,6 +49,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="product-body">
                         <div class="product-label">
@@ -65,9 +68,13 @@
                             </div>
                             <a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>
                         </div>
-                        <p><strong>Khả Dụng:</strong> Trong Kho</p>
-                        <p><strong>Nhãn Hiệu:</strong> E-SHOP</p>
-                        <p>Tông màu nam tính, đẳng cấp cùng chất liệu vải sợi cao cấp, mềm mại, không mang đến cảm giác đau chân khi phải di chuyển nhiều, sản phẩm tạo nên sự tin tưởng tuyệt đối trong sự lựa chọn của giới trẻ thời nay.</p>
+                        <p><strong>Tình trạng:</strong> Còn hàng</p>
+                        <p><strong>Loại:</strong> Giày</p>
+                        <p><strong>Nhãn Hiệu:</strong> Adidas</p>
+                        <p><strong>Xuất Xứ:</strong> USA</p>
+                        <p><strong>Số lượt xem:</strong> 4</p>
+                        <p><strong>Số lượt bán:</strong> 2</p>
+                        <p><strong>Mô tả:</strong> màu nam tính, đẳng cấp cùng chất liệu vải sợi cao cấp, mềm mại, không mang đến cảm giác đau chân khi phải di chuyển nhiều, sản phẩm tạo nên sự tin tưởng tuyệt đối trong sự lựa chọn của giới trẻ thời nay.</p>
                         <div class="product-options">
                             <ul class="size-option">
                                 <li><span class="text-uppercase">Size:</span></li>
@@ -428,7 +435,7 @@
             <!-- section title -->
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2 class="title">sản phẩm cùng nhà sản xuất</h2>
+                    <h2 class="title">cùng nhãn hiệu</h2>
                 </div>
             </div>
             <!-- section title -->

@@ -19,7 +19,8 @@
             <div class="product product-details clearfix">
                 <div class="col-md-6">
                     <div id="product-main-view">
-                       <?php foreach ($one_product as $__product)?>
+                       <?php $id_manufact;
+                       foreach ($one_product as $__product)?>
                         <div class="product-view">
                             <img src="<?php echo base_url(); ?>public/upload/<?php echo $__product['image_url']; ?>" alt="">
                         </div>

@@ -143,8 +143,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <!--                                    <li><span>00 M</span></li>-->
                                         <!--                                    <li><span>00 S</span></li>-->
                                     </ul>
-                                    <button class="main-btn quick-view"
-                                    "><i class="fa fa-search-plus"></i>Xem nhanh</button>
+
+                                    <a class="main-btn quick-view btn"
+                                       href="<?php echo base_url(); ?>products/detail?id=<?php echo $product['id']; ?>"
+                                       role="button">Xem Nhanh</a>
+
                                     <img src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url']; ?>"
                                          alt="">
                                 </div>
@@ -237,8 +240,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <!-- Product Single -->
                             <div class="product product-single">
                                 <div class="product-thumb">
-                                    <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh
-                                    </button>
+                                    <a class="main-btn quick-view btn"
+                                       href="<?php echo base_url(); ?>products/detail?id=<?php echo $sold['id']; ?>"
+                                       role="button">Xem Nhanh</a>
                                     <img src="<?php echo base_url(); ?>public/upload/<?php echo $sold['image_url']; ?>"
                                          alt="">
                                 </div>
@@ -298,7 +302,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-md-2 col-sm-6 col-xs-6">
                     <div class="product product-single">
                         <div class="product-thumb">
-                            <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh</button>
+
+                            <a class="main-btn quick-view btn"
+                               href="<?php echo base_url(); ?>products/detail?id=<?php echo $view['id']; ?>"
+                               role="button">Xem Nhanh</a>
                             <img src="<?php echo base_url(); ?>public/upload/<?php echo $view['image_url']; ?>" alt="">
                         </div>
                         <div class="product-body">

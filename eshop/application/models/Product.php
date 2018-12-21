@@ -49,6 +49,13 @@ class Product extends CI_Model
         return $query->result_array();
     }
 
+    public function get_same_manufacturer($num = 6, $id = '')
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_manufacturer} WHERE id = {$id} AND deleted = 0 ORDER BY name ASC LIMIT {$num}");
+
+        return $query->result_array();
+    }
+
     // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
     public function get_product_type_manufacturer($id_type = 1)
     {
@@ -68,7 +75,16 @@ class Product extends CI_Model
             $where .= " AND product.id = {$filter['id']}";
         }
         $query = $this->db->query("
-            SELECT *
+            SELECT 
+            product.name as product_name ,
+            product_type.name as type_name,
+            manufacturer.name as manufacturer_name,
+            product.price,
+            product.origin,
+            product.image_url,       
+            product.views,
+            product.solds,
+            product.descreibe
             FROM manufacturer JOIN product ON manufacturer.id = product.manufacturer_id
 		    JOIN product_type ON product_type.id = product.product_type_id
             WHERE 1 {$where} AND product.deleted = 0

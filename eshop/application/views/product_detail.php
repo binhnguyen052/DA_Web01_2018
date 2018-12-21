@@ -54,7 +54,7 @@
                             <a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>
                         </div>
                         <p class="text-uppercase"><strong>Tình trạng: </strong>Còn hàng</p>
-                        <p class="text-uppercase"><strong>Loại: </strong><?php echo $__product['name'];  ?></p>
+                        <p class="text-uppercase"><strong>Loại: </strong><?php echo  ?></p>
                         <p class="text-uppercase"><strong>Nhãn Hiệu: </strong> Adidas</p>
                         <p class="text-uppercase"><strong>Xuất Xứ: </strong><?php echo $__product['origin'];?></p>
                         <p class="text-uppercase"><strong>Số lượt xem: </strong><?php echo $__product['views'];?></p>

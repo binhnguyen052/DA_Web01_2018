@@ -225,8 +225,7 @@
             <!-- section title -->
 
 
-            <?php
-//                foreach ($same_manufacturer as $same) {?>
+            <?php foreach ($same_manufacturer as $same) {?>
                 <!-- Product Single -->
                 <div class="col-md-2 col-sm-6 col-xs-6">
                     <div class="product product-single">
@@ -254,7 +253,7 @@
                 </div>
                 <!-- /Product Single -->
 
-<!--            --><?php //}?>
+            <?php }?>
 
         </div>
         <!-- /row -->

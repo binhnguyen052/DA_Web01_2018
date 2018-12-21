@@ -17,6 +17,7 @@ class Users extends CI_Controller {
 
             $this->load->model('Account');
             $check_login = $this->Account->register($data);
+            redirect('');
 
             if ($check_login) {
                 // chuyen qua trang chu

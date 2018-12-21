@@ -11,20 +11,31 @@ class Managers extends CI_Controller {
     }
 
 
-
-
     public function m_account()
     {
-        $this->load->view('admin/header');
-        $this->load->view('admin/account');
-        $this->load->view('admin/footer');
+        $this->load->model('admin/Account');
+        $accounts = $this->Account->get_account();
+
+        $data = array(
+          'accounts' => $accounts
+        );
+
+        $this->load->view('admin/header', $data);
+        $this->load->view('admin/account', $data);
+        $this->load->view('admin/footer', $data);
     }
 
     public function m_product()
     {
-        $this->load->view('admin/header');
-        $this->load->view('admin/products');
-        $this->load->view('admin/footer');
+        $this->load->model('admin/Product');
+        $products = $this->Product->get_product();
+
+        $data = array(
+            'products' => $products
+        );
+        $this->load->view('admin/header', $data);
+        $this->load->view('admin/products', $data);
+        $this->load->view('admin/footer', $data);
     }
 
     public function m_product_type()

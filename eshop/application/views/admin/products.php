@@ -14,9 +14,82 @@
             </ol>
 
             <!-- Page Content -->
-            <h1>Quản lý sản phẩm</h1>
-            <hr>
-            <p>This is a great starting point for new custom pages.</p>
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    Quản lý sản phẩm</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Origin</th>
+                                <th>Date Added</th>
+                                <th>Type</th>
+                                <th>Manufacturer</th>
+                                <th>Inventory</th>
+                                <th>Sold</th>
+                                <th>Views</th>
+                                <th>Sale</th>
+                                <th>Status</th>
+                                <th>Describe</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+                            <tfoot>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Origin</th>
+                                <th>Date Added</th>
+                                <th>Type</th>
+                                <th>Manufacturer</th>
+                                <th>Inventory</th>
+                                <th>Sold</th>
+                                <th>Views</th>
+                                <th>Sale</th>
+                                <th>Status</th>
+                                <th>Describe</th>
+                                <th>Action</th>
+                            </tr>
+                            </tfoot>
+
+                            <tbody>
+                            <?php foreach ($products as $product) {?>
+                                <tr>
+                                    <td> <img class="img-thumbnail" src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url'];?>"</td>
+                                    <td><?php echo $product['name'];?></td>
+                                    <td><?php echo $product['price'];?></td>
+                                    <td><?php echo $product['origin'];?></td>
+                                    <td><?php echo $product['date_added'];?></td>
+                                    <td><?php echo '1';?></td>
+                                    <td><?php echo '1';?></td>
+                                    <td><?php echo $product['inventory'];?></td>
+                                    <td><?php echo $product['solds'];?></td>
+                                    <td><?php echo $product['views'];?></td>
+                                    <td><?php echo $product['sale'];?></td>
+                                    <td><?php echo $product['deleted'] == 0? 'Enable' : 'Disable';?></td>
+                                    <td><?php echo $product['descreibe'];?></td>
+                                    <td>Xóa, sửa</td>
+                                </tr>
+                            <?php }?>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+
+
+
+
 
         </div>
         <!-- /.container-fluid -->

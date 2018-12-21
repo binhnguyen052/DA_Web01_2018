@@ -17,22 +17,22 @@ class Users extends CI_Controller {
 
             $this->load->model('Account');
             $check_login = $this->Account->register($data);
-            redirect('');
+            redirect(''); // đăng ký thành công trở về trang chủ
 
-            if ($check_login) {
-                // chuyen qua trang chu
-                $account_type = $this->session->userdata('account_type');
-                if($account_type==1){
-                    redirect('products');
-                }
-                if($account_type==0)
-                {
-                    redirect('admin/managers');
-                }
-                //die($account_type);
-            } else {
-                $data['login_message'] = 'Thong tin dang nhap sai';
-            }
+//            if ($check_login) {
+//                // chuyen qua trang chu
+//                $account_type = $this->session->userdata('account_type');
+//                if($account_type==1){
+//                    redirect('products');
+//                }
+//                if($account_type==0)
+//                {
+//                    redirect('admin/managers');
+//                }
+//                //die($account_type);
+//            } else {
+//                $data['login_message'] = 'Thong tin dang nhap sai';
+//            }
         }
 
 

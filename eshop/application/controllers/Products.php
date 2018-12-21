@@ -56,16 +56,17 @@ class Products extends CI_Controller
         $product_type = $this->Product->get_product_type();
         $product_type_manufacturers = $this->Product->get_product_type_manufacturer(1);
         $one_product = $this->Product->get_one($params);
-
-        //$same_manufacturer = $this->Product->get_same_manufacturer();
+        $products = $this->Product->get_same_type($id, 0, 6);
+        $products_manu=$this->Product->get_same_manufacturer($id, 0, 6);
 
         $data = array(
             'title' => 'Product ' . $id,
             'product_type' => $product_type,
             'manufacturers' => $manufacturers,
             'one_product' => $one_product,
-            //'same_manufacturer' => $same_manufacturer,
-            'product_type_manufacturers' => $product_type_manufacturers
+            'products' => $products,
+            'product_type_manufacturers' => $product_type_manufacturers,
+            '$products_manu'=>$products_manu
         );
         $this->load->view('header', $data);
         $this->load->view('product_detail', $data);

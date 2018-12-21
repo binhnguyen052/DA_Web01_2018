@@ -19,8 +19,10 @@
             <div class="product product-details clearfix">
                 <div class="col-md-6">
                     <div id="product-main-view">
-                       <?php $id_manufact;
-                       foreach ($one_product as $__product)?>
+                       <?php $id_manufacturer; $id_type;
+                       foreach ($one_product as $__product) {
+                       $id_manufacturer =  $__product['manufacturer_id'];
+                       $id_type = $__product['type_id']; ?>
                         <div class="product-view">
                             <img src="<?php echo base_url(); ?>public/upload/<?php echo $__product['image_url']; ?>" alt="">
                         </div>
@@ -202,6 +204,8 @@
                     <hr/>
                 </div>
 
+          <?php } ?>
+
             </div>
             <!-- /Product Details -->
         </div>
@@ -226,13 +230,14 @@
             <!-- section title -->
 
 
-            <?php foreach ($same_manufacturer as $same) {?>
+            <?php $products = $this->Product->get_same_type($id_type, 0, 6);
+            foreach ($products as $product) {?>
                 <!-- Product Single -->
                 <div class="col-md-2 col-sm-6 col-xs-6">
                     <div class="product product-single">
                         <div class="product-thumb">
                             <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                            <img src="<?php echo base_url(); ?>public/img/product04.jpg" alt="">
+                            <img src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url']; ?>" alt="">
                         </div>
                         <div class="product-body">
                             <h3 class="product-price">$32.50</h3>
@@ -243,7 +248,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o empty"></i>
                             </div>
-                            <h2 class="product-name"><a href="#">Tên sản phẩm</a></h2>
+                            <h2 class="product-name text-uppercase"><a href="#"><?php echo $product['name'];?></a></h2>
                             <div class="product-btns">
                                 <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                 <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
@@ -277,12 +282,14 @@
             </div>
             <!-- section title -->
 
+            <?php $products_manu = $this->Product->get_same_manufacturer($id_manufacturer, 0, 6);
+            foreach ($products_manu as $product) {?>
             <!-- Product Single -->
             <div class="col-md-2 col-sm-6 col-xs-6">
                 <div class="product product-single">
                     <div class="product-thumb">
                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product04.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url']; ?>" alt="">
                     </div>
                     <div class="product-body">
                         <h3 class="product-price">$32.50</h3>
@@ -293,7 +300,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o empty"></i>
                         </div>
-                        <h2 class="product-name"><a href="#">Tên sản phẩm</a></h2>
+                        <h2 class="product-name text-uppercase" ><a href="#"><?php echo $product['name'];?></a></h2>
                         <div class="product-btns">
                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                             <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
@@ -304,6 +311,7 @@
             </div>
             <!-- /Product Single -->
 
+            <?php }?>
 
         </div>
         <!-- /row -->

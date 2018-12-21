@@ -49,9 +49,9 @@ class Product extends CI_Model
         return $query->result_array();
     }
 
-    public function get_same_manufacturer($num = 6, $id = '')
+    public function get_same_manufacturer($num = 6, $_id = '')
     {
-        $query = $this->db->query("SELECT * FROM {$this->tb_manufacturer} WHERE id = {$id} AND deleted = 0 ORDER BY name ASC LIMIT {$num}");
+        $query = $this->db->query("SELECT * FROM {$this->tb_manufacturer} WHERE id = {$_id} AND deleted = 0 ORDER BY name ASC LIMIT {$num}");
 
         return $query->result_array();
     }

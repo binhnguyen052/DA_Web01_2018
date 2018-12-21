@@ -27,7 +27,7 @@
 
     <body id="page-top">
 
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top" style="width: auto;">
 
         <a class="navbar-brand mr-1" href="index.php">Start Bootstrap</a>
 

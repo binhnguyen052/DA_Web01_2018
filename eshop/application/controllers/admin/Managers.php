@@ -40,9 +40,19 @@ class Managers extends CI_Controller {
 
     public function m_product_type()
     {
-        $this->load->view('admin/header');
-        $this->load->view('admin/product_type');
-        $this->load->view('admin/footer');
+
+        $this->load->model('admin/Product');
+        $products = $this->Product->get_product();
+        $one_product_type = $this->Product->get_one_product_type();
+
+        $data = array(
+            'products' => $products,
+            'one_product_type' => $one_product_type
+        );
+
+        $this->load->view('admin/header', $data);
+        $this->load->view('admin/product_type', $data);
+        $this->load->view('admin/footer', $data);
     }
 
     public function m_order()
@@ -61,9 +71,18 @@ class Managers extends CI_Controller {
 
     public function m_manufacturer()
     {
-        $this->load->view('admin/header');
-        $this->load->view('admin/manufacturer');
-        $this->load->view('admin/footer');
+        $this->load->model('admin/Product');
+        $manufacturers = $this->Product->get_manufacturer();
+        $one_manufacturer = $this->Product->get_one_manufacturer();
+
+        $data = array(
+            'manufacturers' => $manufacturers,
+            'one_manufacturer' => $one_manufacturer
+        );
+
+        $this->load->view('admin/header', $data);
+        $this->load->view('admin/manufacturer', $data);
+        $this->load->view('admin/footer', $data);
     }
 
     public  function login()

@@ -67,8 +67,10 @@
                                     <td><?php echo $product['price'];?></td>
                                     <td><?php echo $product['origin'];?></td>
                                     <td><?php echo $product['date_added'];?></td>
-                                    <td><?php echo '1';?></td>
-                                    <td><?php echo '1';?></td>
+                                    <td><?php $one_product_type = $this->Product->get_one_product_type($product['product_type_id']);
+                                        foreach ($one_product_type as $type){ echo $type['name'];}?></td>
+                                    <td><?php $one_manufacturer = $this->Product->get_one_manufacturer($product['manufacturer_id']);
+                                        foreach ($one_manufacturer as $manufacturer){ echo $manufacturer['name'];}?></td>
                                     <td><?php echo $product['inventory'];?></td>
                                     <td><?php echo $product['solds'];?></td>
                                     <td><?php echo $product['views'];?></td>

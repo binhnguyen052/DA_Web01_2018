@@ -4,6 +4,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Users extends CI_Controller {
     public function register()
     {
+        //lấy du liệu
+        if ($this->input->server('REQUEST_METHOD') == 'POST') {
+            $data = array(
+                'username' => $this->input->post('r_username'),
+                'password' => $this->input->post('r_password'),
+                'display_name'=>$this->input->post('r_displayname'),
+                'tel'=>$this->input->post('r_tel'),
+                'email'=>$this->input->post('r_email'),
+                'address'=>$this->input->post('r_address')
+            );
+
+            $this->load->model('Account');
+            $check_login = $this->Account->register($data);
+
+            if ($check_login) {
+                // chuyen qua trang chu
+                $account_type = $this->session->userdata('account_type');
+                if($account_type==1){
+                    redirect('products');
+                }
+                if($account_type==0)
+                {
+                    redirect('admin/managers');
+                }
+                //die($account_type);
+            } else {
+                $data['login_message'] = 'Thong tin dang nhap sai';
+            }
+        }
+
+
+
         $this->load->model('Product');
         $manufacturers = $this->Product->get_manufacturer();
         $product_type = $this->Product->get_product_type();
@@ -25,7 +57,6 @@ class Users extends CI_Controller {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
             $this->load->model('Account');
-
             $check_login = $this->Account->login($username,$password);
 
             if ($check_login) {

@@ -15,7 +15,7 @@
     <div class="container">
         <!-- row -->
         <div class="row">
-            <form id="checkout-form" class="clearfix">
+            <form id="checkout-form" class="clearfix" method="POST">
                 <div class="col-md-6">
                     <div class="billing-details">
                         <p>Bạn đã có tài khoản chưa?<a href="login.php"> Đăng Nhập</a></p>
@@ -50,30 +50,9 @@
                         <div class="form-group">
                             <input class="input" type="text" name="r_address" placeholder="Địa Chỉ">
                         </div>
-                        <!-- <div class="form-group">
-                            <input class="input" type="text" name="r_city" placeholder="Thành Phố">
+                        <div class="form-group" >
+                            <button name="r_submit" type="submit" class="btn btn-primary" >Tạo tài khoản</button>
                         </div>
-                        <div class="form-group">
-                            <input class="input" type="text" name="r_country" placeholder="Quốc Gia">
-                        </div> -->
-                        <!-- <div class="form-group">
-                            <input class="input" type="text" name="r_zip-code" placeholder="ZIP Code">
-                        </div> -->
-
-                        <div class="form-group">
-                            <button name="r_submit" type="submit" class="btn btn-primary">Tạo tài khoản</button>
-                        </div>
-                        <!-- <div class="form-group">
-                            <div class="input-checkbox">
-                                <input type="checkbox" id="register">
-                                <label class="font-weak" for="register">Tạo Tài Khoản ?</label>
-                                <div class="caption">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                        <p>
-                                            <input class="input" type="password" name="password" placeholder="Enter Your Password">
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 

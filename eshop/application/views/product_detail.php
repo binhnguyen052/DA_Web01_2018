@@ -21,14 +21,14 @@
                     <div id="product-main-view">
                        <?php foreach ($one_product as $__product)?>
                         <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/main-product01.jpg" alt="">
+                            <img src="<?php echo base_url(); ?>public/upload/<?php echo $__product['image_url']; ?>" alt="">
                         </div>
 
                     </div>
 
                     <div id="product-view">
                         <div class="product-view">
-                            <img src="<?php echo base_url(); ?>public/img/thumb-product01.jpg" alt="">
+                            <img src="<?php echo base_url(); ?>public/upload/<?php echo $__product['image_url']; ?>" alt="">
                         </div>
 
                     </div>
@@ -37,7 +37,7 @@
                 <div class="col-md-6">
                     <div class="product-body">
                         <div class="product-label">
-                            <span class="text-uppercase">Tên sản phẩm</span>
+                            <span class="text-uppercase"><?php echo $__product['product_name'];?></span>
 <!--                            <span class="sale">-20%</span>-->
                         </div>
                         <h2 class="product-name text-uppercase"><?php  ?></h2>
@@ -54,8 +54,8 @@
                             <a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>
                         </div>
                         <p class="text-uppercase"><strong>Tình trạng: </strong>Còn hàng</p>
-                        <p class="text-uppercase"><strong>Loại: </strong><?php  ?></p>
-                        <p class="text-uppercase"><strong>Nhãn Hiệu: </strong> Adidas</p>
+                        <p class="text-uppercase"><strong>Loại: </strong><?php echo $__product['type_name'];?></p>
+                        <p class="text-uppercase"><strong>Nhãn Hiệu: </strong><?php echo $__product['manufacturer_name'];?></p>
                         <p class="text-uppercase"><strong>Xuất Xứ: </strong><?php echo $__product['origin'];?></p>
                         <p class="text-uppercase"><strong>Số lượt xem: </strong><?php echo $__product['views'];?></p>
                         <p class="text-uppercase"><strong>Số lượt bán: </strong><?php echo $__product['solds'];?></p>
@@ -224,184 +224,36 @@
             </div>
             <!-- section title -->
 
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product04.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50</h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">Tên sản phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm Vào giỏ hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
 
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
+            <?php foreach ($same_manufacturer as $same) {?>
+                <!-- Product Single -->
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="product product-single">
+                        <div class="product-thumb">
+                            <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
+                            <img src="<?php echo base_url(); ?>public/img/product04.jpg" alt="">
                         </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product03.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50</h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">Tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm vào giỏ hàng</button>
+                        <div class="product-body">
+                            <h3 class="product-price">$32.50</h3>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o empty"></i>
+                            </div>
+                            <h2 class="product-name"><a href="#">Tên sản phẩm</a></h2>
+                            <div class="product-btns">
+                                <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+                                <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+                                <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm Vào giỏ hàng</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- /Product Single -->
+                <!-- /Product Single -->
 
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product02.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">Tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
+            <?php }?>
 
         </div>
         <!-- /row -->
@@ -451,158 +303,6 @@
             </div>
             <!-- /Product Single -->
 
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product03.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50</h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">Tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product02.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">Tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
-
-            <!-- Product Single -->
-            <div class="col-md-2 col-sm-6 col-xs-6">
-                <div class="product product-single">
-                    <div class="product-thumb">
-                        <div class="product-label">
-                            <span>Hàng Mới</span>
-                            <span class="sale">-20%</span>
-                        </div>
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-                        <img src="<?php echo base_url(); ?>public/img/product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o empty"></i>
-                        </div>
-                        <h2 class="product-name"><a href="#">tên Sản Phẩm</a></h2>
-                        <div class="product-btns">
-                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  Thêm Vào Giỏ Hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Product Single -->
 
         </div>
         <!-- /row -->

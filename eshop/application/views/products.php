@@ -18,93 +18,15 @@
             <!-- ASIDE -->
             <div id="aside" class="col-md-3">
 
-                <!-- aside widget -->
-<!--                <div class="aside">-->
-<!--                    <h3 class="aside-title">Shop by:</h3>-->
-<!--                    <ul class="filter-list">-->
-<!--                        <li><span class="text-uppercase">Màu Sắc:</span></li>-->
-<!--                        <li><a href="#" style="color:#FFF; background-color:#8A2454;">Camelot</a></li>-->
-<!--                        <li><a href="#" style="color:#FFF; background-color:#475984;">East Bay</a></li>-->
-<!--                        <li><a href="#" style="color:#FFF; background-color:#BF6989;">Tapestry</a></li>-->
-<!--                        <li><a href="#" style="color:#FFF; background-color:#9A54D8;">Medium Purple</a></li>-->
-<!--                    </ul>-->
-<!---->
-<!--                    <ul class="filter-list">-->
-<!--                        <li><span class="text-uppercase">Kích Thước:</span></li>-->
-<!--                        <li><a href="#">X</a></li>-->
-<!--                        <li><a href="#">XL</a></li>-->
-<!--                    </ul>-->
-<!---->
-<!--                    <ul class="filter-list">-->
-<!--                        <li><span class="text-uppercase">Giá:</span></li>-->
-<!--                        <li><a href="#">MIN: $20.00</a></li>-->
-<!--                        <li><a href="#">MAX: $120.00</a></li>-->
-<!--                    </ul>-->
-<!---->
-<!--                    <ul class="filter-list">-->
-<!--                        <li><span class="text-uppercase">Phái:</span></li>-->
-<!--                        <li><a href="#">Nam</a></li>-->
-<!--                    </ul>-->
-<!---->
-<!--                    <button class="primary-btn">Xóa Tất Cả</button>-->
-<!--                </div>-->
-                <!-- /aside widget -->
-
-                <!-- aside widget -->
-                <!-- <div class="aside">
-                    <h3 class="aside-title">Lọc Theo Giá</h3>
-                    <div id="price-slider"></div>
-                </div> -->
-                <!-- aside widget -->
-
-                <!-- aside widget -->
-<!--                <div class="aside">-->
-<!--                     <h3 class="aside-title">Lọc Theo Màu:</h3>-->
-<!--                    <ul class="color-option">-->
-<!--                        <li><a href="#" style="background-color:#475984;"></a></li>-->
-<!--                        <li><a href="#" style="background-color:#8A2454;"></a></li>-->
-<!--                        <li class="active"><a href="#" style="background-color:#BF6989;"></a></li>-->
-<!--                        <li><a href="#" style="background-color:#9A54D8;"></a></li>-->
-<!--                        <li><a href="#" style="background-color:#675F52;"></a></li>-->
-<!--                        <li><a href="#" style="background-color:#050505;"></a></li>-->
-<!--                        <li><a href="#" style="background-color:#D5B47B;"></a></li>-->
-<!--                    </ul> -->
-<!--                </div>-->
-                <!-- /aside widget -->
-
-                <!-- aside widget -->
-<!--                <div class="aside">-->
-<!--                    <h3 class="aside-title">Lọc Theo Kích Cỡ:</h3>-->
-<!--                    <ul class="size-option">-->
-<!--                        <li class="active"><a href="#">S</a></li>-->
-<!--                        <li class="active"><a href="#">XL</a></li>-->
-<!--                        <li><a href="#">SL</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-                <!-- /aside widget -->
-
-                <!-- aside widget -->
                 <div class="aside">
                     <h3 class="aside-title">Lọc Theo Nhãn Hiệu</h3>
                     <ul class="list-links">
                         <?php foreach($manufacturers as $manufacturer) {?>
-                        <li><a href="#"> <?php echo $manufacturer['name']; ?> </a></li>
+                        <li><a href="<?php echo base_url(); ?>products?manufacturer=<?php echo $manufacturer['id']; ?>"> <?php echo $manufacturer['name']; ?> </a></li>
                          <?php }?>
                     </ul>
                 </div>
-                <!-- /aside widget -->
 
-                <!-- aside widget -->
-                <!-- <div class="aside">
-                    <h3 class="aside-title">Lọc Theo Phái</h3>
-                    <ul class="list-links">
-                        <li class="active"><a href="#">Nam</a></li>
-                        <li><a href="#">Nữ</a></li>
-                    </ul>
-                </div> -->
-                <!-- /aside widget -->
-
-                <!-- aside widget -->
                 <div class="aside">
                     <h3 class="aside-title">Xếp Hạng Cao Nhất</h3>
                     <!-- widget product -->
@@ -180,10 +102,7 @@
                         <ul class="store-pages">
                             <li><span class="text-uppercase">Trang:</span></li>
                             <?php echo $pagination_links; ?>
-<!--                            <li class="active">1</li>-->
-<!--                            <li><a href="#">2</a></li>-->
-<!--                            <li><a href="#">3</a></li>-->
-<!--                            <li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
+
                         </ul>
                     </div>
                 </div>
@@ -264,10 +183,7 @@
                         <ul class="store-pages">
                             <li><span class="text-uppercase">Trang:</span></li>
                             <?php echo $pagination_links; ?>
-<!--                            <li class="active">1</li>-->
-<!--                            <li><a href="#">2</a></li>-->
-<!--                            <li><a href="#">3</a></li>-->
-<!--                            <li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
+
 
                         </ul>
                     </div>

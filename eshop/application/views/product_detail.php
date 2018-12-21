@@ -236,7 +236,10 @@
                 <div class="col-md-2 col-sm-6 col-xs-6">
                     <div class="product product-single">
                         <div class="product-thumb">
-                            <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
+                            <a class="main-btn quick-view"
+                               href="<?php echo base_url(); ?>products/detail?id=<?php echo $product['id']; ?>"  role="button">
+                                <i class="fa fa-search-plus"></i> Xem Nhanh</a>
+
                             <img src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url']; ?>" alt="">
                         </div>
                         <div class="product-body">
@@ -288,7 +291,9 @@
             <div class="col-md-2 col-sm-6 col-xs-6">
                 <div class="product product-single">
                     <div class="product-thumb">
-                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
+                        <a class="main-btn quick-view"
+                           href="<?php echo base_url(); ?>products/detail?id=<?php echo $product['id']; ?>"  role="button">
+                            <i class="fa fa-search-plus"></i> Xem Nhanh</a>
                         <img src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url']; ?>" alt="">
                     </div>
                     <div class="product-body">

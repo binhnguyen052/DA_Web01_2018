@@ -23,12 +23,12 @@
                             <h3 class="title">Thông tin đăng kí</h3> <br>
                             <h6>(*) Thông tin bắt buộc phải nhập</h6>
                         </div>
-                        <div class="form-group">
-                            <input class="input" type="text" name="r_first-name" placeholder="Tên">
-                        </div>
-                        <div class="form-group">
-                            <input class="input" type="text" name="r_last-name" placeholder="Họ">
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <input class="input" type="text" name="r_first-name" placeholder="Tên">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <input class="input" type="text" name="r_last-name" placeholder="Họ">-->
+<!--                        </div>-->
                         <div class="form-group">
                             <input class="input" type="text" name="r_username" required="required" placeholder="Tên đăng nhập *">
                         </div>

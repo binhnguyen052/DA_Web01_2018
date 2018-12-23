@@ -53,12 +53,10 @@ class Managers extends MY_Controller {
     {
 
         $this->load->model('admin/Product');
-        $products = $this->Product->get_product();
-        $one_product_type = $this->Product->get_one_product_type();
+        $product_type = $this->Product->get_product_type();
 
         $data = array(
-            'products' => $products,
-            'one_product_type' => $one_product_type
+            'product_type' => $product_type,
         );
 
         $this->load->view('admin/header', $data);

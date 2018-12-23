@@ -87,7 +87,9 @@ class Accounts extends MY_Controller
     {
         $input = array();
         //$input['where'] = array('id' => 1);
-        $input['order'] = array('id', 'desc');
+        //$input['order'] = array('username', 'asc');
+        $input['like'] = array('username', 'admin');
+        //$input['limit'] = array(2, 2);
         $list = $this->Account->get_list($input);
         echo '<pre>';
         print_r($list);

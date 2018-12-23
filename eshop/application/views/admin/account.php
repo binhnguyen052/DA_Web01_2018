@@ -12,7 +12,6 @@
             </ol>
 
             <!-- Page Content -->
-
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
@@ -67,11 +66,6 @@
                 </div>
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
-
-
-
-
-
 
 
         </div>

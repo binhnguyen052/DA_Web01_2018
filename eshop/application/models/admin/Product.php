@@ -1,6 +1,9 @@
 <?php
-class Product extends CI_Model
+class Product extends MY_Model
 {
+    var $table =  'account';
+
+    public $tb_account = 'account';
     public $tb_product = 'product';
     public $tb_product_type = 'product_type';
     public $tb_manufacturer = 'manufacturer';

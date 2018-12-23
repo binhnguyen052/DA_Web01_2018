@@ -95,6 +95,13 @@
 
 <div id="wrapper">
 
+    <?php
+    //các biến sử dụng trong controller
+    $_managers = 'managers';
+    $_accounts = 'accounts';
+    $_product_types = 'product_types';
+    $_products = 'products';
+    ?>
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item active">
@@ -111,12 +118,12 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <h6 class="dropdown-header text-uppercase text-info">management:</h6>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_account">Account</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_product">Product</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_product_type">Product Type</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_manufacturer">Manufacturer</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_order">Product Orders</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/m_order_detail">Product Order Details</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_account">Account</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_products; ?>/m_product">Product</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_product_types; ?>/m_product_type">Product Type</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_manufacturer">Manufacturer</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_order">Product Orders</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_order_detail">Product Order Details</a>
 
                 <h6 class="dropdown-header text-uppercase text-info">Login Screens:</h6>
                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/login">Login</a>

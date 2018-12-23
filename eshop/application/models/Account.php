@@ -47,6 +47,8 @@ class Account extends CI_Model
            $this->email= $data['email'];
            $this->db->insert('account', $this);
        }
+
+
     }
 
 

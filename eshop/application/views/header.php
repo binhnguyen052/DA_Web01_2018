@@ -421,9 +421,9 @@
                     <li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Các trang<i class="fa fa-caret-down"></i></a>
                         <ul class="custom-menu">
                             <li><a href="<?php echo base_url();?>index.php">Trang chủ</a></li>
-                            <li><a href="<?php echo base_url(); ?>index.php/products">Các sản phẩm</a></li>
-                            <li><a href="<?php echo base_url(); ?>index.php/products/checkout">Thanh toán</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/admin/managers">Admin (test view)</a></li>
+                            <li><a href="<?php echo base_url(); ?>products">Các sản phẩm</a></li>
+                            <li><a href="<?php echo base_url(); ?>products/checkout">Thanh toán</a></li>
+                            <li><a href="<?php echo base_url();?>admin/managers">Admin (test view)</a></li>
                             <li><a href="<?php echo base_url();?>index.php">Blank</a></li>
 <!--                            <li><a href="--><?php //echo base_url();?><!--index.php/users/profile">user-profile (test view)</a></li>-->
                         </ul>

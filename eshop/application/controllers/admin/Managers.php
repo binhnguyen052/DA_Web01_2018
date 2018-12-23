@@ -1,7 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Managers extends CI_Controller {
+class Managers extends MY_Controller {
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    //public function
+    function  test()
+    {
+        echo '<br> test admin page';
+    }
 
     public function index()
     {
@@ -134,4 +145,10 @@ class Managers extends CI_Controller {
         $this->load->view('admin/blankt');
         $this->load->view('admin/footer');
     }
+
+
+
+
+
+
 }

@@ -22,6 +22,48 @@ class Product_type extends MY_Model
         return $query->result_array();
     }
 
+    public function get_one_product($id = '')
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_product} WHERE id = {$id}");
+
+        return $query->result_array();
+    }
+
+    public function get_one_product_type($id = '')
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_product_type} WHERE id = {$id}");
+
+        return $query->result_array();
+    }
+
+    public function get_manufacturer()
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_manufacturer} WHERE 1");
+
+        return $query->result_array();
+    }
+
+    public function get_one_manufacturer($id = '')
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_manufacturer} WHERE id = {$id}");
+
+        return $query->result_array();
+    }
+
+    public function get_account()
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_account} WHERE 1");
+
+        return $query->result_array();
+    }
+
+    public function get_one_account($id = '')
+    {
+        $query = $this->db->query("SELECT * FROM {$this->tb_account} WHERE id = {$id}");
+
+        return $query->result_array();
+    }
+
     public function _insert($data)
     {
 

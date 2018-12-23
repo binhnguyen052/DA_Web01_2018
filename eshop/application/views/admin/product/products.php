@@ -1,5 +1,3 @@
-<div id="wrapper">
-
 
     <div id="content-wrapper">
 
@@ -14,6 +12,14 @@
             </ol>
 
             <!-- Page Content -->
+
+            <div class="">
+                <a class="btn btn-xs btn-info" href="<?php echo base_url(); ?>/admin/products/add">
+                    <i class="fa fa-plus text-uppercase"> Thêm sản phẩm</i></a>
+            </div>
+
+            <hr/>
+
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table"></i>
@@ -23,6 +29,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
+                                <th>Action</th>
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Price</th>
@@ -36,12 +43,12 @@
                                 <th>Sale</th>
                                 <th>Status</th>
                                 <th>Describe</th>
-                                <th>Action</th>
                             </tr>
                             </thead>
 
                             <tfoot>
                             <tr>
+                                <th>Action</th>
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Price</th>
@@ -55,13 +62,19 @@
                                 <th>Sale</th>
                                 <th>Status</th>
                                 <th>Describe</th>
-                                <th>Action</th>
                             </tr>
                             </tfoot>
 
                             <tbody>
                             <?php foreach ($products as $product) {?>
                                 <tr>
+                                    <td class="optional">
+                                        <a class="btn btn-xs btn-info" href="<?php echo base_url();?>admin/products/edit/<?php echo $product['id']; ?>">
+                                            <i class="fa fa-edit text-uppercase">sửa</i></a>
+
+                                        <a class="btn btn-xs btn-danger" href="#">
+                                            <i class="fa fa-times text-uppercase">Xóa</i></a></td>
+
                                     <td> <img class="img-thumbnail" src="<?php echo base_url(); ?>public/upload/<?php echo $product['image_url'];?>"</td>
                                     <td><?php echo $product['name'];?></td>
                                     <td><?php echo $product['price'];?></td>
@@ -77,7 +90,6 @@
                                     <td><?php echo $product['sale'];?></td>
                                     <td><?php echo $product['deleted'] == 0? 'Enable' : 'Disable';?></td>
                                     <td><?php echo $product['descreibe'];?></td>
-                                    <td>Xóa, sửa</td>
                                 </tr>
                             <?php }?>
 

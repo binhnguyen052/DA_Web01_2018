@@ -17,7 +17,7 @@ class Accounts extends MY_Controller
             'accounts' => $accounts
         );
         $this->load->view('admin/header', $data);
-        $this->load->view('admin/account', $data);
+        $this->load->view('admin/account/account', $data);
         $this->load->view('admin/footer', $data);
     }
 

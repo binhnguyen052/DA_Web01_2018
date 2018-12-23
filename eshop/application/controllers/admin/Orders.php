@@ -1,37 +1,38 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Product_types extends MY_Controller
+class Orders extends MY_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('admin/Product_type');
+        $this->load->model('admin/Order');
     }
 
-    public $model_Product_type = 'Product_type';
+    public $model_Product_type = 'Order';
 
-    public function m_product_type()
+    public function m_order()
     {
 
-        $product_type = $this->Product_type->get_product_type();
-        $check_insert = FALSE;
+        $input = array();
+        $orders = $this->Order->get_list($input);
+        $check_insert = null;
 
         //lấy dữ liệu
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $insert_data = array(
-                'name' => $this->input->post('m_product_type_name')
+                'name' => $this->input->post('m_manufacturer_name')
             );
-            $check_insert = $this->Product_type->_insert($insert_data);
+            $check_insert = $this->Order->_insert($insert_data);
         }
 
         $data = array(
-            'product_type' => $product_type,
+            'orders' => $orders,
             'check_insert' => $check_insert
         );
 
         $this->load->view('admin/header', $data);
-        $this->load->view('admin/product_type/product_type', $data);
+        $this->load->view('admin/Order/Order', $data);
         $this->load->view('admin/footer', $data);
     }
 

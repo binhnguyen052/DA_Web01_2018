@@ -1,42 +1,12 @@
 <?php
-class Product extends MY_Model
+class Order extends MY_Model
 {
-    var $table =  'product';
+    var $table = 'orders';
 
     public $tb_account = 'account';
     public $tb_product = 'product';
     public $tb_product_type = 'product_type';
     public $tb_manufacturer = 'manufacturer';
-
-    public function _insert($data)
-    {
-
-        $query = $this->db->query("SELECT * FROM {$this->table} WHERE name = '{$data['name']}'");
-        $row = $query->row();
-
-        if (isset($row)) {
-            $data['type_message'] = 'loại sản phẩm đã tồn tại !';
-            return FALSE;
-        } else {
-            $insert_data = array(
-                'name' => $data['name'],
-                'image_url' => null,
-                'price' => $data['price'],
-                'origin' => $data['origin'],
-                'date_added' => null,
-                'inventory' => $data['inventory'],
-                'solds' => null,
-                'views' => null,
-                'descreibe' => null,
-                'deleted' => 0,
-                'product_type_id' => null,
-                'manufacturer_id' => null,
-                'sale' => null,
-            );
-            $this->db->insert($this->table, $insert_data);
-            return TRUE;
-        }
-    }
 
     public function get_product()
     {
@@ -95,5 +65,24 @@ class Product extends MY_Model
     }
 
 
+
+
+    public function _insert($data)
+    {
+
+        $query = $this->db->query("SELECT * FROM {$this->table} WHERE name = '{$data['name']}'");
+        $row = $query->row();
+
+        if (isset($row)) {
+            $data['type_message'] = 'loại sản phẩm đã tồn tại !';
+            return FALSE;
+        } else {
+            $insert_data = array(
+                'name' => $data['name']
+            );
+            $this->db->insert($this->table, $insert_data);
+            return TRUE;
+        }
+    }
 
 }

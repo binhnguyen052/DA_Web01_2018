@@ -180,7 +180,8 @@ class MY_Model extends CI_Model
         //thực hiện truy vấn dữ liệu
         $query = $this->db->get($this->table);
         //echo $this->db->last_query();
-        return $query->result();
+        //return $query->result();
+        return $query->result_array();
     }
 
     protected function get_list_set_input($input = array())

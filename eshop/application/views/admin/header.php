@@ -101,6 +101,9 @@
     $_accounts = 'accounts';
     $_product_types = 'product_types';
     $_products = 'products';
+    $_manufacturer = 'manufacturers';
+    $_orders = 'orders';
+    $_order_detail = 'order_details';
     ?>
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
@@ -121,9 +124,9 @@
                 <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_account">Account</a>
                 <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_products; ?>/m_product">Product</a>
                 <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_product_types; ?>/m_product_type">Product Type</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_manufacturer">Manufacturer</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_order">Product Orders</a>
-                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_accounts; ?>/m_order_detail">Product Order Details</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_manufacturer; ?>/m_manufacturer">Manufacturer</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_orders; ?>/m_order">Product Orders</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>admin/<?php echo $_order_detail; ?>/m_order_detail">Product Order Details</a>
 
                 <h6 class="dropdown-header text-uppercase text-info">Login Screens:</h6>
                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/admin/managers/login">Login</a>

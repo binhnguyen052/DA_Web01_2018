@@ -12,6 +12,7 @@
             </ol>
 
             <!-- Page Content -->
+
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
@@ -22,41 +23,52 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th>Username</th>
-                                <th>Display name</th>
+                                <th>Action</th>
+                                <th>Avatar</th>
+                                <th>Display Name</th>
+                                <th>Address</th>
                                 <th>Tel</th>
                                 <th>Email</th>
-                                <th>Status</th>
                                 <th>Type</th>
-                                <th>Action</th>
+                                <th>Status</th>
+
                             </tr>
                             </thead>
 
                             <tfoot>
                             <tr>
-                                <th>Username</th>
-                                <th>Display name</th>
+                                <th>Action</th>
+                                <th>Avatar</th>
+                                <th>Display Name</th>
+                                <th>Address</th>
                                 <th>Tel</th>
                                 <th>Email</th>
-                                <th>Status</th>
                                 <th>Type</th>
-                                <th>Action</th>
+                                <th>Status</th>
                             </tr>
                             </tfoot>
 
                             <tbody>
                             <?php foreach ($accounts as $account) {?>
-                            <tr>
-                                <td><?php echo $account['username'];?></td>
-                                <td><?php echo $account['display_name'];?></td>
-                                <td><?php echo $account['tel'];?></td>
-                                <td><?php echo $account['email'];?></td>
-                                <td><?php echo $account['deleted'] == 0? 'Enable' : 'Disable';?></td>
-                                <?php echo $account['account_type'] == 0 ?
-                                    'echo <td class="text-warning bg-dark">Admin</td>':
-                                    'echo <td class="text-success">Customer</td>';?>
-                                <td>Xóa, sửa</td>
-                            </tr>
+                                <tr>
+                                    <td class="optional">
+                                        <a class="btn btn-xs btn-info" href="<?php echo base_url();?>admin/accounts/edit/<?php echo $account['id']; ?>">
+                                            <i class="fa fa-edit text-uppercase"> sửa</i></a>
+
+                                        <a class="btn btn-xs btn-danger" href="#">
+                                            <i class="fa fa-times text-uppercase"> Xóa</i></a></td>
+
+                                    <td class="text-uppercase"><?php echo $account['avartar_url'];?></td>
+                                    <td class="text-uppercase"><?php echo $account['display_name'];?></td>
+                                    <td class="text-uppercase"><?php echo $account['address'];?></td>
+                                    <td class="text-uppercase"><?php echo $account['tel'];?></td>
+                                    <td class="text-uppercase"><?php echo $account['email'];?></td>
+                                    <?php if($account['account_type'] == 0) {echo '<td class="text-primary bg-light">Admin</td>';}
+                                    else if($account['account_type'] == 1) {echo '<td class="text-success">Customer</td>';}
+                                    ?>
+                                    <td class="text-uppercase"><?php echo $account['deleted'] == 0? 'Enable' : 'Disable';?></td>
+
+                                </tr>
                             <?php }?>
 
                             </tbody>
@@ -66,6 +78,7 @@
                 </div>
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
+            <!-- DataTables Example -->
 
 
         </div>

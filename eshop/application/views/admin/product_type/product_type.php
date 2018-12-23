@@ -12,6 +12,8 @@
             </ol>
 
             <!-- Page Content -->
+
+
             <button data-toggle="collapse" data-target="#demo" class="text-uppercase btn btn-primary">
                 click here to add new</button>
             <div id="demo" class="collapse in">
@@ -27,7 +29,7 @@
             </div>
 
             <hr/>
-            <div class="text-uppercase"><?php echo $alert;?> </div>
+            <?php $this->load->view('admin/message'); ?>
             <hr/>
 
             <!-- DataTables Example -->
@@ -63,8 +65,16 @@
                                         <a class="btn btn-xs btn-info" href="<?php echo base_url();?>admin/product_types/edit/<?php echo $type['id']; ?>">
                                             <i class="fa fa-edit text-uppercase">sửa</i></a>
                                         
-                                        <a class="btn btn-xs btn-danger" href="#">
-                                            <i class="fa fa-times text-uppercase">Xóa</i></a></td>
+                                        <a class="btn btn-xs btn-danger" href="<?php echo base_url();?>admin/product_types/delete/<?php echo $type['id']; ?>"
+                                           onclick="return confirmAction()">
+                                            <i class="fa fa-times text-uppercase">xóa</i></a></td>
+
+                                    <script language="JavaScript">
+                                        function confirmAction() {
+                                            return confirm("Bạn có muốn xóa không?")
+                                        }
+                                    </script>
+
                                 </tr>
                             <?php }?>
 

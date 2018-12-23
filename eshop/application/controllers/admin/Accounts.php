@@ -10,8 +10,8 @@ class Accounts extends MY_Controller
 
     public function m_account()
     {
-
-        $accounts = $this->Account->get_account();
+        $input = array();
+        $accounts = $this->Account->get_list($input);
 
         $data = array(
             'accounts' => $accounts
@@ -74,26 +74,6 @@ class Accounts extends MY_Controller
         }
     }
 
-    public function get_info()
-    {
-        $id = 1;
-        $field = 'username, password, display_name';
-        $info = $this->Account->get_info($id, $field);
-        echo '<pre>';
-        print_r($info);
-    }
-
-    public function get_list()
-    {
-        $input = array();
-        //$input['where'] = array('id' => 1);
-        //$input['order'] = array('username', 'asc');
-        $input['like'] = array('username', 'admin');
-        //$input['limit'] = array(2, 2);
-        $list = $this->Account->get_list($input);
-        echo '<pre>';
-        print_r($list);
-    }
 
 }
 

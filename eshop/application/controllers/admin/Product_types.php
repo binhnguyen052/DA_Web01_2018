@@ -16,7 +16,7 @@ class Product_types extends MY_Controller
 
         $product_type = $this->Product_type->get_product_type();
         $check_insert = FALSE;
-
+        $message = $this->session->flashdata('message');
         //lấy dữ liệu
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $insert_data = array(
@@ -27,7 +27,8 @@ class Product_types extends MY_Controller
 
         $data = array(
             'product_type' => $product_type,
-            'check_insert' => $check_insert
+            'check_insert' => $check_insert,
+            'message' => $message
         );
 
         $this->load->view('admin/header', $data);
@@ -39,6 +40,24 @@ class Product_types extends MY_Controller
     {
         $id = $this->uri->rsegment('3');
         echo $id;
+    }
+
+    public function delete()
+    {
+        $id = $this->uri->rsegment('3');
+        $id = intval($id);
+
+        //kiểm tra có tồn tại id
+        $info = $this->Product_type->get_info($id);
+        if (!$info)
+        {
+            $this->session->set_flashdata('message','Không tồn tại loại sản phẩm cần xóa!');
+            redirect('admin/product_types/m_product_type');
+        }
+        //thực hiện xóa
+        $this->Product_type->delete($id);
+        $this->session->set_flashdata('message','Xóa thành công!');
+        redirect('admin/product_types/m_product_type');
     }
 }
 

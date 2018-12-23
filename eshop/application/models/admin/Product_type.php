@@ -71,13 +71,15 @@ class Product_type extends MY_Model
         $row = $query->row();
 
         if (isset($row)) {
-            $data['type_message'] = 'loại sản phẩm đã tồn tại !';
+            $this->session->set_flashdata('message','Loại sản phẩm đã tồn tại!');
             return FALSE;
         } else {
             $insert_data = array(
                 'name' => $data['name']
             );
             $this->db->insert($this->table, $insert_data);
+            $this->session->set_flashdata('message','Thêm thành công!');
+            redirect('admin/product_types/m_product_type');
             return TRUE;
         }
     }

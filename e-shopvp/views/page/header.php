@@ -1,6 +1,8 @@
 <?php
 //biến lưu đường link
 include_once ("../../libraries/page.php");
+include_once("../../models/database/model_product.php");
+$_model_product = new MProduct();
 $currentURL = curPageURL();
 $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 $href_public = '../../public';
@@ -206,17 +208,42 @@ $href_public = '../../public';
                     <!-- vùng hiển thị menu -->
                     <?php
                     //lấy danh sách loại sản phẩm từ database
-                    $sql = "SELECT * FROM `product_type` WHERE deleted = 0";
+                    $sql = $_model_product->get_product_type();
                     $result = mysqli_query($db->link , $sql) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
                     while($row = mysqli_fetch_array($result))
                     {
                         extract($row); ?>
                         <li class='dropdown side-dropdown'>
-                            <a class='dropdown-toggle'  aria-expanded='true' a href='./products.php?id=<?php echo $row['id'];?>'>
-                                <?php echo $name; ?> <i class='fa fa-angle-right'></i> </a> </li>
+                            <a class='dropdown-toggle' data-toggle="dropdown" aria-expanded='true' >
+                                <?php echo $row['name']; ?> <i class='fa fa-angle-right'></i> </a>
+
+                            <div class="custom-menu">
+                                <div class="row">
+                                    <?php
+                                    $sql2 = $_model_product->get_product_type_manufacturer($row['id']);
+                                    $result2 = mysqli_query($db->link , $sql2) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                                    while($row2 = mysqli_fetch_array($result2)) {
+                                        extract($row2); ?>
+                                        <div class="col-md-4">
+                                            <ul class="list-links" >
+                                                <li><a href="./products.php?product_type_id=<?php echo $row['id']?>&manufacturer_id=<?php echo $row2['id']; ?>">
+                                                        <h3 class="text-uppercase" style=" color: #F8694A;"> <?php echo $row2['name'];?></h3></a>
+                                                </li>
+                                                <li><hr/></li>
+                                            </ul>
+                                            <hr class="hidden-md hidden-lg">
+                                </div>
+                                    <?php }?>
+                                    <!-- https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-bong-do-155.html  -->
+                                    <div class="col-md-4">
+                                        <a href="./products.php?<?php echo $row['id'];?>">
+                                            <h3 class="text-uppercase text-info">xem tất cả</h3></a>
+                                    </div>
+                               </div>
+                        </li>
                     <?php } ?>
 
-                    <li><a href='<?php echo $__config['views'];?>/page/products.php'>Xem tất cả</a></li>
+                    <li><a href="./products.php">Xem tất cả</a></li>
 
                 </ul>
             </div>
@@ -230,12 +257,10 @@ $href_public = '../../public';
 
                     <li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Nhà
                             sản xuất <i class="fa fa-caret-down"></i></a>
-
                         <div class="custom-menu">
                             <div class="row">
-
                                 <?php
-                                $sql = "SELECT * FROM `manufacturer` WHERE deleted = 0";
+                                $sql = $_model_product->get_manufacturer();
                                 $result = mysqli_query($db->link, $sql);
                                 while ($row = mysqli_fetch_array($result))
                                 {
@@ -244,19 +269,14 @@ $href_public = '../../public';
                                         <div class='hidden-sm hidden-xs'>
                                             <a class='banner banner-1' href='./products.php?id=<?php echo $row['id']; ?>'>
                                                 <img src='<?php echo $href_public;?>/upload/<?php echo $row['logo_url'];?>' alt=''>
-<!--                                                <div class='banner-caption text-center'>-->
-<!--                                                    <h3 class='white-color text-uppercase'> --><?php //echo $name; ?><!--</h3>-->
-<!--                                                </div>-->
                                             </a>
                                             <hr>
                                         </div>
                                         <ul class="list-links">
                                             <li><h3 class="list-links-title"><a href="#"><?php echo $row['name']; ?></a></h3></li>
                                         </ul>
-
                                     </div>
                                 <?php } ?>
-
                             </div>
                         </div>
                     </li>

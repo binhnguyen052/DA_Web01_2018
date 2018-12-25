@@ -1,0 +1,20 @@
+adidas_bags01:adidas aop national-50$-usa
+adidas_bags02:adidas school bags-45$-usa
+adidas_bags03:black adidas duffle -40$-usa
+adidas_bags04:superR1-100$-usa
+adidas_pants01:adidas Adibreak -40$-usa
+adidas_pants02:adidas women's -50$-usa 
+adidas_pants03:adidas dh4558 usa-55$-usa
+adidas_shirts01:adidas white t shirt-55$-usa
+adidas_shirts02:adidas polo sports -55$-usa
+adidas_shirts03:adidas - TShirts-45$-usa
+adidas_shirts04:adidas-S1-50$-usa
+adidas_shirts05:adidas-T-shirts1-55$-usa
+adidas_shirts06:adidas-polo m-40$-usa
+adidas_shoes01:Adidas Prophere-100$-usa
+adidas_shoes02:adidas superstar -120$-usa
+adidas_shoes03:adidas ultra boost-150$-usa
+adidas_shoes04:adidas R1-200$-usa
+adidas_shoes05:adidas superstar 80s-100$-usa
+adidas_shoes06:adidas R1-300$-usa
+adidas_shoes07:adidas supertar 80s-150$-usa

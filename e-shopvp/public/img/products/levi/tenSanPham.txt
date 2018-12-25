@@ -1,0 +1,3 @@
+levi_bags01:Levi Jeans-100$-usa
+levi_bags02:levis small bag-140$-usa
+levi_bags03:Levi Basic-100$-usa

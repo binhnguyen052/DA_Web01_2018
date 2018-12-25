@@ -1,0 +1,8 @@
+viettien_pants01:Viettien so 97-25$-Vietnam
+viettien_pants02:Viettien so 92-35$-Vietnam
+viettien_pants03:Viettien so 57-45$-Vietnam
+viettien_shirts01:Viettien 8C0037 CT4-25$-Vietnam
+viettien_shirts02:Viettien 1E0853NT5-30$-Vietnam
+viettien_shirts03:Viettien 1E1006NT6-40$-Vietnam
+viettien_shirts04:Viettien 1E0857NK5-35$-Vietnam
+viettien_shirts05: Viettien1E0854NT5-44$-Vietnam

@@ -1,0 +1,9 @@
+casio_watches01: casio era 600d-200$-China
+casio_watches02:casio men's-50$-China
+casio_watches03:gshock dw5900 bb-200$-China
+casio_watches04:gshock b1-250$-usa
+casio_watches05:gshock g1-500$-usa
+casio_watches06:gshock men-400$-usa
+casio_watches07:casio G66-60$-usa
+casio_watches08: casio classic-100$-usa
+

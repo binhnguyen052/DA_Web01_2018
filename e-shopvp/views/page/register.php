@@ -85,7 +85,8 @@ $_model_user = new MUser();
 //                                echo $display_name.'<br>';
                                 $check_register = $_model_user->check_register($db->link, $username, $display_name);
                                 if($check_register == TRUE && isset($_POST['r_password'])){
-                                    $password = md5(['r_password']);
+                                    
+                                    $password = md5($_POST['r_password']);
 
                                     if(isset($_POST['r_address'])){ $address = $_POST['r_address']; }
                                     if(isset($_POST['r_email'])){ $email = $_POST['r_email']; }

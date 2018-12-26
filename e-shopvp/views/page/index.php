@@ -135,7 +135,7 @@ $href_public = '../../public';
 					<div class="row">
 						<div id="product-slick-1" class="product-slick">
                             <?php $last_entries = $_model_product->get_last_entries();
-                                $result = mysqli_query($db->link, $last_entries) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                                $result = $db->executeQuery($db->link, $last_entries);
                                 while ($row = mysqli_fetch_array($result)) {
                                     extract($row); ?>
                                 <!-- Product Single -->
@@ -234,7 +234,7 @@ $href_public = '../../public';
 					<div class="row">
 						<div id="product-slick-2" class="product-slick">
                             <?php $most_sold = $_model_product->get_most_sold();
-                                $result = mysqli_query($db->link, $most_sold) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                                $result = $db->executeQuery($db->link, $most_sold);
                                 while ($row = mysqli_fetch_array($result)) {
                                     extract($row); ?>
                                 <!-- Product Single -->
@@ -288,7 +288,7 @@ $href_public = '../../public';
 				<!-- section title -->
 
                 <?php $most_view = $_model_product->get_most_views();
-                      $result = mysqli_query($db->link, $most_view) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                      $result = $db->executeQuery($db->link, $most_view);
                       while ($row = mysqli_fetch_array($result)) {
                           extract($row); ?>
 

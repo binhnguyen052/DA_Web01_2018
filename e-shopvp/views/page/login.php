@@ -2,7 +2,13 @@
 
 <!-- https://bootsnipp.com/tags/login -->
 <!-- https://bootsnipp.com/snippets/featured/login-form -->
-
+<?php
+//biến lưu đường link
+include_once ("../../libraries/page.php");
+$currentURL = curPageURL();
+$__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
+$href_public = '../../public';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="../css/login.css" rel="stylesheet" id="bootstrap-css">
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
+    <link href="<?php echo $href_public;?>/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="<?php echo $href_public;?>/css/login.css" rel="stylesheet" id="bootstrap-css">
+
     <!------ Include the above in your HEAD tag ---------->
 </head>
 
@@ -68,7 +73,8 @@
         </div>
     </div>
 
-
+    <script src="<?php echo $href_public;?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo $href_public;?>/js/jquery.min.js"></script>
 </body>
 
 </html>

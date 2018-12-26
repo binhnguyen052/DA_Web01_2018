@@ -121,9 +121,8 @@ $href_public = '../../public';
                             </div>
                             <strong class="text-uppercase">Tài khoản của tôi<i class="fa fa-caret-down"></i></strong>
                         </div>
-                        <a href="<?php echo $__config['views'];?>/page/login.php" class="text-uppercase">Đăng nhập</a>/
-                        <a href="<?php echo $__config['views'];?>/page/register.php" class="text-uppercase">Đăng
-                            kí</a>
+                        <a href="./login.php" class="text-uppercase">Đăng nhập</a>/
+                        <a href="./register.php" class="text-uppercase">Đăng kí</a>
                         <ul class="custom-menu">
                             <li><a href="#"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
@@ -435,11 +434,11 @@ $href_public = '../../public';
                         <ul class="custom-menu">
                             <li><a href="index.php">Trang chủ</a></li>
                             <li><a href="./products.php">Các sản phẩm</a></li>
-                            <li><a href="./page/product-page.php">Chi tiết sản phẩm</a></li>
+<!--                            <li><a href="./page/product-page.php">Chi tiết sản phẩm</a></li>-->
                             <li><a href="./page/checkout.php">Thanh toán</a></li>
                             <li><a href="./page/admin/index.php">Admin (test view)</a></li>
-                            <li><a href="./page/blank.php">Blank</a></li>
-                            <li><a href="./page/register.php">user-profile (test view)</a></li>
+                            <li><a href="./blank.php">Blank</a></li>
+<!--                            <li><a href="./page/register.php">user-profile (test view)</a></li>-->
                         </ul>
                     </li>
                 </ul>

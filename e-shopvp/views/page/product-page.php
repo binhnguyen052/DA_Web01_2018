@@ -194,7 +194,10 @@
 				<div class="col-md-2 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
+<!--							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>-->
+                            <a class="main-btn quick-view btn"
+                               href="./product-page.php?id=<?php echo $row_manufacturer['id']; ?>"
+                               role="button">Xem Nhanh</a>
 							<img src="<?php echo $href_public; ?>/upload/<?php echo $row_manufacturer['image_url'];?>" alt="">
 						</div>
 						<div class="product-body">

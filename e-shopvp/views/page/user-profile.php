@@ -37,18 +37,18 @@ $href_public = '../../public';
 					</hr>
 					<div class="list-group ">
 						<a href="#" class="list-group-item list-group-item-action active">Thông tin cá nhân</a>
-						<a href="#" class="list-group-item list-group-item-action">User Management</a>
-						<a href="#" class="list-group-item list-group-item-action">Used</a>
-						<a href="#" class="list-group-item list-group-item-action">Enquiry</a>
-						<a href="#" class="list-group-item list-group-item-action">Dealer</a>
-						<a href="#" class="list-group-item list-group-item-action">Media</a>
-						<a href="#" class="list-group-item list-group-item-action">Post</a>
-						<a href="#" class="list-group-item list-group-item-action">Category</a>
-						<a href="#" class="list-group-item list-group-item-action">New</a>
-						<a href="#" class="list-group-item list-group-item-action">Comments</a>
-						<a href="#" class="list-group-item list-group-item-action">Appearance</a>
-						<a href="#" class="list-group-item list-group-item-action">Reports</a>
-						<a href="#" class="list-group-item list-group-item-action">Settings</a>
+<!--						<a href="#" class="list-group-item list-group-item-action">User Management</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Used</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Enquiry</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Dealer</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Media</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Post</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Category</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">New</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Comments</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Appearance</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Reports</a>-->
+<!--						<a href="#" class="list-group-item list-group-item-action">Settings</a>-->
 
 
 					</div>
@@ -66,12 +66,10 @@ $href_public = '../../public';
 								<div class="col-md-12">
 									<form>
 										<div class="form-group row">
-											<label for="username" class="col-4 col-form-label">Tên đăng nhập: <?php echo $_SESSION['display_name'];?></label>
-											<div class="col-8">
-												<!-- <input id="username" name="username" placeholder="Username" class="form-control here" required="required"
-												 type="text"> -->
-												 <label for="username" class="col-4 col-form-label">Tên đăng****</label>
-											</div>
+											<label for="username" class="col-4 col-form-label">Tên hiển thị: <?php echo $_SESSION['display_name'];?></label>
+                                            <div class="col-8">
+                                                <input id="displayname" name="displayname" placeholder="Đổi tên hiển thị" class="form-control here" required="required" type="text">
+                                            </div>
 										</div>
 										<div class="form-group row">
 											<label for="name" class="col-4 col-form-label">Tên</label>
@@ -83,12 +81,6 @@ $href_public = '../../public';
 											<label for="lastname" class="col-4 col-form-label">Họ</label>
 											<div class="col-8">
 												<input id="lastname" name="lastname" placeholder="Nhập họ" class="form-control here" type="text">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="displayname" class="col-4 col-form-label">Tên hiển thị*</label>
-											<div class="col-8">
-												<input id="displayname" name="displayname" placeholder="Nhập tên hiển thị" class="form-control here" required="required" type="text">
 											</div>
 										</div>
 										<!-- <div class="form-group row">
@@ -123,24 +115,24 @@ $href_public = '../../public';
 												<input id="website" name="website" placeholder="website" class="form-control here" type="text">
 											</div>
 										</div> -->
-										<div class="form-group row">
-											<label for="publicinfo" class="col-4 col-form-label">Thông tin công khai</label>
-											<div class="col-8">
-												<textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
-											</div>
-										</div>
+<!--										<div class="form-group row">-->
+<!--											<label for="publicinfo" class="col-4 col-form-label">Thông tin công khai</label>-->
+<!--											<div class="col-8">-->
+<!--												<textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>-->
+<!--											</div>-->
+<!--										</div>-->
 										<div class="form-group row">
 											<label for="newpass" class="col-4 col-form-label">Mật khẩu mới</label>
 											<div class="col-8">
 												<input id="newpass" name="newpass" placeholder="Nhập mật khẩu mới" class="form-control here" type="text">
 											</div>
 										</div>
-										<div class="form-group row">
-											<label for="confirmnewpass" class="col-4 col-form-label">Xác nhận mật khẩu</label>
-											<div class="col-8">
-												<input id="confirmnewpass" name="confirmnewpass" placeholder="Nhập lại mật khẩu mới" class="form-control here" required="required" type="text">
-											</div>
-										</div>
+<!--										<div class="form-group row">-->
+<!--											<label for="confirmnewpass" class="col-4 col-form-label">Xác nhận mật khẩu</label>-->
+<!--											<div class="col-8">-->
+<!--												<input id="confirmnewpass" name="confirmnewpass" placeholder="Nhập lại mật khẩu mới" class="form-control here" required="required" type="text">-->
+<!--											</div>-->
+<!--										</div>-->
 										<div class="form-group row">
 											<label for="starbind" class="col-4 col-form-label">(*) Thông tin bắt buộc phải có</label>
 											

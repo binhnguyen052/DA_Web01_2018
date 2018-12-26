@@ -67,7 +67,7 @@ $_model_user = new MUser();
 							<div class="row">
 								<div class="col-md-12">
 									<form method="POST">
-                                        <?php $sql = $_model_user->get_account();
+                                        <?php $sql = $_model_user->get_one_account($_SESSION['username']);
                                         $result = $db->executeQuery($db->link, $sql);
                                         while ($row = mysqli_fetch_array($result)) {
                                         extract($row);
@@ -203,6 +203,7 @@ $_model_user = new MUser();
 		<!-- /container -->
 	</div>
 	<!-- /section -->
+
 
 <!-- FOOTER -->
 <?php

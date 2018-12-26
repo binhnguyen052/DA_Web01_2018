@@ -20,6 +20,18 @@ class MUser
         return $query;
     }
 
+    public function get_one_account($username)
+    {
+        $where = "";
+
+        if (!empty($username)) {
+            $where .= " AND username = '{$username}'";
+        }
+        $query = "SELECT * FROM {$this->tb_account} WHERE 1 {$where} AND deleted = 0";
+
+        return $query;
+    }
+
     public function check_login($conn, $username, $password)
     {
         $password_md5 = md5($password);
@@ -109,7 +121,7 @@ class MUser
         if (!empty($filter['email'])) {
             $set .= ", email = '{$filter['email']}'";
         }
-        
+
         $query = "UPDATE account
                   SET {$set}
                   WHERE username = '{$username}'";

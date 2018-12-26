@@ -82,7 +82,12 @@ $_model_user = new MUser();
                                 $check_register = $_model_user->check_register($db->link, $username, $display_name);
                                 if($check_register == TRUE){
                                     //thêm tài khoản
+                                    $register  = $_model_user->register($db->link, $filter);
+                                    if ($register == TRUE){
 
+                                    } else{
+                                        $message ='Thông báo: Đăng kí thất bại! ERROR 404';
+                                    }
                                 } else {
                                     $message ='Thông báo: Tài khoản hoặc tên hiển thị đã tồn tại!';
                                 }

@@ -23,16 +23,25 @@
 				<div class="product product-details clearfix">
 					<div class="col-md-6">
 						<div id="product-main-view">
-                            <?php ?>
+                            <?php
+                                $product_id = null;
+                            if (isset($_GET['id'])) {$product_id = $_GET['id']; }
+                            $filter = array(
+                                'product_id' => $product_id,
+                            );
+                            $sql = $_model_product->get_one_product($filter);
+                            $result = $db->executeQuery($db->link, $sql);
+                            while($row = mysqli_fetch_array($result))
+                            {
+                            extract($row); ?>
                                 <div class="product-view">
-                                    <img src="<?php echo $href_public;?>/upload/adidas_shoes03.jpg" alt="">
+                                    <img src="<?php echo $href_public;?>/upload/<?php echo $row['image_url']; ?>" alt="">
                                 </div>
-
 						</div>
 						<div id="product-view">
 
 							<div class="product-view">
-								<img src="<?php echo $href_public;?>/upload/adidas_shoes03.jpg" alt="">
+								<img src="<?php echo $href_public;?>/upload/<?php echo $row['image_url']; ?>" alt="">
 							</div>
 
 						</div>
@@ -197,7 +206,7 @@
 							</div>
 						</div>
 					</div>
-
+                    <?php } ?>
 				</div>
 				<!-- /Product Details -->
 			</div>

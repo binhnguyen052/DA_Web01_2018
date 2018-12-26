@@ -53,17 +53,17 @@
 <!--								<span class="sale">-20%</span>-->
 							</div>
 							<h2 class="product-name text-uppercase">Adidas Superstar</h2>
-							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-							<div>
-								<div class="product-rating">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o empty"></i>
-								</div>
-								<a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>
-							</div>
+							<h3 class="product-price" style=" color: #F8694A;">$<?php echo $row['price']; ?></h3>
+<!--							<div>-->
+<!--								<div class="product-rating">-->
+<!--									<i class="fa fa-star"></i>-->
+<!--									<i class="fa fa-star"></i>-->
+<!--									<i class="fa fa-star"></i>-->
+<!--									<i class="fa fa-star"></i>-->
+<!--									<i class="fa fa-star-o empty"></i>-->
+<!--								</div>-->
+<!--								<a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>-->
+<!--							</div>-->
 							<p><strong>Khả Dụng:</strong> Trong Kho</p>
 							<p><strong>Nhãn Hiệu:</strong> E-SHOP</p>
 							<p>Tông màu nam tính, đẳng cấp cùng chất liệu vải sợi cao cấp, mềm mại, không mang đến cảm giác đau chân khi phải di chuyển nhiều, sản phẩm tạo nên sự tin tưởng tuyệt đối trong sự lựa chọn của giới trẻ thời nay.</p>

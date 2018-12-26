@@ -2,9 +2,6 @@
   include("./header.php");
   ?>
 
-    
-
-
       <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -29,20 +26,22 @@
                             <thead>
                             <tr>
                                 <th>Action</th>
-                                <th>Name</th>
+                                <th>Display Name</th>
+                                <th>Type</th>
                                 <th>Status</th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
                                 <th>Action</th>
-                                <th>Name</th>
+                                <th>Display Name</th>
+                                <th>Type</th>
                                 <th>Status</th>
                             </tr>
                             </tfoot>
                             <tbody>
                             <?php
-                            $sql = $_model_admin->get_manufacturer();
+                            $sql = $_model_admin->get_account();
                             $result = $db->executeQuery($db->link, $sql);
                             while ($row = mysqli_fetch_array($result)) {
                                 extract($row); ?>
@@ -55,7 +54,9 @@
                                         <a class="btn btn-xs btn-danger" href="#">
                                             <i class="fa fa-times text-uppercase">Xóa</i></a></td>
 
-                                    <td class="text-uppercase"><?php echo $row['name']; ?></td>
+                                    <td class="text-uppercase font-weight-bold"><?php echo $row['display_name']; ?></td>
+                                    <?php if($row['account_type'] == 0) {echo '<td class="text-warning bg-dark font-weight-bold">Admin</td>';}
+                                    else if($row['account_type'] == 1) {echo '<td class="text-primary font-weight-bold">Customer</td>';} ?>
                                     <td class="text-uppercase"><?php echo $row['deleted'] == 0? 'Enable' : 'Disable';?></td>
                                 </tr>
                             <?php }?>

@@ -26,6 +26,12 @@ class MAdmin
         return $query;
     }
 
+    public function get_account()
+    {
+        $query = "SELECT * FROM {$this->tb_account} WHERE 1 AND deleted = 0 ORDER BY id ASC";
+
+        return $query;
+    }
 
     // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
     public function get_product_type_manufacturer($id_type = 1)

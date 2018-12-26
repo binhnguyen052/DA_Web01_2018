@@ -91,28 +91,28 @@ class MUser
     {
         $set = "";
         if (!empty($filter['display_name'])) {
-            $set .= "display_name = {$filter['display_name']}";
+            $set .= "display_name = '{$filter['display_name']}'";
         }
 
         if (!empty($filter['password'])) {
-            $set .= ", password = {$filter['password']}";
+            $set .= ", password = '{$filter['password']}'";
         }
 
         if (!empty($filter['address'])) {
-            $set .= ", address = {$filter['address']}";
+            $set .= ", address = '{$filter['address']}'";
         }
 
         if (!empty($filter['tel'])) {
-            $set .= ", tel = {$filter['tel']}";
+            $set .= ", tel = '{$filter['tel']}'";
         }
 
         if (!empty($filter['email'])) {
-            $set .= ", email = {$filter['email']}";
+            $set .= ", email = '{$filter['email']}'";
         }
-
+        
         $query = "UPDATE account
                   SET {$set}
-                  WHERE username = $username";
+                  WHERE username = '{$username}'";
 
         $result = mysqli_query($conn, $query);
         //nếu update thành công

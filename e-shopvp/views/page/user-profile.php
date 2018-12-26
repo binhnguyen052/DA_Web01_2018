@@ -7,6 +7,9 @@ include ("../../controllers/home/header.php");
 
 $href_public = '../../public';
 
+include_once("../../models/database/model_user.php");
+$_model_user = new MUser();
+
 ?>
 
 	<!-- BREADCRUMB -->
@@ -64,10 +67,17 @@ $href_public = '../../public';
 							<div class="row">
 								<div class="col-md-12">
 									<form method="POST">
+                                        <?php $sql = $_model_user->get_account();
+                                        $result = $db->executeQuery($db->link, $sql);
+                                        while ($row = mysqli_fetch_array($result)) {
+                                        extract($row);
+                                        $sql_display_name = $row['display_name'];
+                                        }?>
 										<div class="form-group row">
-											<label for="username" class="col-4 col-form-label">Tên hiển thị: <?php echo $_SESSION['display_name'];?></label>
+											<label for="username" class="col-4 col-form-label">Tên hiển thị: <?php echo $sql_display_name;?></label>
                                             <div class="col-8">
-                                                <input id="displayname" name="profile_displayname" placeholder="Đổi tên hiển thị" class="form-control here" required="required" type="text">
+                                                <input id="displayname" name="profile_displayname" placeholder="Đổi tên hiển thị"
+                                                       class="form-control here" type="text">
                                             </div>
 										</div>
 <!--										<div class="form-group row">-->
@@ -161,13 +171,12 @@ $href_public = '../../public';
                                             'tel' => $tel,
                                             'email' => $email,
                                         );
-
                                             $check_login = $_model_user->update_profile($db->link, $filter, $_SESSION['username']);
                                             if($check_login == TRUE){
                                                 $message ='Thông báo: Thay đổi thành công!';
                                             } else {
                                                 $message ='Thông báo: Thay đổi thất bại!';
-                                        }
+                                            }
                                         ?>
                                             <div>
                                                 <hr/>

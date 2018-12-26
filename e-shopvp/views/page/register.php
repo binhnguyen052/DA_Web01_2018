@@ -71,17 +71,37 @@ $_model_user = new MUser();
                             $username = null;
                             $password = null;
                             $display_name = null;
+                            $address = null;
+                            $email = null;
+                            $tel = null;
+
+
                             if(isset($_POST['r_username']) && isset($_POST['r_password'])
                                 && isset($_POST['r_displayname'])){
                                 $username = $_POST['r_username'];
-                                $password = $_POST['r_password'];
+
                                 $display_name = $_POST['r_displayname'];
 //                                echo $username .'<br>';
 //                                echo $password.'<br>';
 //                                echo $display_name.'<br>';
                                 $check_register = $_model_user->check_register($db->link, $username, $display_name);
-                                if($check_register == TRUE){
+                                if($check_register == TRUE && isset($_POST['r_password'])){
+                                    $password = $_POST['r_password'];
+
+                                    if(isset($_POST['r_address'])){ $address = $_POST['r_username']; }
+                                    if(isset($_POST['r_email'])){ $email = $_POST['r_email']; }
+                                    if(isset($_POST['r_tel'])){ $tel = $_POST['r_tel']; }
+
                                     //thêm tài khoản
+                                    $filter = array(
+                                        'username' => $username,
+                                        'password' => $password,
+                                        'display_name' => $display_name,
+                                        'address' => $address,
+                                        'tel' => $tel,
+                                        'email' => $email,
+                                    );
+
                                     $register  = $_model_user->register($db->link, $filter);
                                     if ($register == TRUE){
 

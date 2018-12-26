@@ -150,7 +150,10 @@ $href_public = '../../public';
 <!--                                            <li><span>00 M</span></li>-->
 <!--                                            <li><span>00 S</span></li>-->
 <!--                                        </ul>-->
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Xem nhanh</button>
+<!--                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Xem nhanh</button>-->
+                                        <a class="main-btn quick-view btn"
+                                           href="./product-page.php?id=<?php echo $row['id']; ?>"
+                                           role="button">Xem Nhanh</a>
                                         <img src="<?php echo $href_public; ?>/upload/<?php echo $row['image_url'] ?>" alt="">
                                     </div>
                                     <div class="product-body">
@@ -240,7 +243,10 @@ $href_public = '../../public';
                                 <!-- Product Single -->
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh</button>
+<!--                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh</button>-->
+                                        <a class="main-btn quick-view btn"
+                                           href="./product-page.php?id=<?php echo $row['id']; ?>"
+                                           role="button">Xem Nhanh</a>
                                         <img src="<?php echo $href_public; ?>/upload/<?php echo $row['image_url'] ?>" alt="">
                                     </div>
                                     <div class="product-body">
@@ -296,7 +302,10 @@ $href_public = '../../public';
 				<div class="col-md-2 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh</button>
+<!--							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem nhanh</button>-->
+                            <a class="main-btn quick-view btn"
+                               href="./product-page.php?id=<?php echo $row['id']; ?>"
+                               role="button">Xem Nhanh</a>
 							<img src="<?php echo $href_public; ?>/upload/<?php echo $row['image_url'] ?>" alt="">
 						</div>
 						<div class="product-body">

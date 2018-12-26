@@ -26,7 +26,12 @@ class MUser
         $row = mysqli_num_rows($result);
         //nếu tồn tại tài khoản
         if ($row > 0) {
-
+            //lưu session
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['display_name'] = $row['display_name'];
+            $_SESSION['logged_in'] = TRUE;
+            $_SESSION['account_type'] = $row['account_type'];
             return TRUE;
         } else {
             return FALSE;

@@ -127,7 +127,7 @@ $href_public = '../../public';
                         <a href="./login.php" class="text-uppercase">Đăng nhập</a>/
                         <a href="./register.php" class="text-uppercase">Đăng kí</a>
                         <ul class="custom-menu">
-                            <li><a href="#"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
+                            <li><a href="./user-profile.php"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
                             <li><a href="#"><i class="fa fa-exchange"></i>So sánh</a></li>
                             <li><a href="#"><i class="fa fa-check"></i>Thanh toán</a></li>

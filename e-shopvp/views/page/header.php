@@ -6,6 +6,8 @@ $_model_product = new MProduct();
 $currentURL = curPageURL();
 $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 $href_public = '../../public';
+
+// style=" color: #F8694A;"
 ?>
 
 <!DOCTYPE html>

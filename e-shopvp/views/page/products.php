@@ -165,6 +165,25 @@
 					<!-- store top filter -->
 					<div class="store-filter clearfix">
 						<div class="pull-left">
+                            <?php
+                            $product_type_id = null;
+                            $manufacturer_id = null;
+                            if (isset($_GET['product_type_id'])) {$product_type_id = $_GET['product_type_id']; }
+                            if (isset($_GET['manufacturer_id'])) {$manufacturer_id = $_GET['manufacturer_id']; }
+                            $filter = array(
+                                'product_type' => $product_type_id,
+                                'manufacturer' => $manufacturer_id,
+                            );
+                            //                                echo $product_type_id .'<br/>';
+                            //                                echo $manufacturer_id.'<br/>';
+                            $sql = $_model_product->get_product_by_Condition($filter);
+                            $result = $db->executeQuery($db->link, $sql);
+                            $num_r = $_model_product->count_all($db->link, $filter);
+                            //                                echo $num_r; ?>
+                                <div>
+                                    <span><h5 class="title text-uppercase">Có:
+                                            <?php echo $num_r;?> sản phẩm</h5></span>
+                                </div>
 							<div class="row-filter">
 								<a href="#"><i class="fa fa-th-large"></i></a>
 								<a href="#" class="active"><i class="fa fa-bars"></i></a>
@@ -203,23 +222,8 @@
 					<div id="store">
 						<!-- row -->
 						<div class="row">
-
-                            <?php
-                                $product_type_id = null;
-                                $manufacturer_id = null;
-                                if (isset($_GET['product_type_id'])) {$product_type_id = $_GET['product_type_id']; }
-                                if (isset($_GET['manufacturer_id'])) {$manufacturer_id = $_GET['manufacturer_id']; }
-                                $filter = array(
-                                    'product_type' => $product_type_id,
-                                    'manufacturer' => $manufacturer_id,
-                                );
-//                                echo $product_type_id .'<br/>';
-//                                echo $manufacturer_id.'<br/>';
-                                $sql = $_model_product->get_product_by_Condition($filter);
-                                $result = $db->executeQuery($db->link, $sql);
-                                $num_r = $_model_product->count_all($db->link, $filter);
-//                                echo $num_r;
-                                while($row = mysqli_fetch_array($result))
+                            
+                                <?php while($row = mysqli_fetch_array($result))
                                 {
                                 extract($row); ?>
                                 <!-- Product Single -->

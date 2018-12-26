@@ -18,6 +18,13 @@ class MUser
         return $query;
     }
 
+    public function check_login($username, $password)
+    {
+        $password_md5 = md5($password);
+        $query = $this->db->query("SELECT * FROM account WHERE username = '{$username}' AND password = '{$password_md5}'");
+
+    }
+
     public function get_all($filter = array(), $start = 0, $limit = 10)
     {
         $where = "";

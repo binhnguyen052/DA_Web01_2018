@@ -48,7 +48,7 @@ $href_public = '../../public';
                     <h2>Đăng nhập</h2>
                 </div>
 
-                <form id="Login">
+                <form id="Login" method="POST">
 
                     <div class="form-group">
                         <input type="text" class="form-control" name="login_username" placeholder="Tên đăng nhập">
@@ -66,6 +66,10 @@ $href_public = '../../public';
                     <?php
                         $sql = $_model_user->get_account();
                         $result = $db->executeQuery($db->link, $sql);
+                        //nếu tồn tại tài khoản
+                        if ($result){
+
+                        }
                     ?>
                     <div class="flex-col-c p-t-170 p-b-40">
                         <span class="txt1 p-b-9">

@@ -60,32 +60,41 @@ $href_public = '../../public';
 							<div class="form-group">
 								<input class="input" type="text" name="r_address" placeholder="Địa Chỉ">
 							</div>
-							<!-- <div class="form-group">
-								<input class="input" type="text" name="r_city" placeholder="Thành Phố">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="r_country" placeholder="Quốc Gia">
-							</div> -->
-							<!-- <div class="form-group">
-								<input class="input" type="text" name="r_zip-code" placeholder="ZIP Code">
-							</div> -->
-
 							<div class="form-group">
 								<button name="r_submit" type="submit" class="btn btn-primary">Tạo tài khoản</button>
 							</div>
 
-                            
-							<!-- <div class="form-group">
-								<div class="input-checkbox">
-									<input type="checkbox" id="register">
-									<label class="font-weak" for="register">Tạo Tài Khoản ?</label>
-									<div class="caption">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-											<p>
-												<input class="input" type="password" name="password" placeholder="Enter Your Password">
-									</div>
-								</div>
-							</div> -->
+                            <?php
+                            $message = null;
+                            $username = null;
+                            $password = null;
+                            $display_name = null;
+                            if(isset($_POST['r_username']) && isset($_POST['r_password'])
+                                && isset($_POST['r_displayname'])){
+                                $username = $_POST['r_username'];
+                                $password = $_POST['r_password'];
+                                $display_name = $_POST['r_displayname'];
+//                            echo $username;
+//                            echo $password;
+                                $check_login = $_model_user->check_login($db->link, $username, $password);
+                                if($check_login == TRUE){
+                                    header('location: ./user-profile.php');
+                                } else {
+                                    $message ='Thông báo: Tài khoản hoặc tên hiển thị đã tồn tại!';
+                                }
+                            }
+                            ?>
+
+                            <div>
+                                <hr/>
+                                <?php if(isset($message)) {?>
+                                    <p class="bg-info">
+                                        <strong class="fa fa-info"> <?php echo $message; ?> </strong>
+                                    </p>
+                                <?php } ?>
+                                <hr/>
+                            </div>
+
 						</div>
 					</div>
 

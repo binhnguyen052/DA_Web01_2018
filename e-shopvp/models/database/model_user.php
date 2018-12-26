@@ -24,14 +24,16 @@ class MUser
         $query = "SELECT * FROM account WHERE username = '{$username}' AND password = '{$password_md5}'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_num_rows($result);
+        $row_extract = mysqli_fetch_array($result);
+        extract($row_extract);
         //nếu tồn tại tài khoản
         if ($row > 0) {
             //lưu session
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
-            $_SESSION['display_name'] = $row['display_name'];
+            $_SESSION['display_name'] = $row_extract['display_name'];
             $_SESSION['logged_in'] = TRUE;
-            $_SESSION['account_type'] = $row['account_type'];
+            $_SESSION['account_type'] = $row_extract['account_type'];
             return TRUE;
         } else {
             return FALSE;

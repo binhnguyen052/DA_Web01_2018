@@ -66,7 +66,7 @@ $href_public = '../../public';
 								<div class="col-md-12">
 									<form>
 										<div class="form-group row">
-											<label for="username" class="col-4 col-form-label">Tên đăng nhập</label>
+											<label for="username" class="col-4 col-form-label">Tên đăng nhập: <?php echo $_SESSION['display_name'];?></label>
 											<div class="col-8">
 												<!-- <input id="username" name="username" placeholder="Username" class="form-control here" required="required"
 												 type="text"> -->

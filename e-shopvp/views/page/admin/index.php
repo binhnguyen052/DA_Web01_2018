@@ -1,6 +1,10 @@
 <?php
-  include("./header.php");
-  ?>
+include ("../../../controllers/admin/header.php");
+
+$href_public = '../../public';
+
+include("./header.php");
+?>
 
 <div id="content-wrapper">
 

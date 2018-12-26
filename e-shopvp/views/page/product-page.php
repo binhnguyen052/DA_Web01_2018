@@ -23,32 +23,18 @@
 				<div class="product product-details clearfix">
 					<div class="col-md-6">
 						<div id="product-main-view">
+
 							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes03.jpg" alt="">
+								<img src="<?php echo $href_public;?>/upload/adidas_shoes03.jpg" alt="">
 							</div>
-							<div class="product-view">
-								<img src="../img/products/seiko/watches/seiko_watches01.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes02.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes05.jpg" alt="">
-							</div>
+
 						</div>
 						<div id="product-view">
+
 							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes03.jpg" alt="">
+								<img src="<?php echo $href_public;?>/upload/adidas_shoes03.jpg" alt="">
 							</div>
-							<div class="product-view">
-								<img src="../img/products/seiko/watches/seiko_watches01.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes02.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="../img/products/adidas/shoes/adidas_shoes05.jpg" alt="">
-							</div>
+
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -104,11 +90,12 @@
 					</div>
 					<div class="col-md-12">
 						<div class="product-tab">
-							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Miêu Tả</a></li>
-								<li><a data-toggle="tab" href="#tab1">Chi Tiết</a></li>
-								<li><a data-toggle="tab" href="#tab2">Nhận Xét(3)</a></li>
-							</ul>
+<!--							<ul class="tab-nav">-->
+<!--								<li class="active"><a data-toggle="tab" href="#tab1">Miêu Tả</a></li>-->
+<!--								<li><a data-toggle="tab" href="#tab1">Chi Tiết</a></li>-->
+<!--								<li><a data-toggle="tab" href="#tab2">Nhận Xét(3)</a></li>-->
+<!--							</ul>-->
+                            <hr/>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">
 									
@@ -206,9 +193,6 @@
 											</form>
 										</div>
 									</div>
-
-
-
 								</div>
 							</div>
 						</div>

@@ -92,21 +92,21 @@ $href_public = '../../public';
 											</div>
 										</div> -->
 										<div class="form-group row">
-											<label for="address" class="col-4 col-form-label">Địa chỉ</label>
+											<label for="address" class="col-4 col-form-label">Địa chỉ: </label>
 											<div class="col-8">
-												<input id="address" name="address" placeholder="Nhập địa chỉ" class="form-control here" type="text">
+												<input id="address" name="profile_address" placeholder="Nhập địa chỉ" class="form-control here" type="text">
 											</div>
 										</div>
 										<div class="form-group row">
-											<label for="phonenumber" class="col-4 col-form-label">Điện thoại</label>
+											<label for="phonenumber" class="col-4 col-form-label">Điện thoại: </label>
 											<div class="col-8">
-												<input id="phonenumber" name="phonenumber" placeholder="Nhập số điện thoại" class="form-control here" type="text">
+												<input id="phonenumber" name="profile_tel" placeholder="Nhập số điện thoại" class="form-control here" type="text">
 											</div>
 										</div>
 										<div class="form-group row">
-											<label for="email" class="col-4 col-form-label">Email</label>
+											<label for="email" class="col-4 col-form-label">Email: </label>
 											<div class="col-8">
-												<input id="email" name="email" placeholder="Nhập Email" class="form-control here" type="text">
+												<input id="email" name="profile_email" placeholder="Nhập Email" class="form-control here" type="text">
 											</div>
 										</div>
 										<!-- <div class="form-group row">
@@ -124,7 +124,7 @@ $href_public = '../../public';
 										<div class="form-group row">
 											<label for="newpass" class="col-4 col-form-label">Mật khẩu mới</label>
 											<div class="col-8">
-												<input id="newpass" name="newpass" placeholder="Nhập mật khẩu mới" class="form-control here" type="text">
+												<input id="newpass" name="profile_newpass" placeholder="Nhập mật khẩu mới" class="form-control here" type="text">
 											</div>
 										</div>
 <!--										<div class="form-group row">-->
@@ -139,7 +139,7 @@ $href_public = '../../public';
 										</div>
 										<div class="form-group row">
 											<div class="offset-4 col-8">
-												<button name="submit" type="submit" class="btn btn-primary">Cập nhật</button>
+												<button type="submit" class="btn btn-primary">Cập nhật</button>
 											</div>
 										</div>
 
@@ -150,20 +150,35 @@ $href_public = '../../public';
                                         $address = null;
                                         $email = null;
                                         $tel = null;
-                                        if(isset($_POST['login_username']) && isset($_POST['login_password'])){
-                                            $username = $_POST['login_username'];
-                                            $password = $_POST['login_password'];
-                                            $check_login = $_model_user->update_profile($db->link, $username, $_SESSION['username']);
+                                        if(isset($_POST['profile_displayname'])){ $display_name = $_POST['profile_displayname']; }
+                                        if(isset($_POST['profile_newpass'])){ $password = $_POST['profile_newpass']; }
+                                        if(isset($_POST['profile_address'])){ $address = $_POST['profile_address']; }
+                                        if(isset($_POST['profile_email'])){ $email = $_POST['profile_email']; }
+                                        if(isset($_POST['profile_tel'])){ $tel = $_POST['profile_tel']; }
+                                        $filter = array(
+                                            'password' => $password,
+                                            'display_name' => $display_name,
+                                            'address' => $address,
+                                            'tel' => $tel,
+                                            'email' => $email,
+                                        );
+
+                                            $check_login = $_model_user->update_profile($db->link, $filter, $_SESSION['username']);
                                             if($check_login == TRUE){
-                                                header('location: ./user-profile.php');
+                                                $message ='Thông báo: Thay đổi thành công!';
                                             } else {
-                                                $message ='Thông báo: Sai tài khoản hoặc mật khẩu!';
-                                            }
+                                                $message ='Thông báo: Thay đổi thất bại!';
                                         }
                                         ?>
-
-
-
+                                            <div>
+                                                <hr/>
+                                                <?php if(isset($message)) {?>
+                                                    <p class="bg-info">
+                                                        <strong class="fa fa-info"> <?php echo $message; ?> </strong>
+                                                    </p>
+                                                <?php } ?>
+                                                <hr/>
+                                            </div>
 									</form>
 								</div>
 							</div>

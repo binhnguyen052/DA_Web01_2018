@@ -169,13 +169,13 @@ class MProduct
         }
 
         $query = "
-            SELECT COUNT(id) AS num_rows
+            SELECT *
             FROM product
             WHERE 1 {$where} AND deleted = 0";
 
         $result = mysqli_query($conn, $query);
         $row = mysqli_num_rows($result);
-        if (isset($row)) {
+        if ($row > 0) {
             return $row = mysqli_num_rows($result);
         }
         return 0;

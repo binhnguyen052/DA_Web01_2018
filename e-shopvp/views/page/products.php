@@ -1,5 +1,6 @@
 <?php
     include ("../../controllers/products/header.php");
+
 ?>
 
 	<!-- BREADCRUMB -->
@@ -212,14 +213,13 @@
                                     'product_type' => $product_type_id,
                                     'manufacturer' => $manufacturer_id,
                                 );
-                                echo $product_type_id .'<br/>';
-                                echo $manufacturer_id.'<br/>';
+//                                echo $product_type_id .'<br/>';
+//                                echo $manufacturer_id.'<br/>';
                                 $sql = $_model_product->get_product_by_Condition($filter);
                                 $result = $db->executeQuery($db->link, $sql);
                                 $num_r = $_model_product->count_all($db->link, $filter);
-                                echo $num_r;
+//                                echo $num_r;
                             ?>
-                            <hr/>
                                 <!-- Product Single -->
                                 <div class="col-md-4 col-sm-6 col-xs-6">
                                     <div class="product product-single">
@@ -229,7 +229,7 @@
                                                 <span class="sale">-20%</span>
                                             </div>
                                             <button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Xem Nhanh</button>
-                                            <img src="../img/product01.jpg" alt="">
+                                            <img src="<?php echo $href_public?>/upload/product01.jpg" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>

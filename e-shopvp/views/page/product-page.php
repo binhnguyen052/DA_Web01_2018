@@ -23,6 +23,8 @@
                 <div class="product product-details clearfix">
                     <?php
                     $product_id = null;
+                    $product_type_id = null;
+                    $manufacturer_id = null;
                     if (isset($_GET['id'])) {$product_id = $_GET['id']; }
                     $filter = array(
                         'id' => $product_id,
@@ -30,7 +32,7 @@
                     $sql = $_model_product->get_one_product($filter);
                     $result = $db->executeQuery($db->link, $sql);
                     while($row = mysqli_fetch_array($result)) {
-                    extract($row); ?>
+                    extract($row); $product_type_id = $row['type_id']; $manufacturer_id = $row['manufacturer_id'];?>
                         <div class="col-md-6">
                             <div id="product-main-view">
                                 <div class="product-view">
@@ -126,18 +128,18 @@
 				<!-- section title -->
 
                 <?php
-                    $sql = $_model_product->get_same_type($row['id']);
-                    $result = $db->executeQuery($db->link, $sql);
-                    while($row = mysqli_fetch_array($result))
+                    $sql_type = $_model_product->get_same_type($product_type_id);
+                    $result_type = $db->executeQuery($db->link, $sql_type);
+                    while($row_type = mysqli_fetch_array($result_type))
                     {
-                    extract($row);
+                    extract($row_type);
                 ?>
 				<!-- Product Single -->
 				<div class="col-md-2 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
 							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem Nhanh</button>
-							<img src=".<?php echo $href_public?>/upload/<?php echo $row['image_url'];?>product04.jpg" alt="">
+							<img src="<?php echo $href_public; ?>/upload/<?php echo $row_type['image_url'];?>" alt="">
 						</div>
 						<div class="product-body">
 							<h3 class="product-price">$32.50</h3>

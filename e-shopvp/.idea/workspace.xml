@@ -53,7 +53,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="4046" />
+          <entry key="PHP" value="4196" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="SQL" value="81" />
         </counts>
@@ -101,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/database/model_product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="29" />
+            <state relative-caret-position="80">
+              <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -110,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="228" column="107" selection-start-line="228" selection-start-column="83" selection-end-line="228" selection-end-column="107" />
+            <state relative-caret-position="300">
+              <caret line="213" column="38" selection-start-line="209" selection-start-column="20" selection-end-line="213" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -119,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1000">
-              <caret line="175" column="30" lean-forward="true" selection-start-line="172" selection-start-column="27" selection-end-line="175" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="241" column="118" lean-forward="true" selection-start-line="241" selection-start-column="54" selection-end-line="241" selection-end-column="118" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
               </folding>
@@ -131,15 +131,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/page/product-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="181">
+              <caret line="141" column="103" selection-start-line="141" selection-start-column="103" selection-end-line="141" selection-end-column="103" />
               <folding>
-                <element signature="n#div#1;n#!!top" />
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#2;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#3;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#4;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -166,10 +164,12 @@
       <find>style</find>
       <find>product-view</find>
       <find>get_one_p</find>
-      <find>upload</find>
-      <find>get_one</find>
       <find>cùng nha</find>
+      <find>get_one</find>
       <find>xem</find>
+      <find>upload</find>
+      <find>img</find>
+      <find>get_sa</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -274,6 +274,12 @@
             <path>
               <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -327,16 +333,15 @@
       <workItem from="1545738798136" duration="1603000" />
       <workItem from="1545746152193" duration="18060000" />
       <workItem from="1545782163383" duration="3778000" />
-      <workItem from="1545786269461" duration="11817000" />
+      <workItem from="1545786269461" duration="12445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37252000" />
+    <option name="totallyTimeSpent" value="37880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17401215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -476,44 +481,42 @@
     <entry file="file://$PROJECT_DIR$/public/upload/product01.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/page/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="228" column="107" selection-start-line="228" selection-start-column="83" selection-end-line="228" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/adidas_shoes01.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/database/model_product.php">
+    <entry file="file://$PROJECT_DIR$/views/page/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="29" />
+        <state relative-caret-position="300">
+          <caret line="213" column="38" selection-start-line="209" selection-start-column="20" selection-end-line="213" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1000">
-          <caret line="175" column="30" lean-forward="true" selection-start-line="172" selection-start-column="27" selection-end-line="175" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="241" column="118" lean-forward="true" selection-start-line="241" selection-start-column="54" selection-end-line="241" selection-end-column="118" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/database/model_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/page/product-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="181">
+          <caret line="141" column="103" selection-start-line="141" selection-start-column="103" selection-end-line="141" selection-end-column="103" />
           <folding>
-            <element signature="n#div#1;n#!!top" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#2;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#3;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#4;n#ul#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,13 @@
 <!-- https://bootsnipp.com/tags/login -->
 <!-- https://bootsnipp.com/snippets/featured/login-form -->
 <?php
+include_once ("../../models/database/database.php");
+$db = new Database();
+$db->db_connect();
+
+include_once("../../models/database/model_user.php");
+$_model_user = new MUser();
+
 //biến lưu đường link
 include_once ("../../libraries/page.php");
 $currentURL = curPageURL();
@@ -44,11 +51,11 @@ $href_public = '../../public';
                 <form id="Login">
 
                     <div class="form-group">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Tên đăng nhập hoặc Email">
+                        <input type="text" class="form-control" name="login_username" placeholder="Tên đăng nhập">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Mật khẩu">
+                        <input type="password" class="form-control" name="login_password" placeholder="Mật khẩu">
                     </div>
                     <div class="forgot">
                         <a href="#">Quên mật khẩu?</a>
@@ -56,12 +63,16 @@ $href_public = '../../public';
 
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
 
+                    <?php
+//                        $sql = $_model_product->get_most_sold();
+//                        $result = $db->executeQuery($db->link, $most_sold);
+                    ?>
                     <div class="flex-col-c p-t-170 p-b-40">
                         <span class="txt1 p-b-9">
                             Chưa có tài khoản?
                         </span>
 
-                        <a href="#" class="txt3">
+                        <a href="./register.php" class="txt3">
                             Đăng ký ngay
                         </a>
                     </div>
@@ -78,3 +89,7 @@ $href_public = '../../public';
 </body>
 
 </html>
+
+<?php
+ $db->db_close();
+?>

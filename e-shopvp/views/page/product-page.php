@@ -27,8 +27,9 @@
                                 $product_id = null;
                             if (isset($_GET['id'])) {$product_id = $_GET['id']; }
                             $filter = array(
-                                'product_id' => $product_id,
+                                'id' => $product_id,
                             );
+                            //echo $product_id;
                             $sql = $_model_product->get_one_product($filter);
                             $result = $db->executeQuery($db->link, $sql);
                             while($row = mysqli_fetch_array($result))
@@ -39,11 +40,9 @@
                                 </div>
 						</div>
 						<div id="product-view">
-
 							<div class="product-view">
 								<img src="<?php echo $href_public;?>/upload/<?php echo $row['image_url']; ?>" alt="">
 							</div>
-
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -67,7 +66,7 @@
 							<p><strong>Khả Dụng: </strong><?php if($row['inventory'] > 0) {echo 'Còn hàng';}
 							else {echo 'hết hàng';}?></p>
                             <p class="text-uppercase"><strong>Nhãn Hiệu: </strong><?php echo $row['manufacturer_name']; ?></p>
-							<p>Tông màu nam tính, đẳng cấp cùng chất liệu vải sợi cao cấp, mềm mại, không mang đến cảm giác đau chân khi phải di chuyển nhiều, sản phẩm tạo nên sự tin tưởng tuyệt đối trong sự lựa chọn của giới trẻ thời nay.</p>
+							<p><strong>Mô tả: </strong><?php echo $row['descreibe']; ?></p>
 							<div class="product-options">
 								<ul class="size-option">
 									<li><span class="text-uppercase">Size:</span></li>

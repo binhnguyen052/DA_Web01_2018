@@ -87,7 +87,7 @@ class MProduct
         $query = "
             SELECT 
             product.id as product_id,       
-            product.name as product_name ,
+            product.name as product_name,
             product_type.id as type_id,       
             product_type.name as type_name,
             manufacturer.id as manufacturer_id,       

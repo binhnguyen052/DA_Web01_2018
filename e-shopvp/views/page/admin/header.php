@@ -4,7 +4,7 @@ include_once ("../../../models/database/database.php");
 $db = new Database();
 $db->db_connect();
 
-include_once ("./header.php");
+
 //biến lưu đường link
 include_once ("../../../libraries/page.php");
 include_once("../../../models/database/model_admin.php");

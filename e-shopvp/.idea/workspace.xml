@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0bce74f-7939-424b-9c32-4c81d5422a2a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/page/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/admin/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/page/admin/manufacturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/admin/manufacturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/page/admin/product-type.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/admin/product-type.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,13 +65,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="6" />
-          <entry key="PHP" value="80" />
+          <entry key="PHP" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="5645" />
+          <entry key="PHP" value="5655" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="SQL" value="81" />
         </counts>
@@ -98,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/admin/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="40">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -126,10 +129,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/page/admin/product-type.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/admin/manufacturer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="56" column="74" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
+            <state relative-caret-position="137">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="66" selection-end-column="39" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,14 +212,15 @@
         <option value="$PROJECT_DIR$/models/database/model_product.php" />
         <option value="$PROJECT_DIR$/models/database/model_admin.php" />
         <option value="$PROJECT_DIR$/views/page/admin/tables.php" />
-        <option value="$PROJECT_DIR$/views/page/admin/manufacturer/manufacturer.php" />
         <option value="$PROJECT_DIR$/views/page/admin/index.php" />
         <option value="$PROJECT_DIR$/views/page/admin/footer.php" />
         <option value="$PROJECT_DIR$/views/page/products.php" />
         <option value="$PROJECT_DIR$/models/database/database.php" />
-        <option value="$PROJECT_DIR$/views/page/admin/header.php" />
         <option value="$PROJECT_DIR$/controllers/admin/header.php" />
+        <option value="$PROJECT_DIR$/views/page/admin/manufacturer/manufacturer.php" />
+        <option value="$PROJECT_DIR$/views/page/admin/header.php" />
         <option value="$PROJECT_DIR$/views/page/admin/manufacturer.php" />
+        <option value="$PROJECT_DIR$/views/page/admin/product-type.php" />
       </list>
     </option>
   </component>
@@ -334,12 +350,12 @@
       <workItem from="1545746152193" duration="18060000" />
       <workItem from="1545782163383" duration="3778000" />
       <workItem from="1545786269461" duration="19643000" />
-      <workItem from="1545816423474" duration="3079000" />
+      <workItem from="1545816423474" duration="3342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48157000" />
+    <option name="totallyTimeSpent" value="48420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
@@ -570,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/page/admin/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/admin/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -594,10 +603,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/page/admin/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/page/admin/manufacturer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="56" column="74" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
+        <state relative-caret-position="137">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/page/admin/product-type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
         </state>
       </provider>
     </entry>

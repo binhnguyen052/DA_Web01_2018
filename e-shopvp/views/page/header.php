@@ -235,14 +235,14 @@ $href_public = '../../public';
                                     <?php }?>
                                     <!-- https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-bong-do-155.html  -->
                                     <div class="col-md-4">
-                                        <a href="./products.php?<?php echo $row['id'];?>">
+                                        <a href="./products.php?product_type_id=<?php echo $row['id'];?>">
                                             <h3 class="text-uppercase text-info">xem tất cả</h3></a>
                                     </div>
                                </div>
                         </li>
                     <?php } ?>
 
-                    <li><a href="./products.php">Xem tất cả</a></li>
+                    <li><a href="./products.php?">Xem tất cả</a></li>
 
                 </ul>
             </div>

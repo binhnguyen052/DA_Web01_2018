@@ -219,17 +219,19 @@
                                 $result = $db->executeQuery($db->link, $sql);
                                 $num_r = $_model_product->count_all($db->link, $filter);
 //                                echo $num_r;
-                            ?>
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                extract($row); ?>
                                 <!-- Product Single -->
                                 <div class="col-md-4 col-sm-6 col-xs-6">
                                     <div class="product product-single">
                                         <div class="product-thumb">
-                                            <div class="product-label">
-                                                <span>Mới</span>
-                                                <span class="sale">-20%</span>
-                                            </div>
+<!--                                            <div class="product-label">-->
+<!--                                                <span>Mới</span>-->
+<!--                                                <span class="sale">-20%</span>-->
+<!--                                            </div>-->
                                             <button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Xem Nhanh</button>
-                                            <img src="<?php echo $href_public?>/upload/product01.jpg" alt="">
+                                            <img src="<?php echo $href_public?>/upload/<?php echo $row['image_url'];?>" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -250,7 +252,7 @@
                                     </div>
                                 </div>
                                 <!-- /Product Single -->
-                            <?php ?>
+                            <?php } ?>
 
 						</div>
 						<!-- /row -->

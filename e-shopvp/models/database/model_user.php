@@ -55,6 +55,22 @@ class MUser
         }
     }
 
+    public function register($conn, $filter = array())
+    {
+        $query = "
+        INSERT INTO account(username, password, display_name, address, tel, email, avartar_url, account_type)
+        VALUES('{$filter['username']}', '{$filter['password']}', '{$filter['display_name']}',
+        '{$filter['address']}, '{$filter['tel']}, '{$filter['email']}, '{$filter['avartar_url']}', 1);";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_num_rows($result);
+        //nếu insert thành công
+        if ($row <= 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
     public function get_all($filter = array(), $start = 0, $limit = 10)
     {
         $where = "";

@@ -82,7 +82,7 @@ $_model_user = new MUser();
                                 $check_register = $_model_user->check_register($db->link, $username, $display_name);
                                 if($check_register == TRUE){
                                     //thêm tài khoản
-                                    
+
                                 } else {
                                     $message ='Thông báo: Tài khoản hoặc tên hiển thị đã tồn tại!';
                                 }

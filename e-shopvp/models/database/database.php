@@ -40,7 +40,7 @@ class Database
             
             //xuất thông báo xem có kết nối được hay không?
             if (mysqli_connect_error()) {
-                die("Không thể kết nối: " . $link->connect_error);
+                die("Không thể kết nối: " . mysqli_error($this->link));
             } else {
                 // echo "kết nối thành công";
             }
@@ -57,6 +57,19 @@ class Database
             mysqli_close($this->link);
         }
     }
+
+    /*
+     * hàm thực thi câu truy vấn
+     * $query: câu truy vấn cần thực thi
+     */
+    public function executeQuery($conn, $query)
+    {
+        //$this->db_connect();
+        $result = mysqli_query($conn , $query) or die(" Lỗi Truy Vấn " .  mysqli_error($conn));
+        //$this->db_close();
+        return $result;
+    }
+
 
     /**
      * [insert description] hàm insert 

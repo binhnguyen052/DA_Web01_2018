@@ -6,7 +6,6 @@ $_model_product = new MProduct();
 $currentURL = curPageURL();
 $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 $href_public = '../../public';
-
 ?>
 
 <!DOCTYPE html>
@@ -209,7 +208,7 @@ $href_public = '../../public';
                     <?php
                     //lấy danh sách loại sản phẩm từ database
                     $sql = $_model_product->get_product_type();
-                    $result = mysqli_query($db->link , $sql) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                    $result = $db->executeQuery($db->link, $sql);
                     while($row = mysqli_fetch_array($result))
                     {
                         extract($row); ?>
@@ -221,7 +220,7 @@ $href_public = '../../public';
                                 <div class="row">
                                     <?php
                                     $sql2 = $_model_product->get_product_type_manufacturer($row['id']);
-                                    $result2 = mysqli_query($db->link , $sql2) or die(" Lỗi Truy Vấn " . mysqli_error($this->link));
+                                    $result2 = $db->executeQuery($db->link, $sql2);
                                     while($row2 = mysqli_fetch_array($result2)) {
                                         extract($row2); ?>
                                         <div class="col-md-4">
@@ -261,7 +260,7 @@ $href_public = '../../public';
                             <div class="row">
                                 <?php
                                 $sql = $_model_product->get_manufacturer();
-                                $result = mysqli_query($db->link, $sql);
+                                $result = $db->executeQuery($db->link, $sql);
                                 while ($row = mysqli_fetch_array($result))
                                 {
                                     extract($row); ?>

@@ -33,11 +33,11 @@
 <!--							<li><a href="#" style="color:#FFF; background-color:#9A54D8;">Medium Purple</a></li>-->
 <!--						</ul>-->
 
-						<ul class="filter-list">
-							<li><span class="text-uppercase">Kích Thước:</span></li>
-							<li><a href="#">X</a></li>
-							<li><a href="#">XL</a></li>
-						</ul>
+<!--						<ul class="filter-list">-->
+<!--							<li><span class="text-uppercase">Kích Thước:</span></li>-->
+<!--							<li><a href="#">X</a></li>-->
+<!--							<li><a href="#">XL</a></li>-->
+<!--						</ul>-->
 
 						<ul class="filter-list">
 							<li><span class="text-uppercase">Giá:</span></li>

@@ -48,9 +48,9 @@ $href_public = '../../public';
 							<div class="form-group">
 								<input class="input" type="password" name="r_password" required="required" placeholder="Mật khẩu *">
 							</div>
-							<div class="form-group">
-								<input class="input" type="password" name="r_comfirmpassword" required="required" placeholder="Nhập lại mật khẩu *">
-							</div>
+<!--							<div class="form-group">-->
+<!--								<input class="input" type="password" name="r_comfirmpassword" required="required" placeholder="Nhập lại mật khẩu *">-->
+<!--							</div>-->
 							<div class="form-group">
 								<input class="input" type="tel" name="r_tel" placeholder="Số Điện Thoại">
 							</div>
@@ -73,6 +73,8 @@ $href_public = '../../public';
 							<div class="form-group">
 								<button name="r_submit" type="submit" class="btn btn-primary">Tạo tài khoản</button>
 							</div>
+
+                            
 							<!-- <div class="form-group">
 								<div class="input-checkbox">
 									<input type="checkbox" id="register">

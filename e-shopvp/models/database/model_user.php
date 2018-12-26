@@ -42,6 +42,19 @@ class MUser
         }
     }
 
+    public function check_register($conn, $filter = array())
+    {
+        $query = "SELECT * FROM account WHERE username = '{$filter['username']}' AND password = '{$filter['display_name']}'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_num_rows($result);
+        //nếu tồn tại tài khoản hoặc tên hiển thị tồn tại
+        if ($row > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
     public function get_all($filter = array(), $start = 0, $limit = 10)
     {
         $where = "";
@@ -89,6 +102,8 @@ class MUser
         }
         return 0;
     }
+
+
 
 }
 

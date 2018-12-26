@@ -239,14 +239,14 @@
                                             <img src="<?php echo $href_public?>/upload/<?php echo $row['image_url'];?>" alt="">
                                         </div>
                                         <div class="product-body">
-                                            <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                                            <div class="product-rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o empty"></i>
-                                            </div>
+                                            <h3 class="product-price" style=" color: #F8694A;">$<?php echo $row['price']; ?></h3>
+<!--                                            <div class="product-rating">-->
+<!--                                                <i class="fa fa-star"></i>-->
+<!--                                                <i class="fa fa-star"></i>-->
+<!--                                                <i class="fa fa-star"></i>-->
+<!--                                                <i class="fa fa-star"></i>-->
+<!--                                                <i class="fa fa-star-o empty"></i>-->
+<!--                                            </div>-->
                                             <h2 class="product-name"><a href="#">Tên Sản Phẩm</a></h2>
                                             <div class="product-btns">
                                                 <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>

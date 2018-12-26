@@ -115,9 +115,9 @@ class MAdmin
         $where = "";
 
         if (!empty($id)) {
-            $where .= " AND product_type_id = {$id}";
+            $where .= " AND account.id = {$id}";
         }
-        $query = "SELECT * FROM {$this->tb_account} WHERE 1 AND deleted = 0 ORDER BY id ASC";
+        $query = "SELECT * FROM {$this->tb_account} WHERE 1 {$where} AND deleted = 0 ORDER BY id ASC";
 
         return $query;
     }

@@ -29,6 +29,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
+                                <th>Action</th>
                                 <th>Account Name</th>
                                 <th>Date Create</th>
                                 <th>Date Delivery</th>
@@ -46,6 +47,7 @@
                             </thead>
                             <tfoot>
                             <tr>
+                                <th>Action</th>
                                 <th>Account Name</th>
                                 <th>Date Create</th>
                                 <th>Date Delivery</th>
@@ -68,7 +70,14 @@
                             while ($row = mysqli_fetch_array($result)) {
                                 extract($row); ?>
                                 <tr>
-                                    <td><?php $one_account = $_model_admin->get_account();
+                                    <td class="optional">
+                                        <a class="btn btn-xs btn-info" href="#">
+                                            <i class="fa fa-edit text-uppercase">sửa</i></a>
+
+                                        <a class="btn btn-xs btn-danger" href="#">
+                                            <i class="fa fa-times text-uppercase">Xóa</i></a></td>
+
+                                    <td><?php $one_account = $_model_admin->get_one_account($row['account_id']);
                                         $result_account = $db->executeQuery($db->link, $one_account);
                                         while ($row_account = mysqli_fetch_array($result_account))
                                         {extract($row_account); echo $row_account['display_name'];}?></td>

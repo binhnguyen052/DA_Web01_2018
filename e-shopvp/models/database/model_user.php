@@ -34,6 +34,9 @@ class MUser
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['display_name'] = $row_extract['display_name'];
+            $_SESSION['address'] = $row_extract['address'];
+            $_SESSION['tel'] = $row_extract['tel'];
+            $_SESSION['email'] = $row_extract['email'];
             $_SESSION['logged_in'] = TRUE;
             $_SESSION['account_type'] = $row_extract['account_type'];
             return TRUE;
@@ -84,7 +87,7 @@ class MUser
         }
     }
 
-    public function update_profile($conn, $filter = array(), $id)
+    public function update_profile($conn, $filter = array(), $username)
     {
         $set = "";
         if (!empty($filter['display_name'])) {
@@ -109,7 +112,7 @@ class MUser
 
         $query = "UPDATE account
                   SET {$set}
-                  WHERE id = $id";
+                  WHERE username = $username";
 
         $result = mysqli_query($conn, $query);
         //nếu update thành công

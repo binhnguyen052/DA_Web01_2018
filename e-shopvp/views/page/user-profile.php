@@ -64,25 +64,25 @@ $href_public = '../../public';
 							</div>
 							<div class="row">
 								<div class="col-md-12">
-									<form>
+									<form method="POST">
 										<div class="form-group row">
 											<label for="username" class="col-4 col-form-label">Tên hiển thị: <?php echo $_SESSION['display_name'];?></label>
                                             <div class="col-8">
-                                                <input id="displayname" name="displayname" placeholder="Đổi tên hiển thị" class="form-control here" required="required" type="text">
+                                                <input id="displayname" name="profile_displayname" placeholder="Đổi tên hiển thị" class="form-control here" required="required" type="text">
                                             </div>
 										</div>
-										<div class="form-group row">
-											<label for="name" class="col-4 col-form-label">Tên</label>
-											<div class="col-8">
-												<input id="name" name="name" placeholder="Nhập tên" class="form-control here" type="text">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="lastname" class="col-4 col-form-label">Họ</label>
-											<div class="col-8">
-												<input id="lastname" name="lastname" placeholder="Nhập họ" class="form-control here" type="text">
-											</div>
-										</div>
+<!--										<div class="form-group row">-->
+<!--											<label for="name" class="col-4 col-form-label">Tên</label>-->
+<!--											<div class="col-8">-->
+<!--												<input id="name" name="profile_name" placeholder="Nhập tên" class="form-control here" type="text">-->
+<!--											</div>-->
+<!--										</div>-->
+<!--										<div class="form-group row">-->
+<!--											<label for="lastname" class="col-4 col-form-label">Họ</label>-->
+<!--											<div class="col-8">-->
+<!--												<input id="lastname" name="lastname" placeholder="Nhập họ" class="form-control here" type="text">-->
+<!--											</div>-->
+<!--										</div>-->
 										<!-- <div class="form-group row">
 											<label for="select" class="col-4 col-form-label">Display Name public as</label>
 											<div class="col-8">
@@ -142,6 +142,28 @@ $href_public = '../../public';
 												<button name="submit" type="submit" class="btn btn-primary">Cập nhật</button>
 											</div>
 										</div>
+
+                                        <?php
+                                        $message = null;
+                                        $password = null;
+                                        $display_name = null;
+                                        $address = null;
+                                        $email = null;
+                                        $tel = null;
+                                        if(isset($_POST['login_username']) && isset($_POST['login_password'])){
+                                            $username = $_POST['login_username'];
+                                            $password = $_POST['login_password'];
+                                            $check_login = $_model_user->update_profile($db->link, $username, $_SESSION['username']);
+                                            if($check_login == TRUE){
+                                                header('location: ./user-profile.php');
+                                            } else {
+                                                $message ='Thông báo: Sai tài khoản hoặc mật khẩu!';
+                                            }
+                                        }
+                                        ?>
+
+
+
 									</form>
 								</div>
 							</div>

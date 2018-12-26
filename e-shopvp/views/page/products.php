@@ -212,12 +212,12 @@
                                     'product_type' => $product_type_id,
                                     'manufacturer' => $manufacturer_id,
                                 );
-//                                echo $product_type_id;
-//                                echo $manufacturer_id;
+                                echo $product_type_id .'<br/>';
+                                echo $manufacturer_id.'<br/>';
                                 $sql = $_model_product->get_product_by_Condition($filter);
                                 $result = $db->executeQuery($db->link, $sql);
                                 $num_r = $_model_product->count_all($db->link, $filter);
-                                echo $num;
+                                echo $num_r;
                             ?>
                             <hr/>
                                 <!-- Product Single -->

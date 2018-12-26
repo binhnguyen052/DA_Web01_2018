@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/models/database/database.php" line="66" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0bce74f-7939-424b-9c32-4c81d5422a2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/page/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/login.php" afterDir="false" />
-    </list>
+    <list default="true" id="e0bce74f-7939-424b-9c32-4c81d5422a2a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
     <session id="393147536">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -120,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/views/page/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="90" column="99" selection-start-line="90" selection-start-column="99" selection-end-line="90" selection-end-column="99" />
+              <caret line="90" column="97" selection-start-line="90" selection-start-column="97" selection-end-line="90" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -370,16 +368,15 @@
       <workItem from="1545738798136" duration="1603000" />
       <workItem from="1545746152193" duration="18060000" />
       <workItem from="1545782163383" duration="3778000" />
-      <workItem from="1545786269461" duration="19587000" />
+      <workItem from="1545786269461" duration="19643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45022000" />
+    <option name="totallyTimeSpent" value="45078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17401215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -595,7 +592,7 @@
     <entry file="file://$PROJECT_DIR$/views/page/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="90" column="99" selection-start-line="90" selection-start-column="99" selection-end-line="90" selection-end-column="99" />
+          <caret line="90" column="97" selection-start-line="90" selection-start-column="97" selection-end-line="90" selection-end-column="97" />
         </state>
       </provider>
     </entry>

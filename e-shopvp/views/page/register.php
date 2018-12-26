@@ -25,7 +25,7 @@ $href_public = '../../public';
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-				<form id="checkout-form" class="clearfix">
+				<form id="checkout-form" class="clearfix" method="">
 					<div class="col-md-6">
 						<div class="billing-details">
 							<p>Bạn đã có tài khoản chưa?<a href="login.php"> Đăng Nhập</a></p>
@@ -74,9 +74,14 @@ $href_public = '../../public';
                                 $username = $_POST['r_username'];
                                 $password = $_POST['r_password'];
                                 $display_name = $_POST['r_displayname'];
-//                            echo $username;
-//                            echo $password;
-                                $check_login = $_model_user->check_login($db->link, $username, $password);
+                                echo $username;
+                                echo $password;
+                                echo $display_name;
+                                $filter = array(
+                                  'username' => $username,
+                                  'display_name' => $display_name,
+                                );
+                                $check_login = $_model_user->check_register($db->link, $filter);
                                 if($check_login == TRUE){
                                     header('location: ./user-profile.php');
                                 } else {

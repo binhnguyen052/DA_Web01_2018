@@ -133,7 +133,7 @@ $href_admin_public = '../../../public';
           <a class="dropdown-item" href="product-type.php">Product Type</a>
           <a class="dropdown-item" href="manufacturer.php">Manufacturer</a>
           <a class="dropdown-item" href="order.php">Orders</a>
-          <a class="dropdown-item" href="order-detail.php">Product Order Details</a>
+          <a class="dropdown-item" href="order-detail.php">Order Details</a>
 
           <h6 class="dropdown-header text-uppercase text-info">Login Screens:</h6>
           <a class="dropdown-item" href="login.php">Login</a>

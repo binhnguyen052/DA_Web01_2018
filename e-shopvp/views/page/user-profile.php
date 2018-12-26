@@ -30,10 +30,9 @@ $href_public = '../../public';
 
 				<div class="col-md-3 ">
 					<div class="text-center">
-						<img class="avatar img-circle img-thumbnail" src="<?php echo $href_public;?>/upload/user.png"  alt="avatar">
-<!--						<h6>Tải lên một ảnh khác...</h6>-->
-						<input type="file" class="text-center center-block file-upload">
-					</div>
+<!--                        <img class="avatar img-circle img-thumbnail" src="--><?php //echo $href_public;?><!--/upload/user.png"  alt="avatar">-->
+<!--                        <input type="file" class="text-center center-block file-upload">-->
+                    </div>
 					</hr>
 					<div class="list-group ">
 						<a href="#" class="list-group-item list-group-item-action active">Thông tin cá nhân</a>

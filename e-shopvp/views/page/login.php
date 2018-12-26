@@ -3,6 +3,7 @@
 <!-- https://bootsnipp.com/tags/login -->
 <!-- https://bootsnipp.com/snippets/featured/login-form -->
 <?php
+session_start();
 include_once ("../../models/database/database.php");
 $db = new Database();
 $db->db_connect();
@@ -15,6 +16,9 @@ include_once ("../../libraries/page.php");
 $currentURL = curPageURL();
 $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 $href_public = '../../public';
+
+//biến về trang chủ
+$__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +32,7 @@ $href_public = '../../public';
 
     <link href="<?php echo $href_public;?>/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="<?php echo $href_public;?>/css/login.css" rel="stylesheet" id="bootstrap-css">
-
+    <link href="<?php echo $href_public;?>/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" id="bootstrap-css">
     <!------ Include the above in your HEAD tag ---------->
 </head>
 
@@ -38,7 +42,7 @@ $href_public = '../../public';
         <!-- Logo -->
 					<div class="header-logo">
 						<a class="logo" href="index.php">
-							<img src="../img/logo.png" alt="">
+							<img src="<?php echo $href_public;?>/upload/logo.png" alt="">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -64,13 +68,33 @@ $href_public = '../../public';
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
 
                     <?php
-                        $sql = $_model_user->get_account();
-                        $result = $db->executeQuery($db->link, $sql);
-                        //nếu tồn tại tài khoản
-                        if ($result){
-
+                        $message = null;
+                        $username = null;
+                        $password = null;
+                        if(isset($_POST['login_username']) && isset($_POST['login_password'])){
+                            $username = $_POST['login_username'];
+                            $password = $_POST['login_password'];
+//                            echo $username;
+//                            echo $password;
+                            $check_login = $_model_user->check_login($db->link, $username, $password);
+                            if($check_login == TRUE){
+                                header('location:'. $__home);
+                            } else {
+                                $message ='Thông báo: Sai tài khoản hoặc mật khẩu!';
+                            }
                         }
                     ?>
+                        <div>
+                            <hr/>
+                                <?php if(isset($message)) {?>
+                                <p class="bg-info">
+                                    <strong class="fa fa-info"> <?php echo $message; ?> </strong>
+                                </p>
+                                <?php }?>
+                            <hr/>
+                        </div>
+
+
                     <div class="flex-col-c p-t-170 p-b-40">
                         <span class="txt1 p-b-9">
                             Chưa có tài khoản?

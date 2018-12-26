@@ -1,4 +1,5 @@
 <?php
+
 //biến lưu đường link
 include_once ("../../libraries/page.php");
 include_once("../../models/database/model_product.php");

@@ -18,11 +18,19 @@ class MUser
         return $query;
     }
 
-    public function check_login($username, $password)
+    public function check_login($conn, $username, $password)
     {
         $password_md5 = md5($password);
-        $query = $this->db->query("SELECT * FROM account WHERE username = '{$username}' AND password = '{$password_md5}'");
+        $query = "SELECT * FROM account WHERE username = '{$username}' AND password = '{$password_md5}'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_num_rows($result);
+        //nếu tồn tại tài khoản
+        if ($row > 0) {
 
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 
     public function get_all($filter = array(), $start = 0, $limit = 10)

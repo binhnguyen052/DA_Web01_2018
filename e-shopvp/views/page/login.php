@@ -14,7 +14,6 @@ $_model_user = new MUser();
 //biến lưu đường link
 include_once ("../../libraries/page.php");
 $currentURL = curPageURL();
-$__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 $href_public = '../../public';
 
 //biến về trang chủ

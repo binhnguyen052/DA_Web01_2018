@@ -28,14 +28,14 @@ include ("./header.php");
                             <tr>
                                 <th>Action</th>
                                 <th>Name</th>
-                                <th>Deleted</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
                                 <th>Action</th>
                                 <th>Name</th>
-                                <th>Deleted</th>
+                                <th>Status</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -46,9 +46,15 @@ include ("./header.php");
                                     extract($row); ?>
 
                             <tr>
-                                <td>Tiger Nixon</td>
+                                <td class="optional">
+                                    <a class="btn btn-xs btn-info" href="#">
+                                        <i class="fa fa-edit text-uppercase">sửa</i></a>
+
+                                    <a class="btn btn-xs btn-danger" href="#">
+                                        <i class="fa fa-times text-uppercase">Xóa</i></a></td>
+
                                 <td class="text-uppercase"><?php echo $row['name']; ?></td>
-                                <td class="text-uppercase">Edinburgh</td>
+                                <td class="text-uppercase"><?php echo $row['deleted'] == 0? 'Enable' : 'Disable';?></td>
                             </tr>
                                 <?php }?>
 

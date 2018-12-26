@@ -64,8 +64,8 @@ $href_public = '../../public';
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
 
                     <?php
-//                        $sql = $_model_product->get_most_sold();
-//                        $result = $db->executeQuery($db->link, $most_sold);
+                        $sql = $_model_user->get_account();
+                        $result = $db->executeQuery($db->link, $sql);
                     ?>
                     <div class="flex-col-c p-t-170 p-b-40">
                         <span class="txt1 p-b-9">

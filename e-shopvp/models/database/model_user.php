@@ -13,7 +13,7 @@ class MUser
 
     public function get_account()
     {
-        $query = "SELECT * FROM {$this->tb_account} WHERE 1 {AND deleted = 0 DESC";
+        $query = "SELECT * FROM {$this->tb_account} WHERE 1 AND deleted = 0 ORDER BY id ASC";
 
         return $query;
     }

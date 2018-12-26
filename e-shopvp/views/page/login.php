@@ -90,14 +90,14 @@ $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
                                 <p class="bg-info">
                                     <strong class="fa fa-info"> <?php echo $message; ?> </strong>
                                 </p>
-                                <?php }?>
+                                <?php } ?>
                             <hr/>
                         </div>
 
 
                     <div class="flex-col-c p-t-170 p-b-40">
                         <span class="txt1 p-b-9">
-                            Chưa có tài khoản?
+                            Chưa có tài khoản? d
                         </span>
 
                         <a href="./register.php" class="txt3">

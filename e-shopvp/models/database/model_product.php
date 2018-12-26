@@ -57,6 +57,27 @@ class MProduct
         return $query;
     }
 
+    public function get_product_by_Condition($filter = array(), $start = 0, $limit = 10)
+    {
+        $where = "";
+
+        if (!empty($filter['product_type'])) {
+            $where .= " AND product_type_id = {$filter['product_type']}";
+        }
+
+        if (!empty($filter['manufacturer'])) {
+            $where .= " AND manufacturer_id = {$filter['manufacturer']}";
+        }
+
+        $query = "
+            SELECT * 
+            FROM product
+            WHERE 1 {$where} AND deleted = 0
+            LIMIT {$start}, {$limit}";
+
+        return $query;
+    }
+
     public function get_one($filter = array())
     {
         $where = "";

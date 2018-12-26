@@ -31,6 +31,13 @@ class MProduct
         return $query;
     }
 
+    public function get_product()
+    {
+        $query = "SELECT * FROM {$this->tb_product} WHERE deleted = 0 ORDER BY name ASC ";
+
+        return $query;
+    }
+
     public function get_product_type()
     {
         $query = "SELECT * FROM {$this->tb_product_type} WHERE deleted = 0 ORDER BY name ASC ";
@@ -103,6 +110,28 @@ class MProduct
             FROM manufacturer JOIN product ON manufacturer.id = product.manufacturer_id
 		    JOIN product_type ON product_type.id = product.product_type_id
             WHERE 1 {$where} AND product.deleted = 0";
+        return $query;
+    }
+
+    public function get_one_product_type($id)
+    {
+        $where = "";
+        if (!empty($id)) {
+            $where .= " AND product_type.id = {$id}";
+        }
+        $query = "SELECT * FROM {$this->tb_product_type} WHERE 1 {$where} deleted = 0 ORDER BY name ASC ";
+
+        return $query;
+    }
+
+    public function get_one_manufacturer($id)
+    {
+        $where = "";
+        if (!empty($id)) {
+            $where .= " AND manufacturer.id = {$id}";
+        }
+        $query = "SELECT * FROM {$this->tb_manufacturer} WHERE 1 {$where} deleted = 0 ORDER BY name ASC ";
+
         return $query;
     }
 

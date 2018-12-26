@@ -11,7 +11,7 @@ include_once("../../../models/database/model_admin.php");
 $_model_admin = new MAdmin();
 $currentURL = curPageURL();
 $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
-$href_public = '../../public';
+$href_admin_public = '../../../public';
 
 // style=" color: #F8694A;"
 ?>

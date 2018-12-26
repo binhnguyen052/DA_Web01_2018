@@ -11,6 +11,41 @@ class MAdmin
     public $__name;
 
 
+    public function get_account()
+    {
+        $query = "SELECT * FROM {$this->tb_account} WHERE 1 AND deleted = 0 ORDER BY id ASC";
+
+        return $query;
+    }
+
+
+    public function get_last_entries($start = 0, $num = 12)
+    {
+        $query = "SELECT * FROM {$this->tb_product} ORDER BY date_added DESC LIMIT {$start},{$num}";
+
+        return $query;
+    }
+
+    public function get_most_views($start = 0, $num = 12)
+    {
+        $query = "SELECT * FROM {$this->tb_product} ORDER BY views DESC LIMIT {$start},{$num}";
+
+        return $query;
+    }
+
+    public function get_most_sold($start = 0, $num = 10)
+    {
+        $query = "SELECT * FROM {$this->tb_product} ORDER BY solds DESC LIMIT {$start},{$num}";
+
+        return $query;
+    }
+
+    public function get_product()
+    {
+        $query = "SELECT * FROM {$this->tb_product} WHERE deleted = 0 ORDER BY name ASC ";
+
+        return $query;
+    }
 
     public function get_product_type()
     {
@@ -26,12 +61,6 @@ class MAdmin
         return $query;
     }
 
-    public function get_account()
-    {
-        $query = "SELECT * FROM {$this->tb_account} WHERE 1 AND deleted = 0 ORDER BY id ASC";
-
-        return $query;
-    }
 
     // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
     public function get_product_type_manufacturer($id_type = 1)
@@ -90,6 +119,28 @@ class MAdmin
             FROM manufacturer JOIN product ON manufacturer.id = product.manufacturer_id
 		    JOIN product_type ON product_type.id = product.product_type_id
             WHERE 1 {$where} AND product.deleted = 0";
+        return $query;
+    }
+
+    public function get_one_product_type($id)
+    {
+        $where = "";
+        if (!empty($id)) {
+            $where .= " AND product_type.id = {$id}";
+        }
+        $query = "SELECT * FROM {$this->tb_product_type} WHERE 1 {$where} AND deleted = 0 ORDER BY id ASC ";
+
+        return $query;
+    }
+
+    public function get_one_manufacturer($id)
+    {
+        $where = "";
+        if (!empty($id)) {
+            $where .= " AND manufacturer.id = {$id}";
+        }
+        $query = "SELECT * FROM {$this->tb_manufacturer} WHERE 1 {$where} AND deleted = 0 ORDER BY id ASC ";
+
         return $query;
     }
 

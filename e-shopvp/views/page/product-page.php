@@ -52,19 +52,21 @@
                                 </div>
                                 <h2 class="product-name text-uppercase"><?php echo $row['product_name'];?></h2>
                                 <h3 class="product-price" style=" color: #F8694A;">$<?php echo $row['price'];?></h3>
-                                <div>
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                    </div>
-                                    <a href="#">3 Review(s) / Add Review</a>
-                                </div>
-                                <p><strong>Availability:</strong> In Stock</p>
-                                <p><strong>Brand:</strong> E-SHOP</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+<!--                                <div>-->
+<!--                                    <div class="product-rating">-->
+<!--                                        <i class="fa fa-star"></i>-->
+<!--                                        <i class="fa fa-star"></i>-->
+<!--                                        <i class="fa fa-star"></i>-->
+<!--                                        <i class="fa fa-star"></i>-->
+<!--                                        <i class="fa fa-star-o empty"></i>-->
+<!--                                    </div>-->
+<!--                                    <a href="#">3 Review(s) / Add Review</a>-->
+<!--                                </div>-->
+                                <p class="text-uppercase"><strong>Khả dụng: </strong><?php echo $row['type_name']; ?></p>
+                                <p class="text-uppercase"><strong>Loại sản phẩm: </strong><?php echo $row['type_name']; ?></p>
+                                <p class="text-uppercase"><strong>Nhà sản xuất: </strong><?php echo $row['manufacturer_name']; ?></p>
+                                <p class="text-uppercase"><strong>Xuất xứ: </strong><?php echo $row['origin']; ?></p>
+                                <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                                     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <div class="product-options">
                                     <ul class="size-option">

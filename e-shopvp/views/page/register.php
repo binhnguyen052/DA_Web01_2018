@@ -35,12 +35,12 @@ $_model_user = new MUser();
 								<h3 class="title">Thông tin đăng kí</h3> <br>
 								<h6>(*) Thông tin bắt buộc phải nhập</h6>
 							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="r_first-name" placeholder="Tên">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="r_last-name" placeholder="Họ">
-							</div>
+<!--							<div class="form-group">-->
+<!--								<input class="input" type="text" name="r_first-name" placeholder="Tên">-->
+<!--							</div>-->
+<!--							<div class="form-group">-->
+<!--								<input class="input" type="text" name="r_last-name" placeholder="Họ">-->
+<!--							</div>-->
 							<div class="form-group">
 								<input class="input" type="text" name="r_username" required="required" placeholder="Tên đăng nhập *">
 							</div>
@@ -142,7 +142,7 @@ $_model_user = new MUser();
 						<div id="home-slick">
 							<!-- banner -->
 							<div class="banner banner-1">
-								<img src="../img/banner01.jpg" alt="">
+								<img src="<?php echo $href_public;?>/upload/banner01.jpg" alt="">
 								<div class="banner-caption text-center">
 									<h1 style="color: #F8694A">Giảm giá túi xách</h1>
 									<h3 class="white-color font-weak">Giảm lên đến 50%</h3>
@@ -153,7 +153,7 @@ $_model_user = new MUser();
 
 							<!-- banner -->
 							<div class="banner banner-1">
-								<img src="../img/banner02.jpg" alt="">
+								<img src="<?php echo $href_public;?>/upload/banner02.jpg" alt="">
 								<div class="banner-caption">
 									<h1 class="primary-color">Giảm giá<br><span class="white-color font-weak">Lên đến 50%</span></h1>
 									<button class="primary-btn">Mua ngay</button>
@@ -163,7 +163,7 @@ $_model_user = new MUser();
 
 							<!-- banner -->
 							<div class="banner banner-1">
-								<img src="../img/banner03.jpg" alt="">
+								<img src="<?php echo $href_public;?>/upload/banner03.jpg" alt="">
 								<div class="banner-caption">
 									<h1 class="white-color">Sản phẩm <span>mới</span></h1>
 									<button class="primary-btn">Mua ngay</button>

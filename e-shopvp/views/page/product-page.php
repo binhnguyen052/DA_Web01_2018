@@ -30,7 +30,7 @@
                     $sql = $_model_product->get_one_product($filter);
                     $result = $db->executeQuery($db->link, $sql);
                     while($row = mysqli_fetch_array($result)) {
-                    extract($row); echo $row['image_url']; ?>
+                    extract($row); ?>
                         <div class="col-md-6">
                             <div id="product-main-view">
                                 <div class="product-view">
@@ -47,12 +47,11 @@
 
                         <div class="col-md-6">
                             <div class="product-body">
-                                <div class="product-label">
-                                    <span>New</span>
-                                    <span class="sale">-20%</span>
+                                <div class="product-label text-uppercase">
+                                    <span>Sản phẩm</span>
                                 </div>
-                                <h2 class="product-name">Product Name Goes Here</h2>
-                                <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+                                <h2 class="product-name text-uppercase"><?php echo $row['product_name'];?></h2>
+                                <h3 class="product-price" style=" color: #F8694A;">$<?php echo $row['price'];?></h3>
                                 <div>
                                     <div class="product-rating">
                                         <i class="fa fa-star"></i>

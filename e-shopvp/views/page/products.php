@@ -237,7 +237,7 @@
 <!--                                            </div>-->
 <!--                                            <button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Xem Nhanh</button>-->
                                             <a class="main-btn quick-view btn"
-                                               href="#"
+                                               href="./product-page.php?id=<?php echo $row['id']; ?>"
                                                role="button">Xem Nhanh</a>
                                             <img src="<?php echo $href_public?>/upload/<?php echo $row['image_url'];?>" alt="">
                                         </div>

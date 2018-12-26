@@ -1,6 +1,12 @@
 <!-- https://bootsnipp.com/tags/profile -->
 <?php
-	include ("./header.php");
+//$rd = getenv('DOCUMENT_ROOT');
+//echo $rd."<br>";
+
+include ("../../controllers/home/header.php");
+
+$href_public = '../../public';
+
 ?>
 
 	<!-- BREADCRUMB -->
@@ -24,8 +30,8 @@
 
 				<div class="col-md-3 ">
 					<div class="text-center">
-						<img src="../img/user-profile/user.png" class="avatar img-circle img-thumbnail" alt="avatar">
-						<h6>Tải lên một ảnh khác...</h6>
+						<img class="avatar img-circle img-thumbnail" src="<?php echo $href_public;?>/upload/user.png"  alt="avatar">
+<!--						<h6>Tải lên một ảnh khác...</h6>-->
 						<input type="file" class="text-center center-block file-upload">
 					</div>
 					</hr>

@@ -63,10 +63,17 @@ class MUser
 //        echo 'a ' .$filter['address'].'<br>';
 //        echo 'a ' .$filter['tel'].'<br>';
 //        echo 'a ' .$filter['email'].'<br>';
+        $address = NULL;
+        $email = NULL;
+        $tel = NULL;
+        if($filter['address'] != null){ $address = $filter['address'];}
+        if($filter['email'] != null){ $address = $filter['email'];}
+        if($filter['tel'] != null){ $address = $filter['tel'];}
+
         $query = "
         INSERT INTO account(username, password, display_name, address, tel, email, avartar_url, account_type)
         VALUES('{$filter['username']}', '{$filter['password']}', '{$filter['display_name']}',
-        '{$filter['address']}, '{$filter['tel']}, '{$filter['email']}', NULL, 1);";
+        '{$address}', '{$email}', '{$tel}', NULL, 1);";
         $result = mysqli_query($conn, $query);
         //$row = mysqli_num_rows($result);
         //nếu insert thành công

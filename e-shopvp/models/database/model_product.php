@@ -78,7 +78,7 @@ class MProduct
         return $query;
     }
 
-    public function get_one($filter = array())
+    public function get_one_product($filter = array())
     {
         $where = "";
         if (!empty($filter['id'])) {

@@ -23,10 +23,10 @@
 				<div class="product product-details clearfix">
 					<div class="col-md-6">
 						<div id="product-main-view">
-
-							<div class="product-view">
-								<img src="<?php echo $href_public;?>/upload/adidas_shoes03.jpg" alt="">
-							</div>
+                            <?php ?>
+                                <div class="product-view">
+                                    <img src="<?php echo $href_public;?>/upload/adidas_shoes03.jpg" alt="">
+                                </div>
 
 						</div>
 						<div id="product-view">

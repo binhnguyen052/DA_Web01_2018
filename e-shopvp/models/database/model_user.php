@@ -57,14 +57,20 @@ class MUser
 
     public function register($conn, $filter = array())
     {
+//        echo 'a ' .$filter['username'].'<br>';
+//        echo 'a ' .$filter['password'].'<br>';
+//        echo 'a ' .$filter['display_name'].'<br>';
+//        echo 'a ' .$filter['address'].'<br>';
+//        echo 'a ' .$filter['tel'].'<br>';
+//        echo 'a ' .$filter['email'].'<br>';
         $query = "
         INSERT INTO account(username, password, display_name, address, tel, email, avartar_url, account_type)
         VALUES('{$filter['username']}', '{$filter['password']}', '{$filter['display_name']}',
         '{$filter['address']}, '{$filter['tel']}, '{$filter['email']}', NULL, 1);";
         $result = mysqli_query($conn, $query);
-        $row = mysqli_num_rows($result);
+        //$row = mysqli_num_rows($result);
         //nếu insert thành công
-        if ($row <= 0) {
+        if ($result) {
             return TRUE;
         } else {
             return FALSE;

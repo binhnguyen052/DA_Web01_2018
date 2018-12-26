@@ -79,7 +79,6 @@ $_model_user = new MUser();
                             if(isset($_POST['r_username']) && isset($_POST['r_password'])
                                 && isset($_POST['r_displayname'])){
                                 $username = $_POST['r_username'];
-
                                 $display_name = $_POST['r_displayname'];
 //                                echo $username .'<br>';
 //                                echo $password.'<br>';
@@ -88,7 +87,7 @@ $_model_user = new MUser();
                                 if($check_register == TRUE && isset($_POST['r_password'])){
                                     $password = $_POST['r_password'];
 
-                                    if(isset($_POST['r_address'])){ $address = $_POST['r_username']; }
+                                    if(isset($_POST['r_address'])){ $address = $_POST['r_address']; }
                                     if(isset($_POST['r_email'])){ $email = $_POST['r_email']; }
                                     if(isset($_POST['r_tel'])){ $tel = $_POST['r_tel']; }
 
@@ -102,9 +101,16 @@ $_model_user = new MUser();
                                         'email' => $email,
                                     );
 
+//                                    echo 'a ' .$filter['username'].'<br>';
+//                                    echo 'a ' .$filter['password'].'<br>';
+//                                    echo 'a ' .$filter['display_name'].'<br>';
+//                                    echo 'a ' .$filter['address'].'<br>';
+//                                    echo 'a ' .$filter['tel'].'<br>';
+//                                    echo 'a ' .$filter['email'].'<br>';
+
                                     $register  = $_model_user->register($db->link, $filter);
                                     if ($register == TRUE){
-
+                                        $message ='Thông báo: Đăng kí thành công';
                                     } else{
                                         $message ='Thông báo: Đăng kí thất bại! ERROR 404';
                                     }

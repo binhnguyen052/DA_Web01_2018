@@ -39,16 +39,16 @@
 <!--							<li><a href="#">XL</a></li>-->
 <!--						</ul>-->
 
-						<ul class="filter-list">
-							<li><span class="text-uppercase">Giá:</span></li>
-							<li><a href="#">MIN: $20.00</a></li>
-							<li><a href="#">MAX: $120.00</a></li>
-						</ul>
+<!--						<ul class="filter-list">-->
+<!--							<li><span class="text-uppercase">Giá:</span></li>-->
+<!--							<li><a href="#">MIN: $20.00</a></li>-->
+<!--							<li><a href="#">MAX: $120.00</a></li>-->
+<!--						</ul>-->
 
-						<ul class="filter-list">
-							<li><span class="text-uppercase">Phái:</span></li>
-							<li><a href="#">Nam</a></li>
-						</ul>
+<!--						<ul class="filter-list">-->
+<!--							<li><span class="text-uppercase">Phái:</span></li>-->
+<!--							<li><a href="#">Nam</a></li>-->
+<!--						</ul>-->
 
 						<button class="primary-btn">Xóa Tất Cả</button>
 					</div>

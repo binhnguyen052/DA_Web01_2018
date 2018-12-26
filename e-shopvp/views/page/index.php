@@ -154,7 +154,7 @@ $href_public = '../../public';
                                         <img src="<?php echo $href_public; ?>/upload/<?php echo $row['image_url'] ?>" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+                                        <h3 class="product-price">$<?php echo $row['price']; ?></h3>
 <!--                                        <div class="product-rating">-->
 <!--                                            <i class="fa fa-star"></i>-->
 <!--                                            <i class="fa fa-star"></i>-->

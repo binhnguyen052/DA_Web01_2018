@@ -199,6 +199,7 @@
 							</div>
 						</div>
 						<div class="pull-right">
+                            <br/>
 							<div class="page-filter">
 								<span class="text-uppercase">Hiển Thị:</span>
 								<select class="input">

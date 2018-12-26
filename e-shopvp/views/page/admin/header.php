@@ -1,11 +1,20 @@
- <!-- 
-     index.php
-     tables.php
-     404.php
-     blank.php
-     charts.php
-  -->
- 
+<?php
+session_start();
+include_once ("../../../models/database/database.php");
+$db = new Database();
+$db->db_connect();
+
+include_once ("./header.php");
+//biến lưu đường link
+include_once ("../../../libraries/page.php");
+include_once("../../../models/database/model_admin.php");
+$_model_admin = new MAdmin();
+$currentURL = curPageURL();
+$__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
+$href_public = '../../public';
+
+// style=" color: #F8694A;"
+?>
   <!DOCTYPE html>
 <html lang="en">
 

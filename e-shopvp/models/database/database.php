@@ -1,8 +1,37 @@
-<?php 
+<?php
+$_base_url = 'http://localhost/DoAn_Web01_E404_2018/old/e-shopvp';
+
+$__config = array(
+    '_base_url' => $_base_url,
+
+    //các biến tên folder
+    'config' => 'config',
+    'controllers' => 'controllers',
+    'libraries' => 'libraries',
+    'models' => 'models',
+    'public' => 'public',
+    'views' => 'views',
+
+
+);
+
+//cấu hình kết nối cơ sở dữ liệu
+//host
+define('DB_HOST', "localhost");
+//user sử dụng
+define('DB_USER', "root");
+//mật khẩu
+define('DB_PASSWORD', "");
+//database sử dụng
+define('DB_DATABASE', "eshopv");
+//port: cổng mạng
+define('DB_PORT', 3306);
+
+//các biến tên folder
 
 
 // file config.php cấu hình database để kết nối
-include ("../../config/config.php");
+//include ("../../config/config.php");
 
 /*
  *  file tạo cấu trúc database và kết nối dữ liệu

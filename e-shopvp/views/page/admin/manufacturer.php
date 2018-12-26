@@ -1,6 +1,6 @@
 <?php
-  include("./header.php");
-  ?>
+include ("./header.php");
+?>
 
 
       <div id="content-wrapper">
@@ -20,7 +20,7 @@
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <i class="fas fa-table"></i>Nhà sản xuất</div>
+                    <h4><i class="fas fa-table"></i> Nhà sản xuất</h4></div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -39,13 +39,18 @@
                             </tr>
                             </tfoot>
                             <tbody>
+                                <?php
+                                    $sql = $_model_admin->get_manufacturer();
+                                    $result = $db->executeQuery($db->link, $sql);
+                                    while ($row = mysqli_fetch_array($result)) {
+                                    extract($row); ?>
 
                             <tr>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
+                                <td class="text-uppercase"><?php echo $row['name']; ?></td>
+                                <td class="text-uppercase">Edinburgh</td>
                             </tr>
-
+                                <?php }?>
 
                             </tbody>
                         </table>
@@ -78,4 +83,5 @@
 
 <?php
     include("./footer.php");
+    $db->db_close();
 ?>

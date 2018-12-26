@@ -331,8 +331,9 @@ $href_public = '../../public';
 	</div>
 	<!-- /section -->
 
-
+<!-- FOOTER -->
 <?php
 	include("./footer.php");
 	$db->db_close();
 ?>
+<!-- FOOTER -->

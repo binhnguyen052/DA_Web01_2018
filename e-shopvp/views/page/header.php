@@ -133,6 +133,7 @@ $href_public = '../../public';
                             <li><a href="#"><i class="fa fa-check"></i>Thanh toán</a></li>
                             <li><a href="#"><i class="fa fa-unlock-alt"></i>Đăng nhập</a></li>
                             <li><a href="#"><i class="fa fa-user-plus"></i>Tạo tài khoản</a></li>
+                            <li><a href="#"><i class="fa fa-user-plus"></i>Đăng xuất</a></li>
                         </ul>
                     </li>
                     <!-- /Account -->

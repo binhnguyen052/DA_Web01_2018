@@ -14,13 +14,14 @@
             <li class="breadcrumb-item">
               <a href="index.php">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Product Order Details</li>
+            <li class="breadcrumb-item active">Order Details</li>
           </ol>
 
           <!-- Page Content -->
-          <h1>Chi tiết đơn đặt hàng</h1>
-          <hr>
-          <p>This is a great starting point for new custom pages.</p>
+
+
+
+            
 
         </div>
         <!-- /.container-fluid -->

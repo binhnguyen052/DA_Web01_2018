@@ -78,7 +78,7 @@ $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 //                            echo $password;
                             $check_login = $_model_user->check_login($db->link, $username, $password);
                             if($check_login == TRUE){
-                                header('location:'. $__home);
+                                header('location: ./user-profile.php');
                             } else {
                                 $message ='Thông báo: Sai tài khoản hoặc mật khẩu!';
                             }

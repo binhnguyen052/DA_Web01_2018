@@ -94,7 +94,8 @@ class MProduct
             manufacturer.name as manufacturer_name,
             product.price,
             product.origin,
-            product.image_url,       
+            product.image_url,  
+            product.inventory,     
             product.views,
             product.solds,
             product.descreibe

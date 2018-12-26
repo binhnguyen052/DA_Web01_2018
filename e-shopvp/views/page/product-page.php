@@ -64,7 +64,8 @@
 <!--								</div>-->
 <!--								<a href="#">3 Nhận Xét(s) / Thêm Nhận Xét</a>-->
 <!--							</div>-->
-							<p><strong>Khả Dụng:</strong> Trong Kho</p>
+							<p><strong>Khả Dụng: </strong><?php if($row['inventory'] > 0) {echo 'Còn hàng';}
+							else {echo 'hết hàng';}?></p>
 							<p><strong>Nhãn Hiệu:</strong> E-SHOP</p>
 							<p>Tông màu nam tính, đẳng cấp cùng chất liệu vải sợi cao cấp, mềm mại, không mang đến cảm giác đau chân khi phải di chuyển nhiều, sản phẩm tạo nên sự tin tưởng tuyệt đối trong sự lựa chọn của giới trẻ thời nay.</p>
 							<div class="product-options">

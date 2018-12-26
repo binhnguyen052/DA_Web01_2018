@@ -6,6 +6,8 @@ class MAdmin
     public $tb_product = 'product';
     public $tb_product_type = 'product_type';
     public $tb_manufacturer = 'manufacturer';
+    public $tb_orders = 'orders';
+    public $tb_order_detail = 'order_detail';
 
     public $id;
     public $__name;
@@ -61,6 +63,19 @@ class MAdmin
         return $query;
     }
 
+    public function get_orders()
+    {
+        $query = "SELECT * FROM {$this->tb_orders} WHERE deleted = 0 ORDER BY id ASC ";
+
+        return $query;
+    }
+
+    public function get_order_detail()
+    {
+        $query = "SELECT * FROM {$this->tb_order_detail} WHERE deleted = 0 ORDER BY id ASC ";
+
+        return $query;
+    }
 
     // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
     public function get_product_type_manufacturer($id_type = 1)

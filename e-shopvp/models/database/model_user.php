@@ -6,6 +6,8 @@ class MUser
     public $tb_product = 'product';
     public $tb_product_type = 'product_type';
     public $tb_manufacturer = 'manufacturer';
+    public $tb_orders = 'orders';
+    public $tb_order_detail = 'order_detail';
 
     public $id;
     public $__name;

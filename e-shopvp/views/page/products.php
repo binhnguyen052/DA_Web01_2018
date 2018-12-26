@@ -23,14 +23,15 @@
 				<div id="aside" class="col-md-3">
 					<!-- aside widget -->
 					<div class="aside">
-						<h3 class="aside-title">Shop by:</h3>
-						<ul class="filter-list">
-							<li><span class="text-uppercase">Màu Sắc:</span></li>
-							<li><a href="#" style="color:#FFF; background-color:#8A2454;">Camelot</a></li>
-							<li><a href="#" style="color:#FFF; background-color:#475984;">East Bay</a></li>
-							<li><a href="#" style="color:#FFF; background-color:#BF6989;">Tapestry</a></li>
-							<li><a href="#" style="color:#FFF; background-color:#9A54D8;">Medium Purple</a></li>
-						</ul>
+
+<!--						<h3 class="aside-title">Shop by:</h3>-->
+<!--						<ul class="filter-list">-->
+<!--							<li><span class="text-uppercase">Màu Sắc:</span></li>-->
+<!--							<li><a href="#" style="color:#FFF; background-color:#8A2454;">Camelot</a></li>-->
+<!--							<li><a href="#" style="color:#FFF; background-color:#475984;">East Bay</a></li>-->
+<!--							<li><a href="#" style="color:#FFF; background-color:#BF6989;">Tapestry</a></li>-->
+<!--							<li><a href="#" style="color:#FFF; background-color:#9A54D8;">Medium Purple</a></li>-->
+<!--						</ul>-->
 
 						<ul class="filter-list">
 							<li><span class="text-uppercase">Kích Thước:</span></li>

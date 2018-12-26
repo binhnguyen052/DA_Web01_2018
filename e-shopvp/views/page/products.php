@@ -21,9 +21,10 @@
 			<div class="row">
 				<!-- ASIDE -->
 				<div id="aside" class="col-md-3">
-					<!-- aside widget -->
-					<div class="aside">
 
+					<!-- aside widget -->
+<!--					<div class="aside">-->
+<!---->
 <!--						<h3 class="aside-title">Shop by:</h3>-->
 <!--						<ul class="filter-list">-->
 <!--							<li><span class="text-uppercase">Màu Sắc:</span></li>-->
@@ -32,27 +33,27 @@
 <!--							<li><a href="#" style="color:#FFF; background-color:#BF6989;">Tapestry</a></li>-->
 <!--							<li><a href="#" style="color:#FFF; background-color:#9A54D8;">Medium Purple</a></li>-->
 <!--						</ul>-->
-
+<!---->
 <!--						<ul class="filter-list">-->
 <!--							<li><span class="text-uppercase">Kích Thước:</span></li>-->
 <!--							<li><a href="#">X</a></li>-->
 <!--							<li><a href="#">XL</a></li>-->
 <!--						</ul>-->
-
+<!---->
 <!--						<ul class="filter-list">-->
 <!--							<li><span class="text-uppercase">Giá:</span></li>-->
 <!--							<li><a href="#">MIN: $20.00</a></li>-->
 <!--							<li><a href="#">MAX: $120.00</a></li>-->
 <!--						</ul>-->
-
+<!---->
 <!--						<ul class="filter-list">-->
 <!--							<li><span class="text-uppercase">Phái:</span></li>-->
 <!--							<li><a href="#">Nam</a></li>-->
 <!--						</ul>-->
-
+<!---->
 <!--						<button class="primary-btn">Xóa Tất Cả</button>-->
-
-					</div>
+<!---->
+<!--					</div>-->
 					<!-- /aside widget -->
 
 					<!-- aside widget -->

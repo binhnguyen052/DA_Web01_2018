@@ -19,7 +19,7 @@
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <h4><i class="fas fa-table"></i> Nhà sản xuất</h4></div>
+                    <h4><i class="fas fa-table"></i> Quản lý tài khoản</h4></div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

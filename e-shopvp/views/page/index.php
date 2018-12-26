@@ -145,11 +145,11 @@ $href_public = '../../public';
                                             <span>Mới</span>
 <!--                                            <span class="sale">-20%</span>-->
                                         </div>
-                                        <ul class="product-countdown">
-                                            <li><span>00 H</span></li>
-                                            <li><span>00 M</span></li>
-                                            <li><span>00 S</span></li>
-                                        </ul>
+<!--                                        <ul class="product-countdown">-->
+<!--                                            <li><span>00 H</span></li>-->
+<!--                                            <li><span>00 M</span></li>-->
+<!--                                            <li><span>00 S</span></li>-->
+<!--                                        </ul>-->
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Xem nhanh</button>
                                         <img src="<?php echo $href_public; ?>/upload/<?php echo $row['image_url'] ?>" alt="">
                                     </div>

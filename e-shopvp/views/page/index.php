@@ -143,7 +143,7 @@ $href_public = '../../public';
                                     <div class="product-thumb">
                                         <div class="product-label">
                                             <span>Mới</span>
-                                            <span class="sale">-20%</span>
+<!--                                            <span class="sale">-20%</span>-->
                                         </div>
                                         <ul class="product-countdown">
                                             <li><span>00 H</span></li>

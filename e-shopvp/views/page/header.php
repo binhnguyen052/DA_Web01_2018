@@ -253,7 +253,7 @@ $href_public = '../../public';
             <div class="menu-nav">
                 <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
                 <ul class="menu-list">
-                    <li><a href="index.php">Trang chủ</a></li>
+                    <li><a href="index.php">Trang chủ </a></li>
 
                     <li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Nhà
                             sản xuất <i class="fa fa-caret-down"></i></a>

@@ -206,14 +206,20 @@
                             <?php
                                 $product_type_id = null;
                                 $manufacturer_id = null;
-                                if (isset($_GET['product_type'])) {$product_type_id = $_GET['product_type']; }
-                                if (isset($_GET['$manufacturer_id'])) {$manufacturer_id = $_GET['$manufacturer_id']; }
+                                if (isset($_GET['product_type_id'])) {$product_type_id = $_GET['product_type_id']; }
+                                if (isset($_GET['manufacturer_id'])) {$manufacturer_id = $_GET['manufacturer_id']; }
                                 $filter = array(
-                                    'product_type_id' => $product_type_id,
-                                    'manufacturer_id' => $manufacturer_id,
+                                    'product_type' => $product_type_id,
+                                    'manufacturer' => $manufacturer_id,
                                 );
-//                                $result = $db->executeQuery($db->link, $sql);
+//                                echo $product_type_id;
+//                                echo $manufacturer_id;
+                                $sql = $_model_product->get_product_by_Condition($filter);
+                                $result = $db->executeQuery($db->link, $sql);
+                                $num_r = $_model_product->count_all($db->link, $filter);
+                                echo $num;
                             ?>
+                            <hr/>
                                 <!-- Product Single -->
                                 <div class="col-md-4 col-sm-6 col-xs-6">
                                     <div class="product product-single">

@@ -23,7 +23,7 @@ class MProduct
         return $query;
     }
 
-    public function get_most_sold($start = 0,$num = 10)
+    public function get_most_sold($start = 0, $num = 10)
     {
         $query = "SELECT * FROM {$this->tb_product} ORDER BY solds DESC LIMIT {$start},{$num}";
 
@@ -57,7 +57,7 @@ class MProduct
         return $query;
     }
 
-    public function get_product_by_Condition($filter = array(), $start = 0, $limit = 10)
+    public function get_product_by_Condition($filter = array())
     {
         $where = "";
 
@@ -72,8 +72,8 @@ class MProduct
         $query = "
             SELECT * 
             FROM product
-            WHERE 1 {$where} AND deleted = 0
-            LIMIT {$start}, {$limit}";
+            WHERE 1 {$where} AND deleted = 0";
+           //LIMIT {$start}, {$limit}";
 
         return $query;
     }
@@ -104,9 +104,9 @@ class MProduct
         return $query;
     }
 
-    public function get_same_type($id,$start = 0, $limit = 6)
+    public function get_same_type($id, $start = 0, $limit = 6)
     {
-        $where ="";
+        $where = "";
         if (!empty($id)) {
             $where .= " AND product_type_id = {$id}";
         }
@@ -120,7 +120,7 @@ class MProduct
 
     public function get_same_manufacturer($id, $start = 0, $limit = 6)
     {
-        $where ="";
+        $where = "";
         if (!empty($id)) {
             $where .= " AND manufacturer_id = {$id}";
         }
@@ -156,7 +156,7 @@ class MProduct
         return $query;
     }
 
-    public function count_all($filter = array())
+    public function count_all($conn, $filter = array())
     {
         $where = "";
 
@@ -168,8 +168,17 @@ class MProduct
             $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
 
+        $query = "
+            SELECT
+                COUNT(id) AS num_rows
+            FROM product
+            WHERE 1 {$where} AND deleted = 0";
 
-
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_num_rows($result);
+        if (isset($row)) {
+            return $row->num_rows;
+        }
         return 0;
     }
 

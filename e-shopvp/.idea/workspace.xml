@@ -49,7 +49,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="2110" />
+          <entry key="PHP" value="2167" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="SQL" value="79" />
         </counts>
@@ -61,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/page/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="164" column="98" selection-start-line="164" selection-start-column="98" selection-end-line="164" selection-end-column="98" />
+            <state relative-caret-position="132">
+              <caret line="303" column="32" selection-start-line="303" selection-start-column="32" selection-end-line="309" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -228,12 +228,6 @@
             <path>
               <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,12 +279,12 @@
       <workItem from="1545736733671" duration="1994000" />
       <workItem from="1545738798136" duration="1603000" />
       <workItem from="1545746152193" duration="18060000" />
-      <workItem from="1545782163383" duration="1124000" />
+      <workItem from="1545782163383" duration="1374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22781000" />
+    <option name="totallyTimeSpent" value="23031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
@@ -444,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="164" column="98" selection-start-line="164" selection-start-column="98" selection-end-line="164" selection-end-column="98" />
+        <state relative-caret-position="132">
+          <caret line="303" column="32" selection-start-line="303" selection-start-column="32" selection-end-line="309" selection-end-column="38" />
         </state>
       </provider>
     </entry>

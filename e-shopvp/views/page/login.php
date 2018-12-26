@@ -88,7 +88,7 @@ $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
                             <hr/>
                                 <?php if(isset($message)) {?>
                                 <p class="bg-info">
-                                    <strong class="fa fa-info"> <?php echo $message; ?> </strong>
+                                    <strong class="fa fa-info"> <?php echo $message; ?> </strong> a
                                 </p>
                                 <?php } ?>
                             <hr/>

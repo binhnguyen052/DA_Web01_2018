@@ -110,6 +110,18 @@ class MAdmin
         return $query;
     }
 
+    public function get_one_account($id)
+    {
+        $where = "";
+
+        if (!empty($id)) {
+            $where .= " AND product_type_id = {$id}";
+        }
+        $query = "SELECT * FROM {$this->tb_account} WHERE 1 AND deleted = 0 ORDER BY id ASC";
+
+        return $query;
+    }
+
     public function get_one_product($filter = array())
     {
         $where = "";

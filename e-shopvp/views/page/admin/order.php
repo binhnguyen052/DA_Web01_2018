@@ -68,17 +68,10 @@
                             while ($row = mysqli_fetch_array($result)) {
                                 extract($row); ?>
                                 <tr>
-                                    <td class="optional">
-                                        <a class="btn btn-xs btn-info" href="#">
-                                            <i class="fa fa-edit text-uppercase">sửa</i></a>
-
-                                        <a class="btn btn-xs btn-danger" href="#">
-                                            <i class="fa fa-times text-uppercase">Xóa</i></a></td>
-
                                     <td><?php $one_account = $_model_admin->get_account();
                                         $result_account = $db->executeQuery($db->link, $one_account);
                                         while ($row_account = mysqli_fetch_array($result_account))
-                                        {extract($row_account); echo $row_type['display_name'];}?></td>
+                                        {extract($row_account); echo $row_account['display_name'];}?></td>
 
                                     <td class="text-uppercase"><?php echo $row['date_create'];?></td>
                                     <td class="text-uppercase"><?php echo $row['date_delivery'];?></td>

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0bce74f-7939-424b-9c32-4c81d5422a2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/models/database/model_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/database/model_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/database/model_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/database/model_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/page/admin/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/admin/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/page/admin/order-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/admin/order-detail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,13 +63,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="6" />
-          <entry key="PHP" value="95" />
+          <entry key="PHP" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="6080" />
+          <entry key="PHP" value="6127" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="SQL" value="81" />
         </counts>
@@ -91,8 +90,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/database/model_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+            <state relative-caret-position="340">
+              <caret line="74" column="64" selection-start-line="74" selection-start-column="64" selection-end-line="74" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -100,8 +99,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/admin/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="134" column="52" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+            <state relative-caret-position="178">
+              <caret line="135" column="59" selection-start-line="135" selection-start-column="59" selection-end-line="135" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/page/admin/order-detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="52" column="95" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -109,8 +117,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/admin/product-type.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="53" selection-end-column="98" />
+            <state relative-caret-position="217">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="66" selection-end-column="39" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/views/page/admin/order.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="412">
-              <caret line="79" column="97" selection-start-line="79" selection-start-column="97" selection-end-line="79" selection-end-column="97" />
+              <caret line="79" column="91" selection-start-line="79" selection-start-column="91" selection-end-line="79" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -205,9 +216,10 @@
         <option value="$PROJECT_DIR$/views/page/admin/account.php" />
         <option value="$PROJECT_DIR$/views/page/admin/product-type.php" />
         <option value="$PROJECT_DIR$/models/database/model_user.php" />
-        <option value="$PROJECT_DIR$/views/page/admin/header.php" />
         <option value="$PROJECT_DIR$/models/database/model_product.php" />
         <option value="$PROJECT_DIR$/views/page/admin/order.php" />
+        <option value="$PROJECT_DIR$/views/page/admin/header.php" />
+        <option value="$PROJECT_DIR$/views/page/admin/order-detail.php" />
         <option value="$PROJECT_DIR$/models/database/model_admin.php" />
       </list>
     </option>
@@ -338,12 +350,12 @@
       <workItem from="1545746152193" duration="18060000" />
       <workItem from="1545782163383" duration="3778000" />
       <workItem from="1545786269461" duration="19643000" />
-      <workItem from="1545816423474" duration="7424000" />
+      <workItem from="1545816423474" duration="7943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52502000" />
+    <option name="totallyTimeSpent" value="53021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
@@ -591,24 +603,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/database/model_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="163" column="4" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/page/admin/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="134" column="52" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+        <state relative-caret-position="178">
+          <caret line="135" column="59" selection-start-line="135" selection-start-column="59" selection-end-line="135" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/admin/product-type.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="53" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/database/model_product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="163" column="4" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
+        <state relative-caret-position="217">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,14 +637,21 @@
     <entry file="file://$PROJECT_DIR$/views/page/admin/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
-          <caret line="79" column="97" selection-start-line="79" selection-start-column="97" selection-end-line="79" selection-end-column="97" />
+          <caret line="79" column="91" selection-start-line="79" selection-start-column="91" selection-end-line="79" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/page/admin/order-detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="52" column="95" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/database/model_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+        <state relative-caret-position="340">
+          <caret line="74" column="64" selection-start-line="74" selection-start-column="64" selection-end-line="74" selection-end-column="64" />
         </state>
       </provider>
     </entry>

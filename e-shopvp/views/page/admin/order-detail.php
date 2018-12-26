@@ -2,9 +2,6 @@
   include("./header.php");
   ?>
 
-    <div id="wrapper">
-
-
       <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -19,9 +16,49 @@
 
           <!-- Page Content -->
 
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h4><i class="fas fa-table"></i> Chi tiết đơn hàng</h4></div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Order Id</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th>Order Id</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <?php
+                            $sql = $_model_admin->get_order_detail();
+                            $result = $db->executeQuery($db->link, $sql);
+                            while ($row = mysqli_fetch_array($result)) {
+                                extract($row); ?>
+                                <tr>
+                                    <td class="text-uppercase"><?php echo $row['order_id'];?></td>
+                                    <td class="text-uppercase"><?php echo $row['quantity'];?></td>
+                                    <td class="text-uppercase"><?php echo $row['price'];?></td>
+                                </tr>
+                            <?php }?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+            <!-- DataTables Example -->
 
 
-            
 
         </div>
         <!-- /.container-fluid -->

@@ -72,7 +72,7 @@ class MAdmin
 
     public function get_order_detail()
     {
-        $query = "SELECT * FROM {$this->tb_order_detail} WHERE deleted = 0 ORDER BY id ASC ";
+        $query = "SELECT * FROM {$this->tb_order_detail} WHERE 1 ORDER BY id ASC ";
 
         return $query;
     }

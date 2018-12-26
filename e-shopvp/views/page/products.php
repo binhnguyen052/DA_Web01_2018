@@ -50,7 +50,8 @@
 <!--							<li><a href="#">Nam</a></li>-->
 <!--						</ul>-->
 
-						<button class="primary-btn">Xóa Tất Cả</button>
+<!--						<button class="primary-btn">Xóa Tất Cả</button>-->
+                        
 					</div>
 					<!-- /aside widget -->
 

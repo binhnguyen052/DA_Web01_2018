@@ -439,7 +439,7 @@ $href_public = '../../public';
                             <li><a href="./products.php">Các sản phẩm</a></li>
 <!--                            <li><a href="./page/product-page.php">Chi tiết sản phẩm</a></li>-->
                             <li><a href="./page/checkout.php">Thanh toán</a></li>
-                            <li><a href="./page/admin/index.php">Admin (test view)</a></li>
+                            <li><a href="./admin/index.php">Admin (test view)</a></li>
                             <li><a href="./blank.php">Blank</a></li>
 <!--                            <li><a href="./page/register.php">user-profile (test view)</a></li>-->
                         </ul>

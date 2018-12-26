@@ -1,6 +1,6 @@
 <?php
 
-class MProduct
+class MAdmin
 {
     public $tb_account = 'account';
     public $tb_product = 'product';
@@ -10,26 +10,7 @@ class MProduct
     public $id;
     public $__name;
 
-    public function get_last_entries($start = 0, $num = 12)
-    {
-        $query = "SELECT * FROM {$this->tb_product} ORDER BY date_added DESC LIMIT {$start},{$num}";
 
-        return $query;
-    }
-
-    public function get_most_views($start = 0, $num = 12)
-    {
-        $query = "SELECT * FROM {$this->tb_product} ORDER BY views DESC LIMIT {$start},{$num}";
-
-        return $query;
-    }
-
-    public function get_most_sold($start = 0, $num = 10)
-    {
-        $query = "SELECT * FROM {$this->tb_product} ORDER BY solds DESC LIMIT {$start},{$num}";
-
-        return $query;
-    }
 
     public function get_product_type()
     {
@@ -74,7 +55,7 @@ class MProduct
             SELECT * 
             FROM product
             WHERE 1 {$where} AND deleted = 0";
-           //LIMIT {$start}, {$limit}";
+        //LIMIT {$start}, {$limit}";
 
         return $query;
     }
@@ -186,4 +167,3 @@ class MProduct
 }
 
 ?>
-

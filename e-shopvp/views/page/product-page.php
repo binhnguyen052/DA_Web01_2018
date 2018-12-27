@@ -36,15 +36,15 @@
                         <div class="col-md-6">
                             <div id="product-main-view">
                                 <div class="product-view">
-                                    <img src="<?php echo $href_public;?>/upload/<?php echo $row['image_url'];?>" alt="">
+                                    <img src="<?php echo $href_public;?>/upload/detail/<?php echo $row['image_url'];?>" alt="">
                                 </div>
                             </div>
 
-                            <div id="product-view">
-                                <div class="product-view">
-                                    <img src="<?php echo $href_public;?>/upload/<?php echo $row['image_url'];?>" alt="">
-                                </div>
-                            </div>
+<!--                            <div id="product-view">-->
+<!--                                <div class="product-view">-->
+<!--                                    <img src="--><?php //echo $href_public;?><!--/upload/detail/--><?php //echo $row['image_url'];?><!--" alt="">-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
 
                         <div class="col-md-6">

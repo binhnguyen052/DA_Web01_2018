@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/models/database/database.php" line="95" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0bce74f-7939-424b-9c32-4c81d5422a2a" name="Default Changelist" comment="" />
+    <list default="true" id="e0bce74f-7939-424b-9c32-4c81d5422a2a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/page/product-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page/product-page.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,61 +28,12 @@
     <expand />
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="397954465">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PHP" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PHP" value="264" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="393147536">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.54" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Image" value="7" />
-          <entry key="PHP" value="110" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="2" />
-          <entry key="PHP" value="7351" />
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="SQL" value="93" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2780">
+            <state relative-caret-position="2363">
               <caret line="139" column="53" selection-start-line="136" selection-start-column="27" selection-end-line="139" selection-end-column="53" />
             </state>
           </provider>
@@ -88,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/database/model_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-768">
+            <state relative-caret-position="493">
               <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
             </state>
           </provider>
@@ -97,25 +51,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/home/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
+            <state relative-caret-position="17">
               <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-880">
+            <state relative-caret-position="17">
               <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/page/product-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="46" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/upload/detail/adidas_bags01.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/upload/adidas_bags01.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2580">
+            <state relative-caret-position="2193">
               <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="115" />
             </state>
           </provider>
@@ -124,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="1343">
               <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="71" />
             </state>
           </provider>
@@ -133,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/page/user-profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
+            <state relative-caret-position="3502">
               <caret line="206" selection-start-line="206" selection-end-line="206" />
             </state>
           </provider>
@@ -191,7 +164,6 @@
         <option value="$PROJECT_DIR$/views/page/index/header-index.php" />
         <option value="$PROJECT_DIR$/views/page/footer.php" />
         <option value="$PROJECT_DIR$/models/database/product.php" />
-        <option value="$PROJECT_DIR$/views/page/product-page.php" />
         <option value="$PROJECT_DIR$/views/page/index.php" />
         <option value="$PROJECT_DIR$/views/page/blank.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -219,22 +191,9 @@
         <option value="$PROJECT_DIR$/libraries/page.php" />
         <option value="$PROJECT_DIR$/views/page/user-profile.php" />
         <option value="$PROJECT_DIR$/views/page/register.php" />
+        <option value="$PROJECT_DIR$/views/page/product-page.php" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/public/admin/package.json" />
-      <path value="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/package.json" />
-      <path value="$PROJECT_DIR$/views/page/admin/package.json" />
-      <path value="$PROJECT_DIR$/views/page/admin/vendor/fontawesome-free/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="291" />
@@ -255,6 +214,35 @@
             <path>
               <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="detail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-shopvp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-shopvp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,16 +293,17 @@
       <workItem from="1545786269461" duration="19643000" />
       <workItem from="1545816423474" duration="17986000" />
       <workItem from="1545837088083" duration="417000" />
+      <workItem from="1545883929145" duration="1111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63481000" />
+    <option name="totallyTimeSpent" value="64592000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2363222" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23880596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -359,9 +348,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/models/database/config.php" />
     <entry file="file://$PROJECT_DIR$/views/page/checkout.php">
@@ -372,9 +358,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/index/header-index.php" />
     <entry file="file://$PROJECT_DIR$/views/page/index/footer-index.php" />
-    <entry file="file://$PROJECT_DIR$/public/upload/adidas_bags01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/main-product01.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -383,13 +366,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/upload/adidas_shoes01.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/page/product-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="142" column="79" selection-start-line="142" selection-start-column="79" selection-end-line="142" selection-end-column="79" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/blank.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -547,55 +523,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/banner01.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/page/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2780">
+        <state relative-caret-position="2363">
           <caret line="139" column="53" selection-start-line="136" selection-start-column="27" selection-end-line="139" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/database/model_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/home/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
+        <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2580">
+        <state relative-caret-position="2193">
           <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/database/model_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
-          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/upload/banner01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/page/user-profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="206" selection-start-line="206" selection-end-line="206" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="1343">
           <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/page/user-profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3502">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/page/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
+        <state relative-caret-position="17">
           <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/adidas_bags01.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/detail/adidas_bags01.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/page/product-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="46" selection-end-column="38" />
         </state>
       </provider>
     </entry>

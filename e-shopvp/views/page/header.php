@@ -108,26 +108,27 @@ $href_public = '../../public';
 
                 <!-- Search -->
                 <div class="header-search">
-                    <form method="POST">
-                        <input class="input search-input" type="text" name="header_search" required="required" placeholder="Nhập từ khóa tìm kiếm">
+                    <form method="POST" >
+                        <input class="input search-input" type="text" id="header_search_id" name="header_search"  placeholder="Nhập từ khóa tìm kiếm">
                         <select class="input search-categories">
                             <option value="0">TÌM KIẾM</option>
                             <option value="1">Danh mục 01</option>
                             <option value="1">Danh mục 02</option>
                         </select>
-                        <button type="submit" id="btn_header_search" class="search-btn">
+                        <button type="submit" id="btn_header_search_id" class="search-btn">
                             <i class="fa fa-search"></i></button>
                                 <script language="javascript">
                                     {
-                                        var btn = document.getElementById('btn_header_search');
-                                        // Thêm sự kiện cho đối tượng
-                                        btn.onclick = function()
-                                        {
-                                            alert("Bạn vừa click vào button");
-                                        };
+                                        //var btn = document.getElementById('btn_header_search_id');
+                                        var txt_search = document.getElementById("btn_header_search_id");
+                                        if (txt_search.value == '') {
+                                            alert("not");
+                                            txt_search.focus();
+                                        } else {
+                                            alert("ok");
+                                            //location.href = "./products.php";
+                                        }
                                     }
-
-
                                 </script>
 
 <!--                        <a class="btn search-btn fa fa-search"-->

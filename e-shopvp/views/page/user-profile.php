@@ -98,7 +98,6 @@ $_model_user = new MUser();
 												<input id="email" name="profile_email" placeholder="Nhập Email" class="form-control here" type="text">
 											</div>
 										</div>
-
 										<div class="form-group row">
 											<label for="newpass" class="col-4 col-form-label">Mật khẩu mới</label>
 											<div class="col-8">

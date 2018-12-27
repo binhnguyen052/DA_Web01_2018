@@ -101,7 +101,7 @@ class MProduct
         return $query;
     }
 
-    public function product_pagination($filter = array())
+    public function product_pagination($filter = array(), $start = 0, $limit = 12)
     {
         //https://freetuts.net/thuat-toan-phan-trang-voi-php-va-mysql-550.html
         $where = "";
@@ -114,16 +114,20 @@ class MProduct
             $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
 
-//        $page_limit = "";
-//
-//        if (!empty($filter['page'])) {
-//            $page_limit .= " LIMIT {$start}, {$limit}";
-//        }
+        $_start = 0;
+        $_limit = 100;
+
+        if (!empty($filter['page'])) {
+            $_start = $start;
+            $_limit = $limit;
+        }
 
         $query = "
-          SELECT * 
-          FROM product 
-          WHERE 1 {$where} AND deleted = 0 ";
+            SELECT * 
+            FROM product 
+            WHERE 1 {$where} AND deleted = 0
+            LIMIT {$_start}, {$_limit}";
+
         return $query;
     }
 

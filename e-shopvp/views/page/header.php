@@ -234,7 +234,7 @@ $href_public = '../../public';
                                         extract($row2); ?>
                                         <div class="col-md-4">
                                             <ul class="list-links" >
-                                                <li><a href="./products.php?product_type_id=<?php echo $row['id']?>&manufacturer_id=<?php echo $row2['id']; ?>">
+                                                <li><a href="./products.php?page=1&product_type_id=<?php echo $row['id']?>&manufacturer_id=<?php echo $row2['id']; ?>">
                                                         <h3 class="text-uppercase" style=" color: #F8694A;"> <?php echo $row2['name'];?></h3></a>
                                                 </li>
                                                 <li><hr/></li>
@@ -275,7 +275,7 @@ $href_public = '../../public';
                                     extract($row); ?>
                                     <div class='col-md-3'>
                                         <div class='hidden-sm hidden-xs'>
-                                            <a class='banner banner-1' href='./products.php?manufacturer_id=<?php echo $row['id']; ?>'>
+                                            <a class='banner banner-1' href='./products.php?page=1&manufacturer_id=<?php echo $row['id']; ?>'>
                                                 <img src='<?php echo $href_public;?>/upload/<?php echo $row['logo_url'];?>' alt=''>
                                             </a>
                                             <hr>

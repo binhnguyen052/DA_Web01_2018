@@ -180,33 +180,29 @@
                                 'product_type' => $product_type_id,
                                 'manufacturer' => $manufacturer_id,
                             );
-//                            $sql = $_model_product->get_product_by_Condition($filter);
-//                            $result = $db->executeQuery($db->link, $sql);
-
-                            //truy vấn
-                            $sql = $_model_product->product_pagination($filter = array());
-                            $result = $db->executeQuery($db->link, $sql);
                             // tổng số trang
+                            $sql = $_model_product->get_product_by_Condition($filter);
+                            $result = $db->executeQuery($db->link, $sql);
                             $total_records = mysqli_num_rows($result);
                             $total_page = ceil($total_records / $limit);
+
                             // Giới hạn current_page trong khoảng 1 đến total_page
                             if ($current_page > $total_page){
                                 $current_page = $total_page;
-                            }
-
-                            
-                            else if ($current_page < 1){
+                            } else if ($current_page < 1){
                                 $current_page = 1;
                             }
                             // Tìm Start
                             $start = ($current_page - 1) * $limit;
-
-
+                            //truy vấn
+                            $sql = $_model_product->product_pagination($filter, $start, $limit);
+                            $result = $db->executeQuery($db->link, $sql);
+                            $num_row = mysqli_num_rows($result);
                             ?>
 
                                 <div>
                                     <span><h5 class="title text-uppercase">Có:
-                                            <?php echo $total_records;?> sản phẩm</h5></span>
+                                            <?php echo $num_row;?> sản phẩm</h5></span>
                                 </div>
 							<div class="row-filter">
 								<a href="#"><i class="fa fa-th-large"></i></a>
@@ -234,10 +230,37 @@
 							</div>
 							<ul class="store-pages">
 								<li><span class="text-uppercase">Trang:</span></li>
-								<li class="active">1</li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+                                <?php
+                                // nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
+                                if ($current_page > 1 && $total_page > 1){
+                                    echo '<li><a href="./products.php?page='.($current_page-1).'&product_type_id='.($product_type_id).'&manufacturer_id='.($manufacturer_id).'">
+                                        <i class="fa fa-caret-left"></i></a></li> ';
+                                    }
+
+                                // Lặp khoảng giữa
+                                for ($i = 1; $i <= $total_page; $i++){
+                                    // Nếu là trang hiện tại thì hiển thị thẻ span
+                                    // ngược lại hiển thị thẻ a
+                                    if ($i == $current_page){
+                                        echo '<li class="text-primary font-weight-bold"><span>'.$i.'</span></li> ';
+                                    }
+                                    else{
+                                        echo '<li><a href="./products.php?page='.$i.'&product_type_id='.($product_type_id).'&manufacturer_id='.($manufacturer_id).'">
+                                        '.$i.'</a></li> ';
+                                    }
+                                };
+
+                                // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
+                                if ($current_page < $total_page && $total_page > 1){
+                                    echo '<li><a href="./products.php?page='.($current_page+1).'&product_type_id='.($product_type_id).'&manufacturer_id='.($manufacturer_id).'">
+                                            <i class="fa fa-caret-right"></i></a></li> ';
+                                }
+
+                                 ?>
+<!--								<li class="active">1</li>-->
+<!--								<li><a href="#">2</a></li>-->
+<!--								<li><a href="#">3</a></li>-->
+<!--								<li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
 							</ul>
 						</div>
 					</div>

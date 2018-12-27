@@ -101,6 +101,51 @@ class MProduct
         return $query;
     }
 
+    public function product_pagination($conn, $limit = 12)
+    {
+        /*  total_record: tổng số records
+            current_page: trang hiện tại
+            limit: số records hiển thị trên mỗi trang
+            start: record bắt đầu trong câu lệnh SQL
+
+            parameter:
+        Tổng số records: Ta dùng lệnh count trong MySQL.
+        Trang hiện tại: Dựa vào tham số page trên URL.
+        Số records trong mỗi trang: Tham số do coder tự truyền vào.
+         */
+
+        // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào
+
+        // BƯỚC 2: TÌM TỔNG SỐ RECORDS
+        $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";
+        $result = mysqli_query($conn, $query);
+        $total_records = mysqli_num_rows($result);
+
+        // BƯỚC 3: TÌM LIMIT VÀ CURRENT_PAGE
+        $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+        // BƯỚC 4: TÍNH TOÁN TOTAL_PAGE VÀ START
+        // tổng số trang
+        $total_page = ceil($total_records / $limit);
+
+        // Giới hạn current_page trong khoảng 1 đến total_page
+        if ($current_page > $total_page){
+            $current_page = $total_page;
+        }
+        else if ($current_page < 1){
+            $current_page = 1;
+        }
+
+        // Tìm Start
+        $start = ($current_page - 1) * $limit;
+
+        // BƯỚC 5: TRUY VẤN LẤY DANH SÁCH TIN TỨC
+        // Có limit và start rồi thì truy vấn CSDL lấy danh sách tin tức
+        $query = "SELECT * FROM {$this->tb_product} WHERE 1 LIMIT {$start}, {$limit}";
+        mysqli_query($conn, $query);
+    }
+
+
     public function get_one_product($filter = array())
     {
         $where = "";

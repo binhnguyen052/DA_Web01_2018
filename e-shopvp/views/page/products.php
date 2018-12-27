@@ -226,7 +226,7 @@
 						<!-- row -->
 						<div class="row">
                             
-                                <?php while($row = mysqli_fetch_array($product_page))
+                                <?php while($row = mysqli_fetch_array($result))
                                 {
                                 extract($row); ?>
                                 <!-- Product Single -->

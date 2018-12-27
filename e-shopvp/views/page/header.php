@@ -118,11 +118,10 @@ $href_public = '../../public';
                         <button class="search-btn"><i class="fa fa-search"></i></button>
                         <?php
                             $header_search = null;
-                            if(isset($_POST['header_search'])) { $header_search = $_POST['header_search'];}
-
-                            header('location: ./product.php');
-
-
+                            if(isset($_POST['header_search'])) {
+                                $header_search = $_POST['header_search'];
+                                header('location:products.php');
+                            }
 
                         ?>
 

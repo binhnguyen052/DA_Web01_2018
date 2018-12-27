@@ -109,7 +109,7 @@ $href_public = '../../public';
                 <!-- Search -->
                 <div class="header-search">
                     <form method="POST" >
-                        <input class="input search-input" type="text" id="header_search_id" required="required" name="header_search"  placeholder="Nhập từ khóa tìm kiếm">
+                        <input class="input search-input" type="text" name="header_search" required="required" name="header_search"  placeholder="Nhập từ khóa tìm kiếm">
                         <select class="input search-categories">
                             <option value="0">TÌM KIẾM</option>
                             <option value="1">Danh mục 01</option>
@@ -117,18 +117,15 @@ $href_public = '../../public';
                         </select>
                         <button type="submit" id="btn_header_search_id" class="search-btn">
                             <i class="fa fa-search"></i></button>
-                                <script language="javascript">
-                                    {
-                                        //var btn = document.getElementById('btn_header_search_id');
-                                        var txt_search = document.getElementById("btn_header_search_id");
-                                        if (txt_search.text == '') {
-                                            alert("not");
-                                            //txt_search.focus();
-                                        } else {
-                                            <?php  header('location: ./products.php'); ?>
-                                        }
-                                    }
-                                </script>
+                            <?php
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if(empty($_POST['header_search']) == false) {
+                                        echo 'null';
+                                } else {
+                                    echo 'fill';
+                                }
+                            }
+                            ?>
 
 <!--                        <a class="btn search-btn fa fa-search"-->
 <!--                           href="./products.php?product_type_id=--><?php //echo $row['id']?><!--&manufacturer_id=--><?php //echo $row2['id']; ?><!--"-->

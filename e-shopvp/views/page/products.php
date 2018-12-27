@@ -193,6 +193,8 @@
                             if ($current_page > $total_page){
                                 $current_page = $total_page;
                             }
+
+                            
                             else if ($current_page < 1){
                                 $current_page = 1;
                             }

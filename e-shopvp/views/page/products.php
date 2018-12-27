@@ -179,6 +179,8 @@
                             );
                             $sql = $_model_product->get_product_by_Condition($filter);
                             $result = $db->executeQuery($db->link, $sql);
+                            $product_page = $_model_product->product_pagination($db->link);
+
                             $num_r = $_model_product->count_all($db->link, $filter); ?>
                                 <div>
                                     <span><h5 class="title text-uppercase">Có:

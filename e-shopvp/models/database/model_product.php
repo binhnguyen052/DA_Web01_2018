@@ -101,7 +101,7 @@ class MProduct
         return $query;
     }
 
-    public function product_pagination($conn, $limit = 12)
+    public function product_pagination($conn, $filter = array(), $limit = 12)
     {
         /*  total_record: tổng số records
             current_page: trang hiện tại
@@ -114,7 +114,7 @@ class MProduct
         Số records trong mỗi trang: Tham số do coder tự truyền vào.
          */
 
-        // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào
+        // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào, xử lý các sản phẩm theo loại và
 
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";

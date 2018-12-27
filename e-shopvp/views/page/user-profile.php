@@ -80,26 +80,6 @@ $_model_user = new MUser();
                                                        class="form-control here" type="text">
                                             </div>
 										</div>
-<!--										<div class="form-group row">-->
-<!--											<label for="name" class="col-4 col-form-label">Tên</label>-->
-<!--											<div class="col-8">-->
-<!--												<input id="name" name="profile_name" placeholder="Nhập tên" class="form-control here" type="text">-->
-<!--											</div>-->
-<!--										</div>-->
-<!--										<div class="form-group row">-->
-<!--											<label for="lastname" class="col-4 col-form-label">Họ</label>-->
-<!--											<div class="col-8">-->
-<!--												<input id="lastname" name="lastname" placeholder="Nhập họ" class="form-control here" type="text">-->
-<!--											</div>-->
-<!--										</div>-->
-										<!-- <div class="form-group row">
-											<label for="select" class="col-4 col-form-label">Display Name public as</label>
-											<div class="col-8">
-												<select id="select" name="select" class="custom-select">
-													<option value="admin">Admin</option>
-												</select>
-											</div>
-										</div> -->
 										<div class="form-group row">
 											<label for="address" class="col-4 col-form-label">Địa chỉ: </label>
 											<div class="col-8">
@@ -118,18 +98,7 @@ $_model_user = new MUser();
 												<input id="email" name="profile_email" placeholder="Nhập Email" class="form-control here" type="text">
 											</div>
 										</div>
-										<!-- <div class="form-group row">
-											<label for="website" class="col-4 col-form-label">Website</label>
-											<div class="col-8">
-												<input id="website" name="website" placeholder="website" class="form-control here" type="text">
-											</div>
-										</div> -->
-<!--										<div class="form-group row">-->
-<!--											<label for="publicinfo" class="col-4 col-form-label">Thông tin công khai</label>-->
-<!--											<div class="col-8">-->
-<!--												<textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>-->
-<!--											</div>-->
-<!--										</div>-->
+
 										<div class="form-group row">
 											<label for="newpass" class="col-4 col-form-label">Mật khẩu mới</label>
 											<div class="col-8">

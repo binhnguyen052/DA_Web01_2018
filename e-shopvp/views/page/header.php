@@ -110,11 +110,12 @@ $href_public = '../../public';
                 <div class="header-search">
                     <form>
                         <input class="input search-input" type="text" placeholder="Nhập từ khóa tìm kiếm">
-                        <select class="input search-categories">
-                            <option value="0">DANH MỤC</option>
-                            <option value="1">Danh mục 01</option>
-                            <option value="1">Danh mục 02</option>
-                        </select>
+<!--                        <select class="input search-categories">-->
+<!--                            <option value="0">TÌM KIẾM</option>-->
+<!--                            <option value="1">Danh mục 01</option>-->
+<!--                            <option value="1">Danh mục 02</option>-->
+<!--                        </select>-->
+                        <label class="label"> </label>
                         <button class="search-btn"><i class="fa fa-search"></i></button>
                     </form>
                 </div>

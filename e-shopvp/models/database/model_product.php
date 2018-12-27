@@ -114,7 +114,7 @@ class MProduct
         Số records trong mỗi trang: Tham số do coder tự truyền vào.
          */
 
-        // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào, xử lý các sản phẩm theo loại và
+        // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào, xử lý các sản phẩm theo loại và nhà sản xuất
 
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";

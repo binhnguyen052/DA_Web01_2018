@@ -322,7 +322,7 @@ class MProduct
         SELECT  
             account.id, account.display_name, 
             orders.date_create, orders.date_delivery, orders.deleted, orders.status,
-            orders.recipient_name,  orders.recipient_tel,  
+            orders.recipient_name,  orders.recipient_tel, orders.total_pay, 
             orders.address_number, orders.street, orders.ward, orders.district, orders.province,  orders.ward, 
             order_detail.id, order_detail.quantity,
             product.name, product.image_url, product.price

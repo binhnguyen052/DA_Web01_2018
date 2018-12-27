@@ -186,12 +186,12 @@ values
 ('admin01', '1256', 'Garen', null, null, null, null, 0),
 ('admin02', '1256', 'Camllie', null, null, null, null, 0),
 ('admin03', '1256', 'Ezreal', null, null, null, null, 0),
-(md5('admin04'), md5('1256'), 'Aatrox', null, null, null, null, 0),
+('admin04', md5('1256'), 'Aatrox', null, null, null, null, 0),
 
 ('user01', '1256', 'Lux', null, null, null, null, 1),
 ('user02', '1256', 'Jinx', null, null, null, null, 1),
 ('user03', '1256', 'Olaf', null, null, null, null, 1),
-(md5('user04'), md5('1256'), 'Leona',null, null, null, null, 1);
+('user04', md5('1256'), 'Leona',null, null, null, null, 1);
 
 /*
   `id` INT ZEROFILL NOT NULL AUTO_INCREMENT,
@@ -346,10 +346,10 @@ values
 insert into orders(account_id, date_create, date_delivery, total_pay, status, 
 recipient_name, recipient_tel, address_number, street, ward, district, province)
 values  
-(5, now(), date_add(now(), interval '2:0' hour_minute), 200, 0, 'Trãi', null, '159', 'Nguyễn Trãi', 'Phường 04', 'Quận 5', 'TP.HCM'),
-(6, now(), date_add(now(), interval '2:0' hour_minute), 200, 0, 'Nguyên', null, '2222/5', 'Hàn Hải Nguyên', 'Phường 11', 'Quận 11', 'TP.HCM'),
-(7, now(), date_add(now(), interval '2:0' hour_minute), 200, 0, 'Sáu', null, '150A', 'Võ Thị Sáu', 'Tân Kiên', 'Quận 3', 'TP.HCM'),
-(8, now(), date_add(now(), interval '2:0' hour_minute), 200, 0, 'Trân', null, '20', 'Tống Văn Trân', 'Tân Kiên', 'Quận 11', 'TP.HCM');
+(5, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Trãi', null, '159', 'Nguyễn Trãi', 'Phường 04', 'Quận 5', 'TP.HCM'),
+(6, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Nguyên', null, '2222/5', 'Hàn Hải Nguyên', 'Phường 11', 'Quận 11', 'TP.HCM'),
+(7, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Sáu', null, '150A', 'Võ Thị Sáu', 'Tân Kiên', 'Quận 3', 'TP.HCM'),
+(8, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Trân', null, '20', 'Tống Văn Trân', 'Tân Kiên', 'Quận 11', 'TP.HCM');
 
 
 /*

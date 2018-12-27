@@ -48,7 +48,9 @@
                              $result = $db->executeQuery($db->link, $sql);
                                 while($row = mysqli_fetch_array($result))
                                 {
-                                    extract($row); ?>
+                                    extract($row);
+                                    $total = $row['total_pay'];
+                                    ?>
                                     <tr>
                                         <td class="thumb"><img class="img-thumbnail" src="<?php echo $href_public; ?>/upload/detail/<?php echo $row['image_url']; ?>" alt=""></td>
                                         <td class="price text-left text-uppercase"><strong><?php echo $row['name']; ?></strong></td>
@@ -64,18 +66,13 @@
                             <tfoot>
                             <tr>
                                 <th class="empty" colspan="3"></th>
-                                <th>SUBTOTAL</th>
-                                <th colspan="2" class="sub-total">$97.50</th>
-                            </tr>
-                            <tr>
-                                <th class="empty" colspan="3"></th>
                                 <th>SHIPING</th>
                                 <td colspan="2">Free Shipping</td>
                             </tr>
                             <tr>
                                 <th class="empty" colspan="3"></th>
                                 <th>TOTAL</th>
-                                <th colspan="2" class="total">$97.50</th>
+                                <th colspan="2" class="total">$<?php echo $total; ?></th>
                             </tr>
                             </tfoot>
                         </table>

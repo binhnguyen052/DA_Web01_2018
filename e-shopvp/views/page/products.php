@@ -180,7 +180,7 @@
                             $sql = $_model_product->get_product_by_Condition($filter);
                             $result = $db->executeQuery($db->link, $sql);
 
-                            $product_page = $_model_product->product_pagination($db->link);
+                            $product_page = $_model_product->product_pagination($db->link, $filter = array());
                             $num_r = mysqli_num_rows($product_page); ?>
                                 <div>
                                     <span><h5 class="title text-uppercase">Có:

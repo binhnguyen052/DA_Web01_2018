@@ -127,10 +127,12 @@ $href_public = '../../public';
                     <li><?php
                         $display_name = null;
                         if (isset($_SESSION['display_name'])) { $display_name =  $_SESSION['display_name'];
-                            echo $display_name;}
+                            echo $display_name;
+                        }
                         $account_id = null;
                         if (isset($_SESSION['id'])) { $account_id =  $_SESSION['id'];
-                            echo $account_id;}
+                            //echo $account_id;
+                        }
                         ?></li>
                     <!-- Account -->
                     <li class="header-account dropdown default-dropdown">

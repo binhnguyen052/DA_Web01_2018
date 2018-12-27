@@ -329,7 +329,8 @@ class MProduct
         FROM account JOIN orders ON account.id = orders.account_id
         JOIN order_detail ON order_detail.order_id = orders.id
         JOIN product ON product.id = order_detail.product_id
-        WHERE account.id = {$__id__}";
+        WHERE account.id = {$__id__}
+        ORDER BY orders.date_delivery DESC;";
 
         return $query;
     }

@@ -33,7 +33,8 @@
                                 <th>Tên Sản Phẩm</th>
                                 <th class="text-center">Đơn Giá</th>
                                 <th class="text-center">Số Lượng</th>
-                                <th class="text-center">Ngày Giao</th>
+                                <th class="text-center">Ngày Sẽ Giao</th>
+                                <th class="text-center">Trạng Thái</th>
                                 <th class="text-center">Tổng</th>
                                 <th class="text-right"></th>
                             </tr>
@@ -57,6 +58,9 @@
                                         <td class="price text-center"><strong class="primary-color">$<?php echo $row['price']; ?></strong></td>
                                         <td class="price text-center"><strong><?php echo $row['quantity']; ?></strong></td>
                                         <td class="price text-center"><strong><?php echo $row['date_delivery']; ?></strong></td>
+                                        <?php if($row['status'] == 0) {echo '<td class="price text-center text-danger text-uppercase">Chưa giao</td>';}
+                                        else if($row['status'] == 1) {echo '<td class="price text-center text-success text-uppercase">Đã giao</td>';}
+                                        else if($row['status'] == -1) {echo '<td class="price text-center text-primary text-uppercase">Đang giao</td>';}?>
                                         <td class="total text-center"><strong class="primary-color">$<?php echo $row['price']*$row['quantity']; ?></strong></td>
                                         <td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
                                     </tr>

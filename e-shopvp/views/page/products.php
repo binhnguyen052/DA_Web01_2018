@@ -172,20 +172,39 @@
                             $product_type_id = null;
                             $manufacturer_id = null;
                             $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+                            $limit = 12;
                             if (isset($_GET['product_type_id'])) {$product_type_id = $_GET['product_type_id']; }
                             if (isset($_GET['manufacturer_id'])) {$manufacturer_id = $_GET['manufacturer_id']; }
                             $filter = array(
+                                'page' => $current_page,
                                 'product_type' => $product_type_id,
                                 'manufacturer' => $manufacturer_id,
                             );
                             $sql = $_model_product->get_product_by_Condition($filter);
                             $result = $db->executeQuery($db->link, $sql);
 
+                            //truy vấn
                             $product_page = $_model_product->product_pagination($db->link, $filter = array());
-                            $num_r = mysqli_num_rows($product_page); ?>
+
+                            // tổng số trang
+                            $total_records = mysqli_num_rows($product_page);
+                            $total_page = ceil($total_records / $limit);
+                            // Giới hạn current_page trong khoảng 1 đến total_page
+                            if ($current_page > $total_page){
+                                $current_page = $total_page;
+                            }
+                            else if ($current_page < 1){
+                                $current_page = 1;
+                            }
+                            // Tìm Start
+                            $start = ($current_page - 1) * $limit;
+
+
+                            ?>
+
                                 <div>
                                     <span><h5 class="title text-uppercase">Có:
-                                            <?php echo $num_r;?> sản phẩm</h5></span>
+                                            <?php echo $total_records;?> sản phẩm</h5></span>
                                 </div>
 							<div class="row-filter">
 								<a href="#"><i class="fa fa-th-large"></i></a>

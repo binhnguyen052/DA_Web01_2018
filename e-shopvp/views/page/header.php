@@ -115,8 +115,10 @@ $href_public = '../../public';
                             <option value="1">Danh mục 01</option>
                             <option value="1">Danh mục 02</option>
                         </select>
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
-                        
+<!--                        <button class="search-btn"><i class="fa fa-search"></i></button>-->
+                        <a class="btn search-btn fa fa-search"
+                           href="./product-page.php?id=<?php echo $row['id']; ?>"
+                           role="button"></a>
                     </form>
                 </div>
                 <!-- /Search -->

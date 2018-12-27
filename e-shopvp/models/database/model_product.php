@@ -239,13 +239,12 @@ class MProduct
         return 0;
     }
 
-    public function update_view($conn, $id, $op)
+    public function view_session($conn, $id, $op)
     {
         //lưu lượt xem
         $module_data = 'product';
         $column_update = 'views';
         $id_update = $id;
-        $op = $op;
         $session_view = $module_data.'_'.$op.'_'.$id_update;
 
         // Lấy giá trị session có tên là $module_data . '_' . $op . '_' . $_id
@@ -260,6 +259,17 @@ class MProduct
             $query = "UPDATE {$module_data} SET {$column_update} = {$column_update} + 1 WHERE id = {$id_update}";
             mysqli_query($conn, $query);
         }
+    }
+
+    public function view_on_click($conn, $id)
+    {
+        //lưu lượt xem
+        $module_data = 'product';
+        $column_update = 'views';
+        $id_update = $id;
+        // Thực hiện cập nhật lượt xem
+        $query = "UPDATE {$module_data} SET {$column_update} = {$column_update} + 1 WHERE id = {$id_update}";
+        mysqli_query($conn, $query);
     }
 
 

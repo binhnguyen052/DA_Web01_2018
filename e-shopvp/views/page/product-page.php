@@ -4,12 +4,14 @@
 
 //lưu lượt xem
 
-$op = 'product-detail';
+$op = 'product-detail'; //trang hiện tại
 $id_view = $_GET['id'];
-$_model_product->update_view($db->link, $id_view, $op)
 
+//mỗi session riêng chỉ tính 1 lượt view
+//$_model_product->view_session($db->link, $id_view, $op);
 
-
+//mỗi lượt click là tính 1 lượt view (không quan tâm session)
+$_model_product->view_on_click($db->link, $id_view);
 ?>
 
 	<!-- BREADCRUMB -->
@@ -78,8 +80,8 @@ $_model_product->update_view($db->link, $id_view, $op)
                                 <p class="text-uppercase"><strong>Loại sản phẩm: </strong><?php echo $row['type_name']; ?></p>
                                 <p class="text-uppercase"><strong>Nhà sản xuất: </strong><?php echo $row['manufacturer_name']; ?></p>
                                 <p class="text-uppercase"><strong>Xuất xứ: </strong><?php echo $row['origin']; ?></p>
-                                <p class="text-uppercase"><strong>Số lượt xem: </strong><?php echo $row['solds']; ?></p>
-                                <p class="text-uppercase"><strong>Số lượt bán: </strong><?php echo $row['views']; ?></p>
+                                <p class="text-uppercase"><strong>Số lượt bán: </strong><?php echo $row['solds']; ?></p>
+                                <p class="text-uppercase"><strong>Số lượt xem: </strong><?php echo $row['views']; ?></p>
                                 <p class="text-uppercase"><strong>Mô tả: </strong><?php echo $row['descreibe']; ?></p>
                                 <div class="product-options">
                                     <ul class="size-option">

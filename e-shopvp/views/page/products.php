@@ -172,7 +172,7 @@
                             $product_type_id = null;
                             $manufacturer_id = null;
                             $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-                            $limit = 12;
+                            $limit = 6;
                             if (isset($_GET['product_type_id'])) {$product_type_id = $_GET['product_type_id']; }
                             if (isset($_GET['manufacturer_id'])) {$manufacturer_id = $_GET['manufacturer_id']; }
                             $filter = array(
@@ -201,8 +201,8 @@
                             ?>
 
                                 <div>
-                                    <span><h5 class="title text-uppercase">Có:
-                                            <?php echo $num_row;?> sản phẩm</h5></span>
+                                    <span><h5 class="title text-uppercase">Có tất cả:
+                                            <?php echo $total_records;?> sản phẩm</h5></span>
                                 </div>
 							<div class="row-filter">
 								<a href="#"><i class="fa fa-th-large"></i></a>
@@ -315,41 +315,68 @@
 					<!-- /STORE -->
 
 					<!-- store bottom filter -->
-					<div class="store-filter clearfix">
-						<div class="pull-left">
-							<div class="row-filter">
-								<a href="#"><i class="fa fa-th-large"></i></a>
-								<a href="#" class="active"><i class="fa fa-bars"></i></a>
-							</div>
-							<div class="sort-filter">
-								<span class="text-uppercase">Sắp Xếp Theo:</span>
-								<select class="input">
-										<option value="0">Vị Trí</option>
-										<option value="0">Giá</option>
-										<option value="0">Xếp Hạng</option>
-									</select>
-								<a href="#" class="main-btn icon-btn"><i class="fa fa-arrow-down"></i></a>
-							</div>
-						</div>
-						<div class="pull-right">
-							<div class="page-filter">
-								<span class="text-uppercase">Hiển Thị:</span>
-								<select class="input">
-										<option value="0">10</option>
-										<option value="1">20</option>
-										<option value="2">30</option>
-									</select>
-							</div>
-							<ul class="store-pages">
-								<li><span class="text-uppercase">Trang:</span></li>
-								<li class="active">1</li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#"><i class="fa fa-caret-right"></i></a></li>
-							</ul>
-						</div>
-					</div>
+<!--					<div class="store-filter clearfix">-->
+<!--						<div class="pull-left">-->
+<!--							<div class="row-filter">-->
+<!--								<a href="#"><i class="fa fa-th-large"></i></a>-->
+<!--								<a href="#" class="active"><i class="fa fa-bars"></i></a>-->
+<!--							</div>-->
+<!--							<div class="sort-filter">-->
+<!--								<span class="text-uppercase">Sắp Xếp Theo:</span>-->
+<!--								<select class="input">-->
+<!--										<option value="0">Vị Trí</option>-->
+<!--										<option value="0">Giá</option>-->
+<!--										<option value="0">Xếp Hạng</option>-->
+<!--									</select>-->
+<!--								<a href="#" class="main-btn icon-btn"><i class="fa fa-arrow-down"></i></a>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="pull-right">-->
+<!--							<div class="page-filter">-->
+<!--								<span class="text-uppercase">Hiển Thị:</span>-->
+<!--								<select class="input">-->
+<!--										<option value="0">10</option>-->
+<!--										<option value="1">20</option>-->
+<!--										<option value="2">30</option>-->
+<!--									</select>-->
+<!--							</div>-->
+<!--							<ul class="store-pages">-->
+<!--								<li><span class="text-uppercase">Trang:</span></li>-->
+<!--                                --><?php
+//                                // nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
+//                                if ($current_page > 1 && $total_page > 1){
+//                                    echo '<li><a href="./products.php?page='.($current_page-1).'&product_type_id='.($product_type_id).'&manufacturer_id='.($manufacturer_id).'">
+//                                        <i class="fa fa-caret-left"></i></a></li> ';
+//                                }
+//
+//                                // Lặp khoảng giữa
+//                                for ($i = 1; $i <= $total_page; $i++){
+//                                    // Nếu là trang hiện tại thì hiển thị thẻ span
+//                                    // ngược lại hiển thị thẻ a
+//                                    if ($i == $current_page){
+//                                        echo '<li class="text-primary font-weight-bold"><span>'.$i.'</span></li> ';
+//                                    }
+//                                    else{
+//                                        echo '<li><a href="./products.php?page='.$i.'&product_type_id='.($product_type_id).'&manufacturer_id='.($manufacturer_id).'">
+//                                        '.$i.'</a></li> ';
+//                                    }
+//                                };
+//
+//                                // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
+//                                if ($current_page < $total_page && $total_page > 1){
+//                                    echo '<li><a href="./products.php?page='.($current_page+1).'&product_type_id='.($product_type_id).'&manufacturer_id='.($manufacturer_id).'">
+//                                            <i class="fa fa-caret-right"></i></a></li> ';
+//                                }
+//                                ?>
+<!--								<li class="active">1</li>-->
+<!--								<li><a href="#">2</a></li>-->
+<!--								<li><a href="#">3</a></li>-->
+<!--								<li><a href="#"><i class="fa fa-caret-right"></i></a></li>-->
+<!--							</ul>-->
+<!--						</div>-->
+<!--					</div>-->
 					<!-- /store bottom filter -->
+
 				</div>
 				<!-- /MAIN -->
 			</div>

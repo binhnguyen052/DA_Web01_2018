@@ -302,21 +302,34 @@ class MProduct
         mysqli_query($conn, $query);
     }
 
-    public function get_purchase_history()
+    public function check_purchase_history($conn, $_id){
+        $__id__ = (int)$_id;
+        $query = "SELECT * FROM `orders` WHERE 1 AND account_id = {$__id__}";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_num_rows($result);
+        //nếu không tồn tại account trong mua hàng
+        if ($row <= 0){
+            return FALSE;
+        } else{
+            return TRUE;
+        }
+    }
+
+    public function get_purchase_history($_id = -1)
     {
+        $__id__ = (int)$_id;
         $query = "
         SELECT  
             account.id, account.display_name, 
             orders.date_create, orders.date_delivery, orders.deleted, orders.status,
             orders.recipient_name,  orders.recipient_tel,  
             orders.address_number, orders.street, orders.ward, orders.district, orders.province,  orders.ward, 
-            order_detail.id, 
+            order_detail.id, order_detail.quantity,
             product.name, product.image_url, product.price
         FROM account JOIN orders ON account.id = orders.account_id
         JOIN order_detail ON order_detail.order_id = orders.id
         JOIN product ON product.id = order_detail.product_id
-        WHERE account.id = 6;
-        ";
+        WHERE account.id = {$__id__}";
 
         return $query;
     }

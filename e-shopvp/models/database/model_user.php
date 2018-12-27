@@ -43,6 +43,7 @@ class MUser
         //nếu tồn tại tài khoản
         if ($row > 0) {
             //lưu session
+            $_SESSION['id'] = $row_extract['id'];
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['display_name'] = $row_extract['display_name'];

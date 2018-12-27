@@ -1,5 +1,5 @@
 <?php
-include ("../../controllers/products/header.php");
+    include ("../../controllers/products/header.php");
 ?>
 
 <!-- BREADCRUMB -->
@@ -30,8 +30,8 @@ include ("../../controllers/products/header.php");
                             <thead>
                             <tr>
                                 <th>Sản Phẩm</th>
-                                <th></th>
-                                <th class="text-center">Giá</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th class="text-center">Đơn Giá</th>
                                 <th class="text-center">Số Lượng</th>
                                 <th class="text-center">Ngày Giao</th>
                                 <th class="text-center">Tổng</th>
@@ -40,22 +40,25 @@ include ("../../controllers/products/header.php");
                             </thead>
                             <tbody>
 
-                            <tr>
-                                <td class="thumb"><img src="../img/thumb-product01.jpg" alt=""></td>
-                                <td class="details">
-                                    <a href="#">Tên Sản Phẩm</a>
-                                    <ul>
-                                        <li><span>Kích Thước: XL</span></li>
-                                        <li><span>Màu sắc: Camelot</span></li>
-                                    </ul>
-                                </td>
-                                <td class="price text-center"><strong>$32.50</strong></td>
-                                <td class="qty text-center"><input class="input" type="number" value="1"></td>
-                                <td class="price text-center"><strong>28/12/2018</strong></td>
-                                <td class="total text-center"><strong class="primary-color">$32.50</strong></td>
-                                <td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
-                            </tr>
-
+                            <?php
+                             $account_id = -1;
+                             if (isset($_SESSION['id'])) { $account_id = $_SESSION['id'];}
+                             $sql = $_model_product->get_purchase_history($account_id);
+                             //echo $account_id;
+                             $result = $db->executeQuery($db->link, $sql);
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                    extract($row); ?>
+                                    <tr>
+                                        <td class="thumb"><img class="img-thumbnail" src="<?php echo $href_public; ?>/upload/detail/<?php echo $row['image_url']; ?>" alt=""></td>
+                                        <td class="price text-left text-uppercase"><strong><?php echo $row['name']; ?></strong></td>
+                                        <td class="price text-center"><strong class="primary-color">$<?php echo $row['price']; ?></strong></td>
+                                        <td class="price text-center"><strong><?php echo $row['quantity']; ?></strong></td>
+                                        <td class="price text-center"><strong><?php echo $row['date_delivery']; ?></strong></td>
+                                        <td class="total text-center"><strong class="primary-color">$<?php echo $row['price']*$row['quantity']; ?></strong></td>
+                                        <td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
+                                    </tr>
+                                <?php } ?>
                             </tbody>
 
                             <tfoot>

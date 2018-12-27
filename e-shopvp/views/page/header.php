@@ -123,7 +123,15 @@ $href_public = '../../public';
             </div>
             <div class="pull-right">
                 <ul class="header-btns">
-                    <li><?php echo $_SESSION['display_name']; ?></li>
+
+                    <li><?php
+                        $display_name = null;
+                        if (isset($_SESSION['display_name'])) { $display_name =  $_SESSION['display_name'];
+                            echo $display_name;}
+                        $account_id = null;
+                        if (isset($_SESSION['id'])) { $account_id =  $_SESSION['id'];
+                            echo $account_id;}
+                        ?></li>
                     <!-- Account -->
                     <li class="header-account dropdown default-dropdown">
                         <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
@@ -137,11 +145,11 @@ $href_public = '../../public';
                         <ul class="custom-menu">
                             <li><a href="./user-profile.php"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
-                            <li><a href="./purchase-history.php"><i class="fa fa-exchange"></i>Lịch sử mua hàng</a></li>
+                            <li><a href="./purchase-history.php?id=<?php echo $account_id; ?>"><i class="fa fa-exchange"></i>Lịch sử mua hàng</a></li>
                             <li><a href="#"><i class="fa fa-check"></i>Thanh toán</a></li>
                             <li><a href="#"><i class="fa fa-unlock-alt"></i>Đăng nhập</a></li>
                             <li><a href="#"><i class="fa fa-user-plus"></i>Tạo tài khoản</a></li>
-                            <li><a href="#"><i class="fa fa-user-plus"></i>Đăng xuất</a></li>
+                            <li><a href="./log_out.php"><i class="fa fa-user-plus"></i>Đăng xuất</a></li>
                         </ul>
                     </li>
                     <!-- /Account -->
@@ -242,6 +250,7 @@ $href_public = '../../public';
                                         extract($row2); ?>
                                         <div class="col-md-4">
                                             <ul class="list-links" >
+                                                <li><a href="./products.php?page=1&product_type_id=<?php echo $row['id']?>&manufacturer_id=<?php echo $row2['id']; ?>">
                                                 <li><a href="./products.php?page=1&product_type_id=<?php echo $row['id']?>&manufacturer_id=<?php echo $row2['id']; ?>">
                                                         <h3 class="text-uppercase" style=" color: #F8694A;"> <?php echo $row2['name'];?></h3></a>
                                                 </li>

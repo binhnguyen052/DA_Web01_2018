@@ -171,6 +171,20 @@ class MAdmin
         return $query;
     }
 
+    public function get_one_orders($_id)
+    {
+        $__id__ = (int)$_id;
+
+        $where = "";
+        if (!empty($id)) {
+            $where .= " AND orders.account_id = {$__id__}";
+        }
+        $query = "SELECT * FROM {$this->tb_orders} WHERE 1 {$where} AND deleted = 0 ORDER BY id ASC ";
+
+        return $query;
+    }
+
+
     public function get_same_type($id, $start = 0, $limit = 6)
     {
         $where = "";

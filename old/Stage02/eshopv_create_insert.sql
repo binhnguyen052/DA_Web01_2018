@@ -348,8 +348,8 @@ insert into orders(account_id, date_create, date_delivery, total_pay, status,
 recipient_name, recipient_tel, address_number, street, ward, district, province)
 values  
 (5, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Trãi', null, '159', 'Nguyễn Trãi', 'Phường 04', 'Quận 5', 'TP.HCM'),
-(6, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Nguyên', null, '2222/5', 'Hàn Hải Nguyên', 'Phường 11', 'Quận 11', 'TP.HCM'),
-(7, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Sáu', null, '150A', 'Võ Thị Sáu', 'Tân Kiên', 'Quận 3', 'TP.HCM'),
+(6, now(), date_add(now(), interval '2:0' hour_minute), 0, 1, 'Nguyên', null, '2222/5', 'Hàn Hải Nguyên', 'Phường 11', 'Quận 11', 'TP.HCM'),
+(7, now(), date_add(now(), interval '2:0' hour_minute), 0, -1, 'Sáu', null, '150A', 'Võ Thị Sáu', 'Tân Kiên', 'Quận 3', 'TP.HCM'),
 (8, now(), date_add(now(), interval '2:0' hour_minute), 0, 0, 'Trân', null, '20', 'Tống Văn Trân', 'Tân Kiên', 'Quận 11', 'TP.HCM');
 
 

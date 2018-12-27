@@ -71,11 +71,11 @@
                                 extract($row); ?>
                                 <tr>
                                     <td class="optional">
-                                        <a class="btn btn-xs btn-info" href="#">
+                                        <a class="btn btn-xs btn-info" href="order_update.php?orders_id=<?php echo $row['id']; ?>">
                                             <i class="fa fa-edit text-uppercase">sửa</i></a>
 
-                                        <a class="btn btn-xs btn-danger" href="#">
-                                            <i class="fa fa-times text-uppercase">Xóa</i></a></td>
+<!--                                        <a class="btn btn-xs btn-danger" href="#">-->
+<!--                                            <i class="fa fa-times text-uppercase">Xóa</i></a></td>-->
 
                                     <td><?php $one_account = $_model_admin->get_one_account($row['account_id']);
                                         $result_account = $db->executeQuery($db->link, $one_account);

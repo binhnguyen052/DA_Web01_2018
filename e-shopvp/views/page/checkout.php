@@ -28,25 +28,25 @@
                                 <h6 class="title">(*) Thông tin bắt buộc</h6>
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="* Tên Người Nhận">
+								<input class="input" type="text" name="first-name" required="required" placeholder="* Tên Người Nhận">
 							</div>
 							<div class="form-group">
 								<input class="input" type="text" name="last-name" placeholder="SĐT Người Nhận">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="email" placeholder="* Số Nhà">
+								<input class="input" type="text" name="email" required="required" placeholder="* Số Nhà">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="* Tên Đường">
+								<input class="input" type="text" name="address" required="required" placeholder="* Tên Đường">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="* Phường, xã">
+								<input class="input" type="text" name="city" required="required" placeholder="* Phường, xã">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="country" placeholder="* Quận, huyện">
+								<input class="input" type="text" name="country" required="required" placeholder="* Quận, huyện">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="zip-code" placeholder="* Tỉnh, thành phố">
+								<input class="input" type="text" name="zip-code" required="required" placeholder="* Tỉnh, thành phố">
 							</div>
 							<div class="form-group">
 								<div class="input-checkbox">

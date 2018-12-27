@@ -54,7 +54,7 @@ include ("../../controllers/products/header.php");
                                     <td class="thumb"><img class="img-thumbnail" src="<?php echo $href_public; ?>/upload/detail/<?php echo $row['image_url']; ?>" alt=""></td>
                                     <td class="price text-left text-uppercase"><strong><?php echo $row['name']; ?></strong></td>
                                     <td class="price text-center"><strong class="primary-color">$<?php echo $row['price']; ?></strong></td>
-                                    <td class="price text-center"><strong><?php echo $row['quantity']; ?></strong></td>
+                                    <td class="qty text-center"><input class="input" type="number" value="1"></td>
                                     <td class="total text-center"><strong class="primary-color">$<?php echo $row['price']*$row['quantity']; ?></strong></td>
                                     <td class="text-right"><button class="main-btn icon-btn"><i class="fa fa-close"></i></button></td>
                                 </tr>

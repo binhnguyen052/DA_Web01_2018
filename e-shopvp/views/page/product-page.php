@@ -3,22 +3,13 @@
 
 
 //lưu lượt xem
-$module_data = 'product';
-$column_update = 'views';
-$id_update = $_GET['id'];
-$op = 'product-detail';
-// Lấy giá trị session có tên là $module_data . '_' . $op . '_' . $_id
-$chech_view
 
-// Kiểm tra, nếu $time_set rỗng (Truy cập trang lần đầu) thì thực hiện code bên trong
-if( empty( $time_set ) )
-{
-    // Khởi tạo giá trị session có tên $module_data . '_' . $op . '_' . $_id
-    $nv_Request->set_Session( $module_data . '_' . $op . '_' . $_id, NV_CURRENTTIME );
-    // Thực hiện cập nhật lượt xem
-    $query = "UPDATE {$module_data} SET {$column_update} = {$column_update} + 1 WHERE id = {$id_update}";
-    $db->executeQuery($db->link, $query);
-}
+$op = 'product-detail';
+$id_view = $_GET['id'];
+$_model_product->update_view($db->link, $id_view, $op)
+
+
+
 ?>
 
 	<!-- BREADCRUMB -->

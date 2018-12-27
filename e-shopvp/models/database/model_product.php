@@ -116,7 +116,7 @@ class MProduct
 
         // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào, xử lý các sản phẩm theo loại và nhà sản xuất
         $where = "";
-        
+
         if (!empty($filter['product_type'])) {
             $where .= " AND product_type_id = {$filter['product_type']}";
         }
@@ -125,9 +125,10 @@ class MProduct
             $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
 
-        $limit = "";
+        $page_limit = "";
+
         if (!empty($filter['page'])) {
-            $where .= " AND product_type_id = {$filter['product_type']}";
+            $page_limit .= " LIMIT {$start}, {$limit}";
         }
 
 //        // BƯỚC 2: TÌM TỔNG SỐ RECORDS

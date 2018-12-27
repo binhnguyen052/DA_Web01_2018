@@ -269,7 +269,7 @@ $href_public = '../../public';
                                     extract($row); ?>
                                     <div class='col-md-3'>
                                         <div class='hidden-sm hidden-xs'>
-                                            <a class='banner banner-1' href='./products.php?id=<?php echo $row['id']; ?>'>
+                                            <a class='banner banner-1' href='./products.php?manufacturer_id=<?php echo $row['id']; ?>'>
                                                 <img src='<?php echo $href_public;?>/upload/<?php echo $row['logo_url'];?>' alt=''>
                                             </a>
                                             <hr>

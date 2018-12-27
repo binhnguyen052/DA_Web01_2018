@@ -94,12 +94,15 @@
 					<div class="aside">
 						<h3 class="aside-title">Lọc Theo Nhãn Hiệu</h3>
 						<ul class="list-links">
-                            <?php ?>
-							<li><a href="#">Nike</a></li>
-							<li><a href="#">Adidas</a></li>
-							<li><a href="#">Polo</a></li>
-							<li><a href="#">Lacost</a></li>
-                            <?php ?>
+                            <?php
+                                $sql = $_model_product->get_manufacturer();
+                                $result = $db->executeQuery($db->link, $sql);
+                                while($row = mysqli_fetch_array($result)) {
+                                    extract($row); ?>
+							<li><a href="./products.php?manufacturer_id=<?php echo $row['id']; ?>">
+                                    <?php echo $row['name']; ?>
+                                </a></li>
+                            <?php } ?>
 						</ul>
 					</div>
 					<!-- /aside widget -->

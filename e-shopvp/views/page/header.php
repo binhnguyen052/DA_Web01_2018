@@ -148,7 +148,7 @@ $href_public = '../../public';
                             <li><a href="./user-profile.php"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
                             <li><a href="./purchase-history.php?id=<?php echo $account_id; ?>"><i class="fa fa-exchange"></i>Lịch sử mua hàng</a></li>
-                            <li><a href="#"><i class="fa fa-check"></i>Thanh toán</a></li>
+                            <li><a href="./checkout.php?id=<?php echo $account_id; ?>"><i class="fa fa-check"></i>Thanh toán</a></li>
                             <li><a href="#"><i class="fa fa-unlock-alt"></i>Đăng nhập</a></li>
                             <li><a href="#"><i class="fa fa-user-plus"></i>Tạo tài khoản</a></li>
                             <li><a href="./log_out.php"><i class="fa fa-user-plus"></i>Đăng xuất</a></li>
@@ -161,7 +161,7 @@ $href_public = '../../public';
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                             <div class="header-btns-icon">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="qty">3</span>
+                                <span class="qty"></span>
                             </div>
                             <strong class="text-uppercase">Giỏ hàng của tôi:</strong>
                             <br>
@@ -170,31 +170,35 @@ $href_public = '../../public';
                         <div class="custom-menu">
                             <div id="shopping-cart">
                                 <div class="shopping-cart-list">
-                                    <div class="product product-widget">
-                                        <div class="product-thumb">
-                                            <img src="<?php echo $__config['public'];?>/upload/thumb-product01.jpg" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                                            <h2 class="product-name"><a href="#">Xem chi tiết</a></h2>
-                                        </div>
-                                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                                    </div>
-                                    <div class="product product-widget">
-                                        <div class="product-thumb">
-                                            <img src="<?php echo $__config['public'];?>/upload/thumb-product01.jpg" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                                            <h2 class="product-name"><a href="#">Xem chi tiết</a></h2>
-                                        </div>
-                                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                                    </div>
-                                </div>
+
+<!--                                    <div class="product product-widget">-->
+<!--                                        <div class="product-thumb">-->
+<!--                                            <img src="--><?php //echo $__config['public'];?><!--/upload/thumb-product01.jpg" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="product-body">-->
+<!--                                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>-->
+<!--                                            <h2 class="product-name"><a href="#">Xem chi tiết</a></h2>-->
+<!--                                        </div>-->
+<!--                                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="product product-widget">-->
+<!--                                        <div class="product-thumb">-->
+<!--                                            <img src="--><?php //echo $__config['public'];?><!--/upload/thumb-product01.jpg" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="product-body">-->
+<!--                                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>-->
+<!--                                            <h2 class="product-name"><a href="#">Xem chi tiết</a></h2>-->
+<!--                                        </div>-->
+<!--                                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>-->
+<!--                                    </div>-->
+<!---->
+<!--                                </div>-->
+
                                 <div class="shopping-cart-btns">
 <!--                                    <button class="main-btn">View Cart</button>-->
                                     <a class="primary-btn "
-                                       href="./view-cart.php?"
+                                       href="./view-cart.php?id=<?php echo $account_id; ?>"
                                        role="button">View Cart<i class="fa fa-arrow-circle-right"></i></a>
 <!--                                    <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>-->
                                     <a class="primary-btn "
@@ -464,7 +468,7 @@ $href_public = '../../public';
                             <li><a href="index.php">Trang chủ</a></li>
                             <li><a href="./products.php">Các sản phẩm</a></li>
 <!--                            <li><a href="./page/product-page.php">Chi tiết sản phẩm</a></li>-->
-                            <li><a href="./page/checkout.php">Thanh toán</a></li>
+                            <li><a href="./checkout.php?id=<?php echo $account_id; ?>">Thanh toán</a></li>
                             <li><a href="./admin/index.php">Admin (test view)</a></li>
                             <li><a href="./blank.php">Blank</a></li>
 <!--                            <li><a href="./page/register.php">user-profile (test view)</a></li>-->

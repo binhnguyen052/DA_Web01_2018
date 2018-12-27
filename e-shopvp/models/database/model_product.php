@@ -336,6 +336,27 @@ class MProduct
         return $query;
     }
 
+    public function get_view_cart($_id = -1)
+    {
+        $__id__ = (int)$_id;
+        $query = "
+        SELECT  
+            account.id, account.display_name, 
+            orders.date_create, orders.date_delivery, orders.deleted, orders.status,
+            orders.recipient_name,  orders.recipient_tel, orders.total_pay, 
+            orders.address_number, orders.street, orders.ward, orders.district, orders.province,  orders.ward, 
+            order_detail.id, order_detail.quantity, order_detail.deleted
+            product.name, product.image_url, product.price
+        FROM account JOIN orders ON account.id = orders.account_id
+        JOIN order_detail ON order_detail.order_id = orders.id
+        JOIN product ON product.id = order_detail.product_id
+        WHERE account.id = {$__id__} AND order_detail.deleted = 1
+        ORDER BY orders.date_delivery DESC;";
+
+        return $query;
+    }
+
+
     public function get_product_order_detail($_id)
     {
         $query = "

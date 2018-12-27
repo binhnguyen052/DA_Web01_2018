@@ -101,7 +101,7 @@ class MProduct
         return $query;
     }
 
-    public function product_pagination($conn, $filter = array(), $limit = 12)
+    public function product_pagination($conn, $filter = array(), $start, $limit = 12)
     {
         /*  total_record: tổng số records
             current_page: trang hiện tại
@@ -116,7 +116,7 @@ class MProduct
 
         // BƯỚC 1: KẾT NỐI CSDL, biến $conn truyền vào, xử lý các sản phẩm theo loại và nhà sản xuất
         $where = "";
-
+        
         if (!empty($filter['product_type'])) {
             $where .= " AND product_type_id = {$filter['product_type']}";
         }
@@ -125,28 +125,33 @@ class MProduct
             $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
 
-        // BƯỚC 2: TÌM TỔNG SỐ RECORDS
-        $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";
-        $result = mysqli_query($conn, $query);
-        $total_records = mysqli_num_rows($result);
-
-        // BƯỚC 3: TÌM LIMIT VÀ CURRENT_PAGE
-        $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-        // BƯỚC 4: TÍNH TOÁN TOTAL_PAGE VÀ START
-        // tổng số trang
-        $total_page = ceil($total_records / $limit);
-
-        // Giới hạn current_page trong khoảng 1 đến total_page
-        if ($current_page > $total_page){
-            $current_page = $total_page;
-        }
-        else if ($current_page < 1){
-            $current_page = 1;
+        $limit = "";
+        if (!empty($filter['page'])) {
+            $where .= " AND product_type_id = {$filter['product_type']}";
         }
 
-        // Tìm Start
-        $start = ($current_page - 1) * $limit;
+//        // BƯỚC 2: TÌM TỔNG SỐ RECORDS
+//        $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";
+//        $result = mysqli_query($conn, $query);
+//        $total_records = mysqli_num_rows($result);
+//
+//        // BƯỚC 3: TÌM LIMIT VÀ CURRENT_PAGE
+//        $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+//
+//        // BƯỚC 4: TÍNH TOÁN TOTAL_PAGE VÀ START
+//        // tổng số trang
+//        $total_page = ceil($total_records / $limit);
+//
+//        // Giới hạn current_page trong khoảng 1 đến total_page
+//        if ($current_page > $total_page){
+//            $current_page = $total_page;
+//        }
+//        else if ($current_page < 1){
+//            $current_page = 1;
+//        }
+//
+//        // Tìm Start
+//        $start = ($current_page - 1) * $limit;
 
         // BƯỚC 5: TRUY VẤN LẤY DANH SÁCH TIN TỨC
         // Có limit và start rồi thì truy vấn CSDL lấy danh sách tin tức

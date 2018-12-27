@@ -160,8 +160,7 @@ class MProduct
           SELECT * 
           FROM product 
           WHERE 1 {$where} AND deleted = 0 ";
-        $result = mysqli_query($conn, $query);
-        return $result;
+        return $query;
     }
 
 

@@ -180,12 +180,12 @@
                                 'product_type' => $product_type_id,
                                 'manufacturer' => $manufacturer_id,
                             );
-                            $sql = $_model_product->get_product_by_Condition($filter);
-                            $result = $db->executeQuery($db->link, $sql);
+//                            $sql = $_model_product->get_product_by_Condition($filter);
+//                            $result = $db->executeQuery($db->link, $sql);
 
                             //truy vấn
-                            $product_page = $_model_product->product_pagination($db->link, $filter = array());
-
+                            $sql = $_model_product->product_pagination($db->link, $filter = array());
+                            $result = $db->executeQuery($db->link, $sql);
                             // tổng số trang
                             $total_records = mysqli_num_rows($product_page);
                             $total_page = ceil($total_records / $limit);

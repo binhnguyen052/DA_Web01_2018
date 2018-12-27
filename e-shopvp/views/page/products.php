@@ -184,7 +184,7 @@
 //                            $result = $db->executeQuery($db->link, $sql);
 
                             //truy vấn
-                            $sql = $_model_product->product_pagination($db->link, $filter = array());
+                            $sql = $_model_product->product_pagination($filter = array());
                             $result = $db->executeQuery($db->link, $sql);
                             // tổng số trang
                             $total_records = mysqli_num_rows($result);

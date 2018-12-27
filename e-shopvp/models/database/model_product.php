@@ -101,7 +101,7 @@ class MProduct
         return $query;
     }
 
-    public function product_pagination($conn, $filter = array(), $start = 0, $limit = 12)
+    public function product_pagination($filter = array(), $start = 0, $limit = 12)
     {
         /*  total_record: tổng số records
             current_page: trang hiện tại

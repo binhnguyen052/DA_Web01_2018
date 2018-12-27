@@ -4,10 +4,6 @@
 
 include ("../../controllers/home/header.php");
 
-$href_public = '../../public';
-
-include_once("../../models/database/model_user.php");
-$_model_user = new MUser();
 ?>
 
 	<!-- BREADCRUMB -->

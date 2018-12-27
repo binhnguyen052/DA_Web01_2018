@@ -1,5 +1,24 @@
 <?php
     include ("../../controllers/products/header.php");
+
+
+//lưu lượt xem
+$module_data = 'product';
+$column_update = 'views';
+$id_update = $_GET['id'];
+$op = 'product-detail';
+// Lấy giá trị session có tên là $module_data . '_' . $op . '_' . $_id
+$chech_view
+
+// Kiểm tra, nếu $time_set rỗng (Truy cập trang lần đầu) thì thực hiện code bên trong
+if( empty( $time_set ) )
+{
+    // Khởi tạo giá trị session có tên $module_data . '_' . $op . '_' . $_id
+    $nv_Request->set_Session( $module_data . '_' . $op . '_' . $_id, NV_CURRENTTIME );
+    // Thực hiện cập nhật lượt xem
+    $query = "UPDATE {$module_data} SET {$column_update} = {$column_update} + 1 WHERE id = {$id_update}";
+    $db->executeQuery($db->link, $query);
+}
 ?>
 
 	<!-- BREADCRUMB -->
@@ -68,6 +87,8 @@
                                 <p class="text-uppercase"><strong>Loại sản phẩm: </strong><?php echo $row['type_name']; ?></p>
                                 <p class="text-uppercase"><strong>Nhà sản xuất: </strong><?php echo $row['manufacturer_name']; ?></p>
                                 <p class="text-uppercase"><strong>Xuất xứ: </strong><?php echo $row['origin']; ?></p>
+                                <p class="text-uppercase"><strong>Số lượt xem: </strong><?php echo $row['solds']; ?></p>
+                                <p class="text-uppercase"><strong>Số lượt bán: </strong><?php echo $row['views']; ?></p>
                                 <p class="text-uppercase"><strong>Mô tả: </strong><?php echo $row['descreibe']; ?></p>
                                 <div class="product-options">
                                     <ul class="size-option">

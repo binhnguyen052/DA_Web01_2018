@@ -2,8 +2,14 @@
 
 //biến lưu đường link
 include_once ("../../libraries/page.php");
+
 include_once("../../models/database/model_product.php");
 $_model_product = new MProduct();
+
+include_once("../../models/database/model_user.php");
+$_model_user = new MUser();
+
+
 $currentURL = curPageURL();
 $__home = 'http://localhost/DoAn_Web01_E404_2018/e-shopvp/views/page/index.php';
 $href_public = '../../public';

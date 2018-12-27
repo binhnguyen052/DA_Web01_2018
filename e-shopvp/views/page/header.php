@@ -115,18 +115,20 @@ $href_public = '../../public';
                             <option value="1">Danh mục 01</option>
                             <option value="1">Danh mục 02</option>
                         </select>
-<!--                        <button class="search-btn"><i class="fa fa-search"></i></button>-->
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
                         <?php
                             $header_search = null;
-                            if(isset($_POST['header_search'])) {   $header_search = $_POST['header_search'];}
+                            if(isset($_POST['header_search'])) { $header_search = $_POST['header_search'];}
+
+                            header('location: ./product.php');
 
 
-                            
+
                         ?>
 
-                        <a class="btn search-btn fa fa-search"
-                           href="./products.php?product_type_id=<?php echo $row['id']?>&manufacturer_id=<?php echo $row2['id']; ?>"
-                           role="button"></a>
+<!--                        <a class="btn search-btn fa fa-search"-->
+<!--                           href="./products.php?product_type_id=--><?php //echo $row['id']?><!--&manufacturer_id=--><?php //echo $row2['id']; ?><!--"-->
+<!--                           role="button"></a>-->
                     </form>
                 </div>
                 <!-- /Search -->

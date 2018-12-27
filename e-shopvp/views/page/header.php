@@ -109,21 +109,26 @@ $href_public = '../../public';
                 <!-- Search -->
                 <div class="header-search">
                     <form method="POST">
-                        <input class="input search-input" type="text" name="header_search" placeholder="Nhập từ khóa tìm kiếm">
+                        <input class="input search-input" type="text" name="header_search" required="required" placeholder="Nhập từ khóa tìm kiếm">
                         <select class="input search-categories">
                             <option value="0">TÌM KIẾM</option>
                             <option value="1">Danh mục 01</option>
                             <option value="1">Danh mục 02</option>
                         </select>
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
-                        <?php
-                            $header_search = null;
-                            if(isset($_POST['header_search'])) {
-                                $header_search = $_POST['header_search'];
-                                header('location:products.php');
-                            }
+                        <button type="submit" name="btn_header_search" class="search-btn">
+                            <i class="fa fa-search"></i></button>
+                                <script language="javascript">
+                                    function header_search(){
+                                        var btn = document.getElementsByName('btn_header_search');
+                                        // Thêm sự kiện cho đối tượng
+                                        button.onclick = function()
+                                        {
+                                            alert("Bạn vừa click vào button");
+                                        };
+                                    }
 
-                        ?>
+
+                                </script>
 
 <!--                        <a class="btn search-btn fa fa-search"-->
 <!--                           href="./products.php?product_type_id=--><?php //echo $row['id']?><!--&manufacturer_id=--><?php //echo $row2['id']; ?><!--"-->

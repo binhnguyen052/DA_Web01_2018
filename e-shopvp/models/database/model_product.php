@@ -68,6 +68,7 @@ class MProduct
         return $query;
     }
 
+
     // sử dụng cho thanh menu danh mục, loại sản phẩm có các nhà sản xuất tương ứng
     public function get_product_type_manufacturer($id_type = 1)
     {
@@ -335,15 +336,35 @@ class MProduct
         return $query;
     }
 
-    public function check_add_cart($product_id){
-        
+    public function get_product_order_detail($_id)
+    {
+        $query = "
+            SELECT *
+            FROM product JOIN order_detail on product.id = order_detail.product_id
+            WHERE order_detail.product_id = {$_id};";
+        return $query;
+    }
+
+    public function check_add_cart($conn, $order_id, $product_id){
+        $query ="
+          SELECT *
+          FROM order_detail
+          WHERE order_detail.order_id = {$order_id} AND order_detail.product_id = {$product_id};";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_num_rows($result);
+        //nếu không tồn tại product trong mua hàng
+        if ($row <= 0){
+            return FALSE;
+        } else{
+            return TRUE;
+        }
     }
 
     public function add_cart($conn, $_id,  $price = 0, $order_id, $product_id){
         $__id__ = (int)$_id;
         $query = "
-            INSERT INTO orders(account_id, date_create, date_delivery, total_pay, status)
-            VALUES  ({$__id__}, now(), date_add(now(), interval '2:0' hour_minute), 0, 0);";
+            INSERT INTO orders(account_id, date_create, date_delivery, total_pay, deleted, status)
+            VALUES  ({$__id__}, now(), date_add(now(), interval '2:0' hour_minute), 0, 1, 0);";
         mysqli_query($conn, $query);
 
         $query2 = "

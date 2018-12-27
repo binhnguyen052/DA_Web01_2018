@@ -137,7 +137,10 @@ $href_public = '../../public';
                             <?php $last_entries = $_model_product->get_last_entries();
                                 $result = $db->executeQuery($db->link, $last_entries);
                                 while ($row = mysqli_fetch_array($result)) {
-                                    extract($row); ?>
+                                    extract($row);
+                                    $product_id = $row['id'];
+                                    $product_price = $row['price'];
+                                    ?>
                                 <!-- Product Single -->
                                 <div class="product product-single">
                                     <div class="product-thumb">
@@ -262,18 +265,17 @@ $href_public = '../../public';
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                             <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                            <button class="primary-btn add-to-cart" id="index_mview_add_cart"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
-                                            <script language="JavaScript">
-                                                var btn_index_mview_add_cart = document.getElementById('index_mview_add_cart');
-                                                btn_index_mview_add_cart.onclick = function () {
-                                                    alert('test');
-                                                }
-                                            </script>
+                                            <button class="primary-btn add-to-cart" name="index_mview_add_cart"
+                                            onclick="js_add_cart()"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
+
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /Product Single -->
                             <?php } ?>
+
+
+
 						</div>
 					</div>
 				</div>
@@ -346,8 +348,38 @@ $href_public = '../../public';
 	</div>
 	<!-- /section -->
 
+<script language="JavaScript">
+    var btn_index_mview_add_cart = document.getElementsByName("index_mview_add_cart");
+    // Lặp qua từng phần tử trong kết quả và gán sự kiện
+    function js_add_cart() {
+        for (var i = 0; i < btn_index_mview_add_cart.length; i++)
+        {
+            btn_index_mview_add_cart[i].onclick = function()
+            {
+
+                <?php
+                    $sql = $_model_product->get_product_order_detail($product_id);
+                    $js_result = $db->executeQuery($db->link, $sql);
+                    $js_row = mysqli_fetch_array($result);
+
+                    extract($js_row);
+                    $account_id = $_SESSION['id'];
+                    $order_id =  $js_row['product_id'];
+                    $check_add_cart = $_model_product->check_add_cart($db->link, $order_id, $product_id);
+                    if ($check_add_cart == TRUE){
+                        $_model_product->add_cart($db->link, $account_id, $order_id, $product_price);
+                    }
+
+                ?>
+
+            };
+        }
+    }
+
+</script>
 <!-- FOOTER -->
 <?php
+
 	include("./footer.php");
 	$db->db_close();
 ?>

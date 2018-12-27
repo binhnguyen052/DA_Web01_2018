@@ -130,6 +130,7 @@ CREATE TABLE IF NOT EXISTS `eshopv`.`ORDER_DETAIL` (
   `price` INT NOT NULL COMMENT 'đơn giá',
   `order_id` INT ZEROFILL NOT NULL,
   `product_id` INT ZEROFILL NOT NULL,
+  `deleted` SMALLINT NOT NULL DEFAULT 1 COMMENT '0: chưa xóa, 1: bị xóa',
   PRIMARY KEY (`id`),
   INDEX `fk_ProductID_O_idx` (`product_id` ASC),
   INDEX `fk_ProductOrderID_O_idx` (`order_id` ASC),
@@ -370,6 +371,6 @@ values
 (6, 0, 2, 26),
 (6, 0, 3, 12),
 (6, 0, 3, 40),
-(6, 0, 3, 14),
-(6, 0, 3, 11);
+(6, 0, 4, 14),
+(6, 0, 4, 11);
 

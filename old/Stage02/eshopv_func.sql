@@ -82,11 +82,11 @@ Từ khóa OLD chỉ đến dòng dữ liệu đang tồn tại trước khi th�
 Từ khóa NEW chỉ đến dòng dữ liệu mới xuất hiện sau khi thực hiện thao tác chỉnh sửa.
 */
 
-drop trigger if exists trigger_sold_update
+/*drop trigger if exists trigger_sold_update
 DELIMITER $$
 create trigger trigger_sold_update before insert
 on order_detail
 for each row
 begin
 	update product set product.solds = product.solds + 1 where product.id = NEW.product_id;
-end$$
+end$$*/

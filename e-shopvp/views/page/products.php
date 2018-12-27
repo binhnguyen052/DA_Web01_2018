@@ -179,9 +179,9 @@
                             );
                             $sql = $_model_product->get_product_by_Condition($filter);
                             $result = $db->executeQuery($db->link, $sql);
-                            $product_page = $_model_product->product_pagination($db->link);
 
-                            $num_r = $_model_product->count_all($db->link, $filter); ?>
+                            $product_page = $_model_product->product_pagination($db->link);
+                            $num_r = mysqli_num_rows($product_page); ?>
                                 <div>
                                     <span><h5 class="title text-uppercase">Có:
                                             <?php echo $num_r;?> sản phẩm</h5></span>
@@ -226,7 +226,7 @@
 						<!-- row -->
 						<div class="row">
                             
-                                <?php while($row = mysqli_fetch_array($result))
+                                <?php while($row = mysqli_fetch_array($product_page))
                                 {
                                 extract($row); ?>
                                 <!-- Product Single -->

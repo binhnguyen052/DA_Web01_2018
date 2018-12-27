@@ -151,7 +151,8 @@ class MProduct
         // BƯỚC 5: TRUY VẤN LẤY DANH SÁCH TIN TỨC
         // Có limit và start rồi thì truy vấn CSDL lấy danh sách tin tức
         $query = "SELECT * FROM {$this->tb_product} WHERE 1 {$where} LIMIT {$start}, {$limit}";
-        mysqli_query($conn, $query);
+        $result = mysqli_query($conn, $query);
+        return $result;
     }
 
 

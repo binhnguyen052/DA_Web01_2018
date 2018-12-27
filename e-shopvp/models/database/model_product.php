@@ -124,7 +124,7 @@ class MProduct
         if (!empty($filter['manufacturer'])) {
             $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
-        
+
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";
         $result = mysqli_query($conn, $query);
@@ -150,7 +150,7 @@ class MProduct
 
         // BƯỚC 5: TRUY VẤN LẤY DANH SÁCH TIN TỨC
         // Có limit và start rồi thì truy vấn CSDL lấy danh sách tin tức
-        $query = "SELECT * FROM {$this->tb_product} WHERE 1 LIMIT {$start}, {$limit}";
+        $query = "SELECT * FROM {$this->tb_product} WHERE 1 {$where} LIMIT {$start}, {$limit}";
         mysqli_query($conn, $query);
     }
 

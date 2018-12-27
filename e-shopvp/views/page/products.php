@@ -171,6 +171,7 @@
                             <?php
                             $product_type_id = null;
                             $manufacturer_id = null;
+                            $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
                             if (isset($_GET['product_type_id'])) {$product_type_id = $_GET['product_type_id']; }
                             if (isset($_GET['manufacturer_id'])) {$manufacturer_id = $_GET['manufacturer_id']; }
                             $filter = array(
@@ -226,7 +227,7 @@
 						<!-- row -->
 						<div class="row">
                             
-                                <?php while($row = mysqli_fetch_array($result))
+                                <?php while($row = mysqli_fetch_array($product_page))
                                 {
                                 extract($row); ?>
                                 <!-- Product Single -->

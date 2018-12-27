@@ -153,7 +153,7 @@ class MProduct
         $query = "
           SELECT * 
           FROM product 
-          WHERE 1 {$where} AND deleted = 0 LIMIT {$start}, {$limit}";
+          WHERE 1 {$where} AND deleted = 0 ";
         $result = mysqli_query($conn, $query);
         return $result;
     }

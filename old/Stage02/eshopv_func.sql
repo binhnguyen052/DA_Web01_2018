@@ -22,6 +22,32 @@ end $$
 
 call proc_sold_count();
 
+
+-- procedure giá sản phẩm bên chi tiết đơn hàng
+drop procedure if exists proc_order_detail_price
+DELIMITER $$
+create procedure proc_order_detail_price()
+begin 
+	declare _price int; 
+    declare _product_id int;
+    declare no_more_products int default 1;
+    declare cur cursor for select order_detail.product_id, product.price
+								from order_detail join product on order_detail.product_id = product.id;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND set no_more_products = 0;
+    open cur;
+    m_loop: loop
+		fetch cur into _product_id, _price;
+		if no_more_products = 0 then leave m_loop;
+        end if;
+		UPDATE order_detail SET order_detail.price = _price WHERE product_id = _product_id;	
+	end loop m_loop;
+    close cur;
+end $$
+
+call proc_order_detail_price();
+
+
+
 /* trigger cập nhật thuộc tính sold trên bảng product
  khi thêm 1 dòng chi tiết đơn hàng thì thuộc tính sold tăng lên 1
 bảng tầm ảnh hưởng

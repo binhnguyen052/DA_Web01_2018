@@ -117,11 +117,13 @@ $href_public = '../../public';
                         </select>
                         <button type="submit" id="btn_header_search_id" class="search-btn">
                             <i class="fa fa-search"></i></button>
+                    </form>
                 </div>
                 <!-- /Search -->
             </div>
             <div class="pull-right">
                 <ul class="header-btns">
+                    <li><?php echo $_SESSION['display_name']; ?></li>
                     <!-- Account -->
                     <li class="header-account dropdown default-dropdown">
                         <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
@@ -135,7 +137,7 @@ $href_public = '../../public';
                         <ul class="custom-menu">
                             <li><a href="./user-profile.php"><i class="fa fa-user-o"></i>Tài khoản của tôi</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i>Sản phẩm yêu thích</a></li>
-                            <li><a href="#"><i class="fa fa-exchange"></i>So sánh</a></li>
+                            <li><a href="./purchase-history.php"><i class="fa fa-exchange"></i>Lịch sử mua hàng</a></li>
                             <li><a href="#"><i class="fa fa-check"></i>Thanh toán</a></li>
                             <li><a href="#"><i class="fa fa-unlock-alt"></i>Đăng nhập</a></li>
                             <li><a href="#"><i class="fa fa-user-plus"></i>Tạo tài khoản</a></li>
@@ -180,8 +182,14 @@ $href_public = '../../public';
                                     </div>
                                 </div>
                                 <div class="shopping-cart-btns">
-                                    <button class="main-btn">View Cart</button>
-                                    <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
+<!--                                    <button class="main-btn">View Cart</button>-->
+                                    <a class="primary-btn "
+                                       href="./view-cart.php?"
+                                       role="button">View Cart<i class="fa fa-arrow-circle-right"></i></a>
+<!--                                    <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>-->
+                                    <a class="primary-btn "
+                                       href="./checkout.php?"
+                                       role="button">Checkout<i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>

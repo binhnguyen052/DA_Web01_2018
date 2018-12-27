@@ -96,7 +96,7 @@ class MProduct
             SELECT * 
             FROM product
             WHERE 1 {$where} AND deleted = 0";
-           //LIMIT {$start}, {$limit}";
+        //LIMIT {$start}, {$limit}";
 
         return $query;
     }
@@ -276,14 +276,13 @@ class MProduct
         $module_data = 'product';
         $column_update = 'views';
         $id_update = $id;
-        $session_view = $module_data.'_'.$op.'_'.$id_update;
+        $session_view = $module_data . '_' . $op . '_' . $id_update;
 
         // Lấy giá trị session có tên là $module_data . '_' . $op . '_' . $_id
         $chech_view = $_SESSION[$session_view];
 
         // Kiểm tra, nếu $chech_view rỗng (Truy cập trang lần đầu) thì thực hiện code bên trong
-        if(empty($chech_view))
-        {
+        if (empty($chech_view)) {
             // Gán giá trị session
             $_SESSION[$session_view] = 1;
             // Thực hiện cập nhật lượt xem
@@ -303,7 +302,24 @@ class MProduct
         mysqli_query($conn, $query);
     }
 
+    public function get_purchase_history()
+    {
+        $query = "
+        SELECT  
+            account.id, account.display_name, 
+            orders.date_create, orders.date_delivery, orders.deleted, orders.status,
+            orders.recipient_name,  orders.recipient_tel,  
+            orders.address_number, orders.street, orders.ward, orders.district, orders.province,  orders.ward, 
+            order_detail.id, 
+            product.name, product.image_url, product.price
+        FROM account JOIN orders ON account.id = orders.account_id
+        JOIN order_detail ON order_detail.order_id = orders.id
+        JOIN product ON product.id = order_detail.product_id
+        WHERE account.id = 6;
+        ";
 
+        return $query;
+    }
 
 }
 

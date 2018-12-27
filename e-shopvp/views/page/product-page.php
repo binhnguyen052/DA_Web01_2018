@@ -8,10 +8,10 @@ $op = 'product-detail'; //trang hiện tại
 $id_view = $_GET['id'];
 
 //mỗi session riêng chỉ tính 1 lượt view
-//$_model_product->view_session($db->link, $id_view, $op);
+$_model_product->view_session($db->link, $id_view, $op);
 
 //mỗi lượt click là tính 1 lượt view (không quan tâm session)
-$_model_product->view_on_click($db->link, $id_view);
+//$_model_product->view_on_click($db->link, $id_view);
 ?>
 
 	<!-- BREADCRUMB -->

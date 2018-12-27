@@ -125,6 +125,8 @@ class MProduct
             $where .= " AND manufacturer_id = {$filter['manufacturer']}";
         }
 
+
+
         // BƯỚC 2: TÌM TỔNG SỐ RECORDS
         $query = "SELECT COUNT(id) FROM {$this->tb_product} WHERE 1";
         $result = mysqli_query($conn, $query);

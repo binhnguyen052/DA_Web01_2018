@@ -187,7 +187,7 @@
                             $sql = $_model_product->product_pagination($db->link, $filter = array());
                             $result = $db->executeQuery($db->link, $sql);
                             // tổng số trang
-                            $total_records = mysqli_num_rows($product_page);
+                            $total_records = mysqli_num_rows($result);
                             $total_page = ceil($total_records / $limit);
                             // Giới hạn current_page trong khoảng 1 đến total_page
                             if ($current_page > $total_page){
@@ -246,7 +246,7 @@
 						<!-- row -->
 						<div class="row">
                             
-                                <?php while($row = mysqli_fetch_array($product_page))
+                                <?php while($row = mysqli_fetch_array($result))
                                 {
                                 extract($row); ?>
                                 <!-- Product Single -->

@@ -24,7 +24,7 @@
                     <div class="order-summary clearfix">
                         <div class="section-title">
                             <h4 class="title text-primary"><?php echo $_SESSION['display_name']; ?></h4> <br/>
-                            <h3 class="title">Xem Đơn Hàng</h3>
+                            <h3 class="title">Lịch Sử Mua Hàng</h3>
                         </div>
                         <table class="shopping-cart-table table">
                             <thead>

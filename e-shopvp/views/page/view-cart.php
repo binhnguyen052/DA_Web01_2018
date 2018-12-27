@@ -42,7 +42,7 @@ include ("../../controllers/products/header.php");
                             <?php
                             $account_id = -1;
                             if (isset($_SESSION['id'])) { $account_id = $_SESSION['id'];}
-                            $sql = $_model_product->get_purchase_history($account_id);
+                            $sql = $_model_product->get_view_cart($account_id);
                             //echo $account_id;
                             $result = $db->executeQuery($db->link, $sql);
                             while($row = mysqli_fetch_array($result))

@@ -275,7 +275,7 @@ values
 ('adidas superstar', 'adidas_shoes02.jpg', 120, 'USA', date_sub(now(), interval '0:3' hour_minute), null, 3, 1, null),
 ('adidas ultra boost', 'adidas_shoes03.jpg', 150, 'USA', date_sub(now(), interval '0:3' hour_minute), null, 3, 1, null),
 ('adidas R1', 'adidas_shoes04.jpg', 300, 'USA', date_sub(now(), interval '0:3' hour_minute), null, 3, 1, null),
-('adidas supertar', 'adidas_shoes05.jpg', 150, 'USA', date_sub(now(), interval '0:3' hour_minute), null, 3, 1, null),
+('adidas Marquee Boost Shoes', 'adidas_shoes05.jpg', 150, 'USA', date_sub(now(), interval '0:3' hour_minute), null, 3, 1, null),
 
  -- an phước
 ('An phuoc short', 'anphuoc_pant01.jpg', 25, 'Vietnam', date_sub(now(), interval '0:4' hour_minute), null, 4, 2, null),

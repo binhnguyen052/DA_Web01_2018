@@ -335,6 +335,23 @@ class MProduct
         return $query;
     }
 
+    public function check_add_cart($product_id){
+        
+    }
+
+    public function add_cart($conn, $_id,  $price = 0, $order_id, $product_id){
+        $__id__ = (int)$_id;
+        $query = "
+            INSERT INTO orders(account_id, date_create, date_delivery, total_pay, status)
+            VALUES  ({$__id__}, now(), date_add(now(), interval '2:0' hour_minute), 0, 0);";
+        mysqli_query($conn, $query);
+
+        $query2 = "
+            INSERT INTO order_detail(quantity, price, order_id, product_id)
+            VALUES (1, {$price}, {$order_id}, {$product_id});";
+
+        mysqli_query($conn, $query2);
+    }
 }
 
 ?>

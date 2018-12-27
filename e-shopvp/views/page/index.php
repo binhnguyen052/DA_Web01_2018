@@ -262,7 +262,13 @@ $href_public = '../../public';
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                             <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
+                                            <button class="primary-btn add-to-cart" id="index_mview_add_cart"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
+                                            <script language="JavaScript">
+                                                var btn_index_mview_add_cart = document.getElementById('index_mview_add_cart');
+                                                btn_index_mview_add_cart.onclick = function () {
+                                                    alert('test');
+                                                }
+                                            </script>
                                         </div>
                                     </div>
                                 </div>

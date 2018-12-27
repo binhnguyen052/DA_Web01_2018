@@ -117,20 +117,6 @@ $href_public = '../../public';
                         </select>
                         <button type="submit" id="btn_header_search_id" class="search-btn">
                             <i class="fa fa-search"></i></button>
-                            <?php
-                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
-                                if(empty($_POST['header_search']) == false) {
-                                        echo 'null';
-                                } else {
-                                    echo 'fill';
-                                }
-                            }
-                            ?>
-
-<!--                        <a class="btn search-btn fa fa-search"-->
-<!--                           href="./products.php?product_type_id=--><?php //echo $row['id']?><!--&manufacturer_id=--><?php //echo $row2['id']; ?><!--"-->
-<!--                           role="button"></a>-->
-                    </form>
                 </div>
                 <!-- /Search -->
             </div>

@@ -115,13 +115,13 @@ $href_public = '../../public';
                             <option value="1">Danh mục 01</option>
                             <option value="1">Danh mục 02</option>
                         </select>
-                        <button type="submit" name="btn_header_search" class="search-btn">
+                        <button type="submit" id="btn_header_search" class="search-btn">
                             <i class="fa fa-search"></i></button>
                                 <script language="javascript">
-                                    function header_search(){
-                                        var btn = document.getElementsByName('btn_header_search');
+                                    {
+                                        var btn = document.getElementById('btn_header_search');
                                         // Thêm sự kiện cho đối tượng
-                                        button.onclick = function()
+                                        btn.onclick = function()
                                         {
                                             alert("Bạn vừa click vào button");
                                         };
